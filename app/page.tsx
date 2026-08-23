@@ -1,287 +1,292 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useState } from "react";
 
-type Evidence = {
+type Residue = {
   name: string;
   english: string;
-  examples: string;
-  priority: "优先" | "扩展";
-  effects: string[];
-  mechanism: string;
-  value: string;
-  caution: string;
-  evidenceLevel: string;
-  papers: Array<{ label: string; finding: string; href: string }>;
+  effect: string;
+  evidence: string;
+  paper: string;
+  href: string;
+  level: "直接证据" | "骨架证据";
 };
 
-const entries: Evidence[] = [
+type ResidueGroup = {
+  id: string;
+  title: string;
+  english: string;
+  summary: string;
+  residues: Residue[];
+};
+
+const groups: ResidueGroup[] = [
   {
-    name: "N-甲基氨基酸",
+    id: "n-methyl",
+    title: "N-甲基氨基酸",
     english: "N-methyl amino acids",
-    examples: "N-Me-Ala、N-Me-Leu、N-Me-Phe",
-    priority: "优先",
-    effects: ["渗透性", "抗酶解", "构象"],
-    mechanism: "N-甲基化去除一个骨架 NH 氢键供体，并可改变局部构象、分子内氢键和疏水表面的连续性。",
-    value: "是口服环肽中证据最成熟的改造之一；可提高跨膜与肠道渗透，并常伴随蛋白酶稳定性提升。",
-    caution: "效果主要取决于甲基化位置，而不是 N-甲基数量；过度甲基化还可能破坏靶点结合构象。",
-    evidenceLevel: "动物口服暴露 + 肠道渗透",
-    papers: [
+    summary: "减少骨架氢键供体并改变局部构象；这是口服环肽中证据最充分的一类改造，但效果高度依赖位置。",
+    residues: [
       {
-        label: "Ovadia et al., Molecular Pharmaceutics, 2011",
-        finding: "54 个环六肽中，9/10 个高渗透分子在 D-Ala 邻位含 N-Me；渗透性与 N-Me 总数不直接相关。",
-        href: "https://pubmed.ncbi.nlm.nih.gov/21375270/",
-      },
-      {
-        label: "White et al., Nature Chemical Biology, 2011",
-        finding: "一个含 3 个 N-Me、分子量 755 Da 的环六肽在大鼠中达到 28% 口服生物利用度。",
+        name: "N-甲基-D-亮氨酸",
+        english: "N-Me-D-Leu",
+        effect: "同时引入 D-构型与骨架 N-甲基化，可降低暴露极性、限制构象，并提高抗蛋白酶能力。",
+        evidence: "含 N-Me-D-Leu 的环六肽同时包含 N-Me-Leu 与 N-Me-Tyr，在大鼠中达到 28% 口服生物利用度。该结果支持把 N-Me-D-Leu 作为高优先级候选，但不能把整分子的口服效果归因于单一残基。",
+        paper: "White et al., Nature Chemical Biology, 2011",
         href: "https://pubmed.ncbi.nlm.nih.gov/21946276/",
+        level: "骨架证据",
+      },
+      {
+        name: "N-甲基亮氨酸",
+        english: "N-Me-Leu",
+        effect: "保留亮氨酸疏水侧链，同时去除一个骨架 NH；适合连接或扩大连续疏水表面。",
+        evidence: "代表性环六肽 Leu–N-Me-D-Leu–N-Me-Leu–Leu–D-Pro–N-Me-Tyr 的 RRCK Papp 为 13.0 × 10⁻⁶ cm/s，是同系列中渗透性最高的骨架之一。",
+        paper: "Goetz et al., ACS Medicinal Chemistry Letters, 2014",
+        href: "https://pubmed.ncbi.nlm.nih.gov/25313332/",
+        level: "直接证据",
+      },
+      {
+        name: "N-甲基异亮氨酸",
+        english: "N-Me-Ile",
+        effect: "支链疏水侧链有利于膜分配；N-甲基化进一步降低骨架去溶剂化代价。",
+        evidence: "在同一环六肽骨架中以 N-Me-Ile 替换 N-Me-Leu 后，RRCK Papp 为 8.9 × 10⁻⁶ cm/s，证明该残基可支持较高被动渗透。",
+        paper: "Goetz et al., ACS Medicinal Chemistry Letters, 2014",
+        href: "https://pubmed.ncbi.nlm.nih.gov/25313332/",
+        level: "直接证据",
+      },
+      {
+        name: "N-甲基丙氨酸",
+        english: "N-Me-Ala / D-N-Me-Ala",
+        effect: "体积小，适合在不显著增加疏水体积的情况下屏蔽一个骨架 NH，并重新组织大环构象。",
+        evidence: "环十肽中将 D-Pro 改为 D-N-Me-Ala，仅减少一个侧链亚甲基，就形成新的鞍形低介电构象，使 4 个骨架 NH 被屏蔽并得到高渗透骨架。",
+        paper: "Kelly et al., Journal of the American Chemical Society, 2024",
+        href: "https://pubmed.ncbi.nlm.nih.gov/38330910/",
+        level: "直接证据",
+      },
+      {
+        name: "N-甲基苏氨酸",
+        english: "N-Me-Thr",
+        effect: "兼具极性侧链与骨架 NH 屏蔽，可用于尝试在溶解度与渗透性之间取得平衡。",
+        evidence: "在相同环六肽骨架的单点替换系列中，N-Me-Thr 类似物的 RRCK Papp 为 4.7 × 10⁻⁶ cm/s，优于 N-Me-Ser、N-Me-Lys 和 N-Me-Asp 类似物。",
+        paper: "Goetz et al., ACS Medicinal Chemistry Letters, 2014",
+        href: "https://pubmed.ncbi.nlm.nih.gov/25313332/",
+        level: "直接证据",
+      },
+      {
+        name: "N-甲基酪氨酸",
+        english: "N-Me-Tyr",
+        effect: "芳香侧链可作为膜结合疏水锚点；N-甲基化同时屏蔽骨架供氢能力。",
+        evidence: "N-Me-Tyr 出现在 28% 大鼠口服生物利用度的环六肽以及多个可渗透类似物中。现有数据支持它作为渗透骨架的一部分，但没有证明它单独即可提高吸收。",
+        paper: "White et al., Nature Chemical Biology, 2011",
+        href: "https://pubmed.ncbi.nlm.nih.gov/21946276/",
+        level: "骨架证据",
       },
     ],
   },
   {
-    name: "D-氨基酸",
+    id: "d-amino",
+    title: "D-氨基酸",
     english: "D-amino acids",
-    examples: "优先关注 D-Pro、D-Ala",
-    priority: "优先",
-    effects: ["构象", "抗酶解", "渗透性"],
-    mechanism: "反转侧链立体化学，改变转角偏好和蛋白酶识别；D-Pro 尤其适合稳定 β-turn / β-hairpin。",
-    value: "可同时改善骨架预组织、抗酶解能力和清除性质；也常与邻位 N-甲基化组合使用。",
-    caution: "不是所有 L→D 替换都有利；如果替换发生在直接参与靶点结合的位置，活性可能下降。",
-    evidenceLevel: "动物口服暴露 + 构象证据",
-    papers: [
+    summary: "反转立体化学以改变转角和蛋白酶识别；适合放在构象控制位，不宜盲目替换直接参与靶点结合的残基。",
+    residues: [
       {
-        label: "Fouché et al., ChemMedChem, 2016",
-        finding: "在环十肽 β-turn 的 i+1 位引入 D-Pro，有利于渗透性和清除率，并获得较好的口服暴露。",
+        name: "D-脯氨酸",
+        english: "D-Pro",
+        effect: "是强转角诱导单元，可在 β-turn 的 i+1 位稳定 β-hairpin，同时减少构象自由度和蛋白酶识别。",
+        evidence: "在环十肽骨架的 β-turn i+1 位引入 D-Pro，同时改善渗透性与清除性质，并获得良好的口服暴露。",
+        paper: "Fouché et al., ChemMedChem, 2016",
         href: "https://pubmed.ncbi.nlm.nih.gov/27154275/",
+        level: "直接证据",
+      },
+      {
+        name: "D-丙氨酸",
+        english: "D-Ala",
+        effect: "可诱导特定 II 型 β-turn，并与邻位 N-甲基化协同形成较紧凑、低暴露极性的骨架。",
+        evidence: "在 54 个环六肽中，高 Caco-2 渗透模板均围绕 D-Ala 组织转角；N-甲基化 D-Ala 或其邻位是形成高渗透模板的关键条件。",
+        paper: "Beck et al., Journal of the American Chemical Society, 2012",
+        href: "https://pubmed.ncbi.nlm.nih.gov/22737969/",
+        level: "骨架证据",
       },
     ],
   },
   {
-    name: "Aib",
-    english: "α-aminoisobutyric acid",
-    examples: "α,α-二取代氨基酸；常测试 Pro→Aib",
-    priority: "优先",
-    effects: ["构象", "渗透性", "口服暴露"],
-    mechanism: "限制主链构象并促进 γ-turn / 螺旋倾向，可稳定分子内氢键、减少暴露极性表面积。",
-    value: "特别适合仍较柔性的环肽骨架，可通过预组织降低从水相进入膜环境时的构象代价。",
-    caution: "高度依赖骨架；对于本身已经预组织充分的环肽，Aib 可能没有进一步收益。",
-    evidenceLevel: "动物口服暴露 + 多种构象实验",
-    papers: [
+    id: "alpha-disubstituted",
+    title: "α,α-二取代氨基酸",
+    english: "α,α-disubstituted amino acids",
+    summary: "通过 α-碳双取代限制主链构象；目前与口服环肽最直接相关的代表是 Aib。",
+    residues: [
       {
-        label: "Raj et al., Journal of Medicinal Chemistry, 2026",
-        finding: "在多个 6–8 元环肽中，Pro→Aib 使柔性骨架的渗透性最高提高约 8 倍，并提高小鼠口服暴露。",
+        name: "α-氨基异丁酸",
+        english: "Aib · α-aminoisobutyric acid",
+        effect: "促进 γ-turn 和鞍形构象，稳定分子内氢键，并减少从水相进入膜环境所需的构象重排。",
+        evidence: "对多个 6–8 元环肽进行 Pro→Aib 替换后，柔性骨架的被动渗透性最高提高约 8 倍，并在小鼠中提高口服生物利用度；已高度预组织的骨架则未必受益。",
+        paper: "Raj et al., Journal of Medicinal Chemistry, 2026",
         href: "https://pubmed.ncbi.nlm.nih.gov/41797579/",
+        level: "直接证据",
       },
     ],
   },
   {
-    name: "γ-氨基酸",
+    id: "gamma-amino",
+    title: "γ-氨基酸",
     english: "γ-amino acids",
-    examples: "Statine 及其类似物",
-    priority: "优先",
-    effects: ["溶解度", "渗透性", "代谢稳定性"],
-    mechanism: "延长骨架并重新组织转角与分子内氢键，使环肽获得不同于常规 α-氨基酸骨架的构象空间。",
-    value: "少数能够同时改善水溶性、膜渗透性和肝微粒体稳定性的非天然骨架单元。",
-    caution: "会明显改变环尺寸与构象，通常需要重新优化邻近残基和环化位点。",
-    evidenceLevel: "大鼠口服生物利用度 + ADME",
-    papers: [
+    summary: "延长主链并重塑分子内氢键网络；适合同时优化溶解度、渗透性和代谢稳定性。",
+    residues: [
       {
-        label: "Bockus et al., Journal of Medicinal Chemistry, 2015",
-        finding: "含 statine 的环六肽通常更水溶，许多分子的渗透性和微粒体稳定性也更好；一个化合物大鼠口服生物利用度为 21%。",
+        name: "Statine",
+        english: "Sta · (3S,4S)-4-amino-3-hydroxy-6-methylheptanoic acid",
+        effect: "延长骨架并提供羟基/支链疏水组合，可重排转角与分子内氢键，增加水溶性并降低代谢暴露位点。",
+        evidence: "含 statine 的环六肽通常比对应非-statine 骨架更水溶，许多分子的膜渗透性和肝微粒体稳定性也更高；其中一个化合物的大鼠口服生物利用度为 21%。",
+        paper: "Bockus et al., Journal of Medicinal Chemistry, 2015",
         href: "https://pubmed.ncbi.nlm.nih.gov/25950816/",
+        level: "直接证据",
       },
     ],
   },
   {
-    name: "Pye",
-    english: "N,N-pyrrolidinylglutamine",
-    examples: "可优先尝试 Leu→Pye",
-    priority: "优先",
-    effects: ["溶解度", "渗透性", "分子内氢键"],
-    mechanism: "侧链带有强氢键受体但没有氢键供体，可与暴露的骨架 NH 形成侧链—主链分子内氢键。",
-    value: "与单纯增加疏水性不同，Pye 有机会同时改善通常相互冲突的水溶性和膜渗透性。",
-    caution: "效果对位置和骨架都非常敏感；应做 Leu→Pye 的逐位扫描并保留母体对照。",
-    evidenceLevel: "PAMPA + Caco-2 + 结构证据",
-    papers: [
+    id: "cyclic-beta",
+    title: "环状 β-氨基酸",
+    english: "cyclic β²,³-amino acids",
+    summary: "刚化大环并提高抗酶解能力；当前证据主要支持稳定性和活性，尚不能直接等同于提高口服吸收。",
+    residues: [
       {
-        label: "Taechalertpaisarn et al., Journal of Medicinal Chemistry, 2022",
-        finding: "特定 Leu→Pye 替换显著提高环六肽水溶性和 PAMPA/Caco-2 渗透性，并观察到侧链—主链氢键。",
-        href: "https://pubmed.ncbi.nlm.nih.gov/35275623/",
-      },
-    ],
-  },
-  {
-    name: "环状 β-氨基酸",
-    english: "Cyclic β²,³-amino acids",
-    examples: "环戊烷/环己烷 β²,³-AA",
-    priority: "扩展",
-    effects: ["血清稳定性", "抗酶解", "活性"],
-    mechanism: "环状 β-骨架单元可压紧并刚化大环构象，使肽链更难被蛋白酶识别，同时维持靶点结合所需形状。",
-    value: "如果候选物的主要瓶颈是胃肠道或血清降解，这类残基很值得作为稳定性改造工具。",
-    caution: "稳定性证据很强，但现有代表性论文没有直接证明其能提高口服吸收。",
-    evidenceLevel: "血清稳定性 + 活性对照",
-    papers: [
-      {
-        label: "Miura et al., Bulletin of the Chemical Society of Japan, 2024",
-        finding: "含环状 β²,³-AA 的大环肽血清半衰期达到 48 h 和 >168 h；替换回 Ala 后活性和稳定性均明显下降。",
+        name: "反式-2-氨基环戊烷羧酸",
+        english: "(1R,2S)-2-ACPC · β¹",
+        effect: "限制 β-骨架构象，可稳定转角/折叠并显著阻碍血清蛋白酶降解。",
+        evidence: "含 β¹ 的宏环肽 BM3 和 BM7 对 SARS-CoV-2 Mpro 保持纳摩尔抑制活性，血清半衰期分别达到 48 h 与 >168 h；替换为 Ala 后稳定性和活性均下降。",
+        paper: "Miura et al., Bulletin of the Chemical Society of Japan, 2024",
         href: "https://pubmed.ncbi.nlm.nih.gov/38828441/",
+        level: "直接证据",
+      },
+      {
+        name: "顺式-2-氨基环己烷羧酸",
+        english: "(1S,2S)-2-ACHC · β²",
+        effect: "六元环 β-骨架具有强转角诱导能力，可刚化局部构象并提高血清稳定性。",
+        evidence: "β² 与 β¹ 一同出现在高活性、高血清稳定性的 BM3/BM7 中；另一项宏环肽研究显示 (1S,2S)-2-ACHC 可诱导两个 γ-turn 并形成稳定 β-sheet。",
+        paper: "Miura et al., Bulletin of the Chemical Society of Japan, 2024",
+        href: "https://pubmed.ncbi.nlm.nih.gov/38828441/",
+        level: "骨架证据",
       },
     ],
   },
   {
-    name: "Peptoid 残基",
-    english: "N-substituted glycine residues",
-    examples: "N-取代甘氨酸",
-    priority: "扩展",
-    effects: ["构象", "渗透性", "脂溶性"],
-    mechanism: "将侧链移到主链氮上，去除一个 NH，并可通过取代基调节刚性、脂溶性和环境依赖构象。",
-    value: "适合作为构象工程工具：放在转角位可保持刚性，放在 β-strand 位可产生水相柔性、非极性环境刚性的“变色龙”构象。",
-    caution: "严格说属于肽模拟物残基而不是 α-氨基酸；位置效应很大，应与构象分析结合。",
-    evidenceLevel: "PAMPA + 构象分析",
-    papers: [
+    id: "sidechain-hbond",
+    title: "侧链-主链氢键型非天然氨基酸",
+    english: "side-chain-to-backbone H-bonding residues",
+    summary: "用侧链受体遮蔽暴露的骨架 NH，在不单纯增加脂溶性的情况下兼顾溶解度与渗透性。",
+    residues: [
       {
-        label: "Furukawa et al., Angewandte Chemie International Edition, 2020",
-        finding: "在环十肽中，转角和 β-strand 位的 peptoid 替换产生不同刚性与变色龙特征，两类均可获得较高渗透性。",
-        href: "https://pubmed.ncbi.nlm.nih.gov/32789999/",
+        name: "N,N-吡咯烷基谷氨酰胺",
+        english: "Pye · N,N-pyrrolidinylglutamine",
+        effect: "侧链酰胺是强氢键受体且没有供体，可与暴露的骨架 NH 形成侧链-主链分子内氢键。",
+        evidence: "在环六肽非对映体中，特定 Leu→Pye 替换同时显著提高水溶性以及 PAMPA/Caco-2 渗透性，并由结构实验观察到侧链-主链氢键。",
+        paper: "Taechalertpaisarn et al., Journal of Medicinal Chemistry, 2022",
+        href: "https://pubmed.ncbi.nlm.nih.gov/35275623/",
+        level: "直接证据",
       },
     ],
   },
 ];
 
-const propertyFilters = ["全部", "渗透性", "溶解度", "抗酶解", "代谢稳定性", "构象", "活性"];
-
 export default function Home() {
-  const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState("全部");
+  const [openGroups, setOpenGroups] = useState<string[]>(["n-methyl"]);
 
-  const filtered = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    return entries.filter((entry) => {
-      const matchesFilter = filter === "全部" || entry.effects.some((effect) => effect.includes(filter));
-      const haystack = [entry.name, entry.english, entry.examples, entry.mechanism, entry.value, entry.effects.join(" ")].join(" ").toLowerCase();
-      return matchesFilter && (!normalized || haystack.includes(normalized));
-    });
-  }, [query, filter]);
+  const toggleGroup = (id: string) => {
+    setOpenGroups((current) =>
+      current.includes(id) ? current.filter((item) => item !== id) : [...current, id],
+    );
+  };
+
+  const allOpen = openGroups.length === groups.length;
 
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回页面顶部">
           <span className="brand-mark" aria-hidden="true">CP</span>
-          <span>环肽证据库</span>
+          <span>环肽非天然氨基酸库</span>
         </a>
-        <nav aria-label="页面导航">
-          <a href="#library">候选残基</a>
-          <a href="#method">如何使用</a>
-          <a href="#sources">证据说明</a>
-        </nav>
+        <span className="header-note">点击大类查看具体残基</span>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE ATLAS</p>
-          <h1>口服环肽<br /><em>非天然氨基酸</em>证据库</h1>
-          <p className="lede">快速回答三个问题：<strong>可以引入什么？能获得什么性质？哪篇原始论文支持？</strong></p>
-          <div className="stats" aria-label="数据库概览">
-            <div><strong>7</strong><span>类候选残基</span></div>
-            <div><strong>8</strong><span>篇代表性原始研究</span></div>
-            <div><strong>5</strong><span>类优先候选</span></div>
-          </div>
-        </div>
-        <aside className="hero-note">
-          <span className="note-index">01</span>
-          <p>核心判断</p>
-          <h2>位置与构象，通常比“加了多少个非天然氨基酸”更重要。</h2>
-          <p className="note-small">所有改造都应保留母体对照，并同步观察活性、渗透性、溶解度和稳定性。</p>
-        </aside>
+      <section className="intro" id="top">
+        <p className="eyebrow">ORAL CYCLIC PEPTIDE · RESIDUE LIBRARY</p>
+        <h1>适用于口服环肽研发的<br /><em>非天然氨基酸实例</em></h1>
+        <p className="lede">按大类展开，查看具体氨基酸、可能带来的性质变化，以及对应的原始论文证据。</p>
       </section>
 
-      <section className="library-section" id="library">
-        <div className="section-heading">
-          <div><p className="eyebrow">RESIDUE LIBRARY</p><h2>候选残基与论文依据</h2></div>
-          <p>点击论文标题可直接打开 PubMed 原始记录。</p>
-        </div>
-
-        <div className="controls" role="search">
-          <label className="search-box">
-            <span className="sr-only">搜索候选残基</span>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" /></svg>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索名称、作用或机制，例如 Pye / 渗透性" />
-            {query && <button onClick={() => setQuery("")} aria-label="清空搜索">×</button>}
-          </label>
-          <div className="filters" aria-label="按性质筛选">
-            {propertyFilters.map((item) => (
-              <button key={item} className={filter === item ? "active" : ""} onClick={() => setFilter(item)}>{item}</button>
-            ))}
-          </div>
-        </div>
-
-        <p className="result-count">当前显示 {filtered.length} / {entries.length} 类候选</p>
-
-        <div className="card-grid">
-          {filtered.map((entry, index) => (
-            <article className="residue-card" key={entry.name}>
-              <div className="card-topline">
-                <span className="card-number">{String(index + 1).padStart(2, "0")}</span>
-                <span className={`priority ${entry.priority === "优先" ? "primary" : "secondary"}`}>{entry.priority}候选</span>
-              </div>
-              <div className="card-title">
-                <h3>{entry.name}</h3><p>{entry.english}</p><span>{entry.examples}</span>
-              </div>
-              <div className="tags">{entry.effects.map((effect) => <span key={effect}>{effect}</span>)}</div>
-              <dl>
-                <div><dt>作用机制</dt><dd>{entry.mechanism}</dd></div>
-                <div><dt>口服研发价值</dt><dd>{entry.value}</dd></div>
-                <div className="caution"><dt>需要注意</dt><dd>{entry.caution}</dd></div>
-              </dl>
-              <div className="evidence">
-                <div className="evidence-label"><span>证据类型</span><strong>{entry.evidenceLevel}</strong></div>
-                {entry.papers.map((paper) => (
-                  <a href={paper.href} target="_blank" rel="noreferrer" key={paper.href}>
-                    <span className="paper-arrow" aria-hidden="true">↗</span>
-                    <strong>{paper.label}</strong><small>{paper.finding}</small>
-                  </a>
-                ))}
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {filtered.length === 0 && (
-          <div className="empty-state">
-            <strong>没有找到匹配项</strong><p>尝试搜索“N-Me”“稳定性”，或切换到“全部”。</p>
-            <button onClick={() => { setQuery(""); setFilter("全部"); }}>重置筛选</button>
-          </div>
-        )}
-      </section>
-
-      <section className="method-section" id="method">
-        <div className="section-heading inverse">
-          <div><p className="eyebrow">STARTING LIBRARY</p><h2>建议的最小候选库</h2></div>
-          <p>先做小规模、可解释的位置扫描，再扩大化学空间。</p>
-        </div>
-        <div className="steps">
-          <article><span>01</span><p>第一层 · 必做</p><h3>N-Me 位置扫描；转角位 Pro→D-Pro 或 Aib；关键疏水位 Leu→Pye。</h3></article>
-          <article><span>02</span><p>第二层 · 扩展</p><h3>加入 1 个 statine / γ-氨基酸和 1 个环状 β-氨基酸，观察 ADME 协同变化。</h3></article>
-          <article><span>03</span><p>第三层 · 构象探索</p><h3>在转角位与 β-strand 位分别引入 peptoid，比较刚性和环境依赖构象。</h3></article>
-        </div>
-      </section>
-
-      <section className="source-section" id="sources">
-        <p className="eyebrow">HOW TO READ THE EVIDENCE</p>
-        <div className="source-layout">
-          <h2>网页里的“有用”，<br />不等于“放进去一定有效”。</h2>
+      <section className="library" aria-labelledby="library-title">
+        <div className="library-heading">
           <div>
-            <p>证据强度需要区分：动物口服暴露最接近最终目标；PAMPA/Caco-2 主要支持渗透性；血清或微粒体实验主要支持稳定性。不同指标不能相互替代。</p>
-            <p>推荐每个改造都保留母体环肽对照，并至少同步测量 <strong>PAMPA/Caco-2、溶解度、SGF/SIF 或血清稳定性、靶点活性</strong>。</p>
+            <p className="eyebrow">EVIDENCE-BACKED EXAMPLES</p>
+            <h2 id="library-title">氨基酸大类与具体实例</h2>
           </div>
+          <button
+            className="expand-control"
+            onClick={() => setOpenGroups(allOpen ? [] : groups.map((group) => group.id))}
+          >
+            {allOpen ? "全部收起" : "全部展开"}
+          </button>
+        </div>
+
+        <div className="accordion-list">
+          {groups.map((group, groupIndex) => {
+            const isOpen = openGroups.includes(group.id);
+            return (
+              <article className={`accordion ${isOpen ? "open" : ""}`} key={group.id}>
+                <button
+                  className="accordion-trigger"
+                  onClick={() => toggleGroup(group.id)}
+                  aria-expanded={isOpen}
+                  aria-controls={`${group.id}-content`}
+                >
+                  <span className="group-index">{String(groupIndex + 1).padStart(2, "0")}</span>
+                  <span className="group-title">
+                    <strong>{group.title}</strong>
+                    <small>{group.english}</small>
+                  </span>
+                  <span className="group-summary">{group.summary}</span>
+                  <span className="group-count">{group.residues.length} 个实例</span>
+                  <span className="chevron" aria-hidden="true">⌄</span>
+                </button>
+
+                {isOpen && (
+                  <div className="accordion-content" id={`${group.id}-content`}>
+                    {group.residues.map((residue, residueIndex) => (
+                      <section className="residue-row" key={residue.english}>
+                        <div className="residue-identity">
+                          <span>{String(residueIndex + 1).padStart(2, "0")}</span>
+                          <h3>{residue.name}</h3>
+                          <p>{residue.english}</p>
+                        </div>
+                        <div className="residue-detail">
+                          <div>
+                            <h4>主要作用</h4>
+                            <p>{residue.effect}</p>
+                          </div>
+                          <div>
+                            <h4>论文证据</h4>
+                            <p>{residue.evidence}</p>
+                          </div>
+                        </div>
+                        <a className="paper-link" href={residue.href} target="_blank" rel="noreferrer">
+                          <span>{residue.level}</span>
+                          <strong>{residue.paper}</strong>
+                          <small>打开论文 ↗</small>
+                        </a>
+                      </section>
+                    ))}
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </section>
 
       <footer>
-        <div><strong>口服环肽非天然氨基酸证据库</strong><span>基于代表性原始研究整理 · 更新于 2026 年 8 月</span></div>
-        <a href="#top">返回顶部 ↑</a>
+        <strong>口服环肽非天然氨基酸证据库</strong>
+        <span>仅保留有代表性环肽实验依据的候选；具体效果仍取决于替换位置与整体构象。</span>
       </footer>
     </main>
   );
