@@ -114,6 +114,16 @@ h1 em { color: var(--teal); font-style: normal; }
 .record-details { margin: 19px -23px -23px; padding: 23px; display: grid; gap: 20px; border-top: 1px solid #cddbd7; background: #f5faf8; }
 .record-details h4 { margin-bottom: 7px; color: var(--teal); font-size: 11px; letter-spacing: .06em; }
 .record-details p { margin-bottom: 0; color: #4b5a6d; font-size: 12px; line-height: 1.85; }
+.scope-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.scope-tags span { padding: 6px 9px; border: 1px solid #b9d2cc; color: var(--teal-dark); background: white; font-size: 10px; }
+.design-guide, .experiment-panel { padding: 17px; border: 1px solid #c8d8d3; background: white; }
+.design-guide dl, .experiment-panel dl { margin: 0; display: grid; gap: 0; }
+.design-guide dl > div, .experiment-panel dl > div { padding: 9px 0; display: grid; grid-template-columns: 90px 1fr; gap: 13px; border-top: 1px solid #e5ece9; }
+.design-guide dl > div:first-child, .experiment-panel dl > div:first-child { border-top: 0; }
+.design-guide dt, .experiment-panel dt { color: var(--muted); font-size: 10px; }
+.design-guide dd, .experiment-panel dd { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.7; }
+.experiment-panel dd strong { color: var(--teal-dark); font-size: 12px; }
+.record-details .no-metric { padding: 12px; border-left: 3px solid #a9aaa3; background: #f3f3ef; color: #68717c; }
 .caution-box { padding: 15px; border-left: 3px solid var(--gold); background: #fbf6eb; }
 .record-sources { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .record-sources a { min-height: 96px; padding: 13px; display: flex; flex-direction: column; border: 1px solid #c8d8d3; background: white; text-decoration: none; }
@@ -139,6 +149,13 @@ h1 em { color: var(--teal); font-style: normal; }
 .evidence-grid article > span { color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 30px; }
 .evidence-grid h3 { margin: 25px 0 9px; font-size: 15px; }
 .evidence-grid p { margin-bottom: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+.patent-tier-guide { max-width: 1450px; margin: 22px auto 0; padding: 24px; display: grid; grid-template-columns: 1.15fr repeat(3, 1fr); gap: 12px; border: 1px solid var(--line); background: #fbfaf6; }
+.patent-tier-guide > div { padding-right: 18px; }
+.patent-tier-guide h3 { margin-bottom: 8px; font-size: 17px; }
+.patent-tier-guide p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
+.patent-tier-guide article { padding: 14px; display: flex; gap: 12px; border: 1px solid #ded9e9; background: white; }
+.patent-tier-guide article > span { width: 32px; height: 32px; flex: 0 0 auto; display: grid; place-items: center; color: #5e5b77; background: #e9e7f3; font-size: 10px; font-weight: 700; }
+.patent-tier-guide strong { display: block; margin: 2px 0 5px; color: var(--ink); font-size: 11px; }
 .literature-heading { margin-bottom: 0; }
 .literature-toggle { min-width: 190px; padding: 13px 16px; display: flex; justify-content: space-between; align-items: center; gap: 26px; border: 1px solid #516176; color: #d6dee7; background: transparent; cursor: pointer; font-size: 12px; }
 .literature-toggle:hover { border-color: #8dd3cc; color: #8dd3cc; }
@@ -187,6 +204,7 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .record-details { margin: 18px -19px -19px; padding: 19px; }
   .record-sources { grid-template-columns: 1fr; }
   .evidence-grid { grid-template-columns: 1fr 1fr; }
+  .patent-tier-guide { grid-template-columns: 1fr; }
   .literature-toggle { width: 100%; margin-top: 22px; }
   .literature-list a { grid-template-columns: 34px 1fr 30px; }
   .literature-list small, .literature-list em { display: none; }
@@ -199,6 +217,7 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .record-title-row { display: block; }
   .compare-toggle { margin-top: 12px; }
+  .design-guide dl > div, .experiment-panel dl > div { grid-template-columns: 1fr; gap: 4px; }
   .evidence-grid { grid-template-columns: 1fr; }
 }
 

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
+import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
 
 type DatabaseRecord = Residue & { id: string; categoryId: string; category: string };
 type Insight = { takeaway: string; caution: string };
@@ -129,11 +130,14 @@ export default function Home() {
   const clearFilters = () => { setQuery(""); setCategory("all"); setEvidence("all"); setProperty("all"); };
 
   const downloadCsv = () => {
-    const header = ["中文名", "英文名", "类别", "性质变化", "证据说明", "证据等级", "论文", "链接"];
-    const rows = allRecords.map((record) => [record.name, record.english, record.category, record.effect, record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, record.paper, record.href]);
+    const header = ["中文名", "英文名", "类别", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "比较方式", "实验终点", "实验结果", "实验体系", "制剂或证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
+    const rows = allRecords.map((record) => {
+      const design = getDesignGuide(record); const experiment = experimentData[record.english]; const patentTier = patentTierByEnglish[record.english];
+      return [record.name, record.english, record.category, record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
+    });
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-1.csv"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-2.csv"; link.click(); URL.revokeObjectURL(url);
   };
 
   return (
@@ -148,7 +152,7 @@ export default function Home() {
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V2.1</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
+          <div className="version-line"><span>数据库版本 V2.2</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
           <div><strong>{allRecords.length}</strong><span>候选残基与策略</span></div><div><strong>{groups.length}</strong><span>化学与骨架类别</span></div>
@@ -169,14 +173,18 @@ export default function Home() {
 
         {filtered.length ? <div className="record-grid">{filtered.map((record) => {
           const meta = evidenceMeta[record.level]; const insight = insights[record.english]; const isOpen = openRecords.includes(record.id); const isSelected = selected.includes(record.id);
+          const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record);
           return <article className={`record-card ${isOpen ? "open" : ""}`} key={record.id}>
-            <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={meta.description}>{meta.code}｜{meta.label}</span><span className="record-category">{record.category}</span></div>
+            <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.category}</span></div>
             <div className="record-title-row"><div><h3>{record.name}</h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
             <p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p>
             <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}</div>
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
+              <div><h4>这条证据支持什么</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
+              <div className="design-guide"><h4>怎样用于残基扫描</h4><dl><div><dt>优先替换</dt><dd>{design.replace}</dd></div><div><dt>主要目标</dt><dd>{design.goal}</dd></div><div><dt>不建议</dt><dd>{design.avoid}</dd></div></dl></div>
+              <div className="experiment-panel"><h4>结构化实验结果</h4>{experiment ? <dl><div><dt>比较方式</dt><dd>{experiment.comparison}</dd></div><div><dt>实验终点</dt><dd>{experiment.endpoint}</dd></div><div><dt>结果</dt><dd><strong>{experiment.result}</strong></dd></div><div><dt>体系</dt><dd>{experiment.system}</dd></div><div><dt>制剂／边界</dt><dd>{experiment.formulation}</dd></div></dl> : <p className="no-metric">原始来源未报告可归属于该单个残基的定量数据。当前条目用于候选生成，不能据此判断替换后的数值变化。</p>}</div>
               <div><h4>为什么可能有用</h4><p>{record.effect}</p></div><div><h4>原始来源记录了什么</h4><p>{record.evidence}</p></div>
               <div className="caution-box"><h4>设计时要注意</h4><p>{insight?.caution ?? "具体效果取决于替换位置、环尺寸、整体构象和实验体系，建议保留母体对照。"}</p></div>
               <div className="record-sources"><a href={record.href} target="_blank" rel="noreferrer"><span>{meta.code}级来源</span><strong>{record.paper}</strong><small>打开原始来源 ↗</small></a>{record.secondary && <a href={record.secondary.href} target="_blank" rel="noreferrer"><span>补充来源</span><strong>{record.secondary.paper}</strong><small>打开补充来源 ↗</small></a>}</div>
@@ -189,13 +197,14 @@ export default function Home() {
         <div className="section-heading light"><div><p className="eyebrow">SIDE-BY-SIDE REVIEW</p><h2 id="compare-title">残基比较</h2></div><p>{selected.length === 0 ? "在数据库卡片中选择2—3项，即可比较设计定位与证据边界。" : `已选择 ${selected.length}/3 项`}</p></div>
         {selectedRecords.length ? <div className="comparison-table-wrap"><table className="comparison-table"><thead><tr><th>比较项目</th>{selectedRecords.map((record) => <th key={record.id}>{record.name}<small>{record.english}</small></th>)}</tr></thead><tbody>
           <tr><th>类别</th>{selectedRecords.map((record) => <td key={record.id}>{record.category}</td>)}</tr><tr><th>证据</th>{selectedRecords.map((record) => <td key={record.id}><span className="mini-level">{evidenceMeta[record.level].code}</span>{evidenceMeta[record.level].label}</td>)}</tr>
-          <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
+          <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>优先替换</th>{selectedRecords.map((record) => <td key={record.id}>{getDesignGuide(record).replace}</td>)}</tr><tr><th>证据支持</th>{selectedRecords.map((record) => <td key={record.id}>{supportScope(record).join("、")}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
         </tbody></table><button className="clear-comparison" onClick={() => setSelected([])}>清空比较</button></div> : null}
       </section>
 
       <section className="evidence-section" id="evidence-guide" aria-labelledby="evidence-title">
         <div className="section-heading"><div><p className="eyebrow">EVIDENCE FRAMEWORK</p><h2 id="evidence-title">证据怎么读</h2></div><p>等级代表结论与“单个残基”的距离，不是对论文质量的简单打分。</p></div>
         <div className="evidence-grid">{(["直接证据", "骨架证据", "临床骨架", "专利证据"] as EvidenceLevel[]).map((level) => { const meta = evidenceMeta[level]; return <article key={level}><span>{meta.code}</span><h3>{meta.label}</h3><p>{meta.description}</p></article>; })}</div>
+        <div className="patent-tier-guide"><div><h3>专利证据再分三级</h3><p>避免把“做过具体化合物”和“只写进权利要求”视为同一种证据。</p></div>{Object.entries(patentTierMeta).map(([code, item]) => <article key={code}><span>{code}</span><div><strong>{item.label}</strong><p>{item.description}</p></div></article>)}</div>
       </section>
 
       <section className="literature-section" id="literature" aria-labelledby="literature-title">
@@ -203,7 +212,7 @@ export default function Home() {
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.1 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.2 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
     </main>
   );
 }
