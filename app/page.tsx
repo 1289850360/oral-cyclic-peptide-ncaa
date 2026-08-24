@@ -69,6 +69,7 @@ export default function Home() {
   const [property, setProperty] = useState("all");
   const [openRecords, setOpenRecords] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
+  const [literatureOpen, setLiteratureOpen] = useState(false);
 
   const papers = useMemo(() => {
     const sourceMap = new Map<string, { paper: string; href: string; level: EvidenceLevel; residue: string }>();
@@ -90,6 +91,16 @@ export default function Home() {
         && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)));
     });
   }, [query, category, evidence, property]);
+
+  const literatureSources = useMemo(() => [
+    ...papers,
+    ...modernCyclosporineSources.map((source) => ({
+      paper: source.paper,
+      href: source.href,
+      level: "临床骨架" as EvidenceLevel,
+      residue: "环孢素整体机制",
+    })),
+  ], [papers]);
 
   const selectedRecords = selected.map((id) => allRecords.find((record) => record.id === id)).filter((record): record is DatabaseRecord => Boolean(record));
   const toggleDetails = (id: string) => setOpenRecords((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
@@ -116,12 +127,11 @@ export default function Home() {
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <p className="lede">为课题组早期设计与位置扫描提供可追溯的候选信息。这里区分“残基本身的直接证据”和“成功骨架中的组成证据”，不把相关性写成因果关系。</p>
           <div className="version-line"><span>数据库版本 V2.0</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
           <div><strong>{allRecords.length}</strong><span>候选残基与策略</span></div><div><strong>{groups.length}</strong><span>化学与骨架类别</span></div>
-          <div><strong>{papers.length + modernCyclosporineSources.length}</strong><span>论文及专利来源</span></div><div><strong>{allRecords.filter((item) => evidenceMeta[item.level].code === "A").length}</strong><span>A级直接证据</span></div>
+          <div><strong>{literatureSources.length}</strong><span>论文及专利来源</span></div><div><strong>{allRecords.filter((item) => evidenceMeta[item.level].code === "A").length}</strong><span>A级直接证据</span></div>
         </div>
       </section>
 
@@ -159,18 +169,17 @@ export default function Home() {
         {selectedRecords.length ? <div className="comparison-table-wrap"><table className="comparison-table"><thead><tr><th>比较项目</th>{selectedRecords.map((record) => <th key={record.id}>{record.name}<small>{record.english}</small></th>)}</tr></thead><tbody>
           <tr><th>类别</th>{selectedRecords.map((record) => <td key={record.id}>{record.category}</td>)}</tr><tr><th>证据</th>{selectedRecords.map((record) => <td key={record.id}><span className="mini-level">{evidenceMeta[record.level].code}</span>{evidenceMeta[record.level].label}</td>)}</tr>
           <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
-        </tbody></table><button className="clear-comparison" onClick={() => setSelected([])}>清空比较</button></div> : <div className="comparison-placeholder"><span>01</span><p>先从目标性质出发筛选，再选择候选进行比较。不要只按“是否提高渗透性”做单一判断。</p></div>}
+        </tbody></table><button className="clear-comparison" onClick={() => setSelected([])}>清空比较</button></div> : null}
       </section>
 
       <section className="evidence-section" id="evidence-guide" aria-labelledby="evidence-title">
         <div className="section-heading"><div><p className="eyebrow">EVIDENCE FRAMEWORK</p><h2 id="evidence-title">证据怎么读</h2></div><p>等级代表结论与“单个残基”的距离，不是对论文质量的简单打分。</p></div>
         <div className="evidence-grid">{(["直接证据", "骨架证据", "临床骨架", "专利证据"] as EvidenceLevel[]).map((level) => { const meta = evidenceMeta[level]; return <article key={level}><span>{meta.code}</span><h3>{meta.label}</h3><p>{meta.description}</p></article>; })}</div>
-        <div className="old-paper-note"><strong>为什么数据库仍保留1985年的论文？</strong><p>经典论文可用于确认环孢素的残基组成、构象和早期构效关系，但不会被当作现代单点渗透性实验。数据库另外补入2018—2025年的研究，用来支持环孢素整体的构象柔性与膜渗透机制。</p><div>{modernCyclosporineSources.map((source) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}>{source.paper}<small>{source.note}</small></a>)}</div></div>
       </section>
 
       <section className="literature-section" id="literature" aria-labelledby="literature-title">
-        <div className="section-heading light"><div><p className="eyebrow">PAPERS · PATENTS · PROVENANCE</p><h2 id="literature-title">文献与专利库</h2></div><p>每条记录链接原始论文、PubMed、DOI或Google Patents，便于继续核对实验条件。</p></div>
-        <div className="literature-list">{papers.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>
+        <div className="section-heading light literature-heading"><div><p className="eyebrow">PAPERS · PATENTS · PROVENANCE</p><h2 id="literature-title">文献与专利库</h2></div><button className="literature-toggle" onClick={() => setLiteratureOpen((current) => !current)} aria-expanded={literatureOpen} aria-controls="literature-list"><span>{literatureOpen ? "收起文献" : `展开文献（${literatureSources.length}）`}</span><b>{literatureOpen ? "−" : "+"}</b></button></div>
+        {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
       <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.0 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
