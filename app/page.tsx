@@ -202,9 +202,27 @@ export default function Home() {
       </section>
 
       <section className="evidence-section" id="evidence-guide" aria-labelledby="evidence-title">
-        <div className="section-heading"><div><p className="eyebrow">EVIDENCE FRAMEWORK</p><h2 id="evidence-title">证据怎么读</h2></div><p>等级代表结论与“单个残基”的距离，不是对论文质量的简单打分。</p></div>
-        <div className="evidence-grid">{(["直接证据", "骨架证据", "临床骨架", "专利证据"] as EvidenceLevel[]).map((level) => { const meta = evidenceMeta[level]; return <article key={level}><span>{meta.code}</span><h3>{meta.label}</h3><p>{meta.description}</p></article>; })}</div>
-        <div className="patent-tier-guide"><div><h3>专利证据再分三级</h3><p>避免把“做过具体化合物”和“只写进权利要求”视为同一种证据。</p></div>{Object.entries(patentTierMeta).map(([code, item]) => <article key={code}><span>{code}</span><div><strong>{item.label}</strong><p>{item.description}</p></div></article>)}</div>
+        <div className="section-heading evidence-heading"><div><p className="eyebrow">ABOUT THE SOURCES</p><h2 id="evidence-title">资料来源说明</h2></div></div>
+        <div className="source-note">
+          <div className="source-note-intro">
+            <h3>我们主要看两件事</h3>
+            <p>一是有没有在同一个环肽骨架上做替换对照，二是论文中的结果能不能归到这个残基本身。网页里的证据标记只是帮助区分这两点，不是给论文质量打分。</p>
+          </div>
+          <div className="source-note-list">
+            <article>
+              <h3>有同骨架对照</h3>
+              <p>这类数据最适合判断某个替换对渗透性、稳定性或口服暴露产生了什么影响，因此会优先列出具体实验结果。</p>
+            </article>
+            <article>
+              <h3>来自完整分子</h3>
+              <p>如果一个残基只出现在高渗透环肽、天然产物或口服药物中，它可以作为候选参考，但不能把整个分子的表现归因于这一处残基。</p>
+            </article>
+            <article>
+              <h3>来自专利</h3>
+              <p>专利主要用来补充论文里较少见的候选。已经合成并给出实验数据的实例，参考价值高于只出现在结构范围或权利要求中的残基。</p>
+            </article>
+          </div>
+        </div>
       </section>
 
       <section className="literature-section" id="literature" aria-labelledby="literature-title">
