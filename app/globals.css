@@ -144,18 +144,16 @@ h1 em { color: var(--teal); font-style: normal; }
 .comparison-table td { color: #c4ced9; }
 .mini-level { width: 24px; height: 24px; margin-right: 8px; display: inline-grid; place-items: center; border-radius: 50%; color: var(--ink); background: #8dd3cc; font-weight: 700; }
 .clear-comparison { margin-top: 14px; padding: 9px 13px; border: 1px solid #516176; color: #c4ced9; background: transparent; cursor: pointer; }
-.evidence-grid { max-width: 1450px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
-.evidence-grid article { min-height: 205px; padding: 23px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.evidence-grid article > span { color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 30px; }
-.evidence-grid h3 { margin: 25px 0 9px; font-size: 15px; }
-.evidence-grid p { margin-bottom: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
-.patent-tier-guide { max-width: 1450px; margin: 22px auto 0; padding: 24px; display: grid; grid-template-columns: 1.15fr repeat(3, 1fr); gap: 12px; border: 1px solid var(--line); background: #fbfaf6; }
-.patent-tier-guide > div { padding-right: 18px; }
-.patent-tier-guide h3 { margin-bottom: 8px; font-size: 17px; }
-.patent-tier-guide p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.7; }
-.patent-tier-guide article { padding: 14px; display: flex; gap: 12px; border: 1px solid #ded9e9; background: white; }
-.patent-tier-guide article > span { width: 32px; height: 32px; flex: 0 0 auto; display: grid; place-items: center; color: #5e5b77; background: #e9e7f3; font-size: 10px; font-weight: 700; }
-.patent-tier-guide strong { display: block; margin: 2px 0 5px; color: var(--ink); font-size: 11px; }
+.evidence-heading { margin-bottom: 24px; }
+.source-note { max-width: 1450px; margin: 0 auto; display: grid; grid-template-columns: minmax(250px, .8fr) minmax(0, 2.2fr); border-top: 1px solid var(--ink); border-bottom: 1px solid var(--line); }
+.source-note-intro { padding: 28px 42px 28px 0; }
+.source-note-intro h3 { margin-bottom: 12px; font-family: "Noto Serif SC", serif; font-size: 22px; font-weight: 500; }
+.source-note-intro p { max-width: 390px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.source-note-list { display: grid; grid-template-columns: repeat(3, 1fr); border-left: 1px solid var(--line); }
+.source-note-list article { min-height: 178px; padding: 29px 27px; border-right: 1px solid var(--line); }
+.source-note-list article:last-child { border-right: 0; }
+.source-note-list h3 { margin-bottom: 12px; font-size: 14px; }
+.source-note-list p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.85; }
 .literature-heading { margin-bottom: 0; }
 .literature-toggle { min-width: 190px; padding: 13px 16px; display: flex; justify-content: space-between; align-items: center; gap: 26px; border: 1px solid #516176; color: #d6dee7; background: transparent; cursor: pointer; font-size: 12px; }
 .literature-toggle:hover { border-color: #8dd3cc; color: #8dd3cc; }
@@ -203,8 +201,9 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .record-card { padding: 19px; }
   .record-details { margin: 18px -19px -19px; padding: 19px; }
   .record-sources { grid-template-columns: 1fr; }
-  .evidence-grid { grid-template-columns: 1fr 1fr; }
-  .patent-tier-guide { grid-template-columns: 1fr; }
+  .source-note { grid-template-columns: 1fr; }
+  .source-note-intro { padding: 24px 0; }
+  .source-note-list { border-top: 1px solid var(--line); border-left: 0; }
   .literature-toggle { width: 100%; margin-top: 22px; }
   .literature-list a { grid-template-columns: 34px 1fr 30px; }
   .literature-list small, .literature-list em { display: none; }
@@ -218,7 +217,9 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .record-title-row { display: block; }
   .compare-toggle { margin-top: 12px; }
   .design-guide dl > div, .experiment-panel dl > div { grid-template-columns: 1fr; gap: 4px; }
-  .evidence-grid { grid-template-columns: 1fr; }
+  .source-note-list { grid-template-columns: 1fr; }
+  .source-note-list article { min-height: auto; padding: 22px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+  .source-note-list article:last-child { border-bottom: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
