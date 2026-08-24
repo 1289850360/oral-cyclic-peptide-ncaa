@@ -2,19 +2,20 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://1289850360.github.io/oral-cyclic-peptide-ncaa/"),
   title: "口服环肽非天然氨基酸证据库",
-  description: "按作用与证据整理适用于口服环肽研发的非天然氨基酸，并链接代表性原始研究论文。",
+  description: "面向口服环肽研发的非天然残基证据数据库，支持按性质、类别与证据等级检索、比较并追溯原始论文和专利。",
   openGraph: {
     title: "口服环肽非天然氨基酸证据库",
-    description: "结构改造、性质作用与原始论文依据。",
+    description: "可检索、可比较、证据分级明确的口服环肽非天然残基数据库。",
     type: "website",
-    images: [{ url: "/og.png", width: 1200, height: 630, alt: "口服环肽非天然氨基酸证据库" }],
+    images: [{ url: "https://1289850360.github.io/oral-cyclic-peptide-ncaa/og.png", width: 1200, height: 630, alt: "口服环肽非天然氨基酸证据库" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "口服环肽非天然氨基酸证据库",
-    description: "结构改造、性质作用与原始论文依据。",
-    images: ["/og.png"],
+    description: "可检索、可比较、证据分级明确的口服环肽非天然残基数据库。",
+    images: ["https://1289850360.github.io/oral-cyclic-peptide-ncaa/og.png"],
   },
   icons: {
     icon: "/favicon.svg",
