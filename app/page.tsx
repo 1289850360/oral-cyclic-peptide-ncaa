@@ -20,6 +20,8 @@ const insights: Record<string, Insight> = {
   "N-Me-Ile": { takeaway: "与N-Me-Leu相近，但支链几何不同，适合用于疏水口袋和局部构象的配对扫描。", caution: "它能支持高渗透骨架，但并不保证在所有序列中都优于N-Me-Leu。" },
   "N-Me-Ala / D-N-Me-Ala": { takeaway: "适合希望屏蔽一个主链NH、又不想明显增加分子脂溶性和侧链体积的设计。", caution: "小侧链可能重排整个大环构象，替换时需要同步观察活性、溶解度和构象。" },
   "N-Me-Thr": { takeaway: "它保留羟基带来的亲水性，同时减少一个主链供氢位点，常用于寻找溶解度与渗透性的折中。", caution: "侧链羟基仍会增加极性，因此它通常不是追求最大膜分配时的首选。" },
+  "N-Me-Ser": { takeaway: "适合希望保留小型羟基侧链、同时屏蔽一个主链NH的位置；它更偏向溶解度与中等渗透性的折中。", caution: "同骨架 Papp 只有 N-Me-Thr 的约三分之一，不应把所有含羟基的 N-甲基残基视为等效。" },
+  "N-Me-Asp": { takeaway: "更适合作为酸性、增溶或极性边界对照，而不是作为常规增渗残基。", caution: "酸性侧链电离后会显著增加去溶剂化代价；同骨架直接数据提示被动渗透性较低。" },
   "N-Me-Tyr": { takeaway: "芳环可提供疏水锚点，酚羟基又保留一定结合能力，适合芳香位点的渗透性优化。", caution: "目前更接近成功骨架中的组成证据，缺少能隔离其单点贡献的实验。" },
   "N-Me-D-Trp": { takeaway: "适合需要反向转角和芳香疏水锚点的位置，可同时降低主链供氢能力并增强抗酶解性。", caution: "吲哚NH仍是氢键供体，而且体积较大，可能造成溶解度或靶点空间冲突。" },
   "N-Me-Lys": { takeaway: "更适合必须保留碱性侧链或衍生化把手的位点，而不是作为普适增渗残基使用。", caution: "若赖氨酸侧链正电荷暴露，水溶性会提高，但被动膜渗透性往往受到不利影响。" },
@@ -29,6 +31,9 @@ const insights: Record<string, Insight> = {
   "D-Pro": { takeaway: "是经典的转角控制单元，适合在β-turn位置减少构象自由度并提高蛋白酶稳定性。", caution: "它对渗透性的帮助主要来自整体折叠和极性遮蔽，不是简单的疏水性增加。" },
   "D-Ala": { takeaway: "体积小、构型反转明显，适合在不增加侧链负担的情况下重塑转角和蛋白酶识别。", caution: "高渗透实例通常还依赖邻位N-甲基化，因此不应把D-Ala视为独立增渗开关。" },
   "D-Val": { takeaway: "适合同时需要疏水支链和D-构型转角控制的位置，可与D-Pro或N-Me-D-Leu组合扫描。", caution: "现有证据主要来自组合骨架及专利，单点替换的因果证据仍有限。" },
+  "D-Leu": { takeaway: "可在保持亮氨酸疏水体积的同时反转侧链朝向，适合做构象和抗酶解位置扫描。", caution: "直接实验只显示适度渗透性改善，效果主要取决于替换位置和整体折叠。" },
+  "D-Ile": { takeaway: "适合在疏水位保留异亮氨酸体积、同时用 D-构型重排转角和增强抗酶解性。", caution: "目前证据来自完整膜穿透序列，不能据此认定 D-Ile 比 L-Ile 更易透膜。" },
+  "D-Phe": { takeaway: "适合芳香位的立体化学扫描：保留疏水和 π 相互作用，同时改变芳环朝向与蛋白酶识别。", caution: "芳香疏水面积增加可能牺牲水溶性，而且专利没有提供单点因果对照。" },
   "Aib · α-aminoisobutyric acid": { takeaway: "对于仍较柔性的环肽，Aib值得优先尝试；它可促进预组织和分子内氢键，而不必大量增脂。", caution: "已经高度预组织的骨架可能没有收益，甚至因构象被过度固定而损失活性。" },
   "Sta · (3S,4S)-4-amino-3-hydroxy-6-methylheptanoic acid": { takeaway: "当渗透性、溶解度和代谢稳定性需要一起优化时，statine提供了少见的多性质平衡机会。", caution: "它会延长主链并引入羟基，可能明显改变靶点结合几何，不适合仅按侧链等排替换理解。" },
   "β-homoproline · β-HPro": { takeaway: "适合小环肽的转角位，可在保留脯氨酸式约束的同时改变环尺寸和局部结合几何。", caution: "18.4%口服生物利用度属于优化后完整分子结果，仍需对具体替换位点进行对照。" },
@@ -36,6 +41,22 @@ const insights: Record<string, Insight> = {
   "(1S,2S)-2-ACHC · β²": { takeaway: "六元环提供更强的疏水体积和转角约束，可用于稳定局部β折叠或γ-turn。", caution: "渗透性和口服吸收仍属于待验证性质，目前更适合作为构象与稳定性模块。" },
   "NLeu peptoid · N-isobutylglycine": { takeaway: "它模拟亮氨酸疏水侧链，却把侧链移到酰胺氮上，是减少骨架NH并扩展化学空间的实用方案。", caution: "peptoid的局部构象与普通α-氨基酸不同，立体异构和放置位置仍会显著影响渗透性。" },
   "Pye · N,N-pyrrolidinylglutamine": { takeaway: "适合不想继续增加脂溶性时使用：Pye可通过侧链—主链氢键同时改善水溶性和膜渗透。", caution: "作用依赖侧链能否准确接近暴露的骨架NH，因此位置和大环构象比残基数量更重要。" },
+  "trans-4-F-Pro · (2S,4S)-4-fluoroproline": { takeaway: "可把它和 Pro 成对扫描，用氟的立体电子效应微调环折叠、肽键构象和代谢稳定性。", caution: "专利证明了实际合成使用，但没有证明 4-F-Pro 单独提高膜渗透或口服暴露。" },
+  "4-AmPhe · 4-(aminomethyl)-L-phenylalanine": { takeaway: "适合同时需要芳香结合面和侧链桥连把手的位置，完成交联后更有可能体现构象优势。", caution: "未交联的伯胺容易质子化，会增加去溶剂化代价并降低被动扩散。" },
+  "Aze · azetidine-2-carboxylic acid": { takeaway: "是 Pro 的小环替代物，适合在空间紧凑的转角位比较不同环尺寸带来的构象变化。", caution: "目前属于专利候选位点，公开资料没有给出 Aze 的独立渗透性或口服药代数据。" },
+  "Nva · norvaline": { takeaway: "适合作为 Val、Leu 的直链侧链对照，在不大幅增加体积时微调疏水堆积。", caution: "它不屏蔽主链NH；专利入选主要支持化学空间，而不是普适增渗结论。" },
+  "Tle / Tbg · tert-leucine / tert-butylglycine": { takeaway: "适合需要大位阻、疏水占位和代谢屏蔽的位置，常与 Val、Ile、Leu 做小型系列。", caution: "叔丁基会明显推高疏水性，可能带来溶解度下降和非特异结合。" },
+  "Cha · cyclohexylalanine": { takeaway: "适合较大的疏水口袋或需要扩大非芳香疏水表面的位点。", caution: "Cha 很容易把分子推向过度疏水；应同步测溶解度、血浆蛋白结合和聚集倾向。" },
+  "Pal · pyridylalanine": { takeaway: "可用来替代部分 Phe 位点：保留芳香表面，同时增加一个可用于结合或调节溶解度的杂环氮。", caution: "论文支持它存在于活性且可渗透的候选骨架中，但没有拆分出 Pal 对口服暴露的单独贡献。" },
+  "O-Me-Tyr · O-methyl-L-tyrosine": { takeaway: "适合需要保留芳香侧链、但希望去掉酚羟基供氢能力的位置。", caution: "当前最强证据来自 enlicitide 完整临床骨架；增渗作用不能与多重交联及口服制剂分开解释。" },
+  "5-F-Trp · 5-fluoro-L-tryptophan": { takeaway: "适合在保留 Trp 芳香锚定的前提下微调电子性质、代谢位点和结合几何。", caution: "氟化不等于必然增渗；公开证据主要证明其可兼容成功的口服大环骨架。" },
+  "2-Me-Pro · 2-methyl-L-proline": { takeaway: "是较强的转角锁定单元，适合希望同时去除主链供氢并进一步压缩构象空间的位置。", caution: "约束过强可能把骨架锁在非活性构象；应与 Pro 和 Aib 做成对位置扫描。" },
+  "AmPhe · 3-(aminomethyl)-L-phenylalanine": { takeaway: "适合需要芳香结合面并计划在同一位置引入侧链桥连的设计。", caution: "游离氨基会增加亲水性和潜在电荷，优势通常只有在完成内酰胺或其他交联后才体现。" },
+  "CMO-Pro · (3S)-3-(carboxymethoxy)-L-proline": { takeaway: "把脯氨酸式构象限制与一个可交联、可增溶的极性侧链合并在一起。", caution: "羧酸若暴露且电离，可能降低被动渗透；更适合作为整体交联网络的一部分使用。" },
+  "D-Dap(tail) · side-chain-acylated D-2,3-diaminopropionic acid": { takeaway: "适合用作短小的侧链连接把手，把增溶尾部放到大环的溶剂暴露面。", caution: "季铵盐尾部提高溶解度但不利于被动扩散，属于核心、尾部和制剂协同设计，不是单残基增渗策略。" },
+  "3-Cl-Phe · 3-chloro-L-phenylalanine": { takeaway: "可在 Phe 芳香位上小幅增加疏水性并封堵代谢位点，适合与 Phe、F-Phe 做梯度扫描。", caution: "卤代带来的活性改善可能主要来自靶点结合；继续增加卤素也可能快速损害溶解度。" },
+  "4-CF₃-Hph · 4-(trifluoromethyl)-homophenylalanine": { takeaway: "适合需要更深疏水口袋占位的位点，可同时改变芳环距离、脂溶性和代谢稳定性。", caution: "这是强疏水改造，且 LUNA18 系列中的收益包含诱导契合，不能只按增渗解释。" },
+  "Ac5c · 1-aminocyclopentane-1-carboxylic acid": { takeaway: "适合用环状 α,α-二取代来锁定主链，而不依赖 N-甲基化去实现构象预组织。", caution: "Ac5c 的主链 NH 仍然存在；如果暴露在溶剂中，刚化并不会自动降低有效极性。" },
   "(4R)-4-[(E)-2-butenyl]-4,N-dimethyl-L-threonine": { takeaway: "MeBmt可作为环孢素式疏水锚定和环境响应折叠的天然产物参考单元。", caution: "证据来自完整环孢素骨架；1985年研究支持结构和构效关系，不是现代单点渗透实验。" },
   "Abu · L-2-aminobutyric acid": { takeaway: "可把它看作比丙氨酸稍疏水、但仍较紧凑的微调单元，用于填补小型疏水空腔。", caution: "它不减少主链NH，且单独提高渗透性或稳定性的直接证据不足。" },
   "hydroxy-acid / depsipeptide substitution": { takeaway: "当某个暴露酰胺NH成为主要去溶剂化负担时，酰胺转酯可能比N-甲基化更有效。", caution: "酯键可能带来水解风险，必须同步评估胃肠、血浆和制剂条件下的化学稳定性。" },
@@ -112,7 +133,7 @@ export default function Home() {
     const rows = allRecords.map((record) => [record.name, record.english, record.category, record.effect, record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, record.paper, record.href]);
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2.csv"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-1.csv"; link.click(); URL.revokeObjectURL(url);
   };
 
   return (
@@ -127,7 +148,7 @@ export default function Home() {
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V2.0</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
+          <div className="version-line"><span>数据库版本 V2.1</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
           <div><strong>{allRecords.length}</strong><span>候选残基与策略</span></div><div><strong>{groups.length}</strong><span>化学与骨架类别</span></div>
@@ -156,7 +177,7 @@ export default function Home() {
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
-              <div><h4>为什么可能有用</h4><p>{record.effect}</p></div><div><h4>论文中观察到了什么</h4><p>{record.evidence}</p></div>
+              <div><h4>为什么可能有用</h4><p>{record.effect}</p></div><div><h4>原始来源记录了什么</h4><p>{record.evidence}</p></div>
               <div className="caution-box"><h4>设计时要注意</h4><p>{insight?.caution ?? "具体效果取决于替换位置、环尺寸、整体构象和实验体系，建议保留母体对照。"}</p></div>
               <div className="record-sources"><a href={record.href} target="_blank" rel="noreferrer"><span>{meta.code}级来源</span><strong>{record.paper}</strong><small>打开原始来源 ↗</small></a>{record.secondary && <a href={record.secondary.href} target="_blank" rel="noreferrer"><span>补充来源</span><strong>{record.secondary.paper}</strong><small>打开补充来源 ↗</small></a>}</div>
             </div>}
@@ -182,7 +203,7 @@ export default function Home() {
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.0 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.1 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
     </main>
   );
 }
