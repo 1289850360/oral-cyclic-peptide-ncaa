@@ -31,6 +31,13 @@ export const patentTierByEnglish: Record<string, PatentTier> = {
   "Nva · norvaline": "D3",
   "Tle / Tbg · tert-leucine / tert-butylglycine": "D3",
   "Cha · cyclohexylalanine": "D3",
+  "trans-4-F-Pro · (2S,4R)-4-fluoroproline": "D3",
+  "4-Hyp · trans-4-hydroxy-L-proline": "D3",
+  "Orn · L-ornithine": "D3",
+  "Dap · L-2,3-diaminopropionic acid": "D3",
+  "Hph · L-homophenylalanine": "D3",
+  "2-Nal · 2-naphthylalanine": "D3",
+  "5-F-Trp · 5-fluoro-L-tryptophan": "D3",
 };
 
 const specificGuides: Record<string, DesignGuide> = {
