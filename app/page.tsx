@@ -1,8 +1,9 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
 import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
+import { ccdEntryUrl, ccdImageUrl, structuresByEnglish } from "./structure-data";
 
 type DatabaseRecord = Residue & { id: string; categoryId: string; category: string };
 type Insight = { takeaway: string; caution: string };
@@ -62,6 +63,13 @@ const insights: Record<string, Insight> = {
   "Abu · L-2-aminobutyric acid": { takeaway: "可把它看作比丙氨酸稍疏水、但仍较紧凑的微调单元，用于填补小型疏水空腔。", caution: "它不减少主链NH，且单独提高渗透性或稳定性的直接证据不足。" },
   "hydroxy-acid / depsipeptide substitution": { takeaway: "当某个暴露酰胺NH成为主要去溶剂化负担时，酰胺转酯可能比N-甲基化更有效。", caution: "酯键可能带来水解风险，必须同步评估胃肠、血浆和制剂条件下的化学稳定性。" },
   "thioamide substitution": { takeaway: "适合希望同时提高局部脂溶性、渗透性和代谢稳定性的骨架改造，但应作为独立策略评估。", caution: "硫代酰胺会改变羰基几何、氢键和电子性质，可能影响靶点结合，不能只按疏水化处理。" },
+  "trans-4-F-Pro · (2S,4R)-4-fluoroproline": { takeaway: "反式 4-F-Pro 用于微调脯氨酸环构象及前一肽键平衡，适合与 Pro 和顺式异构体成组比较。", caution: "专利只支持其进入候选化学空间，尚不能说明它在任意位置都会提高渗透性。" },
+  "4-Hyp · trans-4-hydroxy-L-proline": { takeaway: "4-Hyp 保留 Pro 的环状约束，并加入一个可形成氢键的羟基，适合作为 4-F-Pro 的极性对照。", caution: "羟基若持续暴露会增加去溶剂化代价；需要结合整体折叠判断。" },
+  "Orn · L-ornithine": { takeaway: "Orn 比 Lys 少一个亚甲基，可用于碱性侧链长度扫描，也可作为侧链交联或衍生化把手。", caution: "未交联的侧链胺通常带正电，不宜直接归类为增渗残基。" },
+  "Dap · L-2,3-diaminopropionic acid": { takeaway: "Dap 以较短侧链提供反应性胺，适合构建内酰胺桥或连接增溶尾部。", caution: "其优势主要在完成交联或修饰之后；游离 Dap 会增加电荷和亲水性。" },
+  "Hph · L-homophenylalanine": { takeaway: "Hph 在 Phe 与芳环之间增加一个亚甲基，适合比较侧链长度、芳环可达范围和疏水口袋占位。", caution: "增加柔性和疏水面积可能同时损害构象预组织与水溶性。" },
+  "2-Nal · 2-naphthylalanine": { takeaway: "2-Nal 可明显扩大芳香疏水表面，适合较深疏水口袋中的 Phe→Nal 梯度扫描。", caution: "较大的芳香表面容易带来低溶解度、聚集和非特异结合。" },
+  "5-F-Trp · 5-fluoro-L-tryptophan": { takeaway: "5-F-Trp 保留 Trp 的芳香结合特征，并可通过氟取代微调电子性质和代谢稳定性。", caution: "它与经过 N-取代或交联的 5-F-Trp 构件不是同一种设计，证据需要分开解释。" },
 };
 
 const modernCyclosporineSources = [
@@ -83,6 +91,7 @@ const propertyFilters = [
 const allRecords: DatabaseRecord[] = groups.flatMap((group) => group.residues.map((residue, index) => ({ ...residue, id: `${group.id}-${index + 1}`, categoryId: group.id, category: group.title })));
 const effectParts = (effect: string) => effect.split("；").map((part) => part.trim()).filter(Boolean);
 const sourceYear = (paper: string) => paper.match(/(19|20)\d{2}/)?.[0] ?? "—";
+const PAGE_SIZE = 12;
 
 export default function Home() {
   const [query, setQuery] = useState("");
@@ -92,6 +101,8 @@ export default function Home() {
   const [openRecords, setOpenRecords] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
   const [literatureOpen, setLiteratureOpen] = useState(false);
+  const [structureOnly, setStructureOnly] = useState(false);
+  const [page, setPage] = useState(1);
 
   const papers = useMemo(() => {
     const sourceMap = new Map<string, { paper: string; href: string; level: EvidenceLevel; residue: string }>();
@@ -106,13 +117,21 @@ export default function Home() {
     const normalized = query.trim().toLowerCase();
     const propertyConfig = propertyFilters.find((item) => item.id === property);
     return allRecords.filter((record) => {
-      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper].join(" ").toLowerCase();
+      const structure = structuresByEnglish[record.english];
+      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, structure?.ccd, structure?.label].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
         && (category === "all" || record.categoryId === category)
         && (evidence === "all" || evidenceMeta[record.level].code === evidence)
-        && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)));
+        && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)))
+        && (!structureOnly || Boolean(structure));
     });
-  }, [query, category, evidence, property]);
+  }, [query, category, evidence, property, structureOnly]);
+
+  const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
+  const paginatedRecords = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+  useEffect(() => { setPage(1); }, [query, category, evidence, property, structureOnly]);
+  useEffect(() => { if (page > totalPages) setPage(totalPages); }, [page, totalPages]);
 
   const literatureSources = useMemo(() => [
     ...papers,
@@ -127,17 +146,18 @@ export default function Home() {
   const selectedRecords = selected.map((id) => allRecords.find((record) => record.id === id)).filter((record): record is DatabaseRecord => Boolean(record));
   const toggleDetails = (id: string) => setOpenRecords((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
   const toggleCompare = (id: string) => setSelected((current) => current.includes(id) ? current.filter((item) => item !== id) : current.length >= 3 ? current : [...current, id]);
-  const clearFilters = () => { setQuery(""); setCategory("all"); setEvidence("all"); setProperty("all"); };
+  const clearFilters = () => { setQuery(""); setCategory("all"); setEvidence("all"); setProperty("all"); setStructureOnly(false); };
 
   const downloadCsv = () => {
-    const header = ["中文名", "英文名", "类别", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "比较方式", "实验终点", "实验结果", "实验体系", "制剂或证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
+    const header = ["中文名", "英文名", "类别", "残基简介", "CCD编号", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "原始骨架与改造方式", "实验终点", "实验结果", "实验环境", "证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
     const rows = allRecords.map((record) => {
       const design = getDesignGuide(record); const experiment = experimentData[record.english]; const patentTier = patentTierByEnglish[record.english];
-      return [record.name, record.english, record.category, record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
+      const structure = structuresByEnglish[record.english];
+      return [record.name, record.english, record.category, insights[record.english]?.takeaway ?? effectParts(record.effect)[0], structure?.ccd ?? "—", record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "完整分子或候选集合；未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
     });
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-2.csv"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-3.csv"; link.click(); URL.revokeObjectURL(url);
   };
 
   return (
@@ -152,7 +172,7 @@ export default function Home() {
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V2.2</span><span>最后核对：2026-08-23</span><span>研究用途，非处方建议</span></div>
+          <div className="version-line"><span>数据库版本 V2.3</span><span>最后核对：2026-08-24</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
           <div><strong>{allRecords.length}</strong><span>候选残基与策略</span></div><div><strong>{groups.length}</strong><span>化学与骨架类别</span></div>
@@ -167,30 +187,35 @@ export default function Home() {
           <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}</select></label>
           <label><span>证据等级</span><select value={evidence} onChange={(event) => setEvidence(event.target.value)}><option value="all">全部等级</option><option value="A">A｜直接实验</option><option value="B">B｜完整骨架</option><option value="C">C｜临床／天然产物</option><option value="D">D｜专利</option></select></label>
           <label><span>目标性质</span><select value={property} onChange={(event) => setProperty(event.target.value)}>{propertyFilters.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label>
+          <label className="structure-filter"><span>结构信息</span><button className={structureOnly ? "active" : ""} onClick={() => setStructureOnly((current) => !current)}>{structureOnly ? "仅显示已核对 CCD" : "显示全部记录"}</button></label>
         </div>
         <div className="category-chips"><button className={category === "all" ? "active" : ""} onClick={() => setCategory("all")}>全部 {allRecords.length}</button>{groups.map((group) => <button className={category === group.id ? "active" : ""} onClick={() => setCategory(group.id)} key={group.id}>{group.title} {group.residues.length}</button>)}</div>
-        <div className="result-bar"><span>找到 <strong>{filtered.length}</strong> 条记录</span>{(query || category !== "all" || evidence !== "all" || property !== "all") && <button onClick={clearFilters}>清除筛选</button>}</div>
+        <div className="result-bar"><span>找到 <strong>{filtered.length}</strong> 条记录 · 第 {page}/{totalPages} 页</span>{(query || category !== "all" || evidence !== "all" || property !== "all" || structureOnly) && <button onClick={clearFilters}>清除筛选</button>}</div>
 
-        {filtered.length ? <div className="record-grid">{filtered.map((record) => {
+        {filtered.length ? <div className="record-grid">{paginatedRecords.map((record) => {
           const meta = evidenceMeta[record.level]; const insight = insights[record.english]; const isOpen = openRecords.includes(record.id); const isSelected = selected.includes(record.id);
-          const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record);
+          const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record); const structure = structuresByEnglish[record.english];
           return <article className={`record-card ${isOpen ? "open" : ""}`} key={record.id}>
             <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.category}</span></div>
             <div className="record-title-row"><div><h3>{record.name}</h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
-            <p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p>
+            <div className={`card-overview ${structure ? "with-structure" : ""}`}>
+              <div><span className="field-label">残基简介</span><p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p></div>
+              {structure && <a className="structure-preview" href={ccdEntryUrl(structure.ccd)} target="_blank" rel="noreferrer" title={`在 RCSB PDB 查看 CCD ${structure.ccd}`}><img src={ccdImageUrl(structure.ccd)} alt={`${record.name}二维结构`} /><span>CCD {structure.ccd} · 查看条目 ↗</span></a>}
+            </div>
             <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}</div>
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
               <div><h4>这条证据支持什么</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
               <div className="design-guide"><h4>怎样用于残基扫描</h4><dl><div><dt>优先替换</dt><dd>{design.replace}</dd></div><div><dt>主要目标</dt><dd>{design.goal}</dd></div><div><dt>不建议</dt><dd>{design.avoid}</dd></div></dl></div>
-              <div className="experiment-panel"><h4>结构化实验结果</h4>{experiment ? <dl><div><dt>比较方式</dt><dd>{experiment.comparison}</dd></div><div><dt>实验终点</dt><dd>{experiment.endpoint}</dd></div><div><dt>结果</dt><dd><strong>{experiment.result}</strong></dd></div><div><dt>体系</dt><dd>{experiment.system}</dd></div><div><dt>制剂／边界</dt><dd>{experiment.formulation}</dd></div></dl> : <p className="no-metric">原始来源未报告可归属于该单个残基的定量数据。当前条目用于候选生成，不能据此判断替换后的数值变化。</p>}</div>
+              <div className="experiment-panel"><h4>原始骨架与实验环境</h4>{experiment ? <dl><div><dt>骨架／改造</dt><dd>{experiment.comparison}</dd></div><div><dt>观察指标</dt><dd>{experiment.endpoint}</dd></div><div><dt>性质变化</dt><dd><strong>{experiment.result}</strong></dd></div><div><dt>实验环境</dt><dd>{experiment.system}</dd></div><div><dt>证据边界</dt><dd>{experiment.formulation}</dd></div></dl> : <p className="no-metric">来源给出了完整分子、候选集合或权利要求范围，但未公开可归属于该单个残基的定量替换对照。该条目用于扩展候选空间，不用于预测具体数值变化。</p>}</div>
               <div><h4>为什么可能有用</h4><p>{record.effect}</p></div><div><h4>原始来源记录了什么</h4><p>{record.evidence}</p></div>
               <div className="caution-box"><h4>设计时要注意</h4><p>{insight?.caution ?? "具体效果取决于替换位置、环尺寸、整体构象和实验体系，建议保留母体对照。"}</p></div>
               <div className="record-sources"><a href={record.href} target="_blank" rel="noreferrer"><span>{meta.code}级来源</span><strong>{record.paper}</strong><small>打开原始来源 ↗</small></a>{record.secondary && <a href={record.secondary.href} target="_blank" rel="noreferrer"><span>补充来源</span><strong>{record.secondary.paper}</strong><small>打开补充来源 ↗</small></a>}</div>
             </div>}
           </article>;
         })}</div> : <div className="empty-state"><strong>没有找到匹配记录</strong><p>可以减少筛选条件，或者尝试英文缩写和实验名称。</p><button onClick={clearFilters}>显示全部记录</button></div>}
+        {filtered.length > PAGE_SIZE && <nav className="pagination" aria-label="候选记录分页"><button onClick={() => setPage((current) => Math.max(1, current - 1))} disabled={page === 1}>上一页</button><div>{Array.from({ length: totalPages }, (_, index) => index + 1).map((number) => <button className={number === page ? "active" : ""} aria-current={number === page ? "page" : undefined} onClick={() => setPage(number)} key={number}>{number}</button>)}</div><button onClick={() => setPage((current) => Math.min(totalPages, current + 1))} disabled={page === totalPages}>下一页</button></nav>}
       </section>
 
       <section className="comparison-section" id="compare" aria-labelledby="compare-title">
@@ -205,8 +230,8 @@ export default function Home() {
         <div className="section-heading evidence-heading"><div><p className="eyebrow">ABOUT THE SOURCES</p><h2 id="evidence-title">资料来源说明</h2></div></div>
         <div className="source-note">
           <div className="source-note-intro">
-            <h3>我们主要看两件事</h3>
-            <p>一是有没有在同一个环肽骨架上做替换对照，二是论文中的结果能不能归到这个残基本身。网页里的证据标记只是帮助区分这两点，不是给论文质量打分。</p>
+            <h3>证据判断依据</h3>
+            <p>证据强度主要取决于两个方面：研究是否在相同环肽骨架上设置替换对照，以及观察到的性质变化能否归因于该残基本身。等级用于说明结论的适用范围，并非对论文质量进行评价。</p>
           </div>
           <div className="source-note-list">
             <article>
@@ -230,7 +255,7 @@ export default function Home() {
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.2 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.3 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
     </main>
   );
 }
