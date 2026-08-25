@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
 import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
-import { ccdEntryUrl, ccdImageUrl, structuresByEnglish } from "./structure-data";
+import { ccdEntryUrl, ccdImageUrl, getStructures, structureNotesByEnglish } from "./structure-data";
 
 type DatabaseRecord = Residue & { id: string; categoryId: string; category: string };
 type Insight = { takeaway: string; caution: string };
@@ -117,13 +117,13 @@ export default function Home() {
     const normalized = query.trim().toLowerCase();
     const propertyConfig = propertyFilters.find((item) => item.id === property);
     return allRecords.filter((record) => {
-      const structure = structuresByEnglish[record.english];
-      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, structure?.ccd, structure?.label].join(" ").toLowerCase();
+      const structures = getStructures(record.english);
+      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, ...structures.flatMap((item) => [item.ccd, item.label]), structureNotesByEnglish[record.english]].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
         && (category === "all" || record.categoryId === category)
         && (evidence === "all" || evidenceMeta[record.level].code === evidence)
         && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)))
-        && (!structureOnly || Boolean(structure));
+        && (!structureOnly || structures.length > 0);
     });
   }, [query, category, evidence, property, structureOnly]);
 
@@ -152,8 +152,8 @@ export default function Home() {
     const header = ["中文名", "英文名", "类别", "残基简介", "CCD编号", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "原始骨架与改造方式", "实验终点", "实验结果", "实验环境", "证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
     const rows = allRecords.map((record) => {
       const design = getDesignGuide(record); const experiment = experimentData[record.english]; const patentTier = patentTierByEnglish[record.english];
-      const structure = structuresByEnglish[record.english];
-      return [record.name, record.english, record.category, insights[record.english]?.takeaway ?? effectParts(record.effect)[0], structure?.ccd ?? "—", record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "完整分子或候选集合；未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
+      const structures = getStructures(record.english);
+      return [record.name, record.english, record.category, insights[record.english]?.takeaway ?? effectParts(record.effect)[0], structures.map((item) => item.ccd).join(" / ") || "—", record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "完整分子或候选集合；未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
     });
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
@@ -194,13 +194,13 @@ export default function Home() {
 
         {filtered.length ? <div className="record-grid">{paginatedRecords.map((record) => {
           const meta = evidenceMeta[record.level]; const insight = insights[record.english]; const isOpen = openRecords.includes(record.id); const isSelected = selected.includes(record.id);
-          const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record); const structure = structuresByEnglish[record.english];
+          const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record); const structures = getStructures(record.english); const structureNote = structureNotesByEnglish[record.english];
           return <article className={`record-card ${isOpen ? "open" : ""}`} key={record.id}>
             <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.category}</span></div>
             <div className="record-title-row"><div><h3>{record.name}</h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
-            <div className={`card-overview ${structure ? "with-structure" : ""}`}>
+            <div className="card-overview with-structure">
               <div><span className="field-label">残基简介</span><p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p></div>
-              {structure && <a className="structure-preview" href={ccdEntryUrl(structure.ccd)} target="_blank" rel="noreferrer" title={`在 RCSB PDB 查看 CCD ${structure.ccd}`}><img src={ccdImageUrl(structure.ccd)} alt={`${record.name}二维结构`} /><span>CCD {structure.ccd} · 查看条目 ↗</span></a>}
+              {structures.length > 0 ? <div className={`structure-stack ${structures.length > 1 ? "multiple" : ""}`}>{structures.map((structure) => <a className="structure-preview" href={ccdEntryUrl(structure.ccd)} target="_blank" rel="noreferrer" title={`在 RCSB PDB 查看 CCD ${structure.ccd}`} key={structure.ccd}><img src={ccdImageUrl(structure.ccd)} alt={`${structure.label}二维结构`} /><span>CCD {structure.ccd} · {structure.label} ↗</span></a>)}</div> : <div className="structure-unavailable"><strong>暂无唯一 CCD 结构</strong><p>{structureNote ?? "当前记录尚未找到可与名称和立体化学完全对应的 CCD 单体。"}</p></div>}
             </div>
             <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}</div>
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
