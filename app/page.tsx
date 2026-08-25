@@ -206,11 +206,11 @@ export default function Home() {
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
-              <div><h4>这条证据支持什么</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
-              <div className="design-guide"><h4>怎样用于残基扫描</h4><dl><div><dt>优先替换</dt><dd>{design.replace}</dd></div><div><dt>主要目标</dt><dd>{design.goal}</dd></div><div><dt>不建议</dt><dd>{design.avoid}</dd></div></dl></div>
+              <div><h4>证据支持范围</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
+              <div className="design-guide"><h4>残基扫描建议</h4><dl><div><dt>优先替换</dt><dd>{design.replace}</dd></div><div><dt>主要目标</dt><dd>{design.goal}</dd></div><div><dt>限制条件</dt><dd>{design.avoid}</dd></div></dl></div>
               <div className="experiment-panel"><h4>原始骨架与实验环境</h4>{experiment ? <dl><div><dt>骨架／改造</dt><dd>{experiment.comparison}</dd></div><div><dt>观察指标</dt><dd>{experiment.endpoint}</dd></div><div><dt>性质变化</dt><dd><strong>{experiment.result}</strong></dd></div><div><dt>实验环境</dt><dd>{experiment.system}</dd></div><div><dt>证据边界</dt><dd>{experiment.formulation}</dd></div></dl> : <p className="no-metric">来源给出了完整分子、候选集合或权利要求范围，但未公开可归属于该单个残基的定量替换对照。该条目用于扩展候选空间，不用于预测具体数值变化。</p>}</div>
-              <div><h4>为什么可能有用</h4><p>{record.effect}</p></div><div><h4>原始来源记录了什么</h4><p>{record.evidence}</p></div>
-              <div className="caution-box"><h4>设计时要注意</h4><p>{insight?.caution ?? "具体效果取决于替换位置、环尺寸、整体构象和实验体系，建议保留母体对照。"}</p></div>
+              <div><h4>预期性质影响</h4><p>{record.effect}</p></div><div><h4>原始来源结论</h4><p>{record.evidence}</p></div>
+              <div className="caution-box"><h4>设计限制</h4><p>{insight?.caution ?? "具体效果取决于替换位置、环尺寸、整体构象和实验体系，建议保留母体对照。"}</p></div>
               <div className="record-sources"><a href={record.href} target="_blank" rel="noreferrer"><span>{meta.code}级来源</span><strong>{record.paper}</strong><small>打开原始来源 ↗</small></a>{record.secondary && <a href={record.secondary.href} target="_blank" rel="noreferrer"><span>补充来源</span><strong>{record.secondary.paper}</strong><small>打开补充来源 ↗</small></a>}</div>
             </div>}
           </article>;
