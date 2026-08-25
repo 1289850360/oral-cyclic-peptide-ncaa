@@ -26,7 +26,7 @@ export const structuresByEnglish: Record<string, StructureRecord> = {
   "Sta · (3S,4S)-4-amino-3-hydroxy-6-methylheptanoic acid": { ccd: "STA", label: "statine" },
   "Aze · azetidine-2-carboxylic acid": { ccd: "02A", label: "L-azetidine-2-carboxylic acid" },
   "Nva · norvaline": { ccd: "NVA", label: "L-norvaline" },
-  "Cha · cyclohexylalanine": { ccd: "HAC", label: "L-cyclohexylalanine" },
+  "Cha · cyclohexylalanine": { ccd: "ALC", label: "L-cyclohexylalanine" },
   "O-Me-Tyr · O-methyl-L-tyrosine": { ccd: "0A1", label: "O-methyl-L-tyrosine" },
   "(3S)-3-hydroxy-L-proline · 3-Hyp": { ccd: "HY3", label: "3-hydroxy-L-proline" },
   "3-Cl-Phe · 3-chloro-L-phenylalanine": { ccd: "FCL", label: "3-chloro-L-phenylalanine" },
