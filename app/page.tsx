@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
 import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
 import { ccdEntryUrl, ccdImageUrl, getStructures, structureNotesByEnglish } from "./structure-data";
+import CcdCatalog from "./ccd-catalog";
+import { legacyCatalogSeedSummary } from "./catalog-seed";
 
 type DatabaseRecord = Residue & { id: string; categoryId: string; category: string };
 type Insight = { takeaway: string; caution: string };
@@ -164,24 +166,26 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回页面顶部"><span className="brand-mark">CP</span><span>口服环肽残基证据库</span></a>
-        <nav className="main-nav" aria-label="页面导航"><a href="#database">数据库</a><a href="#compare">残基比较</a><a href="#evidence-guide">证据说明</a><a href="#literature">文献库</a></nav>
-        <button className="download-button" onClick={downloadCsv}>导出 CSV</button>
+        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#database">证据条目</a><a href="#compare">残基比较</a><a href="#manual-review">人工审核</a></nav>
+        <button className="download-button" onClick={downloadCsv}>导出证据 CSV</button>
       </header>
 
       <section className="dashboard-intro">
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V2.3</span><span>最后核对：2026-08-24</span><span>研究用途，非处方建议</span></div>
+          <div className="version-line"><span>数据库版本 V3.0</span><span>CCD快照：2026-08-26</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
-          <div><strong>{allRecords.length}</strong><span>候选残基与策略</span></div><div><strong>{groups.length}</strong><span>化学与骨架类别</span></div>
-          <div><strong>{literatureSources.length}</strong><span>论文及专利来源</span></div><div><strong>{allRecords.filter((item) => evidenceMeta[item.level].code === "A").length}</strong><span>A级直接证据</span></div>
+          <div><strong>1,687</strong><span>CCD结构确认核心</span></div><div><strong>{legacyCatalogSeedSummary.aminoAcidCores}</strong><span>已关联研发证据的氨基酸</span></div>
+          <div><strong>1,805</strong><span>待人工审核结构</span></div><div><strong>{literatureSources.length}</strong><span>论文及专利来源</span></div>
         </div>
       </section>
 
+      <CcdCatalog />
+
       <section className="database-section" id="database" aria-labelledby="database-title">
-        <div className="section-heading"><div><p className="eyebrow">SEARCH · FILTER · COMPARE</p><h2 id="database-title">候选数据库</h2></div><p>先按研发目标筛选，再打开条目查看实验边界。最多可选择3项并排比较。</p></div>
+        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">研发证据条目</h2></div><p>这部分是已经关联论文或专利的重点候选。先按研发目标筛选，再打开条目查看实验边界。</p></div>
         <div className="filter-panel">
           <label className="search-field"><span>搜索名称、缩写、作用或论文</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：N-Me-Leu、Pye、Caco-2、提高溶解度" /></label>
           <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}</select></label>
@@ -255,7 +259,7 @@ export default function Home() {
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 2.3 · Evidence-curated research database</span></div><p>用于候选生成与实验讨论。任何替换都应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.0 · CCD catalog + evidence layer</span></div><p>用于候选生成与实验讨论。结构名录中的性质标签是类别推断；具体替换仍应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
     </main>
   );
 }
