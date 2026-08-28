@@ -4,11 +4,17 @@ import { useEffect, useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
 import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
 import { ccdEntryUrl, ccdImageUrl, getStructures, structureNotesByEnglish } from "./structure-data";
-import CcdCatalog from "./ccd-catalog";
-import { legacyCatalogSeedSummary } from "./catalog-seed";
+import { masterRecords, type MasterRecord } from "./master-records";
+import SiteFooter from "./site-footer";
+import SiteHeader from "./site-header";
+import Link from "next/link";
+import { deepReviewRecords } from "./deep-review-data";
+import { allUnifiedRecords, reviewOnlyRecords } from "./unified-records";
 
-type DatabaseRecord = Residue & { id: string; categoryId: string; category: string };
+type DatabaseRecord = MasterRecord;
 type Insight = { takeaway: string; caution: string };
+type PortalView = "home" | "evidence" | "about";
+type HomeSearchTarget = "catalog" | "evidence";
 
 const evidenceMeta: Record<EvidenceLevel, { code: string; label: string; description: string }> = {
   "直接证据": { code: "A", label: "直接替换证据", description: "有同骨架对照、单点或明确位置替换，并报告渗透性、稳定性或口服暴露数据。" },
@@ -17,6 +23,13 @@ const evidenceMeta: Record<EvidenceLevel, { code: string; label: string; descrip
   "临床骨架": { code: "C", label: "临床／天然产物参照", description: "存在于环孢素等成功口服骨架中，主要说明设计可行性，不代表单点增渗。" },
   "专利证据": { code: "D", label: "专利设计证据", description: "专利中提出或使用的设计，公开实验细节可能有限，仍需论文或内部实验复核。" },
 };
+
+const reviewGradeMeta = {
+  A: { label: "环肽直接使用", category: "环肽应用记录", description: "有直接环肽或宏环使用证据。" },
+  B: { label: "肽中使用", category: "肽中使用候选", description: "确认进入过肽，但尚无直接环肽证据。" },
+  C: { label: "特殊构件", category: "特殊构件", description: "只适合连接、末端修饰或其他受限情境。" },
+  EXCLUDE: { label: "不可作为独立单体", category: "排除记录", description: "深审后确认不应作为普通氨基酸单体使用。" },
+} as const;
 
 const insights: Record<string, Insight> = {
   "N-Me-D-Leu": { takeaway: "适合在疏水位优先扫描：它把D-构型和N-甲基化放在同一个残基上，常用于同时处理渗透性与抗酶解性。", caution: "现有28%口服生物利用度来自完整环六肽，不能把全部改善归因于这一处残基。" },
@@ -90,12 +103,15 @@ const propertyFilters = [
   { id: "conformation", label: "构象控制", keywords: ["构象", "转角", "刚性"] },
 ];
 
-const allRecords: DatabaseRecord[] = groups.flatMap((group) => group.residues.map((residue, index) => ({ ...residue, id: `${group.id}-${index + 1}`, categoryId: group.id, category: group.title })));
+const allRecords: DatabaseRecord[] = masterRecords;
 const effectParts = (effect: string) => effect.split("；").map((part) => part.trim()).filter(Boolean);
 const sourceYear = (paper: string) => paper.match(/(19|20)\d{2}/)?.[0] ?? "—";
 const PAGE_SIZE = 12;
 
 export default function Home() {
+  const [portalView, setPortalView] = useState<PortalView>("home");
+  const [homeQuery, setHomeQuery] = useState("");
+  const [homeSearchTarget, setHomeSearchTarget] = useState<HomeSearchTarget>("catalog");
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [evidence, setEvidence] = useState("all");
@@ -115,15 +131,34 @@ export default function Home() {
     return [...sourceMap.values()];
   }, []);
 
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    const urlQuery = new URLSearchParams(window.location.search).get("q") ?? "";
+    if (["ccd-catalog", "catalog"].includes(hash)) { window.location.replace("catalog/"); return; }
+    if (["deep-review", "review"].includes(hash)) { setPortalView("evidence"); setCategory("all"); }
+    if (["database", "compare", "evidence"].includes(hash)) { setPortalView("evidence"); if (urlQuery) setQuery(urlQuery); }
+    if (["evidence-guide", "literature", "about"].includes(hash)) setPortalView("about");
+  }, []);
+
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     const propertyConfig = propertyFilters.find((item) => item.id === property);
-    return allRecords.filter((record) => {
+    return allUnifiedRecords.filter((item) => {
+      if (item.kind === "review") {
+        const record = item.record;
+        const searchable = [record.id, record.ccdId, record.name, record.conclusion, record.synthesisEvidence, record.cyclicEvidence, record.oralEvidence, record.recommendation, ...record.sources.flatMap((source) => [source.title, source.evidenceType])].join(" ").toLowerCase();
+        const categoryMatch = category === "all" || category === `review-${record.grade}`;
+        const evidenceMatch = evidence === "all" || evidence === `review-${record.grade}`;
+        const propertyMatch = !propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => searchable.includes(keyword.toLowerCase()));
+        return (!normalized || searchable.includes(normalized)) && categoryMatch && evidenceMatch && propertyMatch;
+      }
+      const record = item.record;
       const structures = getStructures(record.english);
-      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, ...structures.flatMap((item) => [item.ccd, item.label]), structureNotesByEnglish[record.english]].join(" ").toLowerCase();
+      const linkedReview = item.review;
+      const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, ...structures.flatMap((structure) => [structure.ccd, structure.label]), structureNotesByEnglish[record.english], linkedReview?.conclusion, linkedReview?.cyclicEvidence, linkedReview?.oralEvidence].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
-        && (category === "all" || record.categoryId === category)
-        && (evidence === "all" || evidenceMeta[record.level].code === evidence)
+        && (category === "all" || record.categoryId === category || (linkedReview && category === `review-${linkedReview.grade}`))
+        && (evidence === "all" || evidenceMeta[record.level].code === evidence || (linkedReview && evidence === `review-${linkedReview.grade}`))
         && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)))
         && (!structureOnly || structures.length > 0);
     });
@@ -149,14 +184,28 @@ export default function Home() {
   const toggleDetails = (id: string) => setOpenRecords((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
   const toggleCompare = (id: string) => setSelected((current) => current.includes(id) ? current.filter((item) => item !== id) : current.length >= 3 ? current : [...current, id]);
   const clearFilters = () => { setQuery(""); setCategory("all"); setEvidence("all"); setProperty("all"); setStructureOnly(false); };
+  const navigateTo = (view: PortalView, targetId?: string) => {
+    setPortalView(view);
+    window.history.replaceState(null, "", targetId ? `#${targetId}` : view === "home" ? "#top" : `#${view}`);
+    window.setTimeout(() => document.getElementById(targetId ?? "top")?.scrollIntoView({ behavior: "smooth" }), 50);
+  };
+  const searchFromHome = (event: React.FormEvent) => {
+    event.preventDefault();
+    const encoded = encodeURIComponent(homeQuery.trim());
+    if (homeSearchTarget === "catalog") { window.location.href = `catalog/${encoded ? `?q=${encoded}` : ""}`; return; }
+    setQuery(homeQuery.trim());
+    window.history.replaceState(null, "", `${encoded ? `?q=${encoded}` : ""}#database`);
+    setPortalView("evidence");
+    window.setTimeout(() => document.getElementById("database")?.scrollIntoView({ behavior: "smooth" }), 50);
+  };
 
   const downloadCsv = () => {
     const header = ["中文名", "英文名", "类别", "残基简介", "CCD编号", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "原始骨架与改造方式", "实验终点", "实验结果", "实验环境", "证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
-    const rows = allRecords.map((record) => {
+    const rows = [...allRecords.map((record) => {
       const design = getDesignGuide(record); const experiment = experimentData[record.english]; const patentTier = patentTierByEnglish[record.english];
       const structures = getStructures(record.english);
       return [record.name, record.english, record.category, insights[record.english]?.takeaway ?? effectParts(record.effect)[0], structures.map((item) => item.ccd).join(" / ") || "—", record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "完整分子或候选集合；未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${evidenceMeta[record.level].code}-${evidenceMeta[record.level].label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
-    });
+    }), ...reviewOnlyRecords.map((record) => ["中文名待规范", record.name, reviewGradeMeta[record.grade].category, record.conclusion, record.ccdId, record.recommendation, reviewGradeMeta[record.grade].description, "需结合目标位点判断", record.recommendation, record.grade === "EXCLUDE" ? "不可作为独立单体" : "不能据此推断口服性", "92条人工深审工作集", "—", record.cyclicEvidence, "论文／PDB／专利来源核对", record.oralEvidence, record.synthesisEvidence, `深审-${record.grade}-${reviewGradeMeta[record.grade].label}`, "—", record.sources.map((source) => source.title).join("；"), record.sources[0]?.url ?? `https://www.rcsb.org/ligand/${record.ccdId}`])];
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
     const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v3-0.csv"; link.click(); URL.revokeObjectURL(url);
@@ -164,55 +213,89 @@ export default function Home() {
 
   return (
     <main id="top">
-      <header className="site-header">
-        <a className="brand" href="#top" aria-label="返回页面顶部"><span className="brand-mark">CP</span><span>口服环肽残基证据库</span></a>
-        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#deep-review">92条深审</a><a href="#database">证据条目</a><a href="#compare">残基比较</a></nav>
-        <button className="download-button" onClick={downloadCsv}>导出证据 CSV</button>
-      </header>
+      <SiteHeader active={portalView} onDownload={downloadCsv} />
 
-      <section className="dashboard-intro">
-        <div className="intro-copy">
-          <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
-          <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V3.1</span><span>最近审核：2026-08-28</span><span>研究用途，非处方建议</span></div>
-        </div>
-        <div className="stats-grid" aria-label="数据库概况">
-          <div><strong>1,687</strong><span>CCD结构参考总库</span></div><div><strong>221</strong><span>优先研发候选</span></div>
-          <div><strong>92</strong><span>已完成深度审核</span></div><div><strong>{legacyCatalogSeedSummary.totalRecords}</strong><span>人工整理证据条目</span></div>
-        </div>
-      </section>
+      {portalView === "home" && <>
+        <section className="portal-hero" aria-labelledby="portal-title">
+          <div className="portal-hero-copy">
+            <p className="eyebrow">ORAL CYCLIC PEPTIDE · RESIDUE KNOWLEDGEBASE</p>
+            <h1 id="portal-title">口服环肽<br /><em>非天然残基数据库</em></h1>
+            <p className="portal-summary">汇集非天然氨基酸结构、肽中使用记录、环肽研发证据与审核边界，为候选生成、位点扫描和实验设计提供可追溯入口。</p>
+          </div>
+          <form className="portal-search" onSubmit={searchFromHome}>
+            <label htmlFor="portal-search-input">搜索数据库</label>
+            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
+            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
+          </form>
+          <div className="version-line"><span>Version 3.2</span><span>最近审核：2026-08-28</span><span>研究用途数据库</span></div>
+        </section>
 
-      <nav className="database-paths" aria-label="数据库使用入口">
-        <a href="#database"><span>01 · 优先用于设计决策</span><strong>口服性质与研发证据库</strong><p>查渗透、溶解度、稳定性和同骨架实验依据。</p><b>查看人工证据条目 →</b></a>
-        <a href="#deep-review"><span>02 · 核对身份与使用环境</span><strong>结构身份与环肽使用深审库</strong><p>查92条候选是否为独立残基、是否进入过环肽。</p><b>查看92条深审 →</b></a>
-        <a href="#ccd-catalog"><span>03 · 扩展化学空间</span><strong>CCD结构参考库</strong><p>浏览1,687条结构候选及PDB聚合物使用线索。</p><b>浏览完整结构库 →</b></a>
-      </nav>
+        <section className="portal-stats" aria-label="数据库概览">
+          <article><strong>1,687</strong><span>CCD结构参考记录</span><small>非标准肽链连接结构候选</small></article>
+          <article><strong>34</strong><span>人工证据支持单体</span><small>结构与证据精确对应</small></article>
+          <article><strong>221</strong><span>优先研发候选</span><small>结构层面首轮筛选</small></article>
+          <article><strong>176</strong><span>短肽序列命中</span><small>≤50残基PDB聚合物实体</small></article>
+          <article><strong>139</strong><span>统一研发数据库记录</span><small>53条原记录与92条审核数据去重合并</small></article>
+          <article><strong>8</strong><span>明确排除记录</span><small>保留可追溯，但不作为单体推荐</small></article>
+        </section>
 
-      <CcdCatalog />
+        <section className="portal-body">
+          <div className="portal-section-heading"><div><p className="eyebrow">EXPLORE THE DATABASE</p><h2>从研究任务进入数据库</h2></div><p>首页只提供概览和入口；复杂筛选、结构卡片和证据详情在各自模块中完成。</p></div>
+          <div className="portal-entry-grid">
+            <button onClick={() => navigateTo("evidence", "database")}><span>01 · 设计决策</span><strong>研发证据库</strong><p>原53条证据记录与92条人工审核数据已经去重并入同一检索界面。</p><b>浏览139条统一记录 →</b></button>
+            <button onClick={() => { window.location.href = "catalog/"; }}><span>02 · 扩展化学空间</span><strong>CCD结构库</strong><p>浏览结构、中文名称、研发分档、PDB序列使用与单体可用性线索。</p><b>进入1,687条结构目录 →</b></button>
+            <button onClick={() => { window.location.href = "quality/"; }}><span>03 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
+          </div>
 
+          <div className="portal-overview-grid">
+            <article className="portal-progress-card"><div><span>数据审核进度</span><strong>从结构候选到统一研发记录</strong></div><ol><li><b>结构参考层</b><span>1,687条CCD核心结构，已完成身份与完整性校验</span></li><li><b>证据整理层</b><span>53条原研发记录与92条人工审核数据统一去重</span></li><li><b>统一数据库</b><span>现收录139条唯一记录，并保留使用等级与排除结论</span></li></ol></article>
+            <article className="portal-boundary-card"><span>使用前请注意</span><h3>“出现过”不等于“能改善口服性”</h3><p>CCD身份、进入PDB聚合物、可作为独立合成单体，以及提高环肽口服暴露是四个不同结论。本站分层展示，不把结构预测写成实验事实。</p><button onClick={() => { window.location.href = "quality/"; }}>查看版本、质量与证据边界 →</button></article>
+          </div>
+        </section>
+      </>}
+
+      {portalView === "evidence" && <>
       <section className="database-section" id="database" aria-labelledby="database-title">
         <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">口服性质与研发证据库</h2></div><p>用于回答“为什么选这个残基、可能改善什么”。这里汇总论文、专利和临床骨架证据，优先看同骨架替换和定量实验边界。</p></div>
+        <aside className="evidence-integration-status" aria-labelledby="integration-status-title">
+          <div><span>UNIFIED EVIDENCE DATABASE</span><strong id="integration-status-title">92条审核数据已并入研发证据库</strong><p>6条与原有记录合并证据，其余86条形成新的数据库记录。环肽使用、肽中使用、特殊构件和排除结论保留为筛选标签，不再设置独立的“深度审核”页面。</p></div>
+          <dl><div><dt>139</dt><dd>去重后总记录</dd></div><div><dt>34</dt><dd>环肽直接使用</dd></div><div><dt>36</dt><dd>肽中使用</dd></div><div><dt>14</dt><dd>特殊构件</dd></div><div><dt>8</dt><dd>排除记录</dd></div></dl>
+          <nav><a href="deep-review-integration-plan.csv" download>下载合并清单</a><a href="ccd-manual-review-92-final.csv" download>下载审核来源</a></nav>
+        </aside>
         <div className="filter-panel">
           <label className="search-field"><span>搜索名称、缩写、作用或论文</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：N-Me-Leu、Pye、Caco-2、提高溶解度" /></label>
-          <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}</select></label>
-          <label><span>证据等级</span><select value={evidence} onChange={(event) => setEvidence(event.target.value)}><option value="all">全部等级</option><option value="A">A｜直接实验</option><option value="B">B｜完整骨架</option><option value="C">C｜临床／天然产物</option><option value="D">D｜专利</option></select></label>
+          <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}<option value="review-A">环肽直接使用</option><option value="review-B">肽中使用候选</option><option value="review-C">特殊构件</option><option value="review-EXCLUDE">排除记录</option></select></label>
+          <label><span>证据等级</span><select value={evidence} onChange={(event) => setEvidence(event.target.value)}><option value="all">全部等级</option><option value="A">原库A｜直接实验</option><option value="B">原库B｜完整骨架</option><option value="C">原库C｜临床／天然产物</option><option value="D">原库D｜专利</option><option value="review-A">审核A｜环肽直接使用</option><option value="review-B">审核B｜肽中使用</option><option value="review-C">审核C｜特殊构件</option><option value="review-EXCLUDE">审核排除｜非独立单体</option></select></label>
           <label><span>目标性质</span><select value={property} onChange={(event) => setProperty(event.target.value)}>{propertyFilters.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label>
           <label className="structure-filter"><span>结构信息</span><button className={structureOnly ? "active" : ""} onClick={() => setStructureOnly((current) => !current)}>{structureOnly ? "仅显示已核对 CCD" : "显示全部记录"}</button></label>
         </div>
-        <div className="category-chips"><button className={category === "all" ? "active" : ""} onClick={() => setCategory("all")}>全部 {allRecords.length}</button>{groups.map((group) => <button className={category === group.id ? "active" : ""} onClick={() => setCategory(group.id)} key={group.id}>{group.title} {group.residues.length}</button>)}</div>
+        <div className="category-chips"><button className={category === "all" ? "active" : ""} onClick={() => setCategory("all")}>全部 {allUnifiedRecords.length}</button>{groups.map((group) => <button className={category === group.id ? "active" : ""} onClick={() => setCategory(group.id)} key={group.id}>{group.title} {group.residues.length}</button>)}{(["A", "B", "C", "EXCLUDE"] as const).map((grade) => <button className={category === `review-${grade}` ? "active" : ""} onClick={() => setCategory(`review-${grade}`)} key={grade}>{reviewGradeMeta[grade].label} {deepReviewRecords.filter((record) => record.grade === grade).length}</button>)}</div>
         <div className="result-bar"><span>找到 <strong>{filtered.length}</strong> 条记录 · 第 {page}/{totalPages} 页</span>{(query || category !== "all" || evidence !== "all" || property !== "all" || structureOnly) && <button onClick={clearFilters}>清除筛选</button>}</div>
 
-        {filtered.length ? <div className="record-grid">{paginatedRecords.map((record) => {
+        {filtered.length ? <div className="record-grid">{paginatedRecords.map((item) => {
+          if (item.kind === "review") {
+            const record = item.record; const reviewMeta = reviewGradeMeta[record.grade]; const isOpen = openRecords.includes(record.id); const primarySource = record.sources[0];
+            return <article className={`record-card merged-review-card review-card-${record.grade.toLowerCase()} ${isOpen ? "open" : ""}`} key={record.id}>
+              <div className="record-topline"><span className={`evidence-badge review-evidence-${record.grade.toLowerCase()}`}>{record.grade === "EXCLUDE" ? "排除" : `审核${record.grade}`}｜{reviewMeta.label}</span><span className="record-category">{record.id} · CCD {record.ccdId}</span></div>
+              <div className="record-title-row"><div><h3>{record.name}</h3><p>中文规范名称待补充</p></div><span className="merged-record-label">审核数据并入</span></div>
+              <div className="card-overview with-structure"><div><span className="field-label">审核结论</span><p className="takeaway">{record.conclusion}</p><p className="review-card-recommendation">{record.recommendation}</p></div><div className="structure-stack"><a className="structure-preview" href={ccdEntryUrl(record.ccdId)} target="_blank" rel="noreferrer"><img src={ccdImageUrl(record.ccdId)} alt={`${record.name}二维结构`} /><span>CCD {record.ccdId} · 打开RCSB ↗</span></a></div></div>
+              <div className="property-tags"><span>{reviewMeta.label}</span><span>{record.grade === "A" ? "环肽证据已核对" : record.grade === "B" ? "肽中使用已核对" : record.grade === "C" ? "受限使用" : "不建议作为单体"}</span></div>
+              <div className="source-summary"><span>{sourceYear(primarySource?.title ?? "")}</span><strong>{primarySource?.title ?? "CCD与人工审核记录"}</strong></div>
+              <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
+              {isOpen && <div className="record-details merged-review-details"><div><h4>记录定位</h4><p>{reviewMeta.description}</p></div><div className="design-guide"><h4>人工审核字段</h4><dl><div><dt>合成／身份</dt><dd>{record.synthesisEvidence}</dd></div><div><dt>环肽证据</dt><dd>{record.cyclicEvidence}</dd></div><div><dt>口服证据</dt><dd>{record.oralEvidence}</dd></div><div><dt>研发建议</dt><dd>{record.recommendation}</dd></div></dl></div><div className="caution-box"><h4>解释边界</h4><p>该等级描述结构身份和肽／环肽使用情况，不表示这一残基能够单独提高口服吸收。</p></div><div className="record-sources">{record.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span>{source.evidenceType}</span><strong>{source.title}</strong><small>打开原始来源 ↗</small></a>)}</div></div>}
+            </article>;
+          }
+          const record = item.record;
           const meta = evidenceMeta[record.level]; const insight = insights[record.english]; const isOpen = openRecords.includes(record.id); const isSelected = selected.includes(record.id);
           const patentTier = patentTierByEnglish[record.english]; const design = getDesignGuide(record); const experiment = experimentData[record.english]; const scope = supportScope(record); const structures = getStructures(record.english); const structureNote = structureNotesByEnglish[record.english];
           return <article className={`record-card ${isOpen ? "open" : ""}`} key={record.id}>
-            <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.category}</span></div>
-            <div className="record-title-row"><div><h3>{record.name}</h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
+            <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.id} · {record.category}</span></div>
+            <div className="record-title-row"><div><h3><Link href={`/residue/${record.slug}/`}>{record.name}</Link></h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
             <div className="card-overview with-structure">
               <div><span className="field-label">残基简介</span><p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p></div>
               {structures.length > 0 ? <div className={`structure-stack ${structures.length > 1 ? "multiple" : ""}`}>{structures.map((structure) => <a className="structure-preview" href={ccdEntryUrl(structure.ccd)} target="_blank" rel="noreferrer" title={`在 RCSB PDB 查看 CCD ${structure.ccd}`} key={structure.ccd}><img src={ccdImageUrl(structure.ccd)} alt={`${structure.label}二维结构`} /><span>CCD {structure.ccd} · {structure.label} ↗</span></a>)}</div> : <div className="structure-unavailable"><strong>暂无唯一 CCD 结构</strong><p>{structureNote ?? "当前记录尚未找到可与名称和立体化学完全对应的 CCD 单体。"}</p></div>}
             </div>
-            <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}</div>
+            <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}{item.review && <span className="linked-review-tag">审核{item.review.grade}｜{reviewGradeMeta[item.review.grade].label}</span>}</div>
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
@@ -235,7 +318,9 @@ export default function Home() {
           <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>优先替换</th>{selectedRecords.map((record) => <td key={record.id}>{getDesignGuide(record).replace}</td>)}</tr><tr><th>证据支持</th>{selectedRecords.map((record) => <td key={record.id}>{supportScope(record).join("、")}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
         </tbody></table><button className="clear-comparison" onClick={() => setSelected([])}>清空比较</button></div> : null}
       </section>
+      </>}
 
+      {portalView === "about" && <>
       <section className="evidence-section" id="evidence-guide" aria-labelledby="evidence-title">
         <div className="section-heading evidence-heading"><div><p className="eyebrow">ABOUT THE SOURCES</p><h2 id="evidence-title">资料来源说明</h2></div></div>
         <div className="source-note">
@@ -264,8 +349,9 @@ export default function Home() {
         <div className="section-heading light literature-heading"><div><p className="eyebrow">PAPERS · PATENTS · PROVENANCE</p><h2 id="literature-title">证据来源库</h2></div><button className="literature-toggle" onClick={() => setLiteratureOpen((current) => !current)} aria-expanded={literatureOpen} aria-controls="literature-list"><span>{literatureOpen ? "收起来源" : `展开去重来源（${literatureSources.length}）`}</span><b>{literatureOpen ? "−" : "+"}</b></button></div>
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
+      </>}
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.1 · CCD catalog + evidence layer</span></div><p>用于候选生成与实验讨论。结构名录中的性质标签是类别推断；具体替换仍应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <SiteFooter />
     </main>
   );
 }
