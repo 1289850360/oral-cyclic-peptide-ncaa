@@ -91,6 +91,49 @@ const USAGE_META: Record<PolymerUsageStatus, { label: string; shortLabel: string
 
 const PAGE_SIZE = 24;
 const REVIEW_PAGE_SIZE = 12;
+const CCD_PROPERTY_FILTERS = [
+  { id: "all", label: "全部性质", keywords: [] },
+  { id: "permeability", label: "渗透性", keywords: ["渗透", "膜分配"] },
+  { id: "hydrophobicity", label: "疏水性", keywords: ["疏水", "脂溶"] },
+  { id: "solubility", label: "溶解度", keywords: ["水溶", "溶解度"] },
+  { id: "stability", label: "稳定性", keywords: ["稳定性", "抗酶解", "蛋白酶"] },
+  { id: "polarity", label: "降低极性", keywords: ["极性可能↓", "氢键供体可能↓"] },
+  { id: "conformation", label: "构象控制", keywords: ["构象", "刚性", "折叠", "骨架间距"] },
+] as const;
+
+const EXACT_CHINESE_NAMES: Record<string, string> = {
+  "(2S)-azetidine-2-carboxylic acid": "(2S)-氮杂环丁烷-2-羧酸",
+  "1-aminocyclohexanecarboxylic acid": "1-氨基环己烷羧酸",
+  "1-aminocycloheptanecarboxylic acid": "1-氨基环庚烷羧酸",
+  "S-methyl-D-cysteine": "S-甲基-D-半胱氨酸",
+  "N-benzylglycine": "N-苄基甘氨酸",
+  "O-methyl-L-tyrosine": "O-甲基-L-酪氨酸",
+};
+
+const CHINESE_NAME_PARTS: Array<[RegExp, string]> = [
+  [/trifluoromethoxy/gi, "三氟甲氧基"], [/trifluoromethyl/gi, "三氟甲基"], [/carboximidic acid/gi, "甲亚胺酸"],
+  [/homophenylalanine/gi, "高苯丙氨酸"], [/phenylalanine/gi, "苯丙氨酸"], [/aminocycloheptanecarboxylic acid/gi, "氨基环庚烷羧酸"],
+  [/aminocyclohexanecarboxylic acid/gi, "氨基环己烷羧酸"], [/aminocyclopentanecarboxylic acid/gi, "氨基环戊烷羧酸"],
+  [/aspartic acid/gi, "天冬氨酸"], [/glutamic acid/gi, "谷氨酸"], [/asparagine/gi, "天冬酰胺"], [/glutamine/gi, "谷氨酰胺"],
+  [/homocysteine/gi, "高半胱氨酸"], [/cysteine/gi, "半胱氨酸"], [/norleucine/gi, "正亮氨酸"], [/isoleucine/gi, "异亮氨酸"],
+  [/leucine/gi, "亮氨酸"], [/norvaline/gi, "正缬氨酸"], [/valine/gi, "缬氨酸"], [/tryptophan/gi, "色氨酸"],
+  [/tyrosine/gi, "酪氨酸"], [/histidine/gi, "组氨酸"], [/methionine/gi, "蛋氨酸"], [/ornithine/gi, "鸟氨酸"],
+  [/arginine/gi, "精氨酸"], [/citrulline/gi, "瓜氨酸"], [/threonine/gi, "苏氨酸"], [/serine/gi, "丝氨酸"],
+  [/proline/gi, "脯氨酸"], [/alanine/gi, "丙氨酸"], [/glycine/gi, "甘氨酸"], [/lysine/gi, "赖氨酸"],
+  [/azetidine/gi, "氮杂环丁烷"], [/pyrrolidine/gi, "吡咯烷"], [/piperidine/gi, "哌啶"], [/morpholine/gi, "吗啉"],
+  [/cycloheptyl/gi, "环庚基"], [/cyclohexyl/gi, "环己基"], [/cyclopentyl/gi, "环戊基"], [/naphthalen/gi, "萘"],
+  [/nonanoic acid/gi, "壬酸"], [/octanoic acid/gi, "辛酸"], [/heptanoic acid/gi, "庚酸"], [/hexanoic acid/gi, "己酸"],
+  [/pentanoic acid/gi, "戊酸"], [/butanoic acid/gi, "丁酸"], [/propanoic acid/gi, "丙酸"], [/ethanoic acid/gi, "乙酸"], [/acetic acid/gi, "乙酸"],
+  [/carboxylic acid/gi, "羧酸"], [/carboxy/gi, "羧基"], [/dihydroxy/gi, "二羟基"], [/hydroxy/gi, "羟基"], [/amino/gi, "氨基"], [/oxo/gi, "氧代"],
+  [/dimethyl/gi, "二甲基"], [/methyl/gi, "甲基"], [/ethyl/gi, "乙基"], [/benzyl/gi, "苄基"], [/phenyl/gi, "苯基"],
+  [/fluoro/gi, "氟"], [/chloro/gi, "氯"], [/bromo/gi, "溴"], [/iodo/gi, "碘"], [/sulfo/gi, "磺酸基"],
+];
+
+const chineseNameFor = (name: string) => {
+  if (EXACT_CHINESE_NAMES[name]) return EXACT_CHINESE_NAMES[name];
+  const translated = CHINESE_NAME_PARTS.reduce((current, [pattern, replacement]) => current.replace(pattern, replacement), name);
+  return translated === name ? "中文系统名待人工核对" : translated;
+};
 const DEEP_REVIEW_META: Record<DeepReviewGrade, { label: string; description: string }> = {
   A: { label: "环肽直接使用", description: "已有直接环肽或宏环结构证据" },
   B: { label: "肽中使用", description: "能够进入肽，但缺少直接环肽证据" },
@@ -130,6 +173,7 @@ export default function CcdCatalog() {
   const [category, setCategory] = useState("all");
   const [screeningTier, setScreeningTier] = useState<CcdCoreRecord["screening"]["tier"] | "all">("priority");
   const [usageStatus, setUsageStatus] = useState<PolymerUsageStatus | "all">("short-polymer");
+  const [targetProperty, setTargetProperty] = useState<(typeof CCD_PROPERTY_FILTERS)[number]["id"]>("all");
   const [page, setPage] = useState(1);
   const [reviewQuery, setReviewQuery] = useState("");
   const [reviewGrade, setReviewGrade] = useState<DeepReviewGrade | "all">("all");
@@ -165,10 +209,13 @@ export default function CcdCatalog() {
     const normalized = query.trim().toLowerCase();
     return payload.records.filter((record) => {
       const usage = usageById.get(record.id);
+      const propertyFilter = CCD_PROPERTY_FILTERS.find((item) => item.id === targetProperty)!;
+      const chineseName = chineseNameFor(record.name);
       const searchable = [
         record.primaryCcdId,
         ...record.ccdIds,
         record.name,
+        chineseName,
         ...record.synonyms,
         record.formula,
         ...record.parentIds,
@@ -183,9 +230,10 @@ export default function CcdCatalog() {
       return (!normalized || searchable.includes(normalized))
         && (category === "all" || record.category === category)
         && (screeningTier === "all" || record.screening.tier === screeningTier)
-        && (usageStatus === "all" || usage?.status === usageStatus);
+        && (usageStatus === "all" || usage?.status === usageStatus)
+        && (propertyFilter.keywords.length === 0 || propertyFilter.keywords.some((keyword) => record.predictedEffects.some((effect) => effect.includes(keyword))));
     });
-  }, [payload, query, category, screeningTier, usageStatus, usageById]);
+  }, [payload, query, category, screeningTier, usageStatus, targetProperty, usageById]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -194,6 +242,7 @@ export default function CcdCatalog() {
   const changeCategory = (value: string) => { setCategory(value); setPage(1); };
   const changeScreeningTier = (value: CcdCoreRecord["screening"]["tier"] | "all") => { setScreeningTier(value); setPage(1); };
   const changeUsageStatus = (value: PolymerUsageStatus | "all") => { setUsageStatus(value); setPage(1); };
+  const changeTargetProperty = (value: (typeof CCD_PROPERTY_FILTERS)[number]["id"]) => { setTargetProperty(value); setPage(1); };
 
   const filteredDeepReview = useMemo(() => {
     const normalized = reviewQuery.trim().toLowerCase();
@@ -245,11 +294,13 @@ export default function CcdCatalog() {
         <label><span>搜索CCD编号、名称、同义词或分子式</span><input value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="例如：AIB、N-methyl、phenylglycine、C8 H9 N O2" /></label>
         <label><span>研发筛选等级</span><select value={screeningTier} onChange={(event) => changeScreeningTier(event.target.value as CcdCoreRecord["screening"]["tier"] | "all")}><option value="all">全部1,687条</option>{payload && (["priority", "conditional", "reference", "exclude"] as const).map((tier) => <option value={tier} key={tier}>{payload.metadata.tierMeta[tier].label}（{payload.metadata.tierCounts[tier]}）</option>)}</select></label>
         <label><span>PDB聚合物使用证据</span><select value={usageStatus} onChange={(event) => changeUsageStatus(event.target.value as PolymerUsageStatus | "all")}><option value="all">全部使用状态</option>{usagePayload && (["short-polymer", "polymer-only", "no-polymer-hit"] as const).map((status) => <option value={status} key={status}>{USAGE_META[status].label}（{usagePayload.metadata.statusCounts[status]}）</option>)}</select></label>
+        <label><span>目标性质</span><select value={targetProperty} onChange={(event) => changeTargetProperty(event.target.value as (typeof CCD_PROPERTY_FILTERS)[number]["id"])}>{CCD_PROPERTY_FILTERS.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label>
         <label><span>结构类别</span><select value={category} onChange={(event) => changeCategory(event.target.value)}><option value="all">全部结构类别</option>{categories.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label>
       </div>
+      <p className="ccd-name-note">中文辅助名用于快速阅读，由常见氨基酸母体和系统命名规则生成；涉及复杂杂环或多官能团时仍以英文系统名、立体化学SMILES和CCD记录为准。</p>
 
       {loadError ? <div className="ccd-loading"><strong>结构名录暂时没有载入</strong><p>可以先下载CSV，或稍后刷新页面重试。</p></div> : !payload ? <div className="ccd-loading">正在载入CCD结构名录…</div> : <>
-        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "priority" || usageStatus !== "short-polymer") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("priority"); changeUsageStatus("short-polymer"); }}>恢复默认筛选</button>}</div>
+        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "priority" || usageStatus !== "short-polymer" || targetProperty !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("priority"); changeUsageStatus("short-polymer"); changeTargetProperty("all"); }}>恢复默认筛选</button>}</div>
         {shown.length ? <div className="ccd-record-grid">{shown.map((record) => <article className="ccd-record-card" key={record.id}>
           <div className="ccd-card-head"><span>CCD {record.ccdIds.join(" / ")}</span><em className={`screening-tier screening-${record.screening.tier}`}>{payload.metadata.tierMeta[record.screening.tier].shortLabel}</em></div>
           <div className="ccd-card-main">
@@ -257,7 +308,7 @@ export default function CcdCatalog() {
               <img src={record.structureImageUrl} alt={`${record.name}二维结构`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />
               <b>{record.primaryCcdId}</b>
             </a>
-            <div><h3>{record.name}</h3>{record.synonyms.length > 0 && <p className="ccd-synonyms">{record.synonyms.slice(0, 2).join(" · ")}</p>}<p className="ccd-formula">{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</p></div>
+            <div><h3>{chineseNameFor(record.name)}</h3><p className="ccd-english-name">{record.name}</p>{record.synonyms.length > 0 && <p className="ccd-synonyms">{record.synonyms.slice(0, 2).join(" · ")}</p>}<p className="ccd-formula">{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</p></div>
           </div>
           <div className="ccd-effect-tags">{record.predictedEffects.map((effect) => <span key={effect}>{effect}</span>)}</div>
           <details className="ccd-details"><summary>结构信息与判断边界</summary><dl>
