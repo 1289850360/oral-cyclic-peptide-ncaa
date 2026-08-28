@@ -137,6 +137,7 @@ h1 em { color: var(--teal); font-style: normal; }
 .manual-review-guide > summary > strong { color: var(--teal); font-size: 22px; font-weight: 400; }
 .manual-review-guide[open] > summary > strong { transform: rotate(45deg); }
 .review-guide-content { padding: 0 20px 22px; border-top: 1px solid #dce5e2; }
+.review-queue-boundary { margin-top: 20px; }
 .review-priority { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
 .review-priority article { min-height: 150px; padding: 18px; display: flex; flex-direction: column; gap: 9px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .review-priority article > b { color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 22px; font-weight: 500; }

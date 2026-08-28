@@ -166,7 +166,7 @@ export default function Home() {
     <main id="top">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回页面顶部"><span className="brand-mark">CP</span><span>口服环肽残基证据库</span></a>
-        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#database">证据条目</a><a href="#compare">残基比较</a><a href="#manual-review">人工审核</a></nav>
+        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#database">证据条目</a><a href="#compare">残基比较</a><a href="#manual-review">补充审核</a></nav>
         <button className="download-button" onClick={downloadCsv}>导出证据 CSV</button>
       </header>
 
@@ -177,8 +177,8 @@ export default function Home() {
           <div className="version-line"><span>数据库版本 V3.0</span><span>CCD快照：2026-08-26</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
-          <div><strong>1,687</strong><span>CCD结构确认核心</span></div><div><strong>{legacyCatalogSeedSummary.aminoAcidCores}</strong><span>已关联研发证据的氨基酸</span></div>
-          <div><strong>1,805</strong><span>待人工审核结构</span></div><div><strong>{literatureSources.length}</strong><span>论文及专利来源</span></div>
+          <div><strong>1,687</strong><span>CCD结构参考总库</span></div><div><strong>221</strong><span>优先研发候选</span></div>
+          <div><strong>176</strong><span>具有短肽序列命中</span></div><div><strong>{legacyCatalogSeedSummary.totalRecords}</strong><span>人工整理证据条目</span></div>
         </div>
       </section>
 
@@ -255,7 +255,7 @@ export default function Home() {
       </section>
 
       <section className="literature-section" id="literature" aria-labelledby="literature-title">
-        <div className="section-heading light literature-heading"><div><p className="eyebrow">PAPERS · PATENTS · PROVENANCE</p><h2 id="literature-title">文献与专利库</h2></div><button className="literature-toggle" onClick={() => setLiteratureOpen((current) => !current)} aria-expanded={literatureOpen} aria-controls="literature-list"><span>{literatureOpen ? "收起文献" : `展开文献（${literatureSources.length}）`}</span><b>{literatureOpen ? "−" : "+"}</b></button></div>
+        <div className="section-heading light literature-heading"><div><p className="eyebrow">PAPERS · PATENTS · PROVENANCE</p><h2 id="literature-title">证据来源库</h2></div><button className="literature-toggle" onClick={() => setLiteratureOpen((current) => !current)} aria-expanded={literatureOpen} aria-controls="literature-list"><span>{literatureOpen ? "收起来源" : `展开去重来源（${literatureSources.length}）`}</span><b>{literatureOpen ? "−" : "+"}</b></button></div>
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 

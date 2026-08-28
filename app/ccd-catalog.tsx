@@ -227,8 +227,9 @@ export default function CcdCatalog() {
       </>}
 
       <details className="manual-review-guide" id="manual-review">
-        <summary><span><b>人工审核清单</b><small>1,805个结构 · 点击查看审核方法</small></span><strong>+</strong></summary>
+        <summary><span><b>主库外补充结构审核队列</b><small>1,805条 · 不计入上方1,687条主目录 · 点击查看处理方法</small></span><strong>+</strong></summary>
         <div className="review-guide-content">
+          <div className="ccd-boundary-note review-queue-boundary"><strong>这1,805条如何处理</strong><p>它们来自非聚合物或peptide-like组分的结构规则命中，与1,687条CCD肽链核心主目录分开保存。目前不能直接并入研发库：先排除药物、代谢物、辅因子、保护体和整分子片段，再确认是否能作为独立肽合成单体；只有通过人工身份与合成用途核对的记录，才会进入条件候选或优先候选。</p></div>
           <div className="review-priority">
             <article><b>P0</b><strong>6个网站已有例外</strong><p>确认名称、构型和CCD结构与现有证据条目完全一致。</p></article>
             <article><b>P1</b><strong>45个标准母体候选</strong><p>重点判断修饰后的组分能否作为独立肽合成单体。</p></article>
