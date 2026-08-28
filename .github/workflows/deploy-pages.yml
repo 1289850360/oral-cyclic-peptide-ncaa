@@ -30,6 +30,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Validate catalog integrity
+        run: npm run audit:catalog
+
       - name: Build static site
         run: npm run build:github
 

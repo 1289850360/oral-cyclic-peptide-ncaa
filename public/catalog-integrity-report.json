@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-28T03:57:55.870Z",
+  "result": "passed",
+  "scope": {
+    "statement": "This report checks local field completeness, uniqueness, cross-file consistency, and deterministic CCD-to-URL mapping. It does not prove peptide-synthesis suitability or property effects.",
+    "excludedClaims": [
+      "The remote SVG was rendered from the chemically correct structure.",
+      "The component has been used as an independently synthesizable peptide monomer.",
+      "The component improves permeability, stability, or oral exposure."
+    ]
+  },
+  "catalog": {
+    "jsonRecords": 1687,
+    "csvRecords": 1687,
+    "uniqueCoreRecords": 1687,
+    "uniqueCcdIds": 1688,
+    "uniqueStereochemicalSmiles": 1687,
+    "sourceUrlMatches": 1687,
+    "imageUrlMatches": 1687
+  },
+  "reviewQueue": {
+    "rows": 1805,
+    "uniqueCcdFields": 1805,
+    "priorityCounts": {
+      "P0": 6,
+      "P1": 45,
+      "P2": 484,
+      "P3": 1270
+    },
+    "sourceUrlMatches": 1805,
+    "imageUrlMatches": 1805
+  },
+  "issues": {
+    "errors": 0,
+    "warnings": 0,
+    "file": "catalog-integrity-issues.csv"
+  }
+}

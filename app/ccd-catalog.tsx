@@ -126,12 +126,13 @@ export default function CcdCatalog() {
         <div className="catalog-downloads">
           <a href="ccd-verified-cores-1687.csv" download>下载结构名录 CSV</a>
           <a href="ccd-manual-review-1805.csv" download>下载人工审核清单</a>
+          <a href="catalog-integrity-report.json" download>下载完整性校验报告</a>
         </div>
       </div>
 
       <div className="ccd-boundary-note">
         <strong>如何理解这1,687条</strong>
-        <p>可以直接用于建立非标准肽链构件的结构目录；但“渗透性可能↑”等标签由化学类别推断，只有进入下方证据数据库并关联论文或专利后，才能作为具体研发依据。</p>
+        <p>本地校验已确认1,687条记录在JSON/CSV之间一致，CCD详情和二维图链接也与编号逐条对应。该结果只证明数据配对完整；“渗透性可能↑”等标签仍是化学类别推断，只有进入下方证据数据库并关联论文或专利后，才能作为具体研发依据。</p>
       </div>
 
       <div className="ccd-filter-panel">
