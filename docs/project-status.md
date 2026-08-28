@@ -29,6 +29,19 @@ npm run audit:catalog
 - `public/catalog-integrity-report.json`
 - `public/catalog-integrity-issues.csv`
 
+需要联网的官方字段复核运行：
+
+```bash
+npm run audit:catalog:remote
+```
+
+它会分批查询 RCSB PDB Data API，并生成：
+
+- `public/ccd-official-field-audit.json`
+- `public/ccd-official-field-issues.csv`
+
+2026-08-28 的全量结果覆盖网站涉及的 3,496 个唯一 CCD 编号；名称、分子式、分子量、母体编号和立体化学 SMILES 均与当日官方记录一致。
+
 它检查：
 
 - JSON 与 CSV 行数一致；

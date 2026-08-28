@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T03:57:55.870Z",
+  "generatedAt": "2026-08-28T05:01:10.730Z",
   "result": "passed",
   "scope": {
     "statement": "This report checks local field completeness, uniqueness, cross-file consistency, and deterministic CCD-to-URL mapping. It does not prove peptide-synthesis suitability or property effects.",
