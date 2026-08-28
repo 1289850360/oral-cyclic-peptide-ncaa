@@ -65,6 +65,8 @@ const catalogCsv = parseCsv(await readFile(path.join(publicDir, "ccd-verified-co
 const reviewQueue = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-1805.csv"), "utf8"));
 const developmentScreen = JSON.parse(await readFile(path.join(publicDir, "ccd-development-screen.json"), "utf8"));
 const developmentScreenCsv = parseCsv(await readFile(path.join(publicDir, "ccd-development-screen.csv"), "utf8"));
+const polymerUsage = JSON.parse(await readFile(path.join(publicDir, "ccd-polymer-usage-audit.json"), "utf8"));
+const polymerUsageCsv = parseCsv(await readFile(path.join(publicDir, "ccd-polymer-usage-audit.csv"), "utf8"));
 
 if (catalog.metadata.count !== catalog.records.length) {
   addIssue("error", "catalog-json", "metadata", "count", `Metadata says ${catalog.metadata.count}, but JSON contains ${catalog.records.length} records.`);
@@ -183,6 +185,44 @@ for (const tier of screeningTiers) {
   }
 }
 
+const priorityScreenRecords = developmentScreen.records.filter((record) => record.screening.tier === "priority");
+const priorityScreenById = new Map(priorityScreenRecords.map((record) => [record.id, record]));
+const usageStatuses = new Set(["short-polymer", "polymer-only", "no-polymer-hit"]);
+const usageCounts = Object.fromEntries([...usageStatuses].map((status) => [status, 0]));
+if (polymerUsage.records.length !== priorityScreenRecords.length) {
+  addIssue("error", "polymer-usage", "all", "row-count", `Usage JSON contains ${polymerUsage.records.length} rows; priority screen contains ${priorityScreenRecords.length}.`);
+}
+if (polymerUsageCsv.length !== polymerUsage.records.length) {
+  addIssue("error", "polymer-usage", "all", "csv-row-count", `Usage CSV contains ${polymerUsageCsv.length} rows; JSON contains ${polymerUsage.records.length}.`);
+}
+polymerUsage.records.forEach((record, index) => {
+  const source = priorityScreenById.get(record.id);
+  const label = record.primaryCcdId || `row-${index + 1}`;
+  if (!source || source.ccdIds.join("|") !== record.ccdIds.join("|")) {
+    addIssue("error", "polymer-usage", label, "source-match", "Usage record does not map to a current priority candidate.");
+  }
+  if (!usageStatuses.has(record.status)) {
+    addIssue("error", "polymer-usage", label, "status", `Unknown usage status: ${record.status ?? "missing"}.`);
+  } else {
+    usageCounts[record.status] += 1;
+  }
+  if (!(record.polymerEntityCount >= record.shortPolymerEntityCount && record.shortPolymerEntityCount >= 0)) {
+    addIssue("error", "polymer-usage", label, "counts", "Short-polymer count must be non-negative and cannot exceed total polymer count.");
+  }
+  if (record.status === "short-polymer" && record.shortPolymerEntityCount === 0) addIssue("error", "polymer-usage", label, "status", "Short-polymer status has zero short-polymer hits.");
+  if (record.status === "polymer-only" && (record.polymerEntityCount === 0 || record.shortPolymerEntityCount !== 0)) addIssue("error", "polymer-usage", label, "status", "Polymer-only status has inconsistent counts.");
+  if (record.status === "no-polymer-hit" && record.polymerEntityCount !== 0) addIssue("error", "polymer-usage", label, "status", "No-hit status has a nonzero polymer count.");
+  const csvRow = polymerUsageCsv[index];
+  if (csvRow && splitCcdIds(csvRow["CCD编号"]).join("|") !== record.ccdIds.join("|")) {
+    addIssue("error", "polymer-usage", label, "CCD编号", "Usage CSV and JSON CCD identifiers differ at the same row.");
+  }
+});
+for (const status of usageStatuses) {
+  if (polymerUsage.metadata.statusCounts?.[status] !== usageCounts[status]) {
+    addIssue("error", "polymer-usage", status, "status-count", `Metadata says ${polymerUsage.metadata.statusCounts?.[status] ?? "missing"}; counted ${usageCounts[status]}.`);
+  }
+}
+
 const report = {
   schemaVersion: 1,
   generatedAt: new Date().toISOString(),
@@ -215,6 +255,12 @@ const report = {
     rows: developmentScreen.records.length,
     csvRows: developmentScreenCsv.length,
     tierCounts: screeningCounts,
+  },
+  polymerUsage: {
+    rows: polymerUsage.records.length,
+    csvRows: polymerUsageCsv.length,
+    shortPolymerMaxLength: polymerUsage.metadata.shortPolymerMaxLength,
+    statusCounts: usageCounts,
   },
   issues: {
     errors: issues.filter((issue) => issue.severity === "error").length,
