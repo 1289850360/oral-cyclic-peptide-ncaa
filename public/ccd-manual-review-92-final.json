@@ -1,0 +1,3019 @@
+{
+  "metadata": {
+    "auditDate": "2026-08-28",
+    "count": 92,
+    "batches": [
+      {
+        "batch": 1,
+        "count": 20,
+        "gradeCounts": {
+          "A": 9,
+          "B": 7,
+          "C": 2,
+          "EXCLUDE": 2
+        }
+      },
+      {
+        "batch": 2,
+        "count": 36,
+        "gradeCounts": {
+          "A": 13,
+          "B": 15,
+          "C": 6,
+          "EXCLUDE": 2
+        }
+      },
+      {
+        "batch": 3,
+        "count": 36,
+        "gradeCounts": {
+          "A": 12,
+          "B": 14,
+          "C": 6,
+          "EXCLUDE": 4
+        }
+      }
+    ],
+    "gradeCounts": {
+      "A": 34,
+      "B": 36,
+      "C": 14,
+      "EXCLUDE": 8
+    },
+    "usableSummary": {
+      "directMacrocycleEvidence": 34,
+      "peptideUsableButNoDirectMacrocycleEvidence": 36,
+      "restrictedSpecialFragments": 14,
+      "excludedNonMonomers": 8
+    },
+    "scope": "92条优先深审候选的三批人工证据审核汇总。等级描述证据强度和用途边界，不代表任何单个残基能够独立带来口服性。"
+  },
+  "records": [
+    {
+      "batch": 1,
+      "batchPosition": 1,
+      "ccdId": "STA",
+      "name": "STATINE",
+      "formula": "C8 H17 N O3",
+      "molecularWeight": 175.225,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为高价值候选",
+      "synthesisEvidence": "已有statine及其保护衍生物的成熟合成与肽偶联应用。",
+      "cyclicEvidence": "含statine的环六肽系列有直接实验数据。",
+      "oralEvidence": "同系列一个化合物在大鼠中口服生物利用度为21%；结论属于完整环肽骨架，不能归因于单个残基。",
+      "recommendation": "优先用于构象预组织、蛋白酶过渡态模拟及溶解度/渗透性平衡设计。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Bockus et al., J Med Chem (2015)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25950816/",
+          "evidenceType": "直接环肽/口服证据"
+        },
+        {
+          "title": "RCSB PDB 1FIV",
+          "url": "https://www.rcsb.org/structure/1FIV",
+          "evidenceType": "结构使用证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/STA",
+      "pdbExamples": [
+        "1FIV",
+        "1GVU",
+        "1IZE",
+        "1LS5",
+        "1LYB"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 2,
+      "ccdId": "3WX",
+      "name": "2-methyl-L-proline",
+      "formula": "C6 H11 N O2",
+      "molecularWeight": 129.157,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为临床骨架候选",
+      "synthesisEvidence": "已在enlicitide的模块化合成和放大路线中实际使用。",
+      "cyclicEvidence": "是enlicitide复杂宏环/三环骨架中的构象限制残基。",
+      "oralEvidence": "enlicitide为口服活性PCSK9宏环肽并已有临床人体证据；不能把整体口服性单独归因于2-Me-Pro。",
+      "recommendation": "优先用于转角、局部刚化和降低骨架氢键供体，但需结合整个大环构象评估。",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "title": "Josien et al., J Med Chem (2026)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42201324/",
+          "evidenceType": "临床宏环骨架"
+        },
+        {
+          "title": "MK-0616 Phase 1 report",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37125593/",
+          "evidenceType": "人体口服证据"
+        },
+        {
+          "title": "RCSB PDB 10SB",
+          "url": "https://www.rcsb.org/structure/10SB",
+          "evidenceType": "精确结构位置"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/3WX",
+      "pdbExamples": [
+        "10SB",
+        "6XIB",
+        "6XIC",
+        "6XID",
+        "6XIE"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 3,
+      "ccdId": "SOQ",
+      "name": "N-methyl-L-aspartic acid",
+      "formula": "C5 H9 N O4",
+      "molecularWeight": 147.129,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留，但标记为高极性位置依赖型",
+      "synthesisEvidence": "N-甲基氨基酸可按常规保护/偶联策略进入环肽；该残基已有宏环结构实例。",
+      "cyclicEvidence": "在宏环KRAS抑制剂结构中实际出现，并有同骨架环六肽单点替换数据。",
+      "oralEvidence": "N-Me-Asp环六肽类似物RRCK Papp约0.6×10^-6 cm/s，表现偏低；不能视为增渗残基。",
+      "recommendation": "只在需要酸性结合点或溶解度时使用，并优先考虑侧链电荷埋藏。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Goetz et al., ACS Med Chem Lett (2014)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4190640/",
+          "evidenceType": "环肽渗透性直接证据"
+        },
+        {
+          "title": "RCSB PDB 24HR",
+          "url": "https://www.rcsb.org/structure/24HR",
+          "evidenceType": "宏环肽结构证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/SOQ",
+      "pdbExamples": [
+        "24HR",
+        "24HS",
+        "7AZ6",
+        "7AZ7",
+        "7AZG"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 4,
+      "ccdId": "5JP",
+      "name": "N-methyl-L-serine",
+      "formula": "C4 H9 N O3",
+      "molecularWeight": 119.119,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为可用的亲水N-甲基候选",
+      "synthesisEvidence": "有N-甲基丝氨酸环肽合成和结构使用记录。",
+      "cyclicEvidence": "在相同环六肽骨架的单点替换系列中被直接测试。",
+      "oralEvidence": "EPSA为83、RRCK Papp约1.6×10^-6 cm/s；有可测被动渗透，但不是该系列最优残基。",
+      "recommendation": "适合需要保留羟基和水溶性的位点，不能宣传为普适增渗单元。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "Goetz et al., ACS Med Chem Lett (2014)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4190640/",
+          "evidenceType": "环肽渗透性直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/5JP",
+      "pdbExamples": [
+        "5E2A",
+        "6DUB",
+        "7NUS",
+        "7TL8"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 5,
+      "ccdId": "A1CHA",
+      "name": "3-(aminomethyl)-L-phenylalanine",
+      "formula": "C10 H14 N2 O2",
+      "molecularWeight": 194.23,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为临床骨架交联残基",
+      "synthesisEvidence": "已在enlicitide的可放大模块化路线中使用。",
+      "cyclicEvidence": "额外氨甲基参与enlicitide的复杂交联网络。",
+      "oralEvidence": "所在完整宏环药物具有临床口服活性；额外伯胺本身通常不利于被动扩散。",
+      "recommendation": "作为侧链桥连/内酰胺化把手使用，不应当作单纯增脂或增渗残基。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Josien et al., J Med Chem (2026)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42201324/",
+          "evidenceType": "临床宏环骨架"
+        },
+        {
+          "title": "RCSB PDB 10SB",
+          "url": "https://www.rcsb.org/structure/10SB",
+          "evidenceType": "精确结构位置"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1CHA",
+      "pdbExamples": [
+        "10SB",
+        "9P5C",
+        "9R9M"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 6,
+      "ccdId": "NMK",
+      "name": "N-methyl Lysine",
+      "formula": "C7 H17 N2 O2",
+      "molecularWeight": 161.222,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "curated-evidence",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留，但标记为带正电位置依赖型",
+      "synthesisEvidence": "N-Me-Lys已用于环肽N-甲基化扫描和生长抑素类似物。",
+      "cyclicEvidence": "NMR结构6HVC为含N-Me-Lys的环状urotensin肽；另有N-甲基环六肽系统数据。",
+      "oralEvidence": "单点环肽RRCK Papp约0.3×10^-6 cm/s；但含N-Me-Lys的三N-甲基生长抑素类似物约10%口服生物利用度。",
+      "recommendation": "仅在正电荷参与结合或可被构象埋藏时使用。",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "title": "Goetz et al., ACS Med Chem Lett (2014)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4190640/",
+          "evidenceType": "环肽渗透性直接证据"
+        },
+        {
+          "title": "Biron et al., Angew Chem Int Ed (2008)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18297660/",
+          "evidenceType": "口服环肽骨架"
+        },
+        {
+          "title": "RCSB PDB 6HVC",
+          "url": "https://www.rcsb.org/structure/6HVC",
+          "evidenceType": "环肽结构证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/NMK",
+      "pdbExamples": [
+        "6HVC",
+        "7AA4"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 7,
+      "ccdId": "BAL",
+      "name": "BETA-ALANINE",
+      "formula": "C3 H7 N O2",
+      "molecularWeight": 89.093,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为β-氨基酸/间隔单元",
+      "synthesisEvidence": "β-丙氨酸可用标准肽化学进入α/β肽，也是天然肽抗生素efrapeptin的组成单元。",
+      "cyclicEvidence": "存在环肽和环状低聚物应用，但当前CCD命中主要证明肽中使用。",
+      "oralEvidence": "未找到该残基在可口服环肽中的直接归因证据。",
+      "recommendation": "用于延长骨架和调节转角；注意柔性增加可能不利于被动渗透。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1EFR / PNAS",
+          "url": "https://www.rcsb.org/structure/1EFR",
+          "evidenceType": "天然肽使用证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/BAL",
+      "pdbExamples": [
+        "1EFR",
+        "1FGL",
+        "1MCD",
+        "1MCE",
+        "1MCF"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 8,
+      "ccdId": "XCP",
+      "name": "(1S,2S)-2-aminocyclopentanecarboxylic acid",
+      "formula": "C6 H11 N O2",
+      "molecularWeight": 129.157,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为高价值构象限制β-氨基酸",
+      "synthesisEvidence": "有全立体异构体的规模化合成，且文献明确说明兼容标准SPPS。",
+      "cyclicEvidence": "已用于α/β肽、受体配体和RaPID非标准肽库；目前最强证据是稳定螺旋与细胞进入，不是口服宏环。",
+      "oralEvidence": "未找到直接口服暴露数据。",
+      "recommendation": "优先用于螺旋稳定、抗蛋白酶和细胞进入设计；口服价值仍需在具体环肽中验证。",
+      "sourceCount": 3,
+      "sources": [
+        {
+          "title": "Kawai et al., RSC Chem Biol (2025)",
+          "url": "https://doi.org/10.1039/D5CB00021A",
+          "evidenceType": "细胞进入/稳定性"
+        },
+        {
+          "title": "Scalable ACPC stereoisomer synthesis",
+          "url": "https://doi.org/10.1021/acs.joc.3c02991",
+          "evidenceType": "合成与SPPS兼容性"
+        },
+        {
+          "title": "RCSB PDB 25NV",
+          "url": "https://www.rcsb.org/structure/25NV",
+          "evidenceType": "肽中使用证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/XCP",
+      "pdbExamples": [
+        "25NV",
+        "25NX",
+        "3C3H",
+        "3F4Z",
+        "3F50"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 9,
+      "ccdId": "ASJ",
+      "name": "(3S)-3-amino-4-hydroxybutanoic acid",
+      "formula": "C4 H9 N O3",
+      "molecularWeight": 119.119,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为末端抑制剂/特殊用途片段",
+      "synthesisEvidence": "结构上可作为β-氨基酸样单元，但当前命中主要来自醛型或末端抑制剂体系。",
+      "cyclicEvidence": "未找到作为普通内部残基的可靠环肽应用。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "不要进入通用残基推荐库；仅在末端醛/半醛及蛋白酶抑制剂专题中保留。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 1F1J",
+          "url": "https://www.rcsb.org/structure/1F1J",
+          "evidenceType": "caspase肽醛抑制剂结构"
+        },
+        {
+          "title": "PubChem CID 1502045",
+          "url": "https://pubchem.ncbi.nlm.nih.gov/compound/1502045",
+          "evidenceType": "身份核对"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/ASJ",
+      "pdbExamples": [
+        "1F1J",
+        "1IAU",
+        "1PAU",
+        "1PYO",
+        "1QTN"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 10,
+      "ccdId": "XPC",
+      "name": "(3S,4R)-4-aminopyrrolidine-3-carboxylic acid",
+      "formula": "C5 H10 N2 O2",
+      "molecularWeight": 130.145,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为构象限制β-氨基酸",
+      "synthesisEvidence": "已有Fmoc保护体和SPPS进入α/β肽的直接方法。",
+      "cyclicEvidence": "用于α/β肽螺旋束、细胞穿透肽及环肽类似物研究。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合刚化骨架并提供可衍生的环内氮；需要单独评估碱性和渗透性。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RSC Org Biomol Chem (2015)",
+          "url": "https://doi.org/10.1039/C5OB00389J",
+          "evidenceType": "SPPS与细胞进入证据"
+        },
+        {
+          "title": "RCSB PDB 3C3H",
+          "url": "https://www.rcsb.org/structure/3C3H",
+          "evidenceType": "α/β肽结构证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/XPC",
+      "pdbExamples": [
+        "3C3H",
+        "3F4Z",
+        "3F50",
+        "3FDM",
+        "3G7A"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 11,
+      "ccdId": "PSA",
+      "name": "3-HYDROXY-4-AMINO-5-PHENYLPENTANOIC ACID",
+      "formula": "C11 H15 N O3",
+      "molecularWeight": 209.242,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为蛋白酶过渡态模拟残基",
+      "synthesisEvidence": "AHPPA/phenylstatine有成熟保护和肽偶联记录。",
+      "cyclicEvidence": "当前强证据主要是线性肽样蛋白酶抑制剂，不是口服环肽。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "适合蛋白酶靶点和过渡态模拟，不应外推为普适口服残基。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Peptide substrates and inhibitors of HIV-1 protease",
+          "url": "https://doi.org/10.1016/0006-291X(89)90008-9",
+          "evidenceType": "肽样抑制剂证据"
+        },
+        {
+          "title": "RCSB PDB 1EPL",
+          "url": "https://www.rcsb.org/structure/1EPL",
+          "evidenceType": "结构证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/PSA",
+      "pdbExamples": [
+        "1EPL",
+        "1EPM",
+        "2IFW",
+        "3UQP",
+        "3UQR"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 12,
+      "ccdId": "V7T",
+      "name": "(2R)-6-azanyl-2-carbamimidamido-hexanoic acid",
+      "formula": "C7 H16 N4 O2",
+      "molecularWeight": 188.228,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为宏环蛋白酶抑制剂残基",
+      "synthesisEvidence": "在MI系列宏环Zika病毒蛋白酶抑制剂中完成合成和优化。",
+      "cyclicEvidence": "7O55等多条PDB结构直接证明进入宏环抑制剂。",
+      "oralEvidence": "未找到口服暴露证据。",
+      "recommendation": "作为高极性、酶口袋定向残基使用；不适合默认用于被动渗透优化。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "Huber et al., J Med Chem (2022) / RCSB 7O55",
+          "url": "https://www.rcsb.org/structure/7O55",
+          "evidenceType": "宏环抑制剂直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/V7T",
+      "pdbExamples": [
+        "7O55",
+        "7OBV",
+        "7OC2",
+        "7PFQ",
+        "7PFY"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 13,
+      "ccdId": "L2O",
+      "name": "(2S,3R)-3-amino-2-hydroxy-5-methylhexanoic acid",
+      "formula": "C7 H15 N O3",
+      "molecularWeight": 161.199,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为天然肽样抑制剂残基",
+      "synthesisEvidence": "有光学纯保护衍生物合成，并已与Val-Val-Asp偶联制备amastatin。",
+      "cyclicEvidence": "当前直接证据为线性四肽amastatin，不是环肽。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "适合氨肽酶抑制和过渡态模拟专题，进入环肽需重新验证偶联与构象。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Rich et al., J Org Chem (1980)",
+          "url": "https://doi.org/10.1021/jo01300a004",
+          "evidenceType": "合成与肽偶联"
+        },
+        {
+          "title": "RCSB PDB 1BLL",
+          "url": "https://www.rcsb.org/structure/1BLL",
+          "evidenceType": "amastatin结构证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/L2O",
+      "pdbExamples": [
+        "1BLL",
+        "1Y0Y",
+        "4FYT",
+        "4KX8",
+        "4Q4I"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 14,
+      "ccdId": "3FB",
+      "name": "(3S)-3-AMINO-4-PHENYLBUTANOIC ACID",
+      "formula": "C10 H13 N O2",
+      "molecularWeight": 179.216,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为疏水β-氨基酸",
+      "synthesisEvidence": "β-高苯丙氨酸可进入α/β肽和功能性折叠体。",
+      "cyclicEvidence": "目前主要是α/β螺旋模拟物，不是环肽直接证据。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "可用于疏水结合面和抗蛋白酶设计；进入宏环后需重新优化闭环几何。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 4A1W / JACS",
+          "url": "https://www.rcsb.org/structure/4A1W",
+          "evidenceType": "α/β肽功能结构"
+        },
+        {
+          "title": "β-amino acid medicinal chemistry perspective",
+          "url": "https://doi.org/10.1021/jm5010896",
+          "evidenceType": "类别证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/3FB",
+      "pdbExamples": [
+        "4A1W",
+        "4WPB",
+        "6J67",
+        "7JFR",
+        "8DL7"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 15,
+      "ccdId": "A1CK7",
+      "name": "3-amino-3-methylbutanoic acid",
+      "formula": "C5 H11 N O2",
+      "molecularWeight": 117.146,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为宏环RAS抑制剂残基",
+      "synthesisEvidence": "已在UM0140401宏环肽中实际合成和结构解析。",
+      "cyclicEvidence": "9PU1等结构直接证明进入H/KRAS宏环抑制剂。",
+      "oralEvidence": "未找到口服暴露证据。",
+      "recommendation": "适合引入β位 gem-二甲基约束；常规偶联可能较困难，需保留专用合成条件。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9PU1 / ACS Med Chem Lett",
+          "url": "https://www.rcsb.org/structure/9PU1",
+          "evidenceType": "宏环抑制剂直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1CK7",
+      "pdbExamples": [
+        "9PU1",
+        "9PUN",
+        "9PUQ",
+        "9PUT",
+        "9PUZ"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 16,
+      "ccdId": "0JY",
+      "name": "4-methyl-L-leucine",
+      "formula": "C7 H15 N O2",
+      "molecularWeight": 145.2,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为疏水α-氨基酸",
+      "synthesisEvidence": "已有商品和设计肽中的实际使用。",
+      "cyclicEvidence": "当前强证据来自de novo coiled-coil肽，不是环肽。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "可作为高疏水侧链扫描单元；需防止溶解度下降和过度脂溶。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4G4L / Protein Science",
+          "url": "https://www.rcsb.org/structure/4G4L",
+          "evidenceType": "设计肽使用证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/0JY",
+      "pdbExamples": [
+        "4G4L",
+        "5GTR",
+        "7Z8O",
+        "9GXE",
+        "9GXG"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 17,
+      "ccdId": "CSI",
+      "name": "AMINO-(2-IMINO-HEXAHYDRO-PYRIMIDIN-4-YL)-ACETIC ACID",
+      "formula": "C7 H12 N4 O4",
+      "molecularWeight": 216.195,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为天然肽样抑制剂特殊残基",
+      "synthesisEvidence": "在chymostatin类肽醛抑制剂中出现，但结构含氨基甲酰化/环状胍特征，不是普通自由α-氨基酸。",
+      "cyclicEvidence": "未找到可靠的通用环肽单体证据。",
+      "oralEvidence": "未找到直接证据。",
+      "recommendation": "从通用单体库移到特殊天然产物残基/端基抑制剂区。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1BCS / J Mol Biol",
+          "url": "https://www.rcsb.org/structure/1BCS",
+          "evidenceType": "chymostatin肽醛证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/CSI",
+      "pdbExamples": [
+        "1BCS",
+        "1M21",
+        "1SGC",
+        "1WVM",
+        "6M9D"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 18,
+      "ccdId": "UQ4",
+      "name": "N-(7-nitro-2,1,3-benzoxadiazol-4-yl)-beta-alanine",
+      "formula": "C9 H8 N4 O5",
+      "molecularWeight": 252.184,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从氨基酸单体候选中排除",
+      "synthesisEvidence": "该分子是NBD-β-alanine荧光探针/标签，β-丙氨酸氨基已被NBD取代。",
+      "cyclicEvidence": "PDB命中来自人工细胞内丝状体等标记体系，不能证明它是普通内部残基。",
+      "oralEvidence": "无相关证据。",
+      "recommendation": "仅保留在荧光标签或成像探针专题，不纳入环肽单体库。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6X5I / Cell Reports Physical Science",
+          "url": "https://www.rcsb.org/structure/6X5I",
+          "evidenceType": "标记肽结构背景"
+        },
+        {
+          "title": "NBD-β-alanine identity",
+          "url": "https://adipogen.com/cdx-n0250-nbd-beta-alanine.html",
+          "evidenceType": "用途与身份核对"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/UQ4",
+      "pdbExamples": [
+        "6X5I",
+        "7T6E",
+        "8DST",
+        "9NEF",
+        "9NEQ"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 19,
+      "ccdId": "ABU",
+      "name": "GAMMA-AMINO-BUTANOIC ACID",
+      "formula": "C4 H9 N O2",
+      "molecularWeight": 103.12,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环肽间隔/骨架延长单元",
+      "synthesisEvidence": "GABA已有标准Fmoc固相肽合成和多肽类似物制备记录。",
+      "cyclicEvidence": "公开论文和专利均有GABA进入环肽/二硫键环肽的实例。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合间隔和环尺寸调节；柔性增加可能降低被动渗透，需配合其他刚化单元。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "Microcin J25 cyclic derivative (2019)",
+          "url": "https://brieflands.com/journals/ijpr/articles/126167.pdf",
+          "evidenceType": "环肽直接证据"
+        },
+        {
+          "title": "US20200223889A1",
+          "url": "https://patents.google.com/patent/US20200223889A1/en",
+          "evidenceType": "环肽专利证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/ABU",
+      "pdbExamples": [
+        "1QUR",
+        "6DN6",
+        "7K2O",
+        "7OPM",
+        "8PSR"
+      ]
+    },
+    {
+      "batch": 1,
+      "batchPosition": 20,
+      "ccdId": "PUK",
+      "name": "N-[(2S)-2-amino-3-phenylpropyl]-L-phenylalanine",
+      "formula": "C18 H22 N2 O2",
+      "molecularWeight": 298.379,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单个氨基酸库排除，转入二肽等排体",
+      "synthesisEvidence": "PUK是Phe-还原键-Phe类型片段，代表两个残基之间的CH2NH肽键等排替换，不是一个普通氨基酸单体。",
+      "cyclicEvidence": "命中来自H256等线性蛋白酶抑制剂。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "可在肽键等排体/蛋白酶抑制剂构件库中保留，但不计入非天然氨基酸数量。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 1GVX",
+          "url": "https://www.rcsb.org/structure/1GVX",
+          "evidenceType": "H256线性抑制剂结构"
+        },
+        {
+          "title": "Reduced-bond inhibitor comparison",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3943106/",
+          "evidenceType": "Phe-reduced-bond-Phe身份"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/PUK",
+      "pdbExamples": [
+        "1GVX",
+        "2ER6",
+        "3APR",
+        "3URL",
+        "4GYE"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 1,
+      "ccdId": "A1APM",
+      "name": "alpha-methyl-L-phenylalanine",
+      "formula": "C10 H13 N O2",
+      "molecularWeight": 179.216,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为宏环构象限制残基",
+      "synthesisEvidence": "α-甲基苯丙氨酸可按保护氨基酸方式进入肽链。",
+      "cyclicEvidence": "9BI3直接显示其位于Aβ来源的宏环β-发夹肽中。",
+      "oralEvidence": "未找到直接口服暴露数据。",
+      "recommendation": "适合刚化局部构象和降低蛋白酶识别；需监测疏水性和闭环收率。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9BI3",
+          "url": "https://www.rcsb.org/structure/9BI3",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1APM",
+      "pdbExamples": [
+        "9BI3",
+        "9YM5",
+        "9YM6",
+        "9YM7"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 2,
+      "ccdId": "EZY",
+      "name": "N-[(2-nitrophenyl)methyl]glycine",
+      "formula": "C9 H10 N2 O4",
+      "molecularWeight": 210.187,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "保留为光控N-取代甘氨酸，不列为通用残基",
+      "synthesisEvidence": "文献采用亚单体法在树脂上构建，而不是直接偶联常规Fmoc单体；后续偶联需要triphosgene等强化条件。",
+      "cyclicEvidence": "已进入光控Aβ宏环β-发夹肽，但用途是光解保护和控制聚集。",
+      "oralEvidence": "无口服证据；硝基苄基光敏基团不适合作为常规口服优化单元。",
+      "recommendation": "移入光控/可脱保护特殊构件区。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6CG3",
+          "url": "https://www.rcsb.org/structure/6CG3",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Macrocyclic photocaging study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6361387/",
+          "evidenceType": "合成与宏环直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/EZY",
+      "pdbExamples": [
+        "6CG3",
+        "6CG4",
+        "6CG5",
+        "9PUG"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 3,
+      "ccdId": "01B",
+      "name": "(2S,3R)-3-amino-2-hydroxy-4-phenylbutanoic acid",
+      "formula": "C10 H13 N O3",
+      "molecularWeight": 195.215,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为AHPBA类蛋白酶抑制残基",
+      "synthesisEvidence": "β-羟基-β-高苯丙氨酸类保护体已有肽偶联应用。",
+      "cyclicEvidence": "当前直接结构来自线性apstatin等肽样抑制剂，不是宏环。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合过渡态模拟和氨肽酶靶点；进入环肽需重新验证构象和偶联。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1N51",
+          "url": "https://www.rcsb.org/structure/1N51",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/01B",
+      "pdbExamples": [
+        "1N51",
+        "4S2T",
+        "5JR6",
+        "6A9U"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 4,
+      "ccdId": "1OL",
+      "name": "(2R,4S,5S)-5-amino-4-hydroxy-2,7-dimethyloctanoic acid",
+      "formula": "C10 H21 N O3",
+      "molecularWeight": 203.279,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为statine样过渡态模拟残基",
+      "synthesisEvidence": "在BACE蛋白酶抑制剂中作为稳定肽样构件使用。",
+      "cyclicEvidence": "当前命中主要为线性蛋白酶抑制剂。",
+      "oralEvidence": "未找到直接口服环肽证据。",
+      "recommendation": "仅在蛋白酶过渡态模拟方向优先，不作为普适增渗残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1FKN",
+          "url": "https://www.rcsb.org/structure/1FKN",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/1OL",
+      "pdbExamples": [
+        "1FKN",
+        "1M4H",
+        "1XN2",
+        "2ZHR"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 5,
+      "ccdId": "JG3",
+      "name": "1-[(2S,3S)-3-amino-2-hydroxy-4-phenylbutyl]-L-proline",
+      "formula": "C15 H22 N2 O3",
+      "molecularWeight": 278.347,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，转入肽键等排体库",
+      "synthesisEvidence": "JG3是JG-365中Phe-ψ[CH(OH)CH2N]-Pro的羟乙胺肽键等排片段，跨越两个残基。",
+      "cyclicEvidence": "用于线性七肽来源HIV蛋白酶抑制剂，不是独立单残基环肽证据。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "作为蛋白酶抑制剂二残基等排构件保留，不计入NCAA数量。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 2J9J",
+          "url": "https://www.rcsb.org/structure/2J9J",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "JG-365 identity",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC55048/",
+          "evidenceType": "二残基等排体证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/JG3",
+      "pdbExamples": [
+        "2J9J",
+        "2JE4",
+        "3GI0",
+        "7HVP"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 6,
+      "ccdId": "LOV",
+      "name": "5-AMINO-4-HYDROXY-2-ISOPROPYL-7-METHYL-OCTANOIC ACID",
+      "formula": "C12 H25 N O3",
+      "molecularWeight": 231.332,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为疏水statine样残基",
+      "synthesisEvidence": "已用于H261等过渡态类似肽抑制剂。",
+      "cyclicEvidence": "当前直接证据为线性肽样抑制剂。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合酸性蛋白酶抑制方向；高疏水和延长骨架需结合环尺寸评估。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1GKT",
+          "url": "https://www.rcsb.org/structure/1GKT",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LOV",
+      "pdbExamples": [
+        "1GKT",
+        "1OEX",
+        "2ER7",
+        "8HVP"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 7,
+      "ccdId": "Y2Y",
+      "name": "(3S,4R)-3-amino-4-hydroxyheptanedioic acid",
+      "formula": "C7 H13 N O5",
+      "molecularWeight": 191.182,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为酶反应中间体/末端抑制片段",
+      "synthesisEvidence": "结构命中来自caspase ketomethylene抑制剂形成的四面体加合物。",
+      "cyclicEvidence": "未找到作为稳定独立内部残基的环肽应用。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "不要进入通用合成单体库；仅在caspase机理与末端抑制剂专题中保留。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 6X8I",
+          "url": "https://www.rcsb.org/structure/6X8I",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/Y2Y",
+      "pdbExamples": [
+        "6X8I",
+        "6X8J",
+        "6X8K",
+        "6X8L"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 8,
+      "ccdId": "AKZ",
+      "name": "(3S)-3-amino-4,4-dihydroxybutanoic acid",
+      "formula": "C4 H9 N O4",
+      "molecularWeight": 135.119,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为末端醛/水合抑制片段",
+      "synthesisEvidence": "4,4-二羟基形态对应醛基末端的水合表达，PDB背景为Ac-DEVD-CMK/caspase体系。",
+      "cyclicEvidence": "不是普通内部残基的环肽使用证据。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "从通用残基推荐中移出，保留于蛋白酶共价/末端抑制剂区。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4JR0",
+          "url": "https://www.rcsb.org/structure/4JR0",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/AKZ",
+      "pdbExamples": [
+        "4JR0",
+        "4JR1"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 9,
+      "ccdId": "0UO",
+      "name": "4-methoxy-L-tryptophan",
+      "formula": "C12 H14 N2 O3",
+      "molecularWeight": 234.251,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为天然宏环肽芳香残基",
+      "synthesisEvidence": "4-甲氧基色氨酸存在于argyrin B等天然产物并可随宏环肽完成全合成。",
+      "cyclicEvidence": "4FN5直接显示其位于环肽argyrin B。",
+      "oralEvidence": "未找到该残基对口服吸收的直接归因证据。",
+      "recommendation": "适合芳香结合面与代谢调节；保留天然宏环来源标签。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4FN5",
+          "url": "https://www.rcsb.org/structure/4FN5",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/0UO",
+      "pdbExamples": [
+        "4FN5",
+        "7UG7"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 10,
+      "ccdId": "A1A2Y",
+      "name": "5-methoxy-L-tryptophan",
+      "formula": "C12 H14 N2 O3",
+      "molecularWeight": 234.251,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为芳香氨基酸药效团",
+      "synthesisEvidence": "5-甲氧基色氨酸样构件已进入Pin1共价抑制/降解化合物。",
+      "cyclicEvidence": "当前证据不是宏环肽，而是肽样/小分子化合物。",
+      "oralEvidence": "未找到直接口服环肽证据。",
+      "recommendation": "可用于芳香扫描，但不能因PDB短链命中标成环肽验证。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 8VJD",
+          "url": "https://www.rcsb.org/structure/8VJD",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Pin1 degrader study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11588135/",
+          "evidenceType": "化合物背景"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1A2Y",
+      "pdbExamples": [
+        "8VJD",
+        "8VJE"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 11,
+      "ccdId": "A1I8R",
+      "name": "N-methyl-beta-alanine",
+      "formula": "C4 H9 N O2",
+      "molecularWeight": 103.12,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为膜渗透宏环的N-取代β-氨基酸",
+      "synthesisEvidence": "N-甲基β-丙氨酸可作为N-取代延长骨架构件进入宏环。",
+      "cyclicEvidence": "9QBT/9QDU为KEAP1膜渗透环肽直接结构证据。",
+      "oralEvidence": "有膜渗透证据，但尚不能等同于口服暴露。",
+      "recommendation": "优先用于降低骨架供体和调节环尺寸；继续补查PK。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9QBT",
+          "url": "https://www.rcsb.org/structure/9QBT",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1I8R",
+      "pdbExamples": [
+        "9QBT",
+        "9QDU"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 12,
+      "ccdId": "PDF",
+      "name": "4,4-difluoro-L-proline",
+      "formula": "C5 H7 F2 N O2",
+      "molecularWeight": 151.111,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为构象限制含氟脯氨酸",
+      "synthesisEvidence": "4,4-二氟脯氨酸可按脯氨酸衍生物进入肽。",
+      "cyclicEvidence": "当前结构为线性蛋白酶体肽环氧酮抑制剂。",
+      "oralEvidence": "未找到直接口服环肽证据。",
+      "recommendation": "适合构象/电子效应扫描；含氟并不自动代表增渗。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4Y84",
+          "url": "https://www.rcsb.org/structure/4Y84",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/PDF",
+      "pdbExamples": [
+        "4Y84",
+        "5UU3"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 13,
+      "ccdId": "3WT",
+      "name": "(3R,4S,5S)-3-methoxy-5-methyl-4-(methylamino)heptanoic acid",
+      "formula": "C10 H21 N O3",
+      "molecularWeight": 203.279,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为天然产物型N-甲基γ-氨基酸",
+      "synthesisEvidence": "该残基位于auristatin/MMAF类肽载荷并有成熟合成应用。",
+      "cyclicEvidence": "当前PDB为线性auristatin类肽，不是宏环。",
+      "oralEvidence": "无直接口服证据；MMAF用途为细胞毒载荷。",
+      "recommendation": "保留于天然产物/ADC载荷残基区，不标为口服候选。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5J2U",
+          "url": "https://www.rcsb.org/structure/5J2U",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/3WT",
+      "pdbExamples": [
+        "5J2U",
+        "7JFR"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 14,
+      "ccdId": "APD",
+      "name": "3-METHYLPHENYLALANINE",
+      "formula": "C10 H13 N O2",
+      "molecularWeight": 179.216,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为PCSK9宏环芳香残基",
+      "synthesisEvidence": "3-甲基苯丙氨酸兼容宏环肽合成。",
+      "cyclicEvidence": "6XIE/6XIF直接显示其位于高效PCSK9环肽。",
+      "oralEvidence": "该系列支持宏环药效，但未证明该残基单独提高口服性。",
+      "recommendation": "适合疏水口袋和芳环定向扫描。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 6XIE",
+          "url": "https://www.rcsb.org/structure/6XIE",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/APD",
+      "pdbExamples": [
+        "6XIE",
+        "6XIF"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 15,
+      "ccdId": "KFB",
+      "name": "5-Aminovaleric Acid",
+      "formula": "C5 H11 N O2",
+      "molecularWeight": 117.146,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为δ-氨基酸/间隔单元",
+      "synthesisEvidence": "5-氨基戊酸有肽合成级原料并常作间隔臂。",
+      "cyclicEvidence": "当前PDB为RW16细胞穿透线性肽，不是宏环。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "用于调节间距和环尺寸；柔性较高，不应默认增渗。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6RQS",
+          "url": "https://www.rcsb.org/structure/6RQS",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Peptide-synthesis grade identity",
+          "url": "https://www.sigmaaldrich.com/US/en/product/aldrich/123188",
+          "evidenceType": "合成用途"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/KFB",
+      "pdbExamples": [
+        "6RQS",
+        "7XJO"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 16,
+      "ccdId": "MKE",
+      "name": "(4S)-4-AMINO-5-OXOHEXANOIC ACID",
+      "formula": "C6 H11 N O3",
+      "molecularWeight": 145.156,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为酮酸/蛋白酶反应片段",
+      "synthesisEvidence": "结构背景为caspase DEVE肽复合物中的氧代酸表达。",
+      "cyclicEvidence": "未找到稳定独立残基进入环肽的证据。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "移入caspase底物/反应机理专题，不列入通用单体。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5IC4",
+          "url": "https://www.rcsb.org/structure/5IC4",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/MKE",
+      "pdbExamples": [
+        "5IC4",
+        "5IC6"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 17,
+      "ccdId": "OPR",
+      "name": "(5S)-5-amino-8-carbamimidamido-4-oxooctanoic acid",
+      "formula": "C9 H18 N4 O3",
+      "molecularWeight": 230.264,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为非水解肽键模拟片段",
+      "synthesisEvidence": "OPR位于hirutonin非水解双功能抑制剂中，结构包含Arg样部分与额外酮酸链。",
+      "cyclicEvidence": "当前为线性双功能抑制剂，不是普通宏环单体。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "保留为肽键等排/连接构件，不进入常规NCAA推荐。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 1IHS",
+          "url": "https://www.rcsb.org/structure/1IHS",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Hirutonin context",
+          "url": "https://www.rcsb.org/structure/1IHT",
+          "evidenceType": "非水解连接体背景"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/OPR",
+      "pdbExamples": [
+        "1IHS",
+        "1UCY"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 18,
+      "ccdId": "TIG",
+      "name": "N-(2-aminoethyl)-L-tryptophan",
+      "formula": "C13 H17 N3 O2",
+      "molecularWeight": 247.293,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为N-氨乙基色氨酸",
+      "synthesisEvidence": "N-氨乙基取代后仍可通过末端胺构建N-取代肽骨架。",
+      "cyclicEvidence": "当前直接证据为HLA结合的线性peptidomimetic ELA-2。",
+      "oralEvidence": "未找到直接口服或宏环证据。",
+      "recommendation": "可用于N-取代和带正电侧链扫描，但需验证闭环与选择性保护。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 3O3D",
+          "url": "https://www.rcsb.org/structure/3O3D",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/TIG",
+      "pdbExamples": [
+        "3O3D",
+        "3O3E"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 19,
+      "ccdId": "LNT",
+      "name": "N-[(2S)-2-amino-1,1-dihydroxy-4-methylpentyl]-L-threonine",
+      "formula": "C10 H22 N2 O5",
+      "molecularWeight": 250.292,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，标为捕获的四面体反应中间体",
+      "synthesisEvidence": "LNT是HIV蛋白酶水解NLLTQI时形成的gem-diol四面体中间体片段，并非稳定采购单体。",
+      "cyclicEvidence": "不是宏环残基。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "仅保留于酶反应机理数据，不计入NCAA。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 3B7V",
+          "url": "https://www.rcsb.org/structure/3B7V",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Tetrahedral intermediate study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2546526/",
+          "evidenceType": "反应中间体证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LNT",
+      "pdbExamples": [
+        "3B7V",
+        "3B80"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 20,
+      "ccdId": "WEH",
+      "name": "L-Homoglutamine",
+      "formula": "C6 H12 N2 O3",
+      "molecularWeight": 160.171,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为宏环/硫肽中的同谷氨酰胺",
+      "synthesisEvidence": "同谷氨酰胺可被重编程遗传密码系统引入肽。",
+      "cyclicEvidence": "8WM0为新生硫肽wTP3复合物，支持进入高度修饰宏环肽。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合延长侧链和极性扫描；保留生物合成方式标签。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8WM0",
+          "url": "https://www.rcsb.org/structure/8WM0",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/WEH",
+      "pdbExamples": [
+        "8WM0",
+        "9U2V"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 21,
+      "ccdId": "45F",
+      "name": "(4S)-4-(prop-2-yn-1-yloxy)-L-proline",
+      "formula": "C8 H11 N O3",
+      "molecularWeight": 169.178,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为可点击的构象限制脯氨酸",
+      "synthesisEvidence": "炔丙氧基脯氨酸可作为保护单体进入肽。",
+      "cyclicEvidence": "4Y1C直接显示其位于HIV整合酶结合环六肽。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合脯氨酸刚化与后续点击衍生；需验证醚基代谢稳定性。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4Y1C",
+          "url": "https://www.rcsb.org/structure/4Y1C",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/45F",
+      "pdbExamples": [
+        "4Y1C"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 22,
+      "ccdId": "A1CZ7",
+      "name": "N,O-dimethyl-L-serine",
+      "formula": "C5 H11 N O3",
+      "molecularWeight": 133.146,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为天然环缩酚肽N,O-二甲基丝氨酸",
+      "synthesisEvidence": "已有保护单体与coibamide A固相/全合成路线。",
+      "cyclicEvidence": "coibamide A为高度N-甲基化环缩酚肽，9YWS给出靶点复合物结构。",
+      "oralEvidence": "未找到口服暴露证据；天然产物细胞活性不能等同口服。",
+      "recommendation": "高价值天然宏环残基，适合降低供体并调节极性。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 9YWS",
+          "url": "https://www.rcsb.org/structure/9YWS",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Coibamide A composition",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2659736/",
+          "evidenceType": "天然环缩酚肽直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1CZ7",
+      "pdbExamples": [
+        "9YWS"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 23,
+      "ccdId": "A1J0G",
+      "name": "dimethyl-glutamic acid",
+      "formula": "C7 H13 N O4",
+      "molecularWeight": 175.182,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为xeno peptide构象单元",
+      "synthesisEvidence": "dimethyl-glutamic acid已用于合成xeno peptide并完成NMR结构解析。",
+      "cyclicEvidence": "当前证据为非天然线性肽二级结构，不是宏环。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "保留为构象设计候选，后续需验证闭环和合成收率。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9U2V",
+          "url": "https://www.rcsb.org/structure/9U2V",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1J0G",
+      "pdbExamples": [
+        "9U2V"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 24,
+      "ccdId": "C67",
+      "name": "N~5~-[N-(2-carboxyethyl)carbamimidoyl]-L-ornithine",
+      "formula": "C9 H18 N4 O4",
+      "molecularWeight": 246.264,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环状meditope的Arg侧链扩展残基",
+      "synthesisEvidence": "N-羧乙基胍基鸟氨酸已实际进入meditope变体。",
+      "cyclicEvidence": "meditope是12残基环肽；结构和结合动力学均有直接数据。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合从环肽表面伸出羧酸把手；高极性，不作为被动增渗单元。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6AZL",
+          "url": "https://www.rcsb.org/structure/6AZL",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Meditope cyclic-peptide study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29199990/",
+          "evidenceType": "环肽直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/C67",
+      "pdbExamples": [
+        "6AZL"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 25,
+      "ccdId": "C6D",
+      "name": "N~5~-[N-(3-hydroxypropyl)carbamimidoyl]-L-ornithine",
+      "formula": "C9 H20 N4 O3",
+      "molecularWeight": 232.28,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环状meditope的羟丙基Arg类似物",
+      "synthesisEvidence": "已实际进入meditope变体并完成结构解析。",
+      "cyclicEvidence": "12残基环肽中的直接替换证据。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "可用于水溶性和外露氢键扫描；注意胍基高极性。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6AZK",
+          "url": "https://www.rcsb.org/structure/6AZK",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Meditope cyclic-peptide study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29199990/",
+          "evidenceType": "环肽直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/C6D",
+      "pdbExamples": [
+        "6AZK"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 26,
+      "ccdId": "GLK",
+      "name": "(4S)-4-amino-5,5-dihydroxypentanoic acid",
+      "formula": "C5 H11 N O4",
+      "molecularWeight": 149.145,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "降级为醛/水合蛋白酶抑制片段",
+      "synthesisEvidence": "5,5-二羟基形式代表末端醛的水合表达，背景为HAV 3C蛋白酶肽酮抑制剂。",
+      "cyclicEvidence": "不是稳定普通内部残基的宏环证据。",
+      "oralEvidence": "无直接证据。",
+      "recommendation": "移入末端醛/共价蛋白酶抑制剂区。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 2HAL",
+          "url": "https://www.rcsb.org/structure/2HAL",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/GLK",
+      "pdbExamples": [
+        "2HAL"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 27,
+      "ccdId": "LYP",
+      "name": "N~6~-METHYL-N~6~-PROPYL-L-LYSINE",
+      "formula": "C10 H22 N2 O2",
+      "molecularWeight": 202.294,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为赖氨酸侧链烷基化探针残基",
+      "synthesisEvidence": "N6-甲基-N6-丙基赖氨酸已在组蛋白肽中用于LSD1自杀失活研究。",
+      "cyclicEvidence": "当前为线性组蛋白肽，不是宏环。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合表观遗传读写酶探针；高碱性侧链不利于被动渗透。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 2UXN",
+          "url": "https://www.rcsb.org/structure/2UXN",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LYP",
+      "pdbExamples": [
+        "2UXN"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 28,
+      "ccdId": "9RI",
+      "name": "N~6~-[(1R,2S,4S)-bicyclo[2.2.1]heptan-2-yl]-N~6~-methyl-L-lysine",
+      "formula": "C14 H26 N2 O2",
+      "molecularWeight": 254.368,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为细胞活性甲基赖氨酸模拟物",
+      "synthesisEvidence": "该norbornyl/methyl赖氨酸已进入短肽UNC4976。",
+      "cyclicEvidence": "UNC4976是线性peptidomimetic，不是环肽。",
+      "oralEvidence": "具有细胞活性但无口服证据。",
+      "recommendation": "保留为芳香笼靶点和细胞活性侧链模拟物，不标为环肽验证。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 8SII",
+          "url": "https://www.rcsb.org/structure/8SII",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "UNC4976 study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6800648/",
+          "evidenceType": "短肽/细胞证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/9RI",
+      "pdbExamples": [
+        "8SII"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 29,
+      "ccdId": "A1BIE",
+      "name": "N~6~-(2-methylprop-2-enoyl)-L-lysine",
+      "formula": "C10 H18 N2 O3",
+      "molecularWeight": 214.262,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为赖氨酸甲基丙烯酰化PTM残基",
+      "synthesisEvidence": "已在合成组蛋白H3肽中使用并完成读者蛋白结构研究。",
+      "cyclicEvidence": "当前为线性PTM肽，不是宏环。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "适合表观遗传PTM专题，不作为通用口服设计残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9EHI",
+          "url": "https://www.rcsb.org/structure/9EHI",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1BIE",
+      "pdbExamples": [
+        "9EHI"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 30,
+      "ccdId": "A1IL6",
+      "name": "(2~{S},4~{S})-4-hexylsulfanylpyrrolidine-2-carboxylic acid",
+      "formula": "C11 H21 N O2 S",
+      "molecularWeight": 231.355,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为可钉合4-巯基脯氨酸衍生物",
+      "synthesisEvidence": "4-巯基脯氨酸侧链经己基硫醚表达，已有肽-折叠体合成。",
+      "cyclicEvidence": "9GFK为MDM2结合钉合foldamer，属于侧链宏环约束直接证据。",
+      "oralEvidence": "有细胞活性但未找到口服证据。",
+      "recommendation": "适合构建侧链钉合与螺旋预组织；需区分游离巯基前体和最终硫醚。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 9GFK",
+          "url": "https://www.rcsb.org/structure/9GFK",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1IL6",
+      "pdbExamples": [
+        "9GFK"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 31,
+      "ccdId": "C1J",
+      "name": "N~5~-(N-octylcarbamimidoyl)-L-ornithine",
+      "formula": "C14 H30 N4 O2",
+      "molecularWeight": 286.414,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环状meditope疏水Arg类似物",
+      "synthesisEvidence": "N-octyl胍基鸟氨酸已实际进入meditope变体。",
+      "cyclicEvidence": "12残基环肽直接结构和动力学证据。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "可扫描长疏水侧链，但可能降低溶解度。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6AXP",
+          "url": "https://www.rcsb.org/structure/6AXP",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Meditope cyclic-peptide study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29199990/",
+          "evidenceType": "环肽直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/C1J",
+      "pdbExamples": [
+        "6AXP"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 32,
+      "ccdId": "C4G",
+      "name": "N~5~-[N-(3-aminopropyl)carbamimidoyl]-L-ornithine",
+      "formula": "C9 H21 N5 O2",
+      "molecularWeight": 231.295,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环状meditope氨丙基Arg类似物",
+      "synthesisEvidence": "已实际进入meditope变体。",
+      "cyclicEvidence": "12残基环肽直接结构证据。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "可提供侧链胺把手；额外正电荷通常不利于被动扩散。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 6AYN",
+          "url": "https://www.rcsb.org/structure/6AYN",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Meditope cyclic-peptide study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29199990/",
+          "evidenceType": "环肽直接证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/C4G",
+      "pdbExamples": [
+        "6AYN"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 33,
+      "ccdId": "ZT1",
+      "name": "N~6~-[(1-methyl-1H-imidazol-5-yl)methyl]-N~6~-propan-2-yl-L-lysine",
+      "formula": "C14 H26 N4 O2",
+      "molecularWeight": 282.382,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为CDYL甲基赖氨酸模拟残基",
+      "synthesisEvidence": "N6-异丙基/咪唑甲基赖氨酸已进入短肽抑制剂UNC6261。",
+      "cyclicEvidence": "当前为线性peptidomimetic，不是宏环。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合染色质读者蛋白专题；需验证选择性保护和电荷状态。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 7N27",
+          "url": "https://www.rcsb.org/structure/7N27",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/ZT1",
+      "pdbExamples": [
+        "7N27"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 34,
+      "ccdId": "005",
+      "name": "(2S,3S)-3-amino-2-hydroxy-4-phenylbutanoic acid",
+      "formula": "C10 H13 N O3",
+      "molecularWeight": 195.215,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为口服小分子肽模拟物中的羟基氨基酸",
+      "synthesisEvidence": "该AHPBA立体异构体可作为蛋白酶过渡态模拟构件。",
+      "cyclicEvidence": "9IZB中的TMP1不是环肽，而是口服双靶点肽模拟抑制剂。",
+      "oralEvidence": "TMP1在小鼠报告77.5%口服生物利用度，并有犬PK；这是完整非环状化合物证据。",
+      "recommendation": "保留并标注“非环状口服peptidomimetic证据”，不能直接外推到环肽。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 9IZB",
+          "url": "https://www.rcsb.org/structure/9IZB",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "TMP1 oral study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11601862/",
+          "evidenceType": "非环状口服证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/005",
+      "pdbExamples": [
+        "9IZB"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 35,
+      "ccdId": "2IQ",
+      "name": "2-(hexylamino)ethanoic acid",
+      "formula": "C8 H17 N O2",
+      "molecularWeight": 159.226,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为N-己基甘氨酸宏环残基",
+      "synthesisEvidence": "N-烷基甘氨酸可作为peptoid样单元进入宏环。",
+      "cyclicEvidence": "7WMC直接显示其位于NNMT结合宏环肽1。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "适合降低骨架供体和增加疏水接触；注意长烷基导致溶解度下降。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 7WMC",
+          "url": "https://www.rcsb.org/structure/7WMC",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/2IQ",
+      "pdbExamples": [
+        "7WMC"
+      ]
+    },
+    {
+      "batch": 2,
+      "batchPosition": 36,
+      "ccdId": "4BA",
+      "name": "4-[(2-CARBOXY-ETHYLAMINO)-METHYL]-BENZOIC ACID",
+      "formula": "C11 H13 N O4",
+      "molecularWeight": 223.225,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为芳香β-氨基酸样连接构件",
+      "synthesisEvidence": "已用于HIV-1 gp41细胞进入抑制肽。",
+      "cyclicEvidence": "当前直接证据为线性抑制肽，不是宏环。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "可作为芳香刚性连接单元；双羧酸和延长骨架会增加极性。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1FAV",
+          "url": "https://www.rcsb.org/structure/1FAV",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/4BA",
+      "pdbExamples": [
+        "1FAV"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 1,
+      "ccdId": "0JT",
+      "name": "(4R)-4-amino-5-methylhexanoic acid",
+      "formula": "C7 H15 N O2",
+      "molecularWeight": 145.2,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为syringolin/glidobactin宏内酰胺残基",
+      "synthesisEvidence": "该β-氨基酸样单元已随天然产物及嵌合物完成合成。",
+      "cyclicEvidence": "4GK7直接显示其位于syringolin-glidobactin宏环蛋白酶体抑制剂中。",
+      "oralEvidence": "未找到口服暴露证据。",
+      "recommendation": "保留于天然宏内酰胺残基区；亲脂侧链和亲电药效团需分别评估。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 4GK7",
+          "url": "https://www.rcsb.org/structure/4GK7",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Syringolin macrocycle study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2672505/",
+          "evidenceType": "宏内酰胺与合成证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/0JT",
+      "pdbExamples": [
+        "4GK7"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 2,
+      "ccdId": "24M",
+      "name": "(1R,2R)-2-[(1S,2S)-2-amino-1-hydroxy-4-methylpentyl]cyclopentanecarboxylic acid",
+      "formula": "C12 H23 N O3",
+      "molecularWeight": 229.316,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为环戊基statine样过渡态模拟构件",
+      "synthesisEvidence": "已进入NVP-AMK640等BACE肽样抑制剂。",
+      "cyclicEvidence": "1YM4为线性肽样蛋白酶抑制剂，不是环肽。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "仅在蛋白酶过渡态模拟方向使用；环化兼容性需单独验证。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1YM4",
+          "url": "https://www.rcsb.org/structure/1YM4",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/24M",
+      "pdbExamples": [
+        "1YM4"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 3,
+      "ccdId": "24O",
+      "name": "(1R,2R)-2-[(1S,2S)-2-amino-1-hydroxy-4-methylpentyl]-4-oxocyclopentanecarboxylic acid",
+      "formula": "C12 H21 N O4",
+      "molecularWeight": 243.299,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为含酮环戊基statine样构件",
+      "synthesisEvidence": "已进入NVP-AUR200等BACE肽样抑制剂。",
+      "cyclicEvidence": "1YM2为线性肽样抑制剂，不是环肽。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "保留为蛋白酶抑制药效构件，不标注为增渗或口服残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1YM2",
+          "url": "https://www.rcsb.org/structure/1YM2",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/24O",
+      "pdbExamples": [
+        "1YM2"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 4,
+      "ccdId": "3V8",
+      "name": "(4S)-4-[4-(2-carboxyethyl)-1H-1,2,3-triazol-1-yl]-L-proline",
+      "formula": "C10 H14 N4 O4",
+      "molecularWeight": 254.243,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为可连接的三唑脯氨酸宏环残基",
+      "synthesisEvidence": "三唑化脯氨酸已用于DNA编码宏环库命中物的合成优化。",
+      "cyclicEvidence": "4WVU为XIAP-BIR2结合宏环拮抗剂的直接结构。",
+      "oralEvidence": "该系列有体内抗肿瘤活性，但未证明口服暴露。",
+      "recommendation": "适合脯氨酸构象限制及侧链延伸；继续核对具体保护体。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 4WVU",
+          "url": "https://www.rcsb.org/structure/4WVU",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "XIAP macrocycle study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25695766/",
+          "evidenceType": "宏环与体内药效证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/3V8",
+      "pdbExamples": [
+        "4WVU"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 5,
+      "ccdId": "4H0",
+      "name": "(3S)-3-amino-4-oxo-5-(2,3,5,6-tetrafluorophenoxy)pentanoic acid",
+      "formula": "C11 H9 F4 N O4",
+      "molecularWeight": 295.187,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "限用途保留为底物模拟酮基片段",
+      "synthesisEvidence": "其氨基酮结构出现在caspase-6底物模拟物/三元复合物中。",
+      "cyclicEvidence": "未找到作为稳定通用内部残基的环肽证据。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "移入蛋白酶底物模拟与反应片段区，不作为普通NCAA推荐。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 4HVA",
+          "url": "https://www.rcsb.org/structure/4HVA",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Caspase-6 mechanism study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23227217/",
+          "evidenceType": "底物模拟背景"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/4H0",
+      "pdbExamples": [
+        "4HVA"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 6,
+      "ccdId": "6A0",
+      "name": "(2S)-2-amino-8-(hydroxyamino)-8-oxooctanoic acid",
+      "formula": "C8 H16 N2 O4",
+      "molecularWeight": 204.224,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为带羟肟酸侧链的赖氨酸类似物",
+      "synthesisEvidence": "已进入基于组蛋白H4的HDAC肽抑制剂。",
+      "cyclicEvidence": "5ICN中的直接证据为线性肽抑制剂，不是宏环。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合HDAC金属结合专题；高极性羟肟酸不应被当作通用增渗单元。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 5ICN",
+          "url": "https://www.rcsb.org/structure/5ICN",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "HDAC complex study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4848466/",
+          "evidenceType": "线性肽抑制剂证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/6A0",
+      "pdbExamples": [
+        "5ICN"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 7,
+      "ccdId": "6L9",
+      "name": "[(2S)-2,3-diamino-3-oxopropyl]propanedioic acid",
+      "formula": "C6 H10 N2 O5",
+      "molecularWeight": 190.154,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为环肽表面的双羧酸/酰胺残基",
+      "synthesisEvidence": "该构件已通过合成进入14-3-3结合环肽。",
+      "cyclicEvidence": "5JM4明确为含该残基和金刚烷残基的环肽复合物。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "可用于外露极性和盐桥扫描；多羧酸通常不利于被动渗透。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5JM4",
+          "url": "https://www.rcsb.org/structure/5JM4",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/6L9",
+      "pdbExamples": [
+        "5JM4"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 8,
+      "ccdId": "A1G",
+      "name": "(2S)-amino[(3R,5R,7R)-tricyclo[3.3.1.1~3,7~]decan-1-yl]acetic acid",
+      "formula": "C12 H19 N O2",
+      "molecularWeight": 209.285,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为金刚烷基甘氨酸宏环残基",
+      "synthesisEvidence": "金刚烷基甘氨酸已实际进入14-3-3结合环肽。",
+      "cyclicEvidence": "5JM4提供直接环肽结构证据。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合疏水热点填充，但需重点监测溶解度和非特异结合。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5JM4",
+          "url": "https://www.rcsb.org/structure/5JM4",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/A1G",
+      "pdbExamples": [
+        "5JM4"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 9,
+      "ccdId": "AFC",
+      "name": "(3R,12R)-3-amino-12-methyltetradecanoic acid",
+      "formula": "C15 H31 N O2",
+      "molecularWeight": 257.412,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为天然环脂肽长链β-氨基酸",
+      "synthesisEvidence": "该长链β-氨基酸是bacillomycin Lc等天然脂肽组成单元。",
+      "cyclicEvidence": "2IGZ为环状脂肽bacillomycin Lc的NMR结构。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "保留于天然环脂肽专区；不作为一般口服环肽的常规替换。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 2IGZ",
+          "url": "https://www.rcsb.org/structure/2IGZ",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/AFC",
+      "pdbExamples": [
+        "2IGZ"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 10,
+      "ccdId": "CHS",
+      "name": "4-AMINO-5-CYCLOHEXYL-3-HYDROXY-PENTANOIC ACID",
+      "formula": "C11 H21 N O3",
+      "molecularWeight": 215.289,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为环己基statine样残基",
+      "synthesisEvidence": "已用于天冬氨酸蛋白酶的statine类肽抑制剂。",
+      "cyclicEvidence": "2ER0为线性蛋白酶抑制剂复合物。",
+      "oralEvidence": "未找到直接口服证据。",
+      "recommendation": "仅在蛋白酶过渡态模拟方向优先。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 2ER0",
+          "url": "https://www.rcsb.org/structure/2ER0",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/CHS",
+      "pdbExamples": [
+        "2ER0"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 11,
+      "ccdId": "CNT",
+      "name": "N-METHYL-META-CHLORO-TYROSINE",
+      "formula": "C10 H12 Cl N O3",
+      "molecularWeight": 229.66,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为N-甲基氯代酪氨酸天然宏环残基",
+      "synthesisEvidence": "该残基存在于scyptolin A并有天然产物结构证据。",
+      "cyclicEvidence": "1OKX为弹性蛋白酶与环状scyptolin A复合物。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合N-甲基化和芳香疏水接触研究；注意卤代芳环代谢。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 1OKX",
+          "url": "https://www.rcsb.org/structure/1OKX",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/CNT",
+      "pdbExamples": [
+        "1OKX"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 12,
+      "ccdId": "DAV",
+      "name": "DELTA-AMINO VALERIC ACID",
+      "formula": "C5 H12 N O2",
+      "molecularWeight": 118.154,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为δ-氨基戊酸宏环连接单元",
+      "synthesisEvidence": "可作为双官能间隔单元进入肽合成。",
+      "cyclicEvidence": "7K2P直接显示其用于Nrf2来源KEAP1结合环肽的闭环连接。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合调节环尺寸；高柔性可能削弱预组织，需要构象数据配合。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 7K2P",
+          "url": "https://www.rcsb.org/structure/7K2P",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/DAV",
+      "pdbExamples": [
+        "7K2P"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 13,
+      "ccdId": "DC0",
+      "name": "N-[(2S)-2-amino-4-methylpentyl]-L-phenylalanine",
+      "formula": "C15 H24 N2 O2",
+      "molecularWeight": 264.363,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，转入还原二肽等排体库",
+      "synthesisEvidence": "其结构为Leu-CH2-NH-Phe型还原肽键，跨越两个残基。",
+      "cyclicEvidence": "4GZF来自线性HIV蛋白酶抑制肽，不是独立环肽残基。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "作为二残基肽键等排构件保存，不计入NCAA单体数量。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4GZF",
+          "url": "https://www.rcsb.org/structure/4GZF",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/DC0",
+      "pdbExamples": [
+        "4GZF"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 14,
+      "ccdId": "DMG",
+      "name": "N,N-DIMETHYLGLYCINE",
+      "formula": "C4 H9 N O2",
+      "molecularWeight": 103.12,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为N端二甲基甘氨酸状态，不作为普通内部残基",
+      "synthesisEvidence": "5CVD中的DMG表达CENP-A肽的α-N二甲基化N端。",
+      "cyclicEvidence": "直接结构为线性底物肽。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "保留于N端修饰区，并明确限制为末端状态。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 5CVD",
+          "url": "https://www.rcsb.org/structure/5CVD",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "NRMT1 substrate study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26543159/",
+          "evidenceType": "N端甲基化证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/DMG",
+      "pdbExamples": [
+        "5CVD"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 15,
+      "ccdId": "E7P",
+      "name": "(2S)-2-amino-4-phosphonobutanoic acid",
+      "formula": "C4 H10 N O5 P",
+      "molecularWeight": 183.1,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为磷酸/磷酸酯等排型谷氨酸类似物",
+      "synthesisEvidence": "已进入合成phosphono-MLL肽类似物。",
+      "cyclicEvidence": "7S79为HLA结合线性肽，不是宏环。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合磷酸化表位和高电荷识别研究，不作为被动渗透单元。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 7S79",
+          "url": "https://www.rcsb.org/structure/7S79",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/E7P",
+      "pdbExamples": [
+        "7S79"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 16,
+      "ccdId": "EE3",
+      "name": "(2~{S})-2-azanyl-6-(1,3-oxazol-5-ylcarbonylamino)hexanoic acid",
+      "formula": "C10 H15 N3 O4",
+      "molecularWeight": 241.244,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为侧链酰化赖氨酸宏环残基",
+      "synthesisEvidence": "含噁唑羰基侧链的赖氨酸已进入AF9 YEATS抑制剂。",
+      "cyclicEvidence": "6L5Z标题及结构明确为cyclopeptide inhibitor。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合表观遗传读者蛋白的侧链识别扫描。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 6L5Z",
+          "url": "https://www.rcsb.org/structure/6L5Z",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/EE3",
+      "pdbExamples": [
+        "6L5Z"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 17,
+      "ccdId": "GM8",
+      "name": "(2S)-2-[(1S,2S)-2-aminocyclohexyl]butanoic acid",
+      "formula": "C10 H19 N O2",
+      "molecularWeight": 185.263,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为环己烷约束γ-氨基酸",
+      "synthesisEvidence": "已用于α/β/环γ混合骨架foldamer。",
+      "cyclicEvidence": "4HJB中的肽为螺旋模拟序列，并非闭合宏环。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合螺旋预组织和蛋白酶稳定性研究；闭环几何需另测。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4HJB",
+          "url": "https://www.rcsb.org/structure/4HJB",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/GM8",
+      "pdbExamples": [
+        "4HJB"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 18,
+      "ccdId": "GRN",
+      "name": "2-phenyl-L-alanine",
+      "formula": "C9 H11 N O2",
+      "molecularWeight": 165.189,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为α-甲基-α-苯基甘氨酸构象单元",
+      "synthesisEvidence": "已进入HLA呈递的合成肽配体。",
+      "cyclicEvidence": "4WJ5为线性抗原肽，不是宏环。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合局部刚化和芳香扫描，需关注消旋与偶联效率。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4WJ5",
+          "url": "https://www.rcsb.org/structure/4WJ5",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/GRN",
+      "pdbExamples": [
+        "4WJ5"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 19,
+      "ccdId": "KV6",
+      "name": "(3R)-3-aminoheptadecanoic acid",
+      "formula": "C17 H35 N O2",
+      "molecularWeight": 285.465,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为iturin天然环脂肽长链β-氨基酸",
+      "synthesisEvidence": "长链β-氨基酸是iturin类生物合成与全结构的一部分。",
+      "cyclicEvidence": "7TZ3为iturin环脂肽结构。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "保留于天然环脂肽专区；强疏水性不适合作为普通扫描残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 7TZ3",
+          "url": "https://www.rcsb.org/structure/7TZ3",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/KV6",
+      "pdbExamples": [
+        "7TZ3"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 20,
+      "ccdId": "LAV",
+      "name": "N-[(2S)-2-amino-4-methylpentyl]-L-valine",
+      "formula": "C11 H24 N2 O2",
+      "molecularWeight": 216.32,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，转入还原二肽等排体库",
+      "synthesisEvidence": "其结构是Leu-CH2-NH-Val型还原肽键，跨越两个残基。",
+      "cyclicEvidence": "4ER4来自线性renin抑制剂。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "不计入独立NCAA；仅用于蛋白酶抑制剂肽键等排设计。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4ER4",
+          "url": "https://www.rcsb.org/structure/4ER4",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LAV",
+      "pdbExamples": [
+        "4ER4"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 21,
+      "ccdId": "LDO",
+      "name": "6-HYDROXY-L-NORLEUCINE",
+      "formula": "C6 H13 N O3",
+      "molecularWeight": 147.172,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为末端羟基正亮氨酸",
+      "synthesisEvidence": "已进入Zika NS2B-NS3蛋白酶抑制肽MI-2260。",
+      "cyclicEvidence": "8AQA为线性抑制剂复合物。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "可作侧链极性及后续衍生把手；环肽应用需验证。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8AQA",
+          "url": "https://www.rcsb.org/structure/8AQA",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LDO",
+      "pdbExamples": [
+        "8AQA"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 22,
+      "ccdId": "LHE",
+      "name": "N-[(2R,3S)-3-amino-2-hydroxy-5-methylhexyl]-L-norvaline",
+      "formula": "C12 H26 N2 O3",
+      "molecularWeight": 246.346,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，转入羟乙胺二肽等排体库",
+      "synthesisEvidence": "结构同时包含norvaline和氨基羟基异己基两部分，模拟被还原的肽键。",
+      "cyclicEvidence": "4TRW为线性BACE1 HEA型抑制剂。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "作为二残基过渡态模拟构件保存，不计入NCAA单体。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4TRW",
+          "url": "https://www.rcsb.org/structure/4TRW",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LHE",
+      "pdbExamples": [
+        "4TRW"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 23,
+      "ccdId": "LXO",
+      "name": "4-(pyridin-4-ylamino)butanoic acid",
+      "formula": "C9 H12 N2 O2",
+      "molecularWeight": 180.204,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "限用途保留为含吡啶配位头的连接片段",
+      "synthesisEvidence": "该结构在Im-N-C4-Phe-Phe中充当吡啶配位头/柔性连接单元。",
+      "cyclicEvidence": "8HOU不是环肽，而是P450配体复合物。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "移入配位连接体区，不作为普通氨基酸推荐。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8HOU",
+          "url": "https://www.rcsb.org/structure/8HOU",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/LXO",
+      "pdbExamples": [
+        "8HOU"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 24,
+      "ccdId": "OUD",
+      "name": "(3~{S})-3-azanyl-4-(carboxyamino)butanoic acid",
+      "formula": "C5 H10 N2 O4",
+      "molecularWeight": 162.144,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "保留为短链寡脲骨架单元",
+      "synthesisEvidence": "5N14显示其用于非肽寡脲螺旋结构域。",
+      "cyclicEvidence": "当前为蛋白-寡脲复合折叠体，不是传统环肽。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "单列为寡脲/折叠体构件，不混入普通NCAA残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5N14",
+          "url": "https://www.rcsb.org/structure/5N14",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/OUD",
+      "pdbExamples": [
+        "5N14"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 25,
+      "ccdId": "OUE",
+      "name": "(4~{S})-4-azanyl-5-(carboxyamino)pentanoic acid",
+      "formula": "C6 H12 N2 O4",
+      "molecularWeight": 176.17,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "保留为长链寡脲骨架单元",
+      "synthesisEvidence": "5N14显示其用于非肽寡脲螺旋结构域。",
+      "cyclicEvidence": "当前不是传统环肽直接证据。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "单列为寡脲/折叠体构件，并验证专用固相合成路线。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5N14",
+          "url": "https://www.rcsb.org/structure/5N14",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/OUE",
+      "pdbExamples": [
+        "5N14"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 26,
+      "ccdId": "PBE",
+      "name": "1,1-DIMETHYL-PROLINIUM",
+      "formula": "C7 H14 N O2",
+      "molecularWeight": 144.192,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为N端季铵化脯氨酸状态",
+      "synthesisEvidence": "5CVE中的PBE表达果蝇H2B肽N端二甲基脯氨酸。",
+      "cyclicEvidence": "直接证据为线性底物肽。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "仅作为N端永久正电修饰保留，不作为内部残基或增渗单元。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 5CVE",
+          "url": "https://www.rcsb.org/structure/5CVE",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "NRMT1 substrate study",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/26543159/",
+          "evidenceType": "N端甲基化证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/PBE",
+      "pdbExamples": [
+        "5CVE"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 27,
+      "ccdId": "PRW",
+      "name": "(2R,3R)-4-AMINO-2,3-DIHYDROXYBUTANOIC ACID",
+      "formula": "C4 H9 N O4",
+      "molecularWeight": 135.119,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为可氧化切割的二羟基氨基酸",
+      "synthesisEvidence": "已通过合成装入periodate-cleavable HLA肽。",
+      "cyclicEvidence": "2X4T为线性MHC配体，不是宏环。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "适合作为可切割化学工具，不作为通用口服优化残基。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 2X4T",
+          "url": "https://www.rcsb.org/structure/2X4T",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/PRW",
+      "pdbExamples": [
+        "2X4T"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 28,
+      "ccdId": "QF0",
+      "name": "(3S)-3-amino-4-(naphthalen-2-yl)butanoic acid",
+      "formula": "C14 H15 N O2",
+      "molecularWeight": 229.274,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为2-萘基β3-高丙氨酸",
+      "synthesisEvidence": "已进入PTH1R结合的合成肽配体。",
+      "cyclicEvidence": "8D52为线性受体肽配体，不是宏环。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "适合芳香热点和β肽扫描；注意疏水性与环尺寸。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8D52",
+          "url": "https://www.rcsb.org/structure/8D52",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/QF0",
+      "pdbExamples": [
+        "8D52"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 29,
+      "ccdId": "SGK",
+      "name": "2-(pyridin-2-ylmethylamino)ethanoic acid",
+      "formula": "C8 H10 N2 O2",
+      "molecularWeight": 166.177,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为吡啶甲基N-取代甘氨酸样构件",
+      "synthesisEvidence": "已用于优化细菌DNA滑动夹结合短肽。",
+      "cyclicEvidence": "7AZF中的peptide 8为线性短肽，不是宏环。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "可用于N端延伸和芳香杂环接触，不标为环肽验证。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 7AZF",
+          "url": "https://www.rcsb.org/structure/7AZF",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Sliding-clamp peptide study",
+          "url": "https://doi.org/10.1021/acs.jmedchem.1c00918",
+          "evidenceType": "线性短肽证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/SGK",
+      "pdbExamples": [
+        "7AZF"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 30,
+      "ccdId": "SOW",
+      "name": "[(2-amino-2-oxoethyl)amino]acetic acid",
+      "formula": "C4 H8 N2 O3",
+      "molecularWeight": 132.118,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "限用途保留为还原酰胺/peptoid样片段",
+      "synthesisEvidence": "该N-羧甲基甘氨酰胺结构出现在minihepcidin PR73中。",
+      "cyclicEvidence": "8DL7为线性minihepcidin复合物，不是普通内部α-氨基酸环肽证据。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "单列为肽键等排/peptidomimetic构件，验证具体保护体后再用。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8DL7",
+          "url": "https://www.rcsb.org/structure/8DL7",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/SOW",
+      "pdbExamples": [
+        "8DL7"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 31,
+      "ccdId": "T7H",
+      "name": "3-({2-[(carboxymethyl)amino]ethyl}sulfanyl)propanoic acid",
+      "formula": "C7 H13 N O4 S",
+      "molecularWeight": 207.247,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为双羧酸硫醚宏环连接构件",
+      "synthesisEvidence": "文献建立了固相硫醚闭环合成路线。",
+      "cyclicEvidence": "8DPY直接显示其位于双HBS稳定的宏环β折叠中。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合构建硫醚HBS和β折叠预组织；它更像闭环连接体而非通用侧链。",
+      "sourceCount": 2,
+      "sources": [
+        {
+          "title": "RCSB PDB 8DPY",
+          "url": "https://www.rcsb.org/structure/8DPY",
+          "evidenceType": "结构与论文入口"
+        },
+        {
+          "title": "Macrocyclic beta-sheet study",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10592574/",
+          "evidenceType": "宏环与固相合成证据"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/T7H",
+      "pdbExamples": [
+        "8DPY"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 32,
+      "ccdId": "TVA",
+      "name": "N-[(2R,3S)-3-amino-2-hydroxy-4-(thiophen-2-yl)butyl]-L-norvaline",
+      "formula": "C13 H22 N2 O3 S",
+      "molecularWeight": 286.39,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "EXCLUDE",
+      "gradeLabel": "排除：不是普通氨基酸单体",
+      "conclusion": "从单氨基酸库排除，转入羟乙胺二肽等排体库",
+      "synthesisEvidence": "结构由norvaline与氨基羟基噻吩侧链共同模拟一段肽键。",
+      "cyclicEvidence": "4TRZ为线性BACE1 HEA型抑制剂。",
+      "oralEvidence": "无直接口服证据。",
+      "recommendation": "作为二残基蛋白酶过渡态模拟构件保存。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 4TRZ",
+          "url": "https://www.rcsb.org/structure/4TRZ",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/TVA",
+      "pdbExamples": [
+        "4TRZ"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 33,
+      "ccdId": "WGB",
+      "name": "N-methyl-4-nitro-L-phenylalanine",
+      "formula": "C10 H12 N2 O4",
+      "molecularWeight": 224.213,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为硝基N-甲基苯丙氨酸硫肽残基",
+      "synthesisEvidence": "该N-甲基芳香残基已进入新生硫肽wTP3。",
+      "cyclicEvidence": "8WM0直接显示其位于高度修饰宏环硫肽中。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "保留天然产物/重编程宏环标签；硝基芳环需毒理与代谢评估。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 8WM0",
+          "url": "https://www.rcsb.org/structure/8WM0",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/WGB",
+      "pdbExamples": [
+        "8WM0"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 34,
+      "ccdId": "XZP",
+      "name": "(1R,2R)-2-aminocyclopentane-1-carboxylic acid",
+      "formula": "C6 H11 N O2",
+      "molecularWeight": 129.157,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "B",
+      "gradeLabel": "B级：可进入肽，但缺少口服环肽直接证据",
+      "conclusion": "保留为trans-2-氨基环戊烷羧酸构象单元",
+      "synthesisEvidence": "ACPC可通过合成装入WW结构域环区。",
+      "cyclicEvidence": "5VTI为含ACPC环替换的线性折叠肽，不是闭合环肽。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合β肽与转角刚化；不能仅凭loop一词标成环肽。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5VTI",
+          "url": "https://www.rcsb.org/structure/5VTI",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/XZP",
+      "pdbExamples": [
+        "5VTI"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 35,
+      "ccdId": "Y1Y",
+      "name": "3-amino-2,3-dideoxy-5-O-(5-methylthiophene-2-carbonyl)-D-erythro-pentonic acid",
+      "formula": "C11 H15 N O5 S",
+      "molecularWeight": 273.306,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "C",
+      "gradeLabel": "C级：特殊片段，需限制用途",
+      "conclusion": "限用途保留为AOMK末端战头相关片段",
+      "synthesisEvidence": "该糖酸样结构来自caspase-8与AOMK抑制剂形成的四面体加合物。",
+      "cyclicEvidence": "不是稳定通用内部残基，也无环肽证据。",
+      "oralEvidence": "无口服证据。",
+      "recommendation": "移入共价蛋白酶抑制剂/反应中间体区。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 6X8H",
+          "url": "https://www.rcsb.org/structure/6X8H",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/Y1Y",
+      "pdbExamples": [
+        "6X8H"
+      ]
+    },
+    {
+      "batch": 3,
+      "batchPosition": 36,
+      "ccdId": "ZS8",
+      "name": "(2S)-2-amino-2-methyldec-8-ynoic acid",
+      "formula": "C11 H19 N O2",
+      "molecularWeight": 197.274,
+      "originalStatus": "recommended-review",
+      "originalEvidenceStatus": "short-polymer",
+      "grade": "A",
+      "gradeLabel": "A级：有直接环肽/宏环强证据",
+      "conclusion": "保留为炔基α-甲基氨基酸闭环把手",
+      "synthesisEvidence": "炔基氨基酸已通过合成进入ExoS来源肽。",
+      "cyclicEvidence": "5J31为炔烃交联环肽与14-3-3复合物。",
+      "oralEvidence": "未找到口服证据。",
+      "recommendation": "适合点击/交联闭环和构象限制；需区分游离单体与最终交联状态。",
+      "sourceCount": 1,
+      "sources": [
+        {
+          "title": "RCSB PDB 5J31",
+          "url": "https://www.rcsb.org/structure/5J31",
+          "evidenceType": "结构与论文入口"
+        }
+      ],
+      "ccdUrl": "https://www.rcsb.org/ligand/ZS8",
+      "pdbExamples": [
+        "5J31"
+      ]
+    }
+  ]
+}

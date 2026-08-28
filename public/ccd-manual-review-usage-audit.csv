@@ -1,0 +1,379 @@
+证据状态,审核优先级,CCD编号,名称,聚合物实体数,≤50残基实体数,示例PDB
+网站已有人工证据,P0,3WX,2-methyl-L-proline,8,8,10SB / 6XIB / 6XIC / 6XID / 6XIE
+网站已有人工证据,P0,5JP,N-methyl-L-serine,4,4,5E2A / 6DUB / 7NUS / 7TL8
+网站已有人工证据,P0,A1CHA,3-(aminomethyl)-L-phenylalanine,3,3,10SB / 9P5C / 9R9M
+网站已有人工证据,P0,NMK,N-methyl Lysine,2,2,6HVC / 7AA4
+网站已有人工证据,P0,SOQ,N-methyl-L-aspartic acid,7,7,24HR / 24HS / 7AZ6 / 7AZ7 / 7AZG
+网站已有人工证据,P0,STA,STATINE,44,44,1FIV / 1GVU / 1IZE / 1LS5 / 1LYB
+短聚合物序列命中,P1,0UO,4-methoxy-L-tryptophan,2,2,4FN5 / 7UG7
+仅长聚合物命中,P1,42Y,O-propanoyl-L-serine,3,0,4XSA / 5WGC / 6UR0
+短聚合物序列命中,P1,45F,(4S)-4-(prop-2-yn-1-yloxy)-L-proline,1,1,4Y1C
+仅长聚合物命中,P1,6DN,(2~{S})-2-azanyl-6-(2-hydroxy-2-oxoethylamino)hexanoic acid,1,0,5J2S
+仅结构候选,P1,8AY,"3-[6-(propan-2-yl)-1,3-benzothiazol-2-yl]-L-alanine",0,0,
+仅长聚合物命中,P1,9IJ,2-cyano-L-phenylalanine,19,0,7SJJ / 7SPV / 7SPW / 7SPX / 8DZU
+短聚合物序列命中,P1,9RI,"N~6~-[(1R,2S,4S)-bicyclo[2.2.1]heptan-2-yl]-N~6~-methyl-L-lysine",1,1,8SII
+短聚合物序列命中,P1,A1A2Y,5-methoxy-L-tryptophan,2,2,8VJD / 8VJE
+短聚合物序列命中,P1,A1APM,alpha-methyl-L-phenylalanine,4,4,9BI3 / 9YM5 / 9YM6 / 9YM7
+仅结构候选,P1,A1AV8,N-(prop-2-en-1-yl)glycine,0,0,
+短聚合物序列命中,P1,A1BIE,N~6~-(2-methylprop-2-enoyl)-L-lysine,1,1,9EHI
+短聚合物序列命中,P1,A1CZ7,"N,O-dimethyl-L-serine",1,1,9YWS
+仅长聚合物命中,P1,A1DP2,S-[(1R)-1-hydroxy-2-oxopropyl]-L-cysteine,6,0,9CFI / 9CFM / 9CFO / 9CFY / 9CFZ
+短聚合物序列命中,P1,A1IL6,"(2~{S},4~{S})-4-hexylsulfanylpyrrolidine-2-carboxylic acid",1,1,9GFK
+短聚合物序列命中,P1,A1J0G,dimethyl-glutamic acid,1,1,9U2V
+仅结构候选,P1,A1JJC,N-Phenylglycine,0,0,
+短聚合物序列命中,P1,AKZ,"(3S)-3-amino-4,4-dihydroxybutanoic acid",2,2,4JR0 / 4JR1
+仅结构候选,P1,AVJ,"N,N,N-trimethyl-histidine",0,0,
+短聚合物序列命中,P1,C1J,N~5~-(N-octylcarbamimidoyl)-L-ornithine,1,1,6AXP
+仅长聚合物命中,P1,C1S,3-(prop-2-en-1-yldisulfanyl)-L-alanine,2,0,4MKJ / 4MKK
+短聚合物序列命中,P1,C4G,N~5~-[N-(3-aminopropyl)carbamimidoyl]-L-ornithine,1,1,6AYN
+短聚合物序列命中,P1,C67,N~5~-[N-(2-carboxyethyl)carbamimidoyl]-L-ornithine,1,1,6AZL
+短聚合物序列命中,P1,C6D,N~5~-[N-(3-hydroxypropyl)carbamimidoyl]-L-ornithine,1,1,6AZK
+短聚合物序列命中,P1,EZY,N-[(2-nitrophenyl)methyl]glycine,4,4,6CG3 / 6CG4 / 6CG5 / 9PUG
+仅长聚合物命中,P1,FFL,"5,5'-difluoroleucines",3,0,7Q6P / 8VRI
+短聚合物序列命中,P1,GLK,"(4S)-4-amino-5,5-dihydroxypentanoic acid",1,1,2HAL
+仅结构候选,P1,H1D,"(2S)-2-AMINO-4-[(2R,3S)-2,3-DIHYDROXY-3-N-HYDROXYCARBAMOYL-PROPYLMERCAPTO]BUTYRIC ACID",0,0,
+仅结构候选,P1,HYI,"(2S)-2-AMINO-4-[(2R,3R)-2,3-DIHYDROXY-3-N-HYDROXYCARBAMOYL-PROPYLMERCAPTO]BUTYRIC ACID",0,0,
+仅长聚合物命中,P1,I3D,"5,6-difluoro-tryptophan",2,0,7QZ8 / 7QZ9
+仅长聚合物命中,P1,ILY,N~6~-propan-2-yl-L-lysine,1,0,4IAG
+短聚合物序列命中,P1,LYP,N~6~-METHYL-N~6~-PROPYL-L-LYSINE,1,1,2UXN
+仅长聚合物命中,P1,O18,O-palmitoleoyl serine,1,0,9PQZ
+仅结构候选,P1,OO0,ALLIIN,0,0,
+仅长聚合物命中,P1,P5U,O-[(4-cyanophenyl)sulfonyl]-L-serine,2,0,6DWQ / 6DWR
+短聚合物序列命中,P1,PSA,3-HYDROXY-4-AMINO-5-PHENYLPENTANOIC ACID,16,16,1EPL / 1EPM / 2IFW / 3UQP / 3UQR
+仅长聚合物命中,P1,SBG,O-[(S)-HYDROXY(METHYL)PHOSPHORYL]-L-SERINE,5,0,2JGL / 2WHQ / 4AXB / 4B0O / 4B0P
+仅结构候选,P1,SDB,"(4S)-2-[(1S)-1-amino-2-hydroxyethyl]-3,4,5,6-tetrahydropyrimidine-4-carboxylic acid",0,0,
+仅长聚合物命中,P1,TFW,"5,6,7-trifluoro-tryptophan",1,0,7QZ7
+短聚合物序列命中,P1,V7T,(2R)-6-azanyl-2-carbamimidamido-hexanoic acid,12,12,7O55 / 7OBV / 7OC2 / 7PFQ / 7PFY
+短聚合物序列命中,P1,ZT1,N~6~-[(1-methyl-1H-imidazol-5-yl)methyl]-N~6~-propan-2-yl-L-lysine,1,1,7N27
+短聚合物序列命中,P2,005,"(2S,3S)-3-amino-2-hydroxy-4-phenylbutanoic acid",1,1,9IZB
+仅结构候选,P2,00M,"(2R,3S)-3-amino-2-hydroxy-4-phenylbutanoic acid",0,0,
+仅结构候选,P2,00U,"(1S,7S)-7-amino-7-benzyl-8-oxohexahydro-1H-pyrazolo[1,2-a]pyridazine-1-carboxylic acid",0,0,
+仅结构候选,P2,00V,"(2S,3S)-3,7-diamino-2-hydroxyheptanoic acid",0,0,
+仅结构候选,P2,00W,"3-amino-6-carbamimidamido-3,4,5,6-tetradeoxy-L-erythro-hexonic acid",0,0,
+短聚合物序列命中,P2,01B,"(2S,3R)-3-amino-2-hydroxy-4-phenylbutanoic acid",4,4,1N51 / 4S2T / 5JR6 / 6A9U
+仅结构候选,P2,021,N-cyclopentylglycine,0,0,
+短聚合物序列命中,P2,0JT,(4R)-4-amino-5-methylhexanoic acid,1,1,4GK7
+短聚合物序列命中,P2,0JY,4-methyl-L-leucine,7,7,4G4L / 5GTR / 7Z8O / 9GXE / 9GXG
+仅结构候选,P2,0TF,N~6~-D-ornithyl-L-lysine,0,0,
+仅结构候选,P2,0XW,"(2S,4R)-4-hydroxy-1,1-dimethylpyrrolidinium-2-carboxylate",0,0,
+仅结构候选,P2,108,2-(5-CARBAMIMIDOYL-2-HYDROXY-BENZYLAMINO)-PROPIONIC ACID,0,0,
+仅结构候选,P2,109,2-(4-CARBAMIMIDOYL-2-HYDROXY-BENZYLAMINO)-PROPIONIC ACID,0,0,
+仅结构候选,P2,11C,(2R)-2-aminohexanedioic acid,0,0,
+仅结构候选,P2,12N,"(2R,3S)-3-amino-4-cyclobutyl-2-hydroxybutanoic acid",0,0,
+仅结构候选,P2,1J1,"N~6~-[(2R)-3,4-dihydro-2H-pyrrol-2-ylcarbonyl]-L-lysine",0,0,
+仅结构候选,P2,1KJ,N~5~-(N-methoxycarbamimidoyl)-L-ornithine,0,0,
+仅结构候选,P2,1N4,(2R)-amino(1-hydroxy-4-propyl-1H-pyrazol-5-yl)ethanoic acid,0,0,
+短聚合物序列命中,P2,1OL,"(2R,4S,5S)-5-amino-4-hydroxy-2,7-dimethyloctanoic acid",4,4,1FKN / 1M4H / 1XN2 / 2ZHR
+仅结构候选,P2,1RT,"4-amino-2-oxo-1,2-dihydropyrimidine-5-carboxylic acid",0,0,
+仅结构候选,P2,1X0,(2S)-2-aminooct-7-enoic acid,0,0,
+仅结构候选,P2,1Y2,"(2S)-amino(4,4-difluorocyclohexyl)ethanoic acid",0,0,
+仅结构候选,P2,22N,"(3R,4S,5S)-4-(acetylamino)-5-amino-3-(pentan-3-yloxy)cyclohex-1-ene-1-carboxylic acid",0,0,
+仅结构候选,P2,22P,(2R)-2-(aminomethyl)-2-hydroxy-4-phenylbutanoic acid,0,0,
+仅结构候选,P2,247,"(3R)-3-amino-2,2-difluoro-3-(4-hydroxyphenyl)propanoic acid",0,0,
+短聚合物序列命中,P2,24M,"(1R,2R)-2-[(1S,2S)-2-amino-1-hydroxy-4-methylpentyl]cyclopentanecarboxylic acid",1,1,1YM4
+短聚合物序列命中,P2,24O,"(1R,2R)-2-[(1S,2S)-2-amino-1-hydroxy-4-methylpentyl]-4-oxocyclopentanecarboxylic acid",1,1,1YM2
+仅结构候选,P2,26P,2-AMINO-6-OXOPIMELIC ACID,0,0,
+仅结构候选,P2,296,"(3R)-3-amino-2,2-difluoro-3-(4-methoxyphenyl)propanoic acid",0,0,
+仅结构候选,P2,2A0,N-[(2S)-2-aminohexyl]-L-norleucine,0,0,
+仅结构候选,P2,2B8,"(5R)-5-(3-aminopropyl)-1-propyl-4,5,6,7-tetrahydro-1H-benzimidazole-5-carboxylic acid",0,0,
+仅结构候选,P2,2BH,"[(1E,5S)-5-AMINO-5-CARBOXYPENT-1-ENYL](TRIHYDROXY)BORATE(1-)",0,0,
+仅结构候选,P2,2C0,baclofen,0,0,
+仅结构候选,P2,2CG,"(1R,2R)-3-[(S)-amino(carboxy)methyl]cyclopropane-1,2-dicarboxylic acid",0,0,
+短聚合物序列命中,P2,2IQ,2-(hexylamino)ethanoic acid,1,1,7WMC
+仅结构候选,P2,2K8,"(6R)-2-amino-4-oxo-3,4,5,6,7,8-hexahydropteridine-6-carboxylic acid",0,0,
+仅结构候选,P2,2KJ,N~5~-(N-ethoxycarbamimidoyl)-L-ornithine,0,0,
+仅结构候选,P2,2MM,"N,N-dimethyl-L-methionine",0,0,
+仅结构候选,P2,2NP,L-2-AMINO-6-METHYLENE-PIMELIC ACID,0,0,
+仅结构候选,P2,2QE,"(2S,4R)-4-(3-Methoxy-3-oxopropyl) glutamic acid",0,0,
+仅结构候选,P2,2SU,alpha-(fluoromethyl)-D-tryptophan,0,0,
+仅结构候选,P2,35K,"(2S)-2-amino-4-(2,3-dioxo-1,2,3,4-tetrahydroquinoxalin-6-yl)butanoic acid",0,0,
+仅结构候选,P2,3DJ,(2S)-2-amino-4-(2-amino-3-hydroxyphenyl)-4-oxobutanoic acid,0,0,
+仅结构候选,P2,3ER,(2S)-(3-chlorophenyl)[(methylsulfonyl)amino]ethanoic acid,0,0,
+短聚合物序列命中,P2,3FB,(3S)-3-AMINO-4-PHENYLBUTANOIC ACID,8,8,4A1W / 4WPB / 6J67 / 7JFR / 8DL7
+仅结构候选,P2,3FK,"(2R)-(3,5-dichlorophenyl)(dimethylamino)ethanoic acid",0,0,
+仅结构候选,P2,3GC,GAMMA-GLUTAMYLCYSTEINE,0,0,
+仅结构候选,P2,3GE,N-[(1E)-2-formyl-3-hydroxyprop-1-en-1-yl]-3-[(S)-sulfino]-D-valine,0,0,
+仅结构候选,P2,3K0,N-sulfamoyl-L-glutamic acid,0,0,
+仅结构候选,P2,3KJ,N~5~-(N-hydroxy-N-methylcarbamimidoyl)-L-ornithine,0,0,
+仅结构候选,P2,3RG,2-[(carboxymethyl)amino]benzoic acid,0,0,
+仅结构候选,P2,3V5,"(3S,5S)-3-({[(aminomethyl)amino]methyl}sulfanyl)-5-[(2S)-1,3-dioxobutan-2-yl]-L-proline",0,0,
+短聚合物序列命中,P2,3V8,"(4S)-4-[4-(2-carboxyethyl)-1H-1,2,3-triazol-1-yl]-L-proline",1,1,4WVU
+短聚合物序列命中,P2,3WT,"(3R,4S,5S)-3-methoxy-5-methyl-4-(methylamino)heptanoic acid",2,2,5J2U / 7JFR
+仅结构候选,P2,3ZA,(4R)-4-{3-[hydroxy(methyl)amino]-3-oxopropyl}-L-glutamic acid,0,0,
+仅结构候选,P2,40F,"(1S,2S,5R,6S)-2-aminobicyclo[3.1.0]hexane-2,6-dicarboxylic acid",0,0,
+仅结构候选,P2,40H,"(1R,4S,5S,6S)-4-aminospiro[bicyclo[3.1.0]hexane-2,1'-cyclopropane]-4,6-dicarboxylic acid",0,0,
+仅结构候选,P2,42B,4-AMINO-2-HYDROXYBUTANOIC ACID,0,0,
+短聚合物序列命中,P2,4BA,4-[(2-CARBOXY-ETHYLAMINO)-METHYL]-BENZOIC ACID,1,1,1FAV
+仅结构候选,P2,4E5,(3R)-3-(3-carboxy-5-hydroxyphenyl)-L-proline,0,0,
+仅结构候选,P2,4E7,"(3R,4S)-3-(3-carboxyphenyl)-4-propyl-L-proline",0,0,
+短聚合物序列命中,P2,4H0,"(3S)-3-amino-4-oxo-5-(2,3,5,6-tetrafluorophenoxy)pentanoic acid",1,1,4HVA
+仅结构候选,P2,4JK,(S)-2-AMINO-5-(2-HYDROXYACETIMIDAMIDO)PENTANOIC ACID,0,0,
+仅结构候选,P2,4KJ,(5E)-5-[(N-methoxy-N-methylcarbamimidoyl)imino]-L-norvaline,0,0,
+仅长聚合物命中,P2,4OO,"4-triaza-1,2-dien-2-ium-1-yl-L-phenylalanine",1,0,5XHF
+仅长聚合物命中,P2,4V0,3-(3H-azepin-5-yl)-L-alanine,1,0,5BTT
+仅结构候选,P2,52A,"(2R,4R)-4-aminopyrrolidine-2,4-dicarboxylic acid",0,0,
+仅结构候选,P2,52Q,"(1R,2S,4R,5R,6R)-2-amino-4-(1H-1,2,4-triazol-3-ylsulfanyl)bicyclo[3.1.0]hexane-2,6-dicarboxylic acid",0,0,
+仅结构候选,P2,55P,"(2R,4R)-4-amino-2-methyl-5-phenylpentanoic acid",0,0,
+仅结构候选,P2,5AR,"(2S)-2-amino-4-[5-(4-aminobutyl)-1,3,4-oxadiazol-2-yl]butanoic acid",0,0,
+仅结构候选,P2,5DM,N-[(2S)-2-amino-3-phenylpropyl]-D-methionine,0,0,
+仅结构候选,P2,5DZ,5-[(2R)-2-amino-2-carboxyethyl]-1-(4-fluorophenyl)-1H-pyrazole-3-carboxylic acid,0,0,
+仅结构候选,P2,5E0,5-[(2R)-2-amino-2-carboxyethyl]-1-phenyl-1H-pyrazole-3-carboxylic acid,0,0,
+仅结构候选,P2,5KC,"(2S,3S)-2-azanyl-4-(2-hydroxy-2-oxoethylamino)-3-oxidanyl-butanoic acid",0,0,
+仅结构候选,P2,5KJ,N~5~-(N-hydroxycarbamimidoyl)-N~5~-methyl-L-ornithine,0,0,
+仅结构候选,P2,5OY,5-phosphono-L-norvaline,0,0,
+仅结构候选,P2,5XR,2-hydroxy-N-[(1S)-1-hydroxy-3-oxopropyl]-L-aspartic acid,0,0,
+仅结构候选,P2,64X,5-bromo-L-tryptophan,0,0,
+短聚合物序列命中,P2,6A0,(2S)-2-amino-8-(hydroxyamino)-8-oxooctanoic acid,1,1,5ICN
+仅结构候选,P2,6KJ,(5E)-5-[(N-tert-butoxycarbamimidoyl)imino]-L-norvaline,0,0,
+短聚合物序列命中,P2,6L9,"[(2S)-2,3-diamino-3-oxopropyl]propanedioic acid",1,1,5JM4
+仅结构候选,P2,720,(2S)-5-AMINO-2-[(1-PROPYL-1H-IMIDAZOL-4-YL)METHYL]PENTANOIC ACID,0,0,
+仅结构候选,P2,76I,(2S)-2-oxidanyl-2-[oxidanyl(propan-2-yl)amino]ethanoic acid,0,0,
+仅结构候选,P2,78U,(betaS)-beta-methyl-L-tryptophan,0,0,
+仅结构候选,P2,7B0,(2~{S})-6-azanyl-2-(sulfamoylamino)hexanoic acid,0,0,
+仅结构候选,P2,7UC,(3~{R})-3-(2-hydroxy-2-oxoethylamino)butanoic acid,0,0,
+仅结构候选,P2,83V,(4S)-4-amino-6-phenylhexanoic acid,0,0,
+仅结构候选,P2,8DX,"(2R,3aR,6S,7aR)-2-[(2S)-2-amino-3-hydroxy-3-oxo-propyl]-6-hydroxy-3,3a,5,6,7,7a-hexahydrofuro[4,5-b]pyran-2-carboxylic acid",0,0,
+仅结构候选,P2,8QA,(2S)-2-azanyl-6-[(5-oxidanyl-5-oxidanylidene-pentanethioyl)amino]hexanoic acid,0,0,
+仅结构候选,P2,8X9,"2-[(1R,5S,6S)-6-(aminomethyl)-3-ethyl-6-bicyclo[3.2.0]hept-3-enyl]acetic acid",0,0,
+仅结构候选,P2,96Z,beta-(1-azulenyl)-L-alanine,0,0,
+仅结构候选,P2,9DX,"(2R,3aR,7R,7aR)-2-[(2S)-2-amino-3-hydroxy-3-oxo-propyl]-7-hydroxy-3,3a,5,6,7,7a-hexahydrofuro[4,5-b]pyran-2-carboxylic acid",0,0,
+仅长聚合物命中,P2,A0A,(2S)-2-AMINO-4-(FORMYLOXY)-4-OXOBUTANOIC ACID,1,0,2VJM
+仅结构候选,P2,A1A46,"(2S)-2-{[(2S,3S)-1,3-dihydroxy-4-oxopentan-2-yl]amino}-3-(4-hydroxyphenyl)propanoic acid",0,0,
+仅结构候选,P2,A1A8K,"(4S)-4-hydroxy-1-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-D-proline",0,0,
+仅结构候选,P2,A1AKT,"N-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-D-valine",0,0,
+仅结构候选,P2,A1AKU,"(4S)-4-hydroxy-1-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-D-proline",0,0,
+仅结构候选,P2,A1AKV,"3-cyclopropyl-N-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)-L-alanine",0,0,
+仅结构候选,P2,A1AUG,5-oxo-L-norvaline,0,0,
+仅结构候选,P2,A1CIL,(2R)-2-amino-3-methylbut-3-enoic acid,0,0,
+短聚合物序列命中,P2,A1CK7,3-amino-3-methylbutanoic acid,7,7,9PU1 / 9PUN / 9PUQ / 9PUT / 9PUZ
+短聚合物序列命中,P2,A1G,"(2S)-amino[(3R,5R,7R)-tricyclo[3.3.1.1~3,7~]decan-1-yl]acetic acid",1,1,5JM4
+短聚合物序列命中,P2,A1I8R,N-methyl-beta-alanine,2,2,9QBT / 9QDU
+仅结构候选,P2,A1IFF,(R)-amino-3-hydroxybutanoic acid,0,0,
+仅结构候选,P2,A1IFH,(S)-amino-3-hydroxybutanoic acid,0,0,
+仅结构候选,P2,A1ILR,(2~{R})-2-azanyl-3-(2~{H}-thiophen-5-ylcarbonylamino)propanoic acid,0,0,
+仅结构候选,P2,A1IME,"(2~{R})-2-azanyl-3-[(7-methylthieno[3,2-b]pyridin-2-yl)carbonylamino]propanoic acid",0,0,
+仅结构候选,P2,A1IT0,1-(methylsulfonylamino)cyclohexane-1-carboxylic acid,0,0,
+仅结构候选,P2,A1JEV,(2~{S})-1-[(1~{R})-1-(4-chlorophenyl)-2-(methylamino)-2-oxidanylidene-ethyl]pyrrolidine-2-carboxylic acid,0,0,
+仅结构候选,P2,A1JF4,"3-(7~{H}-pyrrolo[2,3-d]pyrimidin-4-ylamino)propanoic acid",0,0,
+仅结构候选,P2,A1JHR,Gly-Ser-epsilon-Lys,0,0,
+仅结构候选,P2,A1JSL,3-[(6-methylnaphthalen-2-yl)sulfonylamino]propanoic acid,0,0,
+仅结构候选,P2,A1L7T,(2~{R})-3-azanyl-3-methyl-2-oxidanyl-butanoic acid,0,0,
+仅结构候选,P2,A1LWG,(2~{R})-2-[2-(1~{H}-indol-3-yl)ethylamino]propanoic acid,0,0,
+仅结构候选,P2,A33,2-(carboxymethyl)-D-aspartic acid,0,0,
+仅结构候选,P2,A3B,D-VINYLGLYCINE,0,0,
+仅结构候选,P2,ABH,2(S)-AMINO-6-BORONOHEXANOIC ACID,0,0,
+短聚合物序列命中,P2,ABU,GAMMA-AMINO-BUTANOIC ACID,7,5,1QUR / 6DN6 / 7K2O / 7OPM / 8PSR
+仅结构候选,P2,ACZ / TZA,CIS-AMICLENOMYCIN；TRANS-AMICLENOMYCIN,0,0,
+短聚合物序列命中,P2,AFC,"(3R,12R)-3-amino-12-methyltetradecanoic acid",1,1,2IGZ
+仅结构候选,P2,AHY,"(2S,3R)-3-AMINO-2-HYDROXYDECANOIC ACID",0,0,
+仅结构候选,P2,AKB,2-AMINO-3-KETOBUTYRIC ACID,0,0,
+仅结构候选,P2,AL0,3-[HYDROXY(NITROSO)AMINO]-L-ALANINE,0,0,
+仅结构候选,P2,AM1,(S)-2-AMINO-3-(3-CARBOXY-5-METHYLISOXAZOL-4-YL)PROPIONIC ACID,0,0,
+仅结构候选,P2,AMB,L-2-AMINO-4-METHOXY-CIS-BUT-3-ENOIC ACID,0,0,
+仅结构候选,P2,AMQ,(S)-ALPHA-AMINO-3-HYDROXY-5-METHYL-4-ISOXAZOLEPROPIONIC ACID,0,0,
+短聚合物序列命中,P2,APD,3-METHYLPHENYLALANINE,2,2,6XIE / 6XIF
+仅结构候选,P2,AQK,(2~{S})-5-azanyl-2-(2-hydroxy-2-oxoethylamino)pentanoic acid,0,0,
+仅结构候选,P2,AQQ,(2~{S})-5-azanyl-2-[[(2~{R})-1-oxidanyl-1-oxidanylidene-propan-2-yl]amino]pentanoic acid,0,0,
+短聚合物序列命中,P2,ASJ,(3S)-3-amino-4-hydroxybutanoic acid,36,36,1F1J / 1IAU / 1PAU / 1PYO / 1QTN
+仅结构候选,P2,AUU,"(1S,2S,4R)-2-aminobicyclo[2.2.1]heptane-2-carboxylic acid",0,0,
+仅结构候选,P2,AVG,2-AMINO-4-(2-AMINO-ETHOXY)-BUTYRIC ACID,0,0,
+仅结构候选,P2,AVI,"N,N-dimethyl-L-histidine",0,0,
+仅结构候选,P2,AVO,Pyrrolidinohistidine,0,0,
+仅结构候选,P2,AXZ,2-{[dihydroxy(4-aminoethylphenyl)-{4}-sulfanyl]amino}-3-hydroxypropanoic acid,0,0,
+仅结构候选,P2,B56,"2-amino-8-methyl-4-oxo-3,4,7,8-tetrahydropteridine-6-carboxylic acid",0,0,
+短聚合物序列命中,P2,BAL,BETA-ALANINE,67,67,1EFR / 1FGL / 1MCD / 1MCE / 1MCF
+仅结构候选,P2,BDH,L-BETA-ASPARTYLHISTIDINE,0,0,
+仅结构候选,P2,BET,TRIMETHYL GLYCINE,0,0,
+仅结构候选,P2,BN1,(S)-2-AMINO-3-[3-HYDROXY-5-(2-METHYL-2H-TETRAZOL-5-YL)ISOXAZOL-4-YL]PROPIONIC ACID,0,0,
+仅结构候选,P2,BO8,(D-ALPHA-AMINOPIMELYLAMINO)-D-1-ETHYLBORONIC ACID,0,0,
+仅结构候选,P2,BQ7,"(3S)-3-amino-2,2-difluoro-3-phenylpropanoic acid",0,0,
+仅结构候选,P2,BRH,(S)-2-AMINO-3-(4-BROMO-3-HYDROXY-ISOXAZOL-5-YL)PROPIONIC ACID,0,0,
+仅结构候选,P2,BSC,(2S)-2-amino-4-(S-butylsulfonimidoyl)butanoic acid,0,0,
+仅结构候选,P2,C5A,"(1S,3S)-1-aminocyclopentane-1,3-dicarboxylic acid",0,0,
+仅结构候选,P2,C5B,"(1S,3R)-1-AMINOCYCLOPENTANE-1,3-DICARBOXYLIC ACID",0,0,
+仅结构候选,P2,CAL,5-AMINO-6-CYCLOHEXYL-4-HYDROXY-2-ISOBUTYL-HEXANOIC ACID,0,0,
+仅结构候选,P2,CAV,"5-AMINO-6-CYCLOHEXYL-3,4-DIHYDROXY-2-ISOPROPYL-HEXANOIC ACID",0,0,
+仅结构候选,P2,CBH,S-(D-CARBOXYBUTYL)-L-HOMOCYSTEINE,0,0,
+仅结构候选,P2,CCW,(S)-2-Amino-5-(2-(methylsulfonyl)acetimidamido)pentanoic acid,0,0,
+仅结构候选,P2,CE2,3-(5-TERT-BUTYL-3-OXIDOISOXAZOL-4-YL)-L-ALANINATE,0,0,
+仅结构候选,P2,CFU,"(2R)-2-[(1R)-1-(acetylamino)-2-oxoethyl]-5-methyl-3,6-dihydro-2H-1,3-thiazine-4-carboxylic acid",0,0,
+短聚合物序列命中,P2,CHS,4-AMINO-5-CYCLOHEXYL-3-HYDROXY-PENTANOIC ACID,1,1,2ER0
+仅结构候选,P2,CL5,N-(3-OXOPROPYL)GLYCINE,0,0,
+仅结构候选,P2,CMA,N2-(CARBOXYETHYL)-L-ARGININE,0,0,
+短聚合物序列命中,P2,CNT,N-METHYL-META-CHLORO-TYROSINE,1,1,1OKX
+仅结构候选,P2,CPV,5-AMINO-6-CYCLOHEXYL-4-HYDROXY-2-ISOPROPYL-HEXANOIC ACID,0,0,
+仅结构候选,P2,CPW,"(S)-2-AMINO-3-(1,3,5,7-PENTAHYDRO-2,4-DIOXO-CYCLOPENTA[E]PYRIMIDIN-1-YL) PROIONIC ACID",0,0,
+仅结构候选,P2,CRN,N-[(E)-AMINO(IMINO)METHYL]-N-METHYLGLYCINE,0,0,
+短聚合物序列命中,P2,CSI,AMINO-(2-IMINO-HEXAHYDRO-PYRIMIDIN-4-YL)-ACETIC ACID,6,6,1BCS / 1M21 / 1SGC / 1WVM / 6M9D
+仅结构候选,P2,CUW,"(2~{S},3~{R})-2,6-bis(azanyl)-3-oxidanyl-hexanoic acid",0,0,
+仅结构候选,P2,CXA,PHENYLALANINE-N-SULFONAMIDE,0,0,
+仅结构候选,P2,D20,N~5~-{IMINO[(2-METHOXYETHYL)AMINO]METHYL}-L-ORNITHINE,0,0,
+仅结构候选,P2,D8D,1-[(1R)-1-cyclohexyl-2-(methylamino)-2-oxoethyl]-L-proline,0,0,
+仅结构候选,P2,DA3,"(2S,5',S)-2-AMINO-3-(3-CARBOXY-2-ISOXAZOLIN-5-YL)PROPANOIC ACID",0,0,
+短聚合物序列命中,P2,DAV,DELTA-AMINO VALERIC ACID,1,1,7K2P
+短聚合物序列命中,P2,DC0,N-[(2S)-2-amino-4-methylpentyl]-L-phenylalanine,1,1,4GZF
+仅结构候选,P2,DDO,6-HYDROXY-D-NORLEUCINE,0,0,
+仅结构候选,P2,DHH,"(S)-2-AMINO-7,7-DIHYDROXYHEPTANOIC ACID",0,0,
+短聚合物序列命中,P2,DMG,"N,N-DIMETHYLGLYCINE",4,1,5CVD
+仅结构候选,P2,DMO,ALPHA-DIFLUOROMETHYLORNITHINE,0,0,
+仅结构候选,P2,DTE,7-CL-D-TRYPTOPHAN,0,0,
+仅结构候选,P2,DY8,Morpholinohistidine,0,0,
+仅结构候选,P2,E42,(R)-2-amino-3-(3'-hydroxybiphenyl-3-yl)propanoic acid,0,0,
+仅结构候选,P2,E79,"(3R)-3-[[(1R)-1,2-bis(oxidanyl)-2-oxidanylidene-ethyl]amino]butanoic acid",0,0,
+短聚合物序列命中,P2,E7P,(2S)-2-amino-4-phosphonobutanoic acid,1,1,7S79
+短聚合物序列命中,P2,EE3,"(2~{S})-2-azanyl-6-(1,3-oxazol-5-ylcarbonylamino)hexanoic acid",1,1,6L5Z
+仅结构候选,P2,EKN,(2~{S})-2-(2-azanylethylamino)butanedioic acid,0,0,
+仅结构候选,P2,EXR,(2R)-2-azanyl-3-(1-benzothiophen-3-yl)propanoic acid,0,0,
+仅结构候选,P2,FKI,"5,5-DI-FLUORO-2-KETO-3-AMINOPENTANOIC ACID",0,0,
+仅结构候选,P2,FN6,(2S)-2-azanyl-4-[[(2R)-3-(1H-imidazol-4-yl)-1-oxidanyl-1-oxidanylidene-propan-2-yl]amino]butanoic acid,0,0,
+仅结构候选,P2,FOG,"(4S,5S)-5-amino-4-hydroxy-6-phenylhexanoic acid",0,0,
+仅结构候选,P2,FWO,(2S)-2-[[(3S)-3-azanyl-4-oxidanyl-4-oxidanylidene-butanoyl]amino]-4-methyl-pentanoic acid,0,0,
+仅结构候选,P2,FXX,(3R)-3-azanyl-4-oxidanylidene-4-[[3-(trifluoromethyloxy)phenyl]amino]butanoic acid,0,0,
+仅结构候选,P2,G39,"(3R,4R,5S)-4-(acetylamino)-5-amino-3-(pentan-3-yloxy)cyclohex-1-ene-1-carboxylic acid",0,0,
+仅结构候选,P2,GBG,N~6~-[(1E)-2-chloroethanimidoyl]-L-lysine,0,0,
+仅结构候选,P2,GBN,[1-(AMINOMETHYL)CYCLOHEXYL]ACETIC ACID,0,0,
+仅结构候选,P2,GKL,"N-[(2S,3S)-3-amino-2-hydroxy-5-methylhexyl]-L-valine",0,0,
+短聚合物序列命中,P2,GM8,"(2S)-2-[(1S,2S)-2-aminocyclohexyl]butanoic acid",1,1,4HJB
+仅结构候选,P2,GPA,2-AMINO-3-GUANIDINO-PROPIONIC ACID,0,0,
+短聚合物序列命中,P2,GRN,2-phenyl-L-alanine,1,1,4WJ5
+仅结构候选,P2,GVA,5-{[AMINO(IMINO)METHYL]AMINO}PENTANOIC ACID,0,0,
+仅结构候选,P2,HGA,GLUTAMINE HYDROXAMATE,0,0,
+仅结构候选,P2,HOZ,"(4S)-4,5-DIAMINOPENTANOIC ACID",0,0,
+仅结构候选,P2,HVG,"4-[(S)-amino(carboxy)methyl]benzene-1,2-dicarboxylic acid",0,0,
+仅结构候选,P2,HWD,"2-AMINO-3-(2,4-DIOXO-3,4-DIHYDRO-2H-PYRIMIDIN-1-YL)-PROPIONIC ACID",0,0,
+仅结构候选,P2,I2V,"(1S,3S,4S)-3-amino-4-(fluoromethyl)cyclopentane-1-carboxylic acid",0,0,
+仅结构候选,P2,I3J,(2S)-3-(4-hydroxyphenyl)-2-isocyanopropanoic acid,0,0,
+仅结构候选,P2,IBC,"3-(3-HYDROXY-7,8-DIHYDRO-6H-CYCLOHEPTA[D]ISOXAZOL-4-YL)-L-ALANINE",0,0,
+仅结构候选,P2,IKT,3-(1-AMINOETHYL)NONANEDIOIC ACID,0,0,
+仅结构候选,P2,ILO,N5-IMINOETHYL-L-ORNITHINE,0,0,
+仅结构候选,P2,IOM,(DIAMINOMETHYL-METHYL-AMINO)-ACETIC ACID,0,0,
+仅结构候选,P2,IST,ISOSTATINE,0,0,
+仅结构候选,P2,J3R,"3-[methyl-(4-nitro-2,1,3-benzoxadiazol-7-yl)amino]propanoic acid",0,0,
+仅结构候选,P2,JEG,"trans-1-aminocyclobutane-1,3-dicarboxylic acid",0,0,
+短聚合物序列命中,P2,JG3,"1-[(2S,3S)-3-amino-2-hydroxy-4-phenylbutyl]-L-proline",4,4,2J9J / 2JE4 / 3GI0 / 7HVP
+仅结构候选,P2,JIX,"(1S,4R,5R,6S)-4-amino-2-oxabicyclo[3.1.0]hexane-4,6-dicarboxylic acid",0,0,
+仅结构候选,P2,JM2,N~5~-[2-(methylsulfanyl)ethanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,JM4,N~5~-{3-[(1-methylethyl)sulfanyl]propanimidoyl}-L-ornithine,0,0,
+仅结构候选,P2,JM5,N~5~-[2-(propylsulfanyl)ethanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,JM6,N~5~-[4-(methylsulfanyl)butanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,JM7,N~5~-[2-(ethylsulfanyl)ethanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,JM8,N~5~-[(3-(ethylsulfanyl)propanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,K94,4-(difluoromethyl)-L-leucine,0,0,
+仅结构候选,P2,KAH,5-AMINO-4-HYDROXYHEXANOIC ACID,0,0,
+仅结构候选,P2,KAI,3-(CARBOXYMETHYL)-4-ISOPROPENYLPROLINE,0,0,
+短聚合物序列命中,P2,KFB,5-Aminovaleric Acid,2,2,6RQS / 7XJO
+仅结构候选,P2,KFJ,4-(4-nitrophenyl)-L-threonine,0,0,
+仅结构候选,P2,KKA,(2S)-2-azanyl-6-oxidanylidene-6-[[(2S)-1-oxidanyl-1-oxidanylidene-4-sulfanyl-butan-2-yl]amino]hexanoic acid,0,0,
+仅结构候选,P2,KMH,(5S)-5-AMINO-3-OXO-HEXANOIC ACID,0,0,
+仅结构候选,P2,KRI,"(S)-2-AMINO-4-[(2S,3R)-2,3,5-TRIHYDROXY-4-OXO-PENTYL]MERCAPTO-BUTYRIC ACID",0,0,
+短聚合物序列命中,P2,KV6,(3R)-3-aminoheptadecanoic acid,1,1,7TZ3
+仅结构候选,P2,KZ5,(2~{S})-2-(dimethylamino)-3-(2-sulfo-1~{H}-imidazol-4-yl)propanoic acid,0,0,
+仅结构候选,P2,L06,5-{[AMINO(IMINO)METHYL]AMINO}-2-(SULFANYLMETHYL)PENTANOIC ACID,0,0,
+短聚合物序列命中,P2,L2O,"(2S,3R)-3-amino-2-hydroxy-5-methylhexanoic acid",9,9,1BLL / 1Y0Y / 4FYT / 4KX8 / 4Q4I
+仅结构候选,P2,L9Z,"(1~{S},3~{S},4~{S},5~{R})-3-(aminomethyl)-3,4,5-tris(hydroxyl)cyclohexane-1-carboxylic acid",0,0,
+短聚合物序列命中,P2,LAV,N-[(2S)-2-amino-4-methylpentyl]-L-valine,1,1,4ER4
+短聚合物序列命中,P2,LDO,6-HYDROXY-L-NORLEUCINE,2,1,8AQA
+仅结构候选,P2,LH6,"(2~{S})-2-(methylamino)-3-[4-[(1~{E})-3-methylbuta-1,3-dienyl]-1~{H}-indol-3-yl]propanoic acid",0,0,
+短聚合物序列命中,P2,LHE,"N-[(2R,3S)-3-amino-2-hydroxy-5-methylhexyl]-L-norvaline",1,1,4TRW
+仅结构候选,P2,LIS,"(2S,4S)-2-AMINO-4,5-EPOXIPENTANOIC ACID",0,0,
+仅结构候选,P2,LN5,N5-(1-iminopropyl)-L-ornithine,0,0,
+仅结构候选,P2,LN6,N~5~-[(1E)-pentanimidoyl]-L-ornithine,0,0,
+仅结构候选,P2,LN7,N~5~-[(1S)-1-aminopentyl]-L-ornithine,0,0,
+短聚合物序列命中,P2,LNT,"N-[(2S)-2-amino-1,1-dihydroxy-4-methylpentyl]-L-threonine",2,2,3B7V / 3B80
+短聚合物序列命中,P2,LOV,5-AMINO-4-HYDROXY-2-ISOPROPYL-7-METHYL-OCTANOIC ACID,4,4,1GKT / 1OEX / 2ER7 / 8HVP
+仅结构候选,P2,LU0,Sulphamoil Leucine,0,0,
+短聚合物序列命中,P2,LXO,4-(pyridin-4-ylamino)butanoic acid,1,1,8HOU
+仅结构候选,P2,M7V,"(1S,2R)-2-[(S)-amino(carboxy)methyl]-1-butylcyclopropane-1-carboxylic acid",0,0,
+仅结构候选,P2,MHA,(CARBAMOYLMETHYL-CARBOXYMETHYL-AMINO)-ACETIC ACID,0,0,
+仅结构候选,P2,MIK,METHYL ISONICOTINIMIDATE LYSINE,0,0,
+短聚合物序列命中,P2,MKE,(4S)-4-AMINO-5-OXOHEXANOIC ACID,2,2,5IC4 / 5IC6
+仅结构候选,P2,MMS,MIMOSINE,0,0,
+仅结构候选,P2,MQ4,"(1S)-3-amino-4-[(2S)-1,1,1-trifluoro-3-oxopropan-2-yl]cyclopent-3-ene-1-carboxylic acid",0,0,
+仅结构候选,P2,MS8,"(2R,3aR,7aR)-2-[(2S)-2-amino-3-hydroxy-3-oxo-propyl]-3,3a,5,6,7,7a-hexahydrofuro[4,5-b]pyran-2-carboxylic acid",0,0,
+仅结构候选,P2,MTJ,"N,O-DIMETHYL-L-TYROSINE",0,0,
+仅长聚合物命中,P2,NFK,N'-Formylkynurenine,1,0,6GPV
+仅结构候选,P2,NFQ,N-[(E)-iminomethyl]-L-aspartic acid,0,0,
+仅结构候选,P2,NGQ,N-carbamimidoyl-L-glutamic acid,0,0,
+仅结构候选,P2,NIG,N-(IMINOMETHYL)-L-GLUTAMIC ACID,0,0,
+仅结构候选,P2,NLH,"(2R,5S)-5-amino-2-butyl-4,4-dihydroxynonanoic acid",0,0,
+仅结构候选,P2,NLK,"(2R,5S)-5-amino-2-butyl-4-oxononanoic acid",0,0,
+仅结构候选,P2,NMG,GUANIDINO ACETATE,0,0,
+仅结构候选,P2,NO5,(2~{S})-3-methyl-2-(sulfamoylamino)butanoic acid,0,0,
+仅结构候选,P2,NO6,S-[(pyridin-2-yl)methyl]-L-cysteine,0,0,
+仅结构候选,P2,NOU,(2S)-2-amino-4-[(pyridin-2-yl)amino]butanoic acid,0,0,
+仅结构候选,P2,NWG,5-[(diaminomethylidene)amino]-2-oxopentanoic acid,0,0,
+仅结构候选,P2,NZ2,N-(methylsulfonyl)-N-phenyl-L-alanine,0,0,
+仅结构候选,P2,NZ3,N-(methylsulfonyl)-N-phenyl-D-alanine,0,0,
+仅结构候选,P2,O77,N-[(3S)-3-amino-3-carboxypropyl]-L-histidine,0,0,
+仅结构候选,P2,OP1,1-[(1S)-4-carbamimidamido-1-carboxybutyl]-5-oxo-D-proline,0,0,
+短聚合物序列命中,P2,OPR,(5S)-5-amino-8-carbamimidamido-4-oxooctanoic acid,2,2,1IHS / 1UCY
+短聚合物序列命中,P2,OUD,(3~{S})-3-azanyl-4-(carboxyamino)butanoic acid,1,1,5N14
+短聚合物序列命中,P2,OUE,(4~{S})-4-azanyl-5-(carboxyamino)pentanoic acid,1,1,5N14
+仅结构候选,P2,P4B,(2~{R})-4-azanyl-2-[[(1~{S})-1-oxidanylethyl]amino]butanoic acid,0,0,
+仅结构候选,P2,PB1,3-(2-AMINOETHYL)-4-(AMINOMETHYL)HEPTANEDIOIC ACID,0,0,
+短聚合物序列命中,P2,PBE,"1,1-DIMETHYL-PROLINIUM",1,1,5CVE
+仅结构候选,P2,PCV,5-AMINO-3-HYDROXY-2-(2-OXO-AZETIDIN-1-YL)-PENTANOIC ACID,0,0,
+短聚合物序列命中,P2,PDF,"4,4-difluoro-L-proline",2,2,4Y84 / 5UU3
+仅结构候选,P2,PDM,"4-[4-(2,5-DIOXO-PYRROLIDIN-1-YL)-PHENYLAMINO]-4-HYDROXY-BUTYRIC ACID",0,0,
+仅结构候选,P2,PHX,"4-{[(Z)-(5-OXO-2-PHENYL-1,3-OXAZOL-4(5H)-YLIDENE)METHYL]AMINO}BUTANOIC ACID",0,0,
+短聚合物序列命中,P2,PRW,"(2R,3R)-4-AMINO-2,3-DIHYDROXYBUTANOIC ACID",1,1,2X4T
+短聚合物序列命中,P2,PUK,N-[(2S)-2-amino-3-phenylpropyl]-L-phenylalanine,5,5,1GVX / 2ER6 / 3APR / 3URL / 4GYE
+短聚合物序列命中,P2,QF0,(3S)-3-amino-4-(naphthalen-2-yl)butanoic acid,1,1,8D52
+仅结构候选,P2,QJW,(3S)-3-[(2-nitrophenyl)methoxy]-L-aspartic acid,0,0,
+仅结构候选,P2,QLI,"(5S,6S)-6-amino-5-[(1-carboxyethenyl)oxy]cyclohexa-1,3-diene-1-carboxylic acid",0,0,
+仅结构候选,P2,QUS,"(S)-2-AMINO-3-(3,5-DIOXO-[1,2,4]OXADIAZOLIDIN-2-YL)-PROPIONIC ACID",0,0,
+仅结构候选,P2,R1V,"N-[(2E)-3,7-dimethylocta-2,6-dien-1-yl]-L-glutamic acid",0,0,
+仅结构候选,P2,R9J,2-methyl-N-(4-methylphenyl)-L-alanine,0,0,
+仅结构候选,P2,REZ,(2R)-2-AMINO-7-{[(1R)-1-CARBOXYETHYL]AMINO}-7-OXOHEPTANOIC ACID,0,0,
+仅结构候选,P2,RGE,(2S)-2-AMINO-5-(2-(METHYLSULFINYL)ACETIMIDAMIDO)PENTANOIC ACID,0,0,
+仅结构候选,P2,RH0,"3-amino-5-S-benzyl-2,3-dideoxy-5-thio-D-erythro-pentonic acid",0,0,
+仅结构候选,P2,RQJ,deoxyproclavaminic acid,0,0,
+仅结构候选,P2,S4F,3-[(3R)-1-(6-amino-5-chloropyrimidin-4-yl)piperidin-3-yl]propanoic acid,0,0,
+仅结构候选,P2,SDC,S-[2-(AMINOSULFONYL)ETHYL]-D-CYSTEINE,0,0,
+短聚合物序列命中,P2,SGK,2-(pyridin-2-ylmethylamino)ethanoic acid,1,1,7AZF
+仅结构候选,P2,SHI,(S)-2-AMINO-3-(3-HYDROXY-ISOXAZOL-4-YL)PROPIONIC ACID,0,0,
+仅结构候选,P2,SMZ,N~5~-[(E)-imino(methylsulfanyl)methyl]-L-ornithine,0,0,
+短聚合物序列命中,P2,SOW,[(2-amino-2-oxoethyl)amino]acetic acid,1,1,8DL7
+仅结构候选,P2,SSC,"(2S,5S)-5-CARBOXYMETHYLPROLINE",0,0,
+仅结构候选,P2,SUO,N~2~-(3-CARBOXYPROPANOYL)-L-ORNITHINE,0,0,
+短聚合物序列命中,P2,T7H,3-({2-[(carboxymethyl)amino]ethyl}sulfanyl)propanoic acid,1,1,8DPY
+仅结构候选,P2,TB1,(3S)-3-(BENZYLOXY)-L-ASPARTIC ACID,0,0,
+仅结构候选,P2,TBL,N-[(4-methoxyphenyl)sulfonyl]-D-alanine,0,0,
+仅结构候选,P2,TF7,"(3S)-3-(dihydroxy-lambda~4~-sulfanyl)-4-(1H-1,2,3-triazol-1-yl)-D-valine",0,0,
+短聚合物序列命中,P2,TIG,N-(2-aminoethyl)-L-tryptophan,2,2,3O3D / 3O3E
+仅结构候选,P2,TKI,"2-[(4,6-diethyl-1,3,5-triazin-2-yl)-methyl-amino]ethanoic acid",0,0,
+仅结构候选,P2,TPR,TOSYL-D-PROLINE,0,0,
+短聚合物序列命中,P2,TVA,"N-[(2R,3S)-3-amino-2-hydroxy-4-(thiophen-2-yl)butyl]-L-norvaline",1,1,4TRZ
+仅结构候选,P2,U1K,(S)-2-AMINO-3-(3-HYDROXY-5-TERT-BUTYLISOTHIAZOL-4-YL) PROPRIONIC ACID,0,0,
+仅结构候选,P2,U8S,"3-[(2S)-2-hydroxy-2,3-dihydro-1H-imidazol-4-yl]-L-alanine",0,0,
+仅结构候选,P2,UCQ,(2~{S})-2-(dimethylamino)-3-(3-methylimidazol-4-yl)propanoic acid,0,0,
+短聚合物序列命中,P2,UQ4,"N-(7-nitro-2,1,3-benzoxadiazol-4-yl)-beta-alanine",6,6,6X5I / 7T6E / 8DST / 9NEF / 9NEQ
+仅结构候选,P2,UV3,7-bromo-L-tryptophan,0,0,
+仅结构候选,P2,V29,(3R)-3-(benzylamino)oxolane-3-carboxylic acid,0,0,
+仅结构候选,P2,VIG,4-AMINO HEXANOIC ACID,0,0,
+仅结构候选,P2,VIO,N5-(1-IMINO-3-BUTENYL)-L-ORNITHINE,0,0,
+仅结构候选,P2,VLS,"N-[1,3-dihydroxy-2-(hydroxymethyl)propan-2-yl]glycine",0,0,
+仅结构候选,P2,VQ6,"(2R)-(cyclopropylamino)(2,6-difluorophenyl)acetic acid",0,0,
+仅结构候选,P2,VUR,(S)-2-AMINO-5-(2-MERCAPTOACETIMIDAMIDO)PENTANOIC ACID,0,0,
+仅结构候选,P2,VY9,(3R)-3-(2-hydroxy-2-oxoethylamino)decanoic acid,0,0,
+仅结构候选,P2,W1N,(3S)-3-amino-4-(2-fluorophenyl)butanoic acid,0,0,
+仅结构候选,P2,W5J,"N-methyl-N-7H-pyrrolo[2,3-d]pyrimidin-4-yl-beta-alanine",0,0,
+短聚合物序列命中,P2,WEH,L-Homoglutamine,2,2,8WM0 / 9U2V
+短聚合物序列命中,P2,WGB,N-methyl-4-nitro-L-phenylalanine,1,1,8WM0
+仅结构候选,P2,WT2,(S)-2-AMINO-5-(2-OXOACETIMIDAMIDO)PENTANOIC ACID,0,0,
+仅结构候选,P2,X7O,5-AMINO-3-METHYL-PYRROLIDINE-2-CARBOXYLIC ACID,0,0,
+短聚合物序列命中,P2,XCP,"(1S,2S)-2-aminocyclopentanecarboxylic acid",49,45,25NV / 25NX / 3C3H / 3F4Z / 3F50
+仅结构候选,P2,XD1,"(2R,4S)-2-[(1R)-1-amino-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid",0,0,
+仅结构候选,P2,XDC,Phosphocreatine,0,0,
+短聚合物序列命中,P2,XPC,"(3S,4R)-4-aminopyrrolidine-3-carboxylic acid",19,19,3C3H / 3F4Z / 3F50 / 3FDM / 3G7A
+仅结构候选,P2,XSA,(2R)-2-[(2-aminoethyl)amino]-4-boronobutanoic acid,0,0,
+仅结构候选,P2,XSM,(2R)-4-borono-2-{[(1H-imidazol-4-yl)methyl]amino}butanoic acid,0,0,
+仅结构候选,P2,XU7,(2S)-2-amino-4-boronobutanoic acid,0,0,
+仅结构候选,P2,XUJ,(2R)-2-amino-4-boronobutanoic acid,0,0,
+短聚合物序列命中,P2,XZP,"(1R,2R)-2-aminocyclopentane-1-carboxylic acid",1,1,5VTI
+短聚合物序列命中,P2,Y1Y,"3-amino-2,3-dideoxy-5-O-(5-methylthiophene-2-carbonyl)-D-erythro-pentonic acid",1,1,6X8H
+短聚合物序列命中,P2,Y2Y,"(3S,4R)-3-amino-4-hydroxyheptanedioic acid",4,4,6X8I / 6X8J / 6X8K / 6X8L
+仅结构候选,P2,YL0,(4R)-4-chloro-L-lysine,0,0,
+仅结构候选,P2,ZDP,"(2S,6S)-2,6-DIAMINO-2-METHYLHEPTANEDIOIC ACID",0,0,
+仅结构候选,P2,ZDR,"(2R,6S)-2,6-DIAMINO-2-METHYLHEPTANEDIOIC ACID",0,0,
+短聚合物序列命中,P2,ZS8,(2S)-2-amino-2-methyldec-8-ynoic acid,1,1,5J31

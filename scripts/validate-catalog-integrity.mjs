@@ -63,6 +63,16 @@ const linksMatchCcdIds = (value, ccdIds, makeUrl) => {
 const catalog = JSON.parse(await readFile(path.join(publicDir, "ccd-verified-cores.json"), "utf8"));
 const catalogCsv = parseCsv(await readFile(path.join(publicDir, "ccd-verified-cores-1687.csv"), "utf8"));
 const reviewQueue = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-1805.csv"), "utf8"));
+const manualReviewFinal = JSON.parse(await readFile(path.join(publicDir, "ccd-manual-review-final.json"), "utf8"));
+const manualReviewFinalCsv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-final.csv"), "utf8"));
+const manualReviewBatch1 = JSON.parse(await readFile(path.join(publicDir, "ccd-manual-review-batch-1.json"), "utf8"));
+const manualReviewBatch1Csv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-batch-1.csv"), "utf8"));
+const manualReviewBatch2 = JSON.parse(await readFile(path.join(publicDir, "ccd-manual-review-batch-2.json"), "utf8"));
+const manualReviewBatch2Csv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-batch-2.csv"), "utf8"));
+const manualReviewBatch3 = JSON.parse(await readFile(path.join(publicDir, "ccd-manual-review-batch-3.json"), "utf8"));
+const manualReviewBatch3Csv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-batch-3.csv"), "utf8"));
+const manualReview92Final = JSON.parse(await readFile(path.join(publicDir, "ccd-manual-review-92-final.json"), "utf8"));
+const manualReview92FinalCsv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-92-final.csv"), "utf8"));
 const developmentScreen = JSON.parse(await readFile(path.join(publicDir, "ccd-development-screen.json"), "utf8"));
 const developmentScreenCsv = parseCsv(await readFile(path.join(publicDir, "ccd-development-screen.csv"), "utf8"));
 const polymerUsage = JSON.parse(await readFile(path.join(publicDir, "ccd-polymer-usage-audit.json"), "utf8"));
@@ -150,6 +160,131 @@ reviewQueue.forEach((record, index) => {
 const expectedPriorities = { P0: 6, P1: 45, P2: 484, P3: 1270 };
 for (const [tier, expected] of Object.entries(expectedPriorities)) {
   if (priorityCounts[tier] !== expected) addIssue("error", "review-queue", tier, "row-count", `Expected ${expected}; found ${priorityCounts[tier] ?? 0}.`);
+}
+
+const manualStatuses = new Set(["recommended-review", "conditional", "deferred", "excluded"]);
+const manualStatusLabels = { "recommended-review": "优先深审", conditional: "条件候选", deferred: "暂缓", excluded: "排除" };
+const manualStatusCounts = Object.fromEntries([...manualStatuses].map((status) => [status, 0]));
+if (manualReviewFinal.records.length !== reviewQueue.length) {
+  addIssue("error", "manual-review-final", "all", "row-count", `Final JSON contains ${manualReviewFinal.records.length} rows; source queue contains ${reviewQueue.length}.`);
+}
+if (manualReviewFinalCsv.length !== manualReviewFinal.records.length) {
+  addIssue("error", "manual-review-final", "all", "csv-row-count", `Final CSV contains ${manualReviewFinalCsv.length} rows; JSON contains ${manualReviewFinal.records.length}.`);
+}
+manualReviewFinal.records.forEach((record, index) => {
+  const source = reviewQueue[index];
+  const csvRow = manualReviewFinalCsv[index];
+  const label = record.ccdIds?.join(" / ") || `row-${index + 1}`;
+  if (!source || splitCcdIds(source["CCD编号"]).join("|") !== record.ccdIds.join("|") || source["名称"] !== record.name || source["立体化学SMILES"] !== record.smiles) {
+    addIssue("error", "manual-review-final", label, "source-match", "Final result does not match the source queue at the same row.");
+  }
+  if (!manualStatuses.has(record.finalStatus)) {
+    addIssue("error", "manual-review-final", label, "finalStatus", `Unknown final status: ${record.finalStatus ?? "missing"}.`);
+  } else {
+    manualStatusCounts[record.finalStatus] += 1;
+  }
+  if (!record.finalReason) addIssue("error", "manual-review-final", label, "finalReason", "Final result has no stated reason.");
+  if (record.finalStatus === "recommended-review" && !["curated-evidence", "short-polymer"].includes(record.evidenceStatus)) {
+    addIssue("error", "manual-review-final", label, "evidenceStatus", "Recommended-review record lacks curated or short-polymer evidence.");
+  }
+  if (record.finalStatus === "excluded" && record.decision !== "排除") addIssue("error", "manual-review-final", label, "decision", "Excluded final record is not excluded by the structure screen.");
+  if (csvRow && (csvRow["CCD编号"] !== label || csvRow["名称"] !== record.name || csvRow["最终状态"] !== manualStatusLabels[record.finalStatus])) {
+    addIssue("error", "manual-review-final", label, "csv-match", "Final CSV and JSON differ at the same row.");
+  }
+});
+for (const status of manualStatuses) {
+  if (manualReviewFinal.metadata.finalStatusCounts?.[status] !== manualStatusCounts[status]) {
+    addIssue("error", "manual-review-final", status, "status-count", `Metadata says ${manualReviewFinal.metadata.finalStatusCounts?.[status] ?? "missing"}; counted ${manualStatusCounts[status]}.`);
+  }
+}
+
+const batchGrades = new Set(["A", "B", "C", "EXCLUDE"]);
+const batchGradeCounts = Object.fromEntries([...batchGrades].map((grade) => [grade, 0]));
+const finalByCcd = new Map(manualReviewFinal.records.flatMap((record) => record.ccdIds.map((ccdId) => [ccdId, record])));
+if (manualReviewBatch1.records.length !== 20 || manualReviewBatch1Csv.length !== 20) {
+  addIssue("error", "manual-review-batch-1", "all", "row-count", `Expected 20 rows; JSON has ${manualReviewBatch1.records.length}, CSV has ${manualReviewBatch1Csv.length}.`);
+}
+const batchCcdIds = new Set();
+manualReviewBatch1.records.forEach((record, index) => {
+  const label = record.ccdId || `row-${index + 1}`;
+  if (batchCcdIds.has(label)) addIssue("error", "manual-review-batch-1", label, "ccdId", "Duplicate batch CCD identifier.");
+  batchCcdIds.add(label);
+  const sourceRecord = finalByCcd.get(label);
+  if (!sourceRecord || sourceRecord.finalStatus !== "recommended-review" || sourceRecord.name !== record.name) {
+    addIssue("error", "manual-review-batch-1", label, "source-match", "Batch record does not map to a recommended-review source record.");
+  }
+  if (!batchGrades.has(record.grade)) addIssue("error", "manual-review-batch-1", label, "grade", `Unknown grade: ${record.grade ?? "missing"}.`);
+  else batchGradeCounts[record.grade] += 1;
+  if (!record.conclusion || !record.recommendation || !record.cyclicEvidence || !record.oralEvidence) addIssue("error", "manual-review-batch-1", label, "evidence", "Batch record is missing a conclusion or evidence field.");
+  if (!Array.isArray(record.sources) || record.sources.length === 0 || record.sources.some((item) => !item.title || !item.url)) addIssue("error", "manual-review-batch-1", label, "sources", "Batch record has no complete source citation.");
+  const csvRow = manualReviewBatch1Csv[index];
+  if (csvRow && (csvRow["CCD编号"] !== label || csvRow["等级"] !== record.grade || csvRow["名称"] !== record.name)) addIssue("error", "manual-review-batch-1", label, "csv-match", "Batch CSV and JSON differ at the same row.");
+});
+for (const grade of batchGrades) {
+  if (manualReviewBatch1.metadata.gradeCounts?.[grade] !== batchGradeCounts[grade]) addIssue("error", "manual-review-batch-1", grade, "grade-count", `Metadata says ${manualReviewBatch1.metadata.gradeCounts?.[grade] ?? "missing"}; counted ${batchGradeCounts[grade]}.`);
+}
+
+const batch2GradeCounts = Object.fromEntries([...batchGrades].map((grade) => [grade, 0]));
+if (manualReviewBatch2.records.length !== 36 || manualReviewBatch2Csv.length !== 36) {
+  addIssue("error", "manual-review-batch-2", "all", "row-count", `Expected 36 rows; JSON has ${manualReviewBatch2.records.length}, CSV has ${manualReviewBatch2Csv.length}.`);
+}
+manualReviewBatch2.records.forEach((record, index) => {
+  const label = record.ccdId || `row-${index + 1}`;
+  if (batchCcdIds.has(label)) addIssue("error", "manual-review-batch-2", label, "ccdId", "CCD identifier already appears in batch 1 or earlier in batch 2.");
+  batchCcdIds.add(label);
+  const sourceRecord = finalByCcd.get(label);
+  if (!sourceRecord || sourceRecord.finalStatus !== "recommended-review" || sourceRecord.name !== record.name) {
+    addIssue("error", "manual-review-batch-2", label, "source-match", "Batch record does not map to a recommended-review source record.");
+  }
+  if (!batchGrades.has(record.grade)) addIssue("error", "manual-review-batch-2", label, "grade", `Unknown grade: ${record.grade ?? "missing"}.`);
+  else batch2GradeCounts[record.grade] += 1;
+  if (!record.conclusion || !record.recommendation || !record.cyclicEvidence || !record.oralEvidence) addIssue("error", "manual-review-batch-2", label, "evidence", "Batch record is missing a conclusion or evidence field.");
+  if (!Array.isArray(record.sources) || record.sources.length === 0 || record.sources.some((item) => !item.title || !item.url)) addIssue("error", "manual-review-batch-2", label, "sources", "Batch record has no complete source citation.");
+  const csvRow = manualReviewBatch2Csv[index];
+  if (csvRow && (csvRow["CCD编号"] !== label || csvRow["等级"] !== record.grade || csvRow["名称"] !== record.name)) addIssue("error", "manual-review-batch-2", label, "csv-match", "Batch CSV and JSON differ at the same row.");
+});
+for (const grade of batchGrades) {
+  if (manualReviewBatch2.metadata.gradeCounts?.[grade] !== batch2GradeCounts[grade]) addIssue("error", "manual-review-batch-2", grade, "grade-count", `Metadata says ${manualReviewBatch2.metadata.gradeCounts?.[grade] ?? "missing"}; counted ${batch2GradeCounts[grade]}.`);
+}
+
+const batch3GradeCounts = Object.fromEntries([...batchGrades].map((grade) => [grade, 0]));
+if (manualReviewBatch3.records.length !== 36 || manualReviewBatch3Csv.length !== 36) {
+  addIssue("error", "manual-review-batch-3", "all", "row-count", `Expected 36 rows; JSON has ${manualReviewBatch3.records.length}, CSV has ${manualReviewBatch3Csv.length}.`);
+}
+manualReviewBatch3.records.forEach((record, index) => {
+  const label = record.ccdId || `row-${index + 1}`;
+  if (batchCcdIds.has(label)) addIssue("error", "manual-review-batch-3", label, "ccdId", "CCD identifier already appears in an earlier batch or earlier in batch 3.");
+  batchCcdIds.add(label);
+  const sourceRecord = finalByCcd.get(label);
+  if (!sourceRecord || sourceRecord.finalStatus !== "recommended-review" || sourceRecord.name !== record.name) addIssue("error", "manual-review-batch-3", label, "source-match", "Batch record does not map to a recommended-review source record.");
+  if (!batchGrades.has(record.grade)) addIssue("error", "manual-review-batch-3", label, "grade", `Unknown grade: ${record.grade ?? "missing"}.`);
+  else batch3GradeCounts[record.grade] += 1;
+  if (!record.conclusion || !record.recommendation || !record.cyclicEvidence || !record.oralEvidence) addIssue("error", "manual-review-batch-3", label, "evidence", "Batch record is missing a conclusion or evidence field.");
+  if (!Array.isArray(record.sources) || record.sources.length === 0 || record.sources.some((item) => !item.title || !item.url)) addIssue("error", "manual-review-batch-3", label, "sources", "Batch record has no complete source citation.");
+  const csvRow = manualReviewBatch3Csv[index];
+  if (csvRow && (csvRow["CCD编号"] !== label || csvRow["等级"] !== record.grade || csvRow["名称"] !== record.name)) addIssue("error", "manual-review-batch-3", label, "csv-match", "Batch CSV and JSON differ at the same row.");
+});
+for (const grade of batchGrades) {
+  if (manualReviewBatch3.metadata.gradeCounts?.[grade] !== batch3GradeCounts[grade]) addIssue("error", "manual-review-batch-3", grade, "grade-count", `Metadata says ${manualReviewBatch3.metadata.gradeCounts?.[grade] ?? "missing"}; counted ${batch3GradeCounts[grade]}.`);
+}
+
+const expectedDeepReviewIds = new Set(manualReviewFinal.records.filter((record) => record.finalStatus === "recommended-review").flatMap((record) => record.ccdIds));
+if (batchCcdIds.size !== expectedDeepReviewIds.size || [...expectedDeepReviewIds].some((ccdId) => !batchCcdIds.has(ccdId))) {
+  addIssue("error", "manual-review-92-final", "all", "coverage", `Three batches cover ${batchCcdIds.size} unique CCD IDs; recommended-review source contains ${expectedDeepReviewIds.size}.`);
+}
+const combinedBatchRecords = [...manualReviewBatch1.records, ...manualReviewBatch2.records, ...manualReviewBatch3.records];
+const final92GradeCounts = Object.fromEntries([...batchGrades].map((grade) => [grade, 0]));
+if (manualReview92Final.records.length !== 92 || manualReview92FinalCsv.length !== 92) addIssue("error", "manual-review-92-final", "all", "row-count", `Expected 92 rows; JSON has ${manualReview92Final.records.length}, CSV has ${manualReview92FinalCsv.length}.`);
+manualReview92Final.records.forEach((record, index) => {
+  const sourceRecord = combinedBatchRecords[index];
+  const csvRow = manualReview92FinalCsv[index];
+  const label = record.ccdId || `row-${index + 1}`;
+  if (!sourceRecord || sourceRecord.ccdId !== label || sourceRecord.grade !== record.grade) addIssue("error", "manual-review-92-final", label, "batch-match", "Final 92-row result differs from its source batch.");
+  if (batchGrades.has(record.grade)) final92GradeCounts[record.grade] += 1;
+  if (csvRow && (csvRow["CCD编号"] !== label || csvRow["等级"] !== record.grade || csvRow["名称"] !== record.name)) addIssue("error", "manual-review-92-final", label, "csv-match", "Final CSV and JSON differ at the same row.");
+});
+for (const grade of batchGrades) {
+  if (manualReview92Final.metadata.gradeCounts?.[grade] !== final92GradeCounts[grade]) addIssue("error", "manual-review-92-final", grade, "grade-count", `Metadata says ${manualReview92Final.metadata.gradeCounts?.[grade] ?? "missing"}; counted ${final92GradeCounts[grade]}.`);
 }
 
 const screeningTiers = new Set(["priority", "conditional", "reference", "exclude"]);
@@ -250,6 +385,32 @@ const report = {
     priorityCounts,
     sourceUrlMatches: reviewSourceMatches,
     imageUrlMatches: reviewImageMatches,
+  },
+  manualReviewFinal: {
+    rows: manualReviewFinal.records.length,
+    csvRows: manualReviewFinalCsv.length,
+    statusCounts: manualStatusCounts,
+  },
+  manualReviewBatch1: {
+    rows: manualReviewBatch1.records.length,
+    csvRows: manualReviewBatch1Csv.length,
+    gradeCounts: batchGradeCounts,
+  },
+  manualReviewBatch2: {
+    rows: manualReviewBatch2.records.length,
+    csvRows: manualReviewBatch2Csv.length,
+    gradeCounts: batch2GradeCounts,
+  },
+  manualReviewBatch3: {
+    rows: manualReviewBatch3.records.length,
+    csvRows: manualReviewBatch3Csv.length,
+    gradeCounts: batch3GradeCounts,
+  },
+  manualReview92Final: {
+    rows: manualReview92Final.records.length,
+    csvRows: manualReview92FinalCsv.length,
+    uniqueCcdIds: batchCcdIds.size,
+    gradeCounts: final92GradeCounts,
   },
   developmentScreen: {
     rows: developmentScreen.records.length,

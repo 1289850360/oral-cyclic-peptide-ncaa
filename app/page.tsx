@@ -159,14 +159,14 @@ export default function Home() {
     });
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v2-3.csv"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v3-0.csv"; link.click(); URL.revokeObjectURL(url);
   };
 
   return (
     <main id="top">
       <header className="site-header">
         <a className="brand" href="#top" aria-label="返回页面顶部"><span className="brand-mark">CP</span><span>口服环肽残基证据库</span></a>
-        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#database">证据条目</a><a href="#compare">残基比较</a><a href="#manual-review">补充审核</a></nav>
+        <nav className="main-nav" aria-label="页面导航"><a href="#ccd-catalog">CCD结构名录</a><a href="#deep-review">92条深审</a><a href="#database">证据条目</a><a href="#compare">残基比较</a></nav>
         <button className="download-button" onClick={downloadCsv}>导出证据 CSV</button>
       </header>
 
@@ -174,11 +174,11 @@ export default function Home() {
         <div className="intro-copy">
           <p className="eyebrow">ORAL CYCLIC PEPTIDE · EVIDENCE DATABASE</p>
           <h1>口服环肽<br /><em>非天然残基证据库</em></h1>
-          <div className="version-line"><span>数据库版本 V3.0</span><span>CCD快照：2026-08-26</span><span>研究用途，非处方建议</span></div>
+          <div className="version-line"><span>数据库版本 V3.1</span><span>最近审核：2026-08-28</span><span>研究用途，非处方建议</span></div>
         </div>
         <div className="stats-grid" aria-label="数据库概况">
           <div><strong>1,687</strong><span>CCD结构参考总库</span></div><div><strong>221</strong><span>优先研发候选</span></div>
-          <div><strong>176</strong><span>具有短肽序列命中</span></div><div><strong>{legacyCatalogSeedSummary.totalRecords}</strong><span>人工整理证据条目</span></div>
+          <div><strong>92</strong><span>已完成深度审核</span></div><div><strong>{legacyCatalogSeedSummary.totalRecords}</strong><span>人工整理证据条目</span></div>
         </div>
       </section>
 
@@ -259,7 +259,7 @@ export default function Home() {
         {literatureOpen && <div className="literature-list" id="literature-list">{literatureSources.map((source, index) => <a href={source.href} target="_blank" rel="noreferrer" key={source.href}><span>{String(index + 1).padStart(2, "0")}</span><strong>{source.paper}</strong><small>{source.residue}</small><em>{evidenceMeta[source.level].code}级</em><b>↗</b></a>)}</div>}
       </section>
 
-      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.0 · CCD catalog + evidence layer</span></div><p>用于候选生成与实验讨论。结构名录中的性质标签是类别推断；具体替换仍应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
+      <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.1 · CCD catalog + evidence layer</span></div><p>用于候选生成与实验讨论。结构名录中的性质标签是类别推断；具体替换仍应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>
     </main>
   );
 }

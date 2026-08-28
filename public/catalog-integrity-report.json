@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-28T05:23:04.110Z",
+  "generatedAt": "2026-08-28T06:40:28.345Z",
   "result": "passed",
   "scope": {
     "statement": "This report checks local field completeness, uniqueness, cross-file consistency, and deterministic CCD-to-URL mapping. It does not prove peptide-synthesis suitability or property effects.",
@@ -30,6 +30,57 @@
     },
     "sourceUrlMatches": 1805,
     "imageUrlMatches": 1805
+  },
+  "manualReviewFinal": {
+    "rows": 1805,
+    "csvRows": 1805,
+    "statusCounts": {
+      "recommended-review": 92,
+      "conditional": 286,
+      "deferred": 994,
+      "excluded": 433
+    }
+  },
+  "manualReviewBatch1": {
+    "rows": 20,
+    "csvRows": 20,
+    "gradeCounts": {
+      "A": 9,
+      "B": 7,
+      "C": 2,
+      "EXCLUDE": 2
+    }
+  },
+  "manualReviewBatch2": {
+    "rows": 36,
+    "csvRows": 36,
+    "gradeCounts": {
+      "A": 13,
+      "B": 15,
+      "C": 6,
+      "EXCLUDE": 2
+    }
+  },
+  "manualReviewBatch3": {
+    "rows": 36,
+    "csvRows": 36,
+    "gradeCounts": {
+      "A": 12,
+      "B": 14,
+      "C": 6,
+      "EXCLUDE": 4
+    }
+  },
+  "manualReview92Final": {
+    "rows": 92,
+    "csvRows": 92,
+    "uniqueCcdIds": 92,
+    "gradeCounts": {
+      "A": 34,
+      "B": 36,
+      "C": 14,
+      "EXCLUDE": 8
+    }
   },
   "developmentScreen": {
     "rows": 1687,
