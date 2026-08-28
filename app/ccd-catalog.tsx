@@ -19,6 +19,12 @@ type CcdCoreRecord = {
   predictedEffects: string[];
   sourceUrl: string;
   structureImageUrl: string;
+  screening: {
+    tier: "priority" | "conditional" | "reference" | "exclude";
+    reasons: string[];
+    cautions: string[];
+    manualReviewRequired: boolean;
+  };
 };
 
 type CcdCatalogPayload = {
@@ -28,6 +34,8 @@ type CcdCatalogPayload = {
     sourceUrl: string;
     count: number;
     scope: string;
+    tierCounts: Record<CcdCoreRecord["screening"]["tier"], number>;
+    tierMeta: Record<CcdCoreRecord["screening"]["tier"], { label: string; shortLabel: string; description: string }>;
   };
   records: CcdCoreRecord[];
 };
@@ -62,11 +70,12 @@ export default function CcdCatalog() {
   const [loadError, setLoadError] = useState(false);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
+  const [screeningTier, setScreeningTier] = useState<CcdCoreRecord["screening"]["tier"] | "all">("priority");
   const [page, setPage] = useState(1);
 
   useEffect(() => {
     let active = true;
-    fetch("ccd-verified-cores.json")
+    fetch("ccd-development-screen.json")
       .then((response) => {
         if (!response.ok) throw new Error("CCD catalog request failed");
         return response.json() as Promise<CcdCatalogPayload>;
@@ -100,51 +109,57 @@ export default function CcdCatalog() {
         record.categoryLabel,
         ...record.tags,
         ...record.predictedEffects,
+        ...record.screening.reasons,
+        ...record.screening.cautions,
       ].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
-        && (category === "all" || record.category === category);
+        && (category === "all" || record.category === category)
+        && (screeningTier === "all" || record.screening.tier === screeningTier);
     });
-  }, [payload, query, category]);
+  }, [payload, query, category, screeningTier]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
   const shown = filtered.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
   const changeQuery = (value: string) => { setQuery(value); setPage(1); };
   const changeCategory = (value: string) => { setCategory(value); setPage(1); };
+  const changeScreeningTier = (value: CcdCoreRecord["screening"]["tier"] | "all") => { setScreeningTier(value); setPage(1); };
 
   return (
     <section className="ccd-catalog-section" id="ccd-catalog" aria-labelledby="ccd-catalog-title">
       <div className="section-heading ccd-heading">
         <div><p className="eyebrow">STRUCTURE-VERIFIED CCD CATALOG</p><h2 id="ccd-catalog-title">CCD结构名录</h2></div>
-        <p>这里收录的是结构身份和肽链连接类型已经由CCD明确记录的核心。性质标签属于结构层面的可能影响，不等同于已经证明能够提高口服吸收。</p>
+        <p>1,687条结构已经分成优先研发候选、条件候选、仅结构参考和明确排除四档。默认只展示保守筛出的优先候选；分档仍不等同于已经证明能够提高口服吸收。</p>
       </div>
 
       <div className="ccd-catalog-summary">
-        <div><strong>1,687</strong><span>去重后的肽链核心结构</span></div>
-        <div><strong>100%</strong><span>具有立体化学SMILES</span></div>
-        <div><strong>2026-08-26</strong><span>CCD数据快照</span></div>
+        <div><strong>{payload?.metadata.tierCounts.priority ?? "—"}</strong><span>优先研发候选</span></div>
+        <div><strong>{payload?.metadata.tierCounts.conditional ?? "—"}</strong><span>条件候选</span></div>
+        <div><strong>{payload ? payload.metadata.tierCounts.reference + payload.metadata.tierCounts.exclude : "—"}</strong><span>不进入默认研发库</span></div>
         <div className="catalog-downloads">
           <a href="ccd-verified-cores-1687.csv" download>下载结构名录 CSV</a>
           <a href="ccd-manual-review-1805.csv" download>下载人工审核清单</a>
           <a href="catalog-integrity-report.json" download>下载完整性校验报告</a>
           <a href="ccd-official-field-audit.json" download>下载官方字段审计</a>
+          <a href="ccd-development-screen.csv" download>下载研发筛选结果</a>
         </div>
       </div>
 
       <div className="ccd-boundary-note">
-        <strong>如何理解这1,687条</strong>
-        <p>本地校验已确认1,687条记录在JSON/CSV之间一致；全站涉及的3,496个唯一CCD编号也已与RCSB官方名称、分子式、分子量、母体和立体化学SMILES逐项核对。该结果只证明结构身份和数据配对完整；“渗透性可能↑”等标签仍是化学类别推断，只有进入下方证据数据库并关联论文或专利后，才能作为具体研发依据。</p>
+        <strong>如何理解筛选结果</strong>
+        <p>这是保守的第一轮研发相关性筛选：整分子缀合物、辅因子、核苷酸、完整肽、金属复合物和明显保护体被排除；高复杂度、强极性或反应性结构只留作参考。优先候选仍需补充供应/合成路线、SPPS兼容性和环肽实用证据，不能把分档理解为口服有效性结论。</p>
       </div>
 
       <div className="ccd-filter-panel">
         <label><span>搜索CCD编号、名称、同义词或分子式</span><input value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="例如：AIB、N-methyl、phenylglycine、C8 H9 N O2" /></label>
+        <label><span>研发筛选等级</span><select value={screeningTier} onChange={(event) => changeScreeningTier(event.target.value as CcdCoreRecord["screening"]["tier"] | "all")}><option value="all">全部1,687条</option>{payload && (["priority", "conditional", "reference", "exclude"] as const).map((tier) => <option value={tier} key={tier}>{payload.metadata.tierMeta[tier].label}（{payload.metadata.tierCounts[tier]}）</option>)}</select></label>
         <label><span>结构类别</span><select value={category} onChange={(event) => changeCategory(event.target.value)}><option value="all">全部结构类别</option>{categories.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label>
       </div>
 
       {loadError ? <div className="ccd-loading"><strong>结构名录暂时没有载入</strong><p>可以先下载CSV，或稍后刷新页面重试。</p></div> : !payload ? <div className="ccd-loading">正在载入CCD结构名录…</div> : <>
-        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); }}>清除筛选</button>}</div>
+        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "priority") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("priority"); }}>恢复默认筛选</button>}</div>
         {shown.length ? <div className="ccd-record-grid">{shown.map((record) => <article className="ccd-record-card" key={record.id}>
-          <div className="ccd-card-head"><span>CCD {record.ccdIds.join(" / ")}</span><em>{record.categoryLabel}</em></div>
+          <div className="ccd-card-head"><span>CCD {record.ccdIds.join(" / ")}</span><em className={`screening-tier screening-${record.screening.tier}`}>{payload.metadata.tierMeta[record.screening.tier].shortLabel}</em></div>
           <div className="ccd-card-main">
             <a className="ccd-structure" href={record.sourceUrl} target="_blank" rel="noreferrer" aria-label={`打开CCD ${record.primaryCcdId}`}>
               <img src={record.structureImageUrl} alt={`${record.name}二维结构`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />
@@ -154,6 +169,9 @@ export default function CcdCatalog() {
           </div>
           <div className="ccd-effect-tags">{record.predictedEffects.map((effect) => <span key={effect}>{effect}</span>)}</div>
           <details className="ccd-details"><summary>结构信息与判断边界</summary><dl>
+            <div><dt>研发分档</dt><dd>{payload.metadata.tierMeta[record.screening.tier].label}</dd></div>
+            <div><dt>筛选理由</dt><dd>{record.screening.reasons.join("；")}</dd></div>
+            {record.screening.cautions.length > 0 && <div><dt>风险提示</dt><dd>{record.screening.cautions.join("；")}</dd></div>}
             <div><dt>CCD连接类型</dt><dd>{record.linkageTypes.join("；")}</dd></div>
             <div><dt>母体残基</dt><dd>{record.parentIds.join(" / ") || "CCD未指定"}</dd></div>
             <div><dt>结构标签</dt><dd>{record.tags.join("、") || "未自动归类"}</dd></div>

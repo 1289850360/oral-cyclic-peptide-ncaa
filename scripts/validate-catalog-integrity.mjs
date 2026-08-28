@@ -63,6 +63,8 @@ const linksMatchCcdIds = (value, ccdIds, makeUrl) => {
 const catalog = JSON.parse(await readFile(path.join(publicDir, "ccd-verified-cores.json"), "utf8"));
 const catalogCsv = parseCsv(await readFile(path.join(publicDir, "ccd-verified-cores-1687.csv"), "utf8"));
 const reviewQueue = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-1805.csv"), "utf8"));
+const developmentScreen = JSON.parse(await readFile(path.join(publicDir, "ccd-development-screen.json"), "utf8"));
+const developmentScreenCsv = parseCsv(await readFile(path.join(publicDir, "ccd-development-screen.csv"), "utf8"));
 
 if (catalog.metadata.count !== catalog.records.length) {
   addIssue("error", "catalog-json", "metadata", "count", `Metadata says ${catalog.metadata.count}, but JSON contains ${catalog.records.length} records.`);
@@ -148,6 +150,39 @@ for (const [tier, expected] of Object.entries(expectedPriorities)) {
   if (priorityCounts[tier] !== expected) addIssue("error", "review-queue", tier, "row-count", `Expected ${expected}; found ${priorityCounts[tier] ?? 0}.`);
 }
 
+const screeningTiers = new Set(["priority", "conditional", "reference", "exclude"]);
+const screeningCounts = Object.fromEntries([...screeningTiers].map((tier) => [tier, 0]));
+if (developmentScreen.records.length !== catalog.records.length) {
+  addIssue("error", "development-screen", "all", "row-count", `Screen JSON contains ${developmentScreen.records.length} rows; catalog contains ${catalog.records.length}.`);
+}
+if (developmentScreenCsv.length !== catalog.records.length) {
+  addIssue("error", "development-screen", "all", "csv-row-count", `Screen CSV contains ${developmentScreenCsv.length} rows; catalog contains ${catalog.records.length}.`);
+}
+developmentScreen.records.forEach((record, index) => {
+  const source = catalog.records[index];
+  const label = record.primaryCcdId || `row-${index + 1}`;
+  if (!source || record.id !== source.id || record.smiles !== source.smiles) {
+    addIssue("error", "development-screen", label, "source-match", "Screen result does not match the source catalog record at the same row.");
+  }
+  if (!screeningTiers.has(record.screening?.tier)) {
+    addIssue("error", "development-screen", label, "tier", `Unknown screening tier: ${record.screening?.tier ?? "missing"}.`);
+  } else {
+    screeningCounts[record.screening.tier] += 1;
+  }
+  if (!Array.isArray(record.screening?.reasons) || record.screening.reasons.length === 0) {
+    addIssue("error", "development-screen", label, "reasons", "Screen result has no stated reason.");
+  }
+  const csvRow = developmentScreenCsv[index];
+  if (csvRow && splitCcdIds(csvRow["CCD编号"]).join("|") !== record.ccdIds.join("|")) {
+    addIssue("error", "development-screen", label, "CCD编号", "Screen CSV and JSON CCD identifiers differ at the same row.");
+  }
+});
+for (const tier of screeningTiers) {
+  if (developmentScreen.metadata.tierCounts?.[tier] !== screeningCounts[tier]) {
+    addIssue("error", "development-screen", tier, "tier-count", `Metadata says ${developmentScreen.metadata.tierCounts?.[tier] ?? "missing"}; counted ${screeningCounts[tier]}.`);
+  }
+}
+
 const report = {
   schemaVersion: 1,
   generatedAt: new Date().toISOString(),
@@ -175,6 +210,11 @@ const report = {
     priorityCounts,
     sourceUrlMatches: reviewSourceMatches,
     imageUrlMatches: reviewImageMatches,
+  },
+  developmentScreen: {
+    rows: developmentScreen.records.length,
+    csvRows: developmentScreenCsv.length,
+    tierCounts: screeningCounts,
   },
   issues: {
     errors: issues.filter((issue) => issue.severity === "error").length,

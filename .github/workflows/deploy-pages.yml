@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Validate catalog integrity
-        run: npm run audit:catalog
+        run: npm run screen:development && npm run audit:catalog
 
       - name: Build static site
         run: npm run build:github
