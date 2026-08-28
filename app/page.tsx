@@ -182,10 +182,16 @@ export default function Home() {
         </div>
       </section>
 
+      <nav className="database-paths" aria-label="数据库使用入口">
+        <a href="#database"><span>01 · 优先用于设计决策</span><strong>口服性质与研发证据库</strong><p>查渗透、溶解度、稳定性和同骨架实验依据。</p><b>查看人工证据条目 →</b></a>
+        <a href="#deep-review"><span>02 · 核对身份与使用环境</span><strong>结构身份与环肽使用深审库</strong><p>查92条候选是否为独立残基、是否进入过环肽。</p><b>查看92条深审 →</b></a>
+        <a href="#ccd-catalog"><span>03 · 扩展化学空间</span><strong>CCD结构参考库</strong><p>浏览1,687条结构候选及PDB聚合物使用线索。</p><b>浏览完整结构库 →</b></a>
+      </nav>
+
       <CcdCatalog />
 
       <section className="database-section" id="database" aria-labelledby="database-title">
-        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">研发证据条目</h2></div><p>这部分是已经关联论文或专利的重点候选。先按研发目标筛选，再打开条目查看实验边界。</p></div>
+        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">口服性质与研发证据库</h2></div><p>用于回答“为什么选这个残基、可能改善什么”。这里汇总论文、专利和临床骨架证据，优先看同骨架替换和定量实验边界。</p></div>
         <div className="filter-panel">
           <label className="search-field"><span>搜索名称、缩写、作用或论文</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：N-Me-Leu、Pye、Caco-2、提高溶解度" /></label>
           <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}</select></label>

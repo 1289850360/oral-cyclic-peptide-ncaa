@@ -267,22 +267,15 @@ export default function CcdCatalog() {
   return (
     <section className="ccd-catalog-section" id="ccd-catalog" aria-labelledby="ccd-catalog-title">
       <div className="section-heading ccd-heading">
-        <div><p className="eyebrow">STRUCTURE-VERIFIED CCD CATALOG</p><h2 id="ccd-catalog-title">CCD结构名录</h2></div>
-        <p>1,687条结构已经分成四档，并进一步查询其是否实际出现在PDB聚合物序列中。默认展示“优先研发候选＋≤50残基短肽实体命中”；序列命中仍不等同于环肽、可口服或能够提高吸收。</p>
+        <div><p className="eyebrow">STRUCTURE-VERIFIED CCD CATALOG</p><h2 id="ccd-catalog-title">CCD结构参考库</h2></div>
+        <p>用于扩展化学空间和查找结构线索。1,687条结构已经分档并核对PDB聚合物序列；这里的预测标签不能代替环肽实验或口服证据。</p>
       </div>
 
       <div className="ccd-catalog-summary">
         <div><strong>{payload?.metadata.tierCounts.priority ?? "—"}</strong><span>优先研发候选</span></div>
         <div><strong>{usagePayload?.metadata.statusCounts["short-polymer"] ?? "—"}</strong><span>具有短肽序列命中</span></div>
         <div><strong>{usagePayload?.metadata.statusCounts["no-polymer-hit"] ?? "—"}</strong><span>优先候选暂无序列命中</span></div>
-        <div className="catalog-downloads">
-          <a href="ccd-verified-cores-1687.csv" download>下载结构名录 CSV</a>
-          <a href="ccd-manual-review-1805.csv" download>下载人工审核清单</a>
-          <a href="catalog-integrity-report.json" download>下载完整性校验报告</a>
-          <a href="ccd-official-field-audit.json" download>下载官方字段审计</a>
-          <a href="ccd-development-screen.csv" download>下载研发筛选结果</a>
-          <a href="ccd-polymer-usage-audit.csv" download>下载PDB序列使用审计</a>
-        </div>
+        <details className="catalog-download-menu"><summary>下载与审计文件</summary><div className="catalog-downloads"><a href="ccd-verified-cores-1687.csv" download>结构名录 CSV</a><a href="ccd-manual-review-1805.csv" download>人工审核清单</a><a href="catalog-integrity-report.json" download>完整性校验报告</a><a href="ccd-official-field-audit.json" download>官方字段审计</a><a href="ccd-development-screen.csv" download>研发筛选结果</a><a href="ccd-polymer-usage-audit.csv" download>PDB序列使用审计</a></div></details>
       </div>
 
       <div className="ccd-boundary-note">
@@ -330,8 +323,9 @@ export default function CcdCatalog() {
       </>}
 
       <details className="manual-review-guide" id="deep-review" open>
-        <summary><span><b>92条深审结果与补充结构审核</b><small>92条可直接检索 · 1,805条已完成首轮分层 · 点击展开或收起</small></span><strong>+</strong></summary>
+        <summary><span><b>结构身份与环肽使用深审库（92条）</b><small>核对是否为独立残基、是否进入过环肽，以及使用限制 · 点击展开或收起</small></span><strong>+</strong></summary>
         <div className="review-guide-content">
+          <details className="audit-method-details"><summary>查看1,805条首轮审核方法与P0–P3原始队列说明</summary><div>
           <div className="ccd-boundary-note review-queue-boundary"><strong>首轮审核已经做完</strong><p>先按结构判断是否像独立氨基酸单体，再对结构初筛通过项查询RCSB聚合实体和不超过50残基的短链使用记录。只有存在明确结构性负面理由的条目才排除；证据不足的保留为暂缓，避免误删。结果仍不能直接证明SPPS、闭环、渗透或口服可行。</p></div>
           <p><strong>下面的P0–P3是原始队列的检查顺序，不是“能不能用”的结论：</strong></p>
           <div className="review-priority">
@@ -347,6 +341,7 @@ export default function CcdCatalog() {
             <li><strong>最后审核性质：</strong>只有同骨架替换或明确实例数据才能写“实验证实”；类别规律只能写“可能”。</li>
           </ol>
           <div className="review-decision"><strong>1,805条首轮审核结果</strong><span>优先深审 92：最值得继续查合成、环肽和口服证据</span><span>条件候选 286：结构初筛通过，但证据仍不完整</span><span>暂缓 994：没有明确错误，暂时证据不足</span><span>排除 433：存在明确结构性排除理由</span></div>
+          </div></details>
           <div className="ccd-boundary-note review-queue-boundary"><strong>92条优先候选已经全部深审完成</strong><p>环肽直接使用34条、肽中使用36条、特殊构件14条、非独立单体8条。这个分组描述残基身份和使用上下文，不是口服效果评级；完整分子有口服数据也不能证明某个残基能单独提高口服吸收。</p></div>
           <section className="deep-review-browser" aria-labelledby="deep-review-title">
             <div className="deep-review-heading"><div><strong id="deep-review-title">92条深审结果检索</strong><p>这里的分组描述“残基身份和环肽使用证据”，不是口服效果评级。</p></div><span>找到 {filteredDeepReview.length} 条</span></div>
@@ -364,12 +359,7 @@ export default function CcdCatalog() {
             </article>)}</div> : <div className="ccd-loading"><strong>没有符合条件的深审记录</strong><p>可以减少关键词或恢复全部分组。</p></div>}
             {filteredDeepReview.length > REVIEW_PAGE_SIZE && <nav className="pagination ccd-pagination" aria-label="92条深审结果分页"><button onClick={() => setReviewPage((current) => Math.max(1, current - 1))} disabled={safeReviewPage === 1}>上一页</button><div>{compactPages(safeReviewPage, reviewTotalPages).map((item, index) => item === "ellipsis" ? <span className="page-ellipsis" key={`review-ellipsis-${index}`}>…</span> : <button className={item === safeReviewPage ? "active" : ""} aria-current={item === safeReviewPage ? "page" : undefined} onClick={() => setReviewPage(item)} key={item}>{item}</button>)}</div><button onClick={() => setReviewPage((current) => Math.min(reviewTotalPages, current + 1))} disabled={safeReviewPage === reviewTotalPages}>下一页</button></nav>}
           </section>
-          <a className="review-download" href="ccd-manual-review-92-final.csv" download>下载92条最终深审汇总</a>
-          <a className="review-download" href="ccd-manual-review-batch-1.csv" download>下载第一批20条深审结果</a>
-          <a className="review-download" href="ccd-manual-review-batch-2.csv" download>下载第二批36条深审结果</a>
-          <a className="review-download" href="ccd-manual-review-batch-3.csv" download>下载第三批36条深审结果</a>
-          <a className="review-download" href="ccd-manual-review-final.csv" download>下载1,805条审核结果CSV</a>
-          <a className="review-download" href="ccd-manual-review-1805.csv" download>下载原始审核队列CSV</a>
+          <details className="review-download-menu"><summary>下载深审与审核数据文件</summary><div><a className="review-download" href="ccd-manual-review-92-final.csv" download>92条最终深审汇总</a><a className="review-download" href="ccd-manual-review-batch-1.csv" download>第一批20条</a><a className="review-download" href="ccd-manual-review-batch-2.csv" download>第二批36条</a><a className="review-download" href="ccd-manual-review-batch-3.csv" download>第三批36条</a><a className="review-download" href="ccd-manual-review-final.csv" download>1,805条审核结果</a><a className="review-download" href="ccd-manual-review-1805.csv" download>原始审核队列</a></div></details>
         </div>
       </details>
     </section>

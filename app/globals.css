@@ -67,6 +67,14 @@ h1 em { color: var(--teal); font-style: normal; }
 .stats-grid strong { color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 34px; font-weight: 500; }
 .stats-grid span { color: var(--muted); font-size: 12px; }
 
+.database-paths { max-width: 1450px; margin: 0 auto; padding: 0 5vw 58px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.database-paths a { min-height: 168px; padding: 21px; display: flex; flex-direction: column; border: 1px solid var(--line); background: rgba(255,253,248,.62); text-decoration: none; transition: border-color .2s, transform .2s; }
+.database-paths a:hover { border-color: var(--teal); transform: translateY(-2px); }
+.database-paths span { color: var(--teal); font-size: 9px; font-weight: 700; letter-spacing: .06em; }
+.database-paths strong { margin-top: 12px; font-family: "Noto Serif SC", serif; font-size: 18px; font-weight: 600; }
+.database-paths p { margin: 9px 0 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+.database-paths b { margin-top: auto; padding-top: 15px; color: var(--teal-dark); font-size: 10px; }
+
 .database-section, .evidence-section, .ccd-catalog-section { padding: 70px 5vw 92px; background: var(--surface); border-top: 1px solid var(--line); }
 .comparison-section, .literature-section { padding: 70px 5vw 92px; color: white; background: var(--ink); }
 .section-heading { max-width: 1450px; margin: 0 auto 30px; display: flex; justify-content: space-between; align-items: end; gap: 30px; }
@@ -84,6 +92,11 @@ h1 em { color: var(--teal); font-style: normal; }
 .ccd-catalog-summary .catalog-downloads { justify-content: center; gap: 9px; }
 .catalog-downloads a { padding: 9px 12px; border: 1px solid var(--teal); color: var(--teal-dark); background: white; text-align: center; text-decoration: none; font-size: 11px; font-weight: 600; }
 .catalog-downloads a:hover { color: white; background: var(--teal); }
+.catalog-download-menu { min-height: 112px; padding: 18px; border-right: 1px solid #c9dad5; border-bottom: 1px solid #c9dad5; }
+.catalog-download-menu > summary { height: 74px; display: grid; place-items: center; border: 1px solid var(--teal); color: var(--teal-dark); background: white; cursor: pointer; font-size: 11px; font-weight: 700; list-style-position: inside; }
+.catalog-download-menu[open] { grid-column: span 2; }
+.catalog-download-menu[open] > summary { height: auto; padding: 10px; }
+.catalog-download-menu .catalog-downloads { margin-top: 9px; display: grid; grid-template-columns: repeat(2, 1fr); }
 .ccd-boundary-note { max-width: 1450px; margin: 14px auto 0; padding: 16px 19px; display: grid; grid-template-columns: 190px 1fr; gap: 22px; border-left: 3px solid var(--gold); background: #fffaf0; }
 .ccd-boundary-note strong { color: var(--ink); font-size: 12px; }
 .ccd-boundary-note p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
@@ -139,6 +152,9 @@ h1 em { color: var(--teal); font-style: normal; }
 .manual-review-guide > summary > strong { color: var(--teal); font-size: 22px; font-weight: 400; }
 .manual-review-guide[open] > summary > strong { transform: rotate(45deg); }
 .review-guide-content { padding: 0 20px 22px; border-top: 1px solid #dce5e2; }
+.audit-method-details { margin-top: 18px; border: 1px solid #d7e2de; background: #fbfcfa; }
+.audit-method-details > summary { padding: 13px 15px; color: var(--teal-dark); cursor: pointer; font-size: 11px; font-weight: 600; }
+.audit-method-details > div { padding: 0 15px 15px; border-top: 1px solid #e2e9e6; }
 .review-queue-boundary { margin-top: 20px; }
 .review-priority { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
 .review-priority article { min-height: 150px; padding: 18px; display: flex; flex-direction: column; gap: 9px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -153,6 +169,10 @@ h1 em { color: var(--teal); font-style: normal; }
 .review-decision span { padding: 6px 9px; border: 1px solid #c8d8d3; color: var(--teal-dark); font-size: 10px; }
 .review-download { margin-top: 18px; padding: 10px 14px; display: inline-block; border: 1px solid var(--teal); color: white; background: var(--teal); text-decoration: none; font-size: 11px; font-weight: 600; }
 .review-download:hover { background: var(--teal-dark); }
+.review-download-menu { margin-top: 16px; border-top: 1px solid #dce5e2; }
+.review-download-menu > summary { padding: 14px 0 4px; color: var(--teal-dark); cursor: pointer; font-size: 11px; font-weight: 600; }
+.review-download-menu > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.review-download-menu .review-download { margin-top: 7px; }
 
 .deep-review-browser { margin-top: 22px; padding: 20px; border: 1px solid #c8d8d3; background: #f7faf8; }
 .deep-review-heading { display: flex; justify-content: space-between; gap: 20px; align-items: start; }
@@ -313,6 +333,8 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .site-header { grid-template-columns: auto 1fr auto; gap: 18px; }
   .main-nav { gap: 14px; }
   .dashboard-intro { grid-template-columns: 1fr; gap: 36px; }
+  .database-paths { grid-template-columns: 1fr 1fr; }
+  .database-paths a:first-child { grid-column: 1 / -1; }
   .stats-grid { max-width: 700px; }
   .filter-panel { grid-template-columns: 1fr 1fr; }
   .search-field { grid-column: 1 / 3; }
@@ -329,6 +351,9 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .brand { font-size: 13px; }
   .brand-mark { width: 31px; height: 31px; }
   .dashboard-intro { padding: 46px 20px 42px; }
+  .database-paths { padding: 0 18px 42px; grid-template-columns: 1fr; }
+  .database-paths a:first-child { grid-column: auto; }
+  .database-paths a { min-height: 138px; }
   h1 { font-size: 40px; }
   .version-line { display: grid; gap: 4px; }
   .version-line span + span::before { display: none; }
@@ -368,6 +393,9 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .ccd-catalog-summary { grid-template-columns: 1fr 1fr; }
   .ccd-catalog-summary > div { min-height: 98px; padding: 15px; }
+  .catalog-download-menu { grid-column: 1 / -1; min-height: auto; padding: 14px; }
+  .catalog-download-menu > summary { height: auto; padding: 11px; }
+  .catalog-download-menu[open] { grid-column: 1 / -1; }
   .ccd-catalog-summary strong { font-size: 22px; }
   .ccd-catalog-summary .catalog-downloads { grid-column: 1 / -1; }
   .ccd-card-main { grid-template-columns: 92px minmax(0, 1fr); }
