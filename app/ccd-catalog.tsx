@@ -206,11 +206,8 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
   const [screeningTier, setScreeningTier] = useState<CcdCoreRecord["screening"]["tier"] | "all">("all");
   const [usageStatus, setUsageStatus] = useState<PolymerUsageStatus | "all">("all");
   const [targetProperty, setTargetProperty] = useState<(typeof CCD_PROPERTY_FILTERS)[number]["id"]>("all");
-  const [catalogOrigin, setCatalogOrigin] = useState<"all" | CatalogOrigin>("all");
   const [componentClass, setComponentClass] = useState<"all" | ComponentClass>("all");
   const [synthesisStatus, setSynthesisStatus] = useState<"all" | "commercial-listed" | "not-reviewed">("all");
-  const [pdbContextStatus, setPdbContextStatus] = useState<"all" | PdbContextStatus>("all");
-  const [candidateTriageStatus, setCandidateTriageStatus] = useState<"all" | CandidateTriageStatus>("all");
   const [researchEvidenceStatus, setResearchEvidenceStatus] = useState<"all" | ResearchEvidenceStatus>("all");
   const [page, setPage] = useState(1);
   const [reviewQuery, setReviewQuery] = useState("");
@@ -286,15 +283,12 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
         && (category === "all" || record.category === category)
         && (screeningTier === "all" || record.screening.tier === screeningTier)
         && (usageStatus === "all" || usage?.status === usageStatus)
-        && (catalogOrigin === "all" || record.catalogOrigin === catalogOrigin)
         && (componentClass === "all" || record.componentClass.id === componentClass)
         && (synthesisStatus === "all" || (synthesisStatus === "commercial-listed" ? Boolean(record.synthesisUsability) : !record.synthesisUsability))
-        && (pdbContextStatus === "all" || record.pdbContextAudit?.status === pdbContextStatus)
-        && (candidateTriageStatus === "all" || record.candidateTriage?.status === candidateTriageStatus)
         && (researchEvidenceStatus === "all" || (researchEvidenceStatus === "linked" ? record.researchEvidence.length > 0 : researchEvidenceStatus === "usage-confirmed" ? record.researchEvidence.some((item) => item.confirmsUse) : researchEvidenceStatus === "patent-only" ? record.researchEvidence.length > 0 && record.researchEvidence.every((item) => item.level.includes("专利")) : record.researchEvidence.length === 0))
         && (propertyFilter.keywords.length === 0 || propertyFilter.keywords.some((keyword) => record.predictedEffects.some((effect) => effect.includes(keyword))));
     });
-  }, [payload, query, category, screeningTier, usageStatus, targetProperty, catalogOrigin, componentClass, synthesisStatus, pdbContextStatus, candidateTriageStatus, researchEvidenceStatus, usageById]);
+  }, [payload, query, category, screeningTier, usageStatus, targetProperty, componentClass, synthesisStatus, researchEvidenceStatus, usageById]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const safePage = Math.min(page, totalPages);
@@ -306,21 +300,7 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
   const changeTargetProperty = (value: (typeof CCD_PROPERTY_FILTERS)[number]["id"]) => { setTargetProperty(value); setPage(1); };
   const changeComponentClass = (value: "all" | ComponentClass) => { setComponentClass(value); setScreeningTier("all"); setUsageStatus("all"); setPage(1); };
   const changeSynthesisStatus = (value: "all" | "commercial-listed" | "not-reviewed") => { setSynthesisStatus(value); setScreeningTier("all"); setUsageStatus("all"); setPage(1); };
-  const changePdbContextStatus = (value: "all" | PdbContextStatus) => { setPdbContextStatus(value); setScreeningTier("all"); setUsageStatus("all"); setPage(1); };
-  const changeCandidateTriageStatus = (value: "all" | CandidateTriageStatus) => { setCandidateTriageStatus(value); setScreeningTier("all"); setUsageStatus("all"); setPage(1); };
   const changeResearchEvidenceStatus = (value: "all" | ResearchEvidenceStatus) => { setResearchEvidenceStatus(value); setScreeningTier("all"); setUsageStatus("all"); setPage(1); };
-  const changeCatalogOrigin = (value: "all" | CatalogOrigin) => {
-    setCatalogOrigin(value);
-    if (value === "research-evidence-linked") {
-      setScreeningTier("all");
-      setUsageStatus("all");
-    }
-    if (value === "conditional-review") {
-      setScreeningTier("conditional");
-      setUsageStatus("all");
-    }
-    setPage(1);
-  };
 
   const filteredDeepReview = useMemo(() => {
     const normalized = reviewQuery.trim().toLowerCase();
@@ -371,11 +351,11 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
         <label><span>研发证据</span><select value={researchEvidenceStatus} onChange={(event) => changeResearchEvidenceStatus(event.target.value as "all" | ResearchEvidenceStatus)}><option value="all">全部证据状态</option><option value="linked">已有研发资料（{payload?.metadata.researchEvidenceAlignment.linkedCcdStructures ?? 146}个CCD）</option><option value="usage-confirmed">资料支持实际使用</option><option value="patent-only">只有专利资料</option><option value="none">暂无研发资料</option></select></label>
         <label><span>合成可用性</span><select value={synthesisStatus} onChange={(event) => changeSynthesisStatus(event.target.value as "all" | "commercial-listed" | "not-reviewed")}><option value="all">全部合成审核状态</option><option value="commercial-listed">商业保护单体目录已核查（{payload?.metadata.synthesisUsabilityCounts["commercial-listed"] ?? 20}）</option><option value="not-reviewed">尚未核查（{payload?.metadata.synthesisUsabilityCounts["not-reviewed"] ?? 2045}）</option></select></label>
       </div>
-      <details className="ccd-advanced-filters"><summary>高级筛选</summary><div><label><span>研发筛选等级</span><select value={screeningTier} onChange={(event) => changeScreeningTier(event.target.value as CcdCoreRecord["screening"]["tier"] | "all")}><option value="all">全部{payload?.metadata.count ?? ""}条</option>{payload && (["priority", "conditional", "reference", "exclude"] as const).map((tier) => <option value={tier} key={tier}>{payload.metadata.tierMeta[tier].label}（{payload.metadata.tierCounts[tier]}）</option>)}</select></label><label><span>PDB聚合物使用</span><select value={usageStatus} onChange={(event) => changeUsageStatus(event.target.value as PolymerUsageStatus | "all")}><option value="all">全部使用状态</option>{usagePayload && (["short-polymer", "polymer-only", "no-polymer-hit"] as const).map((status) => <option value={status} key={status}>{USAGE_META[status].label}（{usagePayload.metadata.statusCounts[status]}）</option>)}</select></label><label><span>目标性质</span><select value={targetProperty} onChange={(event) => changeTargetProperty(event.target.value as (typeof CCD_PROPERTY_FILTERS)[number]["id"])}>{CCD_PROPERTY_FILTERS.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label><label><span>结构类别</span><select value={category} onChange={(event) => changeCategory(event.target.value)}><option value="all">全部结构类别</option>{categories.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label><label><span>收录来源</span><select value={catalogOrigin} onChange={(event) => changeCatalogOrigin(event.target.value as "all" | CatalogOrigin)}><option value="all">全部来源</option><option value="core-structure-screen">原始CCD核心</option><option value="research-evidence-linked">研发资料补入</option><option value="conditional-review">补充候选</option></select></label><label><span>PDB语境初筛</span><select value={pdbContextStatus} onChange={(event) => changePdbContextStatus(event.target.value as "all" | PdbContextStatus)}><option value="all">全部语境状态</option>{payload && (Object.keys(payload.metadata.pdbContextAudit.statusMeta) as PdbContextStatus[]).map((status) => <option value={status} key={status}>{payload.metadata.pdbContextAudit.statusMeta[status]}（{payload.metadata.pdbContextAudit.statusCounts[status]}）</option>)}</select></label><label><span>候选二次分层</span><select value={candidateTriageStatus} onChange={(event) => changeCandidateTriageStatus(event.target.value as "all" | CandidateTriageStatus)}><option value="all">全部二次分层</option>{payload && (Object.keys(payload.metadata.pendingCandidateTriage.statusMeta) as CandidateTriageStatus[]).map((status) => <option value={status} key={status}>{payload.metadata.pendingCandidateTriage.statusMeta[status]}（{payload.metadata.pendingCandidateTriage.statusCounts[status]}）</option>)}</select></label></div></details>
+      <details className="ccd-advanced-filters"><summary>高级筛选</summary><div><label><span>研发筛选等级</span><select value={screeningTier} onChange={(event) => changeScreeningTier(event.target.value as CcdCoreRecord["screening"]["tier"] | "all")}><option value="all">全部{payload?.metadata.count ?? ""}条</option>{payload && (["priority", "conditional", "reference", "exclude"] as const).map((tier) => <option value={tier} key={tier}>{payload.metadata.tierMeta[tier].label}（{payload.metadata.tierCounts[tier]}）</option>)}</select></label><label><span>PDB聚合物使用</span><select value={usageStatus} onChange={(event) => changeUsageStatus(event.target.value as PolymerUsageStatus | "all")}><option value="all">全部使用状态</option>{usagePayload && (["short-polymer", "polymer-only", "no-polymer-hit"] as const).map((status) => <option value={status} key={status}>{USAGE_META[status].label}（{usagePayload.metadata.statusCounts[status]}）</option>)}</select></label><label><span>目标性质</span><select value={targetProperty} onChange={(event) => changeTargetProperty(event.target.value as (typeof CCD_PROPERTY_FILTERS)[number]["id"])}>{CCD_PROPERTY_FILTERS.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label><label><span>结构类别</span><select value={category} onChange={(event) => changeCategory(event.target.value)}><option value="all">全部结构类别</option>{categories.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label></div></details>
       <p className="ccd-name-note">中文辅助名用于快速阅读，由常见氨基酸母体和系统命名规则生成；涉及复杂杂环或多官能团时仍以英文系统名、立体化学SMILES和CCD记录为准。</p>
 
       {loadError ? <div className="ccd-loading"><strong>结构名录暂时没有载入</strong><p>可以先下载CSV，或稍后刷新页面重试。</p></div> : !payload ? <div className="ccd-loading">正在载入CCD结构名录…</div> : <>
-        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "all" || usageStatus !== "all" || targetProperty !== "all" || catalogOrigin !== "all" || componentClass !== "all" || synthesisStatus !== "all" || pdbContextStatus !== "all" || candidateTriageStatus !== "all" || researchEvidenceStatus !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("all"); changeUsageStatus("all"); changeTargetProperty("all"); changeCatalogOrigin("all"); setComponentClass("all"); setSynthesisStatus("all"); setPdbContextStatus("all"); setCandidateTriageStatus("all"); setResearchEvidenceStatus("all"); }}>清除筛选</button>}</div>
+        <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "all" || usageStatus !== "all" || targetProperty !== "all" || componentClass !== "all" || synthesisStatus !== "all" || researchEvidenceStatus !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("all"); changeUsageStatus("all"); changeTargetProperty("all"); setComponentClass("all"); setSynthesisStatus("all"); setResearchEvidenceStatus("all"); }}>清除筛选</button>}</div>
         {shown.length ? <div className="ccd-record-grid">{shown.map((record) => <article className="ccd-record-card" key={record.id}>
           <div className="ccd-card-head"><div><span>CCD {record.ccdIds.join(" / ")}</span>{record.catalogOrigin === "research-evidence-linked" && <b className="ccd-origin-badge">研发证据关联</b>}{record.catalogOrigin === "conditional-review" && <b className="ccd-origin-badge candidate">待验证</b>}{record.corePriorityReview && <b className="ccd-origin-badge reviewed">优先层深审 {record.corePriorityReview.grade}</b>}</div><em className={`screening-tier screening-${record.screening.tier}`}>{payload.metadata.tierMeta[record.screening.tier].shortLabel}</em></div>
           <div className="ccd-card-row">
