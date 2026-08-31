@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-type HeaderSection = "home" | "catalog" | "evidence" | "about";
+type HeaderSection = "home" | "catalog" | "evidence" | "scaffolds" | "about";
 
 export default function SiteHeader({ active, onDownload }: { active: HeaderSection; onDownload?: () => void }) {
   return (
@@ -12,6 +12,7 @@ export default function SiteHeader({ active, onDownload }: { active: HeaderSecti
         <Link className={active === "home" ? "active" : ""} href="/">首页概览</Link>
         <Link className={active === "catalog" ? "active" : ""} href="/catalog/">CCD结构库</Link>
         <Link className={active === "evidence" ? "active" : ""} href="/#database">研发证据库</Link>
+        <Link className={active === "scaffolds" ? "active" : ""} href="/scaffolds/">实验骨架库</Link>
         <Link className={active === "about" ? "active" : ""} href="/quality/">版本与质量</Link>
       </nav>
       {onDownload ? <button className="download-button" onClick={onDownload}>导出证据 CSV</button> : <Link className="download-button header-action-link" href="/">返回首页</Link>}

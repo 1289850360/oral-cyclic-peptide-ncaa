@@ -10,8 +10,8 @@ export function GET() {
   return Response.json({
     metadata: {
       title: "口服环肽非天然残基证据库主记录",
-      version: "3.2",
-      releaseDate: "2026-08-28",
+      version: "3.3",
+      releaseDate: "2026-08-31",
       recordCount: masterRecords.length + reviewOnlyRecords.length,
       schema: "ocpr-master-record-v1",
       scope: "53条原研发记录与92条人工审核数据按CCD去重后的统一研发数据库；包含排除记录并明确标注。",
@@ -29,6 +29,7 @@ export function GET() {
       primarySource: { citation: record.paper, url: record.href },
       secondarySource: record.secondary ? { citation: record.secondary.paper, url: record.secondary.href, evidenceLevel: record.secondary.level } : null,
       ccdStructures: getStructures(record.english),
+      internalConceptId: getStructures(record.english).length ? null : `OCP-X-${record.id.replace("OCPR", "")}`,
       recordVersion: record.recordVersion,
       reviewedAt: record.reviewedAt,
       detailPath: `/residue/${record.slug}/`,
@@ -50,7 +51,7 @@ export function GET() {
       primarySource: record.sources[0] ? { citation: record.sources[0].title, url: record.sources[0].url } : null,
       secondarySources: record.sources.slice(1).map((source) => ({ citation: source.title, url: source.url, evidenceType: source.evidenceType })),
       ccdStructures: [{ ccd: record.ccdId, label: record.name }],
-      recordVersion: "3.2",
+      recordVersion: "3.3",
       reviewedAt: "2026-08-28",
       detailPath: null,
       recordOrigin: "merged-92-review",

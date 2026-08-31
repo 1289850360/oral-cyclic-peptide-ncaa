@@ -14,7 +14,7 @@ import { allUnifiedRecords, reviewOnlyRecords } from "./unified-records";
 type DatabaseRecord = MasterRecord;
 type Insight = { takeaway: string; caution: string };
 type PortalView = "home" | "evidence" | "about";
-type HomeSearchTarget = "catalog" | "evidence";
+type HomeSearchTarget = "catalog" | "evidence" | "scaffolds";
 
 const evidenceMeta: Record<EvidenceLevel, { code: string; label: string; description: string }> = {
   "直接证据": { code: "A", label: "直接替换证据", description: "有同骨架对照、单点或明确位置替换，并报告渗透性、稳定性或口服暴露数据。" },
@@ -193,6 +193,7 @@ export default function Home() {
     event.preventDefault();
     const encoded = encodeURIComponent(homeQuery.trim());
     if (homeSearchTarget === "catalog") { window.location.href = `catalog/${encoded ? `?q=${encoded}` : ""}`; return; }
+    if (homeSearchTarget === "scaffolds") { window.location.href = `scaffolds/${encoded ? `?q=${encoded}` : ""}`; return; }
     setQuery(homeQuery.trim());
     window.history.replaceState(null, "", `${encoded ? `?q=${encoded}` : ""}#database`);
     setPortalView("evidence");
@@ -220,45 +221,46 @@ export default function Home() {
           <div className="portal-hero-copy">
             <p className="eyebrow">ORAL CYCLIC PEPTIDE · RESIDUE KNOWLEDGEBASE</p>
             <h1 id="portal-title">口服环肽<br /><em>非天然残基数据库</em></h1>
-            <p className="portal-summary">汇集非天然氨基酸结构、肽中使用记录、环肽研发证据与审核边界，为候选生成、位点扫描和实验设计提供可追溯入口。</p>
+            <p className="portal-summary">收录非天然氨基酸的结构身份、肽中使用记录及环肽性质证据，供残基检索、位点扫描和实验方案设计使用。</p>
           </div>
           <form className="portal-search" onSubmit={searchFromHome}>
             <label htmlFor="portal-search-input">搜索数据库</label>
-            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
-            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
+            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option><option value="scaffolds">实验骨架库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : homeSearchTarget === "scaffolds" ? "输入骨架、序列、残基或实验终点" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
+            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : homeSearchTarget === "scaffolds" ? "例如：N-Me-Leu、D8.31、RRCK、口服生物利用度" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
           </form>
-          <div className="version-line"><span>Version 3.2</span><span>最近审核：2026-08-28</span><span>研究用途数据库</span></div>
+          <div className="version-line"><span>Version 3.3</span><span>最近更新：2026-08-31</span><span>研究用途数据库</span></div>
         </section>
 
         <section className="portal-stats" aria-label="数据库概览">
-          <article><strong>1,687</strong><span>CCD结构参考记录</span><small>非标准肽链连接结构候选</small></article>
-          <article><strong>34</strong><span>人工证据支持单体</span><small>结构与证据精确对应</small></article>
-          <article><strong>221</strong><span>优先研发候选</span><small>结构层面首轮筛选</small></article>
-          <article><strong>176</strong><span>短肽序列命中</span><small>≤50残基PDB聚合物实体</small></article>
-          <article><strong>139</strong><span>统一研发数据库记录</span><small>53条原记录与92条审核数据去重合并</small></article>
-          <article><strong>8</strong><span>明确排除记录</span><small>保留可追溯，但不作为单体推荐</small></article>
+          <article><strong>2,065</strong><span>CCD结构参考记录</span><small>五类互斥归类，合计不重复</small></article>
+          <article><strong>105</strong><span>人工确认肽／宏环构件</span><small>来源已核查，仍不等同于口服证据</small></article>
+          <article><strong>168</strong><span>PDB肽中出现</span><small>独立单体和合成资料仍待补充</small></article>
+          <article><strong>294</strong><span>特殊构件／结构参考</span><small>含交联片段、战头和非典型骨架</small></article>
+          <article><strong>1,269</strong><span>氨基酸样待验证候选</span><small>当前不能直接作为可用单体推荐</small></article>
+          <article><strong>229</strong><span>非单体／明确排除</span><small>保留记录用于检索与追溯</small></article>
         </section>
 
         <section className="portal-body">
-          <div className="portal-section-heading"><div><p className="eyebrow">EXPLORE THE DATABASE</p><h2>从研究任务进入数据库</h2></div><p>首页只提供概览和入口；复杂筛选、结构卡片和证据详情在各自模块中完成。</p></div>
+          <div className="portal-section-heading"><div><p className="eyebrow">EXPLORE THE DATABASE</p><h2>数据库内容</h2></div><p>结构检索与研发证据分别编目，记录详情保留结构来源、实验条件和结论适用范围。</p></div>
           <div className="portal-entry-grid">
             <button onClick={() => navigateTo("evidence", "database")}><span>01 · 设计决策</span><strong>研发证据库</strong><p>原53条证据记录与92条人工审核数据已经去重并入同一检索界面。</p><b>浏览139条统一记录 →</b></button>
-            <button onClick={() => { window.location.href = "catalog/"; }}><span>02 · 扩展化学空间</span><strong>CCD结构库</strong><p>浏览结构、中文名称、研发分档、PDB序列使用与单体可用性线索。</p><b>进入1,687条结构目录 →</b></button>
-            <button onClick={() => { window.location.href = "quality/"; }}><span>03 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
+            <button onClick={() => { window.location.href = "catalog/"; }}><span>02 · 扩展化学空间</span><strong>CCD结构库</strong><p>浏览结构、五层证据状态、PDB使用与单体可用性线索。</p><b>进入2,065条结构目录 →</b></button>
+            <button onClick={() => { window.location.href = "scaffolds/"; }}><span>03 · 整环实验结果</span><strong>实验骨架库</strong><p>按序列、环化方式和实验终点检索已报道的环肽骨架，定量结果保留体系与归因边界。</p><b>浏览首批14条骨架记录 →</b></button>
+            <button onClick={() => { window.location.href = "quality/"; }}><span>04 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
           </div>
 
           <div className="portal-overview-grid">
-            <article className="portal-progress-card"><div><span>数据审核进度</span><strong>从结构候选到统一研发记录</strong></div><ol><li><b>结构参考层</b><span>1,687条CCD核心结构，已完成身份与完整性校验</span></li><li><b>证据整理层</b><span>53条原研发记录与92条人工审核数据统一去重</span></li><li><b>统一数据库</b><span>现收录139条唯一记录，并保留使用等级与排除结论</span></li></ol></article>
-            <article className="portal-boundary-card"><span>使用前请注意</span><h3>“出现过”不等于“能改善口服性”</h3><p>CCD身份、进入PDB聚合物、可作为独立合成单体，以及提高环肽口服暴露是四个不同结论。本站分层展示，不把结构预测写成实验事实。</p><button onClick={() => { window.location.href = "quality/"; }}>查看版本、质量与证据边界 →</button></article>
+            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条记录按当前证据只归入一类</strong></div><ol><li><b>已确认使用</b><span>105条经人工来源审核；168条仅确认在PDB肽中出现</span></li><li><b>仍需判断</b><span>294条作为特殊结构参考；1,269条氨基酸样候选待验证</span></li><li><b>明确不推荐</b><span>229条属于非单体或明确排除对象，但保留用于追溯</span></li></ol></article>
+            <article className="portal-boundary-card"><span>证据口径</span><h3>记录按证据层级解释</h3><p>CCD记录用于确认化学身份，PDB命中用于确认其在聚合物中的使用。只有在相同或可比环肽骨架中设有实验对照时，才将性质变化归因于具体残基。</p><button onClick={() => { window.location.href = "quality/"; }}>查看证据分级与数据质量 →</button></article>
           </div>
         </section>
       </>}
 
       {portalView === "evidence" && <>
       <section className="database-section" id="database" aria-labelledby="database-title">
-        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">口服性质与研发证据库</h2></div><p>用于回答“为什么选这个残基、可能改善什么”。这里汇总论文、专利和临床骨架证据，优先看同骨架替换和定量实验边界。</p></div>
+        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">口服性质与研发证据库</h2></div><p>汇总论文、专利和临床骨架中的残基记录。证据等级依据对照设计和归因强度划分，定量结果仅在实验条件可对应时列示。</p></div>
         <aside className="evidence-integration-status" aria-labelledby="integration-status-title">
-          <div><span>UNIFIED EVIDENCE DATABASE</span><strong id="integration-status-title">92条审核数据已并入研发证据库</strong><p>6条与原有记录合并证据，其余86条形成新的数据库记录。环肽使用、肽中使用、特殊构件和排除结论保留为筛选标签，不再设置独立的“深度审核”页面。</p></div>
+          <div><span>UNIFIED EVIDENCE DATABASE</span><strong id="integration-status-title">研发证据库共收录139条记录</strong><p>原53条研发记录与92条审核记录按CCD编号去重：6条合并至原记录，86条新增。使用范围和排除结论保留为独立字段。</p></div>
           <dl><div><dt>139</dt><dd>去重后总记录</dd></div><div><dt>34</dt><dd>环肽直接使用</dd></div><div><dt>36</dt><dd>肽中使用</dd></div><div><dt>14</dt><dd>特殊构件</dd></div><div><dt>8</dt><dd>排除记录</dd></div></dl>
           <nav><a href="deep-review-integration-plan.csv" download>下载合并清单</a><a href="ccd-manual-review-92-final.csv" download>下载审核来源</a></nav>
         </aside>
@@ -282,7 +284,7 @@ export default function Home() {
               <div className="property-tags"><span>{reviewMeta.label}</span><span>{record.grade === "A" ? "环肽证据已核对" : record.grade === "B" ? "肽中使用已核对" : record.grade === "C" ? "受限使用" : "不建议作为单体"}</span></div>
               <div className="source-summary"><span>{sourceYear(primarySource?.title ?? "")}</span><strong>{primarySource?.title ?? "CCD与人工审核记录"}</strong></div>
               <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
-              {isOpen && <div className="record-details merged-review-details"><div><h4>记录定位</h4><p>{reviewMeta.description}</p></div><div className="design-guide"><h4>人工审核字段</h4><dl><div><dt>合成／身份</dt><dd>{record.synthesisEvidence}</dd></div><div><dt>环肽证据</dt><dd>{record.cyclicEvidence}</dd></div><div><dt>口服证据</dt><dd>{record.oralEvidence}</dd></div><div><dt>研发建议</dt><dd>{record.recommendation}</dd></div></dl></div><div className="caution-box"><h4>解释边界</h4><p>该等级描述结构身份和肽／环肽使用情况，不表示这一残基能够单独提高口服吸收。</p></div><div className="record-sources">{record.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span>{source.evidenceType}</span><strong>{source.title}</strong><small>打开原始来源 ↗</small></a>)}</div></div>}
+              {isOpen && <div className="record-details merged-review-details"><div><h4>记录类别</h4><p>{reviewMeta.description}</p></div><div className="design-guide"><h4>审核结果</h4><dl><div><dt>合成／身份</dt><dd>{record.synthesisEvidence}</dd></div><div><dt>环肽证据</dt><dd>{record.cyclicEvidence}</dd></div><div><dt>口服证据</dt><dd>{record.oralEvidence}</dd></div><div><dt>研发建议</dt><dd>{record.recommendation}</dd></div></dl></div><div className="caution-box"><h4>适用范围</h4><p>本级别记录结构身份及肽或环肽中的使用情况，不作为单残基改善口服吸收的因果证据。</p></div><div className="record-sources">{record.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span>{source.evidenceType}</span><strong>{source.title}</strong><small>打开原始来源 ↗</small></a>)}</div></div>}
             </article>;
           }
           const record = item.record;
@@ -292,7 +294,7 @@ export default function Home() {
             <div className="record-topline"><span className={`evidence-badge level-${meta.code.toLowerCase()}`} title={patentTier ? patentTierMeta[patentTier].description : meta.description}>{patentTier ?? meta.code}｜{patentTier ? patentTierMeta[patentTier].label : meta.label}</span><span className="record-category">{record.id} · {record.category}</span></div>
             <div className="record-title-row"><div><h3><Link href={`/residue/${record.slug}/`}>{record.name}</Link></h3><p>{record.english}</p></div><button className={`compare-toggle ${isSelected ? "selected" : ""}`} onClick={() => toggleCompare(record.id)} disabled={!isSelected && selected.length >= 3}>{isSelected ? "已选择" : "加入比较"}</button></div>
             <div className="card-overview with-structure">
-              <div><span className="field-label">残基简介</span><p className="takeaway">{insight?.takeaway ?? effectParts(record.effect)[0]}</p></div>
+              <div><span className="field-label">性质概述</span><p className="takeaway">{effectParts(record.effect).slice(0, 2).join("；")}。</p></div>
               {structures.length > 0 ? <div className={`structure-stack ${structures.length > 1 ? "multiple" : ""}`}>{structures.map((structure) => <a className="structure-preview" href={ccdEntryUrl(structure.ccd)} target="_blank" rel="noreferrer" title={`在 RCSB PDB 查看 CCD ${structure.ccd}`} key={structure.ccd}><img src={ccdImageUrl(structure.ccd)} alt={`${structure.label}二维结构`} /><span>CCD {structure.ccd} · {structure.label} ↗</span></a>)}</div> : <div className="structure-unavailable"><strong>暂无唯一 CCD 结构</strong><p>{structureNote ?? "当前记录尚未找到可与名称和立体化学完全对应的 CCD 单体。"}</p></div>}
             </div>
             <div className="property-tags">{effectParts(record.effect).slice(0, 4).map((part) => <span key={part}>{part}</span>)}{item.review && <span className="linked-review-tag">审核{item.review.grade}｜{reviewGradeMeta[item.review.grade].label}</span>}</div>
@@ -326,16 +328,16 @@ export default function Home() {
         <div className="source-note">
           <div className="source-note-intro">
             <h3>证据判断依据</h3>
-            <p>证据强度主要取决于两个方面：研究是否在相同环肽骨架上设置替换对照，以及观察到的性质变化能否归因于该残基本身。等级用于说明结论的适用范围，并非对论文质量进行评价。</p>
+            <p>证据等级依据研究设计划分：是否设置同骨架替换对照，以及观察结果能否归因于单个残基。分级描述结论的适用范围，不评价文献本身的质量。</p>
           </div>
           <div className="source-note-list">
             <article>
               <h3>有同骨架对照</h3>
-              <p>这类数据最适合判断某个替换对渗透性、稳定性或口服暴露产生了什么影响，因此会优先列出具体实验结果。</p>
+              <p>同一骨架中的位置替换对照可直接比较渗透性、稳定性或口服暴露变化，记录中列出实验体系和定量结果。</p>
             </article>
             <article>
               <h3>来自完整分子</h3>
-              <p>如果一个残基只出现在高渗透环肽、天然产物或口服药物中，它可以作为候选参考，但不能把整个分子的表现归因于这一处残基。</p>
+              <p>残基出现在高渗透环肽、天然产物或口服药物中，只能证明其与该骨架相容；完整分子的性质不归因于单一位点。</p>
             </article>
             <article>
               <h3>来自专利</h3>

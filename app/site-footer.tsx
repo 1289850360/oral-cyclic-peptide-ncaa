@@ -1,3 +1,3 @@
 export default function SiteFooter() {
-  return <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.2 · CCD catalog + evidence layer</span></div><p>用于候选生成与实验讨论。结构名录中的性质标签是类别推断；具体替换仍应保留母体环肽对照，并同步评估活性、PAMPA/Caco-2、溶解度及胃肠/代谢稳定性。</p></footer>;
+  return <footer><div><strong>口服环肽非天然残基证据库</strong><span>Version 3.3 · structure catalog + evidence layer</span></div><p>研究用途数据库。结构标签为类别注释；残基替换结论应基于母体对照，并结合活性、PAMPA/Caco-2、溶解度及胃肠道和代谢稳定性数据解释。</p></footer>;
 }

@@ -1,0 +1,52 @@
+import { readFile, writeFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const publicDir = join(root, "public");
+const readJson = async (name) => JSON.parse(await readFile(join(publicDir, name), "utf8"));
+const [catalog, usage] = await Promise.all([readJson("ccd-development-screen.json"), readJson("ccd-polymer-usage-audit.json")]);
+const usageById = new Map(usage.records.map((record) => [record.id, record]));
+const source = (title, url, evidenceType) => ({ title, url, evidenceType });
+
+const assessments = {
+  "00O": { grade: "PENDING", conclusion: "保留为结构候选，尚不能列为已确认肽合成单体", synthesis: "结构具备氨基酸骨架，但本轮未找到PDB聚合物使用或可直接引用的肽合成实例。", cyclic: "未找到直接环肽使用证据。", oral: "未找到口服或渗透性证据。", use: "待补独立单体合成、保护形式和肽偶联来源。", sources: [] },
+  "02A": { grade: "A", conclusion: "保留为已进入环肽与蛋白类似物的Aze构象单元", synthesis: "PDB 5USV确认Aze可替代胰岛素B28位Pro；PDB 7YV1确认其进入11肽环状RAS抑制剂LUNA18。", cyclic: "LUNA18是具有直接结构证据的11肽环肽。", oral: "LUNA18具有口服可用的完整骨架证据；不能把整分子口服性归因于Aze单点。", use: "适合Pro位点环尺寸与转角扫描，仍需核查目标序列中的偶联和构象影响。", sources: [source("PDB 7YV1 · LUNA18-KRAS复合物", "https://www.rcsb.org/structure/7YV1", "环肽结构"), source("Development of Orally Bioavailable Peptides Targeting an Intracellular Protein", "https://pubmed.ncbi.nlm.nih.gov/37463267/", "完整骨架口服证据"), source("PDB 5USV · Aze胰岛素类似物", "https://www.rcsb.org/structure/5USV", "肽中使用")] },
+  "02K": { grade: "B", conclusion: "保留为已确认肽中使用的Ac6c构象单元", synthesis: "多个PDB结构确认Ac6c进入三肽和工程化肽链。", cyclic: "本轮示例主要是短线性肽或蛋白类似物，未确认直接环肽使用。", oral: "未找到口服证据。", use: "适合作为疏水、α,α-二取代构象限制单元；需补环肽闭环与SPPS条件。", sources: [source("Protein-ligand interactions: thermodynamic effects associated with increasing nonpolar surface area", "https://pubmed.ncbi.nlm.nih.gov/22007755/", "短肽使用"), source("PDB 4P9Z · pTyr-Ac6c-Asn", "https://www.rcsb.org/structure/4P9Z", "结构实例")] },
+  "037": { grade: "PENDING", conclusion: "保留为稠合脯氨酸样结构候选", synthesis: "结构身份成立，但本轮未找到PDB聚合物使用。", cyclic: "未找到直接环肽证据。", oral: "未找到口服证据。", use: "优先补查保护单体、立体选择性合成和Pro替换实例。", sources: [] },
+  "03E": { grade: "B", conclusion: "保留为已确认短肽使用的Ac7c构象单元", synthesis: "PDB 3OVE确认其进入pYXN来源三肽。", cyclic: "未找到直接环肽使用证据。", oral: "未找到口服证据。", use: "可与Ac5c/Ac6c成组扫描环尺寸和疏水体积。", sources: [source("PDB 3OVE · Ac7c三肽复合物", "https://www.rcsb.org/structure/3OVE", "短肽结构"), source("Protein-ligand interactions: thermodynamic effects associated with increasing nonpolar surface area", "https://pubmed.ncbi.nlm.nih.gov/22007755/", "原始论文")] },
+  "05N": { grade: "A", conclusion: "保留为硫肽天然产物中的直接宏环残基", synthesis: "PDB 4G5G与5JBQ确认该残基存在于thiomuracin及其类似物；这证明宏环使用，不等同于通用SPPS单体可得。", cyclic: "Thiomuracin属于硫肽类宏环天然产物。", oral: "未找到口服证据。", use: "适合作为天然产物宏环构件参考；实验前需单独核查保护与合成路线。", sources: [source("PDB 4G5G · thiomuracin A", "https://www.rcsb.org/structure/4G5G", "宏环天然产物"), source("Antibiotic optimization and chemical structure stabilization of thiomuracin A", "https://pubmed.ncbi.nlm.nih.gov/22812377/", "合成与结构优化")] },
+  "060": { grade: "A", conclusion: "保留为环肽与环状天然产物中已使用的D-半胱氨酸衍生残基", synthesis: "PDB 4JNA和7ROV确认该CCD进入FK228相关体系及KRAS环肽MP-9903。", cyclic: "MP-9903具有直接宏环肽结构证据。", oral: "MP-9903论文报告细胞活性与渗透性限制，未建立口服证据。", use: "可用于D-构型和含硫侧链扫描；不能按单点口服增益解释。", sources: [source("PDB 7ROV · KRAS-MP-9903", "https://www.rcsb.org/structure/7ROV", "环肽结构"), source("Discovery of cell active macrocyclic peptides with on-target inhibition of KRAS signaling", "https://pubmed.ncbi.nlm.nih.gov/35024121/", "环肽使用与细胞数据")] },
+  "0EH": { grade: "A", conclusion: "保留为订书肽中的直接闭环把手残基", synthesis: "多个PDB结构确认该长链α-甲基残基进入订书肽。", cyclic: "侧链订书形成宏环约束，但不属于头尾闭环。", oral: "未找到口服证据。", use: "应归入侧链订书单体，使用时需与配对烯基残基和复分解条件共同设计。", sources: [source("PDB 4N5T · ATSP-7041订书肽", "https://www.rcsb.org/structure/4N5T", "订书肽结构"), source("Structure-activity studies of Mdm2/Mdm4-binding stapled peptides", "https://pubmed.ncbi.nlm.nih.gov/29228061/", "订书肽研究")] },
+  "0QZ": { grade: "A", conclusion: "保留为环七肽抗生素GE23077中的异丝氨酸残基", synthesis: "PDB 4MQ9及同系列结构确认其进入GE23077；来源为非核糖体天然产物，不证明常规保护单体供应。", cyclic: "GE23077是非核糖体合成的环七肽。", oral: "未找到口服证据。", use: "适合作为β-氨基酸/羟基骨架参考，需补全合成单体路线。", sources: [source("GE23077 binds to the RNA polymerase i and i+1 sites", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3994528/", "环肽结构与组成"), source("PDB 4MQ9 · GE23077", "https://www.rcsb.org/structure/4MQ9", "结构实例")] },
+  "0UZ": { grade: "A", conclusion: "保留为交联糖肽抗生素中的氯代芳香残基", synthesis: "PDB 4EEC和7LKC确认其存在于糖肽抗生素相关结构。", cyclic: "属于多重交联天然产物肽环境，不是普通头尾环肽。", oral: "未找到口服证据。", use: "适合作为天然产物芳香交联构件；需与通用D-芳香氨基酸区分。", sources: [source("PDB 7LKC · Keratinimicin A", "https://www.rcsb.org/structure/7LKC", "交联肽天然产物"), source("PDB 4EEC · desulfo-A47934", "https://www.rcsb.org/structure/4EEC", "糖肽结构")] },
+  "0XO": { grade: "A", conclusion: "保留为WDR5宏环肽模拟物MM-401中的环化相关残基", synthesis: "MM-401已完成合成并获得WDR5复合物结构。", cyclic: "MM-401是直接报道的环状肽模拟物。", oral: "报道支持细胞活性，不支持口服吸收。", use: "适合作为α-甲基化碱性残基与宏环约束参考。", sources: [source("PDB 4GM9 · WDR5-MM-401", "https://www.rcsb.org/structure/4GM9", "宏环结构"), source("Targeting MLL1 H3 K4 methyltransferase activity in MLL leukemia", "https://pmc.ncbi.nlm.nih.gov/articles/PMC3965208/", "合成与生物活性")] },
+  "0XQ": { grade: "A", conclusion: "保留为WDR5宏环肽模拟物系列中的α-甲基碱性残基", synthesis: "PDB 4GMB及MM-589研究确认该残基进入可合成的宏环肽模拟物。", cyclic: "存在直接宏环肽模拟物结构证据。", oral: "未找到口服证据。", use: "可作为长链碱性侧链和α-甲基化组合构件，需关注电荷与渗透性。", sources: [source("PDB 4GMB · WDR5-MM-402", "https://www.rcsb.org/structure/4GMB", "宏环结构"), source("Discovery of a Highly Potent, Cell-Permeable Macrocyclic Peptidomimetic", "https://pubmed.ncbi.nlm.nih.gov/28603984/", "宏环与细胞活性")] },
+  "0Y9": { grade: "B", conclusion: "保留为蛋白酶抑制肽模拟物中的反应性构件", synthesis: "PDB 3OYP确认其进入HCV NS3/4A抑制剂。", cyclic: "当前来源未确认其属于环肽。", oral: "未找到口服证据。", use: "更适合归入蛋白酶抑制剂特殊构件，需核查反应性和闭环兼容性。", sources: [source("PDB 3OYP · HCV NS3/4A抑制剂", "https://www.rcsb.org/structure/3OYP", "肽模拟物结构"), source("Selective irreversible inhibition of a protease by targeting a noncatalytic cysteine", "https://pubmed.ncbi.nlm.nih.gov/21113170/", "原始论文")] },
+  "11Q": { grade: "A", conclusion: "保留为Plk1环状peptomer中的直接N-取代脯氨酸构件", synthesis: "PDB 4HAB确认其进入PL-49。", cyclic: "PL-49属于直接报道的环状peptomer抑制剂。", oral: "未找到口服证据。", use: "适合peptomer/N-取代骨架设计，不应与普通Pro替换等同。", sources: [source("PDB 4HAB · Plk1-PL-49", "https://www.rcsb.org/structure/4HAB", "环状peptomer结构"), source("Development of cyclic peptomer inhibitors targeting the polo-box domain", "https://pubmed.ncbi.nlm.nih.gov/23498919/", "合成与环肽使用")] },
+  "12L": { grade: "PENDING", conclusion: "保留为双环脯氨酸样候选，等待肽中使用证据", synthesis: "结构身份成立，但本轮未找到PDB聚合物命中。", cyclic: "未找到直接环肽证据。", oral: "未找到口服证据。", use: "优先补查保护形式、偶联难度和Pro位点替换实例。", sources: [] },
+  "192": { grade: "B", conclusion: "保留为已进入受约束肽的Ac4c构象单元", synthesis: "多个PDB结构确认Ac4c进入短肽和受约束肽。", cyclic: "PDB 6OPJ支持受约束figure-eight样肽，但本轮不把它直接等同于常规环肽单体证据。", oral: "未找到口服证据。", use: "适合α,α-二取代构象限制扫描，需补具体闭环方法。", sources: [source("PDB 6OPJ · 受约束menin抑制肽", "https://www.rcsb.org/structure/6OPJ", "受约束肽结构"), source("Covalent and noncovalent constraints yield a figure eight-like conformation", "https://pubmed.ncbi.nlm.nih.gov/32882610/", "合成与构象")] },
+  "1AC": { grade: "B", conclusion: "保留为已确认短肽使用的Ac3c构象单元", synthesis: "多个PDB结构确认其进入8肽、p53肽模拟物和三肽。", cyclic: "本轮未确认直接环肽使用。", oral: "未找到口服证据。", use: "适合作为小环α,α-二取代残基进行构象扫描。", sources: [source("PDB 2GV2 · p53八肽类似物", "https://www.rcsb.org/structure/2GV2", "短肽结构"), source("Crystallographic Analysis of an 8-mer p53 Peptide Analogue", "https://pubmed.ncbi.nlm.nih.gov/16925398/", "原始论文")] },
+  "1G8": { grade: "PENDING", conclusion: "保留为带侧链胺的D-芳香氨基酸候选", synthesis: "结构身份成立，但本轮未找到PDB聚合物使用。", cyclic: "未找到直接环肽证据。", oral: "未找到口服证据。", use: "可能用作侧链桥连把手；需补保护策略和肽中实例。", sources: [] },
+  "1JM": { grade: "A", conclusion: "保留为环孢素衍生物中的直接N-甲基D-芳香残基", synthesis: "PDB 4IPZ确认该残基进入11残基环孢素衍生物SmBz-CsA。", cyclic: "RCSB将该实体标注为cyclic peptide。", oral: "环孢素母体具有口服先例，但当前来源未证明SmBz-CsA或该单点残基的口服贡献。", use: "适合作为N-甲基D-芳香构件和环孢素式骨架参考。", sources: [source("PDB 4IPZ · SmBz-CsA", "https://www.rcsb.org/structure/4IPZ", "环肽结构"), source("HIV-1 evades innate immune recognition through specific cofactor recruitment", "https://pubmed.ncbi.nlm.nih.gov/24196705/", "结构来源")] },
+  "1XW": { grade: "PENDING", conclusion: "保留为稠合双环二肽样骨架候选", synthesis: "结构身份成立，但本轮未找到PDB聚合物使用。", cyclic: "未找到直接环肽证据。", oral: "未找到口服证据。", use: "需先确认它是可独立偶联的单体还是预成环状二肽样片段。", sources: [] },
+};
+
+const batchRecords = catalog.records.filter((record) => record.screening.tier === "priority").sort((a, b) => a.primaryCcdId.localeCompare(b.primaryCcdId)).slice(0, 20).map((record, index) => {
+  const review = assessments[record.primaryCcdId];
+  if (!review) throw new Error(`Missing assessment for ${record.primaryCcdId}`);
+  const pdb = usageById.get(record.id);
+  return { batch: 1, batchPosition: index + 1, id: record.id, ccdId: record.primaryCcdId, name: record.name, formula: record.formula, grade: review.grade, conclusion: review.conclusion, synthesisEvidence: review.synthesis, cyclicEvidence: review.cyclic, oralEvidence: review.oral, recommendation: review.use, pdbUsage: pdb, sources: review.sources, reviewedAt: "2026-08-31" };
+});
+
+const gradeCounts = Object.fromEntries(["A", "B", "PENDING", "EXCLUDE"].map((grade) => [grade, batchRecords.filter((record) => record.grade === grade).length]));
+const payload = { metadata: { reviewProgram: "221 original core-priority CCD candidates", batch: 1, count: batchRecords.length, gradeCounts, scope: "Manual evidence review of independent-monomer identity, PDB peptide context, cyclic-peptide use, synthesis evidence, and oral evidence. Whole-scaffold evidence is not attributed to a single residue." }, records: batchRecords };
+const fields = ["batchPosition", "ccdId", "name", "formula", "grade", "conclusion", "synthesisEvidence", "cyclicEvidence", "oralEvidence", "recommendation", "pdbStatus", "pdbExamples", "sources"];
+const escape = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
+const csv = [fields, ...batchRecords.map((record) => ({ ...record, pdbStatus: record.pdbUsage?.status ?? "not-audited", pdbExamples: record.pdbUsage?.exampleEntryIds?.join(" / ") ?? "", sources: record.sources.map((item) => `${item.evidenceType}｜${item.title}｜${item.url}`).join("；") })).map((record) => fields.map((field) => record[field]))].map((row) => row.map(escape).join(",")).join("\n");
+
+await Promise.all([
+  writeFile(join(publicDir, "ccd-core-priority-review-batch-1.json"), `${JSON.stringify(payload)}\n`, "utf8"),
+  writeFile(join(publicDir, "ccd-core-priority-review-batch-1.csv"), `\uFEFF${csv}\n`, "utf8"),
+]);
+console.log(JSON.stringify(payload.metadata, null, 2));

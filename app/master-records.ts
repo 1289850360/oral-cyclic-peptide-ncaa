@@ -9,8 +9,8 @@ export type MasterRecord = Residue & {
   reviewedAt: string;
 };
 
-export const DATABASE_VERSION = "3.2";
-export const DATABASE_RELEASE_DATE = "2026-08-28";
+export const DATABASE_VERSION = "3.3";
+export const DATABASE_RELEASE_DATE = "2026-08-31";
 
 export const masterRecords: MasterRecord[] = groups.flatMap((group) =>
   group.residues.map((residue) => ({ residue, group })),
