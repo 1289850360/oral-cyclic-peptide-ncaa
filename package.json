@@ -23,7 +23,6 @@
     "review:core-priority:batch-1": "node scripts/build-core-priority-review-batch-1.mjs",
     "review:core-priority:batch-2": "node scripts/build-core-priority-review-batch-2.mjs",
     "review:synthesis-usability:batch-1": "node scripts/build-synthesis-usability-batch-1.mjs",
-    "build:scaffold-evidence": "node scripts/build-cyclic-scaffold-evidence.mjs",
     "audit:pdb-context": "node scripts/audit-pdb-peptide-context.mjs",
     "triage:pending-candidates": "node scripts/triage-pending-candidates.mjs",
     "build:research-alignment": "node scripts/build-research-evidence-alignment.mjs",

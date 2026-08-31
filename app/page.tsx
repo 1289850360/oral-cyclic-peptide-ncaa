@@ -14,7 +14,7 @@ import { allUnifiedRecords, reviewOnlyRecords } from "./unified-records";
 type DatabaseRecord = MasterRecord;
 type Insight = { takeaway: string; caution: string };
 type PortalView = "home" | "evidence" | "about";
-type HomeSearchTarget = "catalog" | "evidence" | "scaffolds";
+type HomeSearchTarget = "catalog" | "evidence";
 
 const evidenceMeta: Record<EvidenceLevel, { code: string; label: string; description: string }> = {
   "直接证据": { code: "A", label: "直接替换证据", description: "有同骨架对照、单点或明确位置替换，并报告渗透性、稳定性或口服暴露数据。" },
@@ -196,7 +196,6 @@ export default function Home() {
     event.preventDefault();
     const encoded = encodeURIComponent(homeQuery.trim());
     if (homeSearchTarget === "catalog") { window.location.href = `catalog/${encoded ? `?q=${encoded}` : ""}`; return; }
-    if (homeSearchTarget === "scaffolds") { window.location.href = `scaffolds/${encoded ? `?q=${encoded}` : ""}`; return; }
     setQuery(homeQuery.trim());
     window.history.replaceState(null, "", `${encoded ? `?q=${encoded}` : ""}#database`);
     setPortalView("evidence");
@@ -228,8 +227,8 @@ export default function Home() {
           </div>
           <form className="portal-search" onSubmit={searchFromHome}>
             <label htmlFor="portal-search-input">搜索数据库</label>
-            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option><option value="scaffolds">实验骨架库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : homeSearchTarget === "scaffolds" ? "输入骨架、序列、残基或实验终点" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
-            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : homeSearchTarget === "scaffolds" ? "例如：N-Me-Leu、D8.31、RRCK、口服生物利用度" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
+            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
+            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
           </form>
           <div className="version-line"><span>Version 3.3</span><span>最近更新：2026-08-31</span><span>研究用途数据库</span></div>
         </section>
@@ -248,8 +247,7 @@ export default function Home() {
           <div className="portal-entry-grid">
             <button onClick={() => navigateTo("evidence", "database")}><span>01 · 设计决策</span><strong>研发证据库</strong><p>从CCD结构主记录关联论文、专利与人工审核；有结构的证据不会再单独维护另一份名单。</p><b>浏览{allUnifiedRecords.length}条证据记录 →</b></button>
             <button onClick={() => { window.location.href = "catalog/"; }}><span>02 · 扩展化学空间</span><strong>CCD结构库</strong><p>浏览结构、五层证据状态、PDB使用与单体可用性线索。</p><b>进入2,065条结构目录 →</b></button>
-            <button onClick={() => { window.location.href = "scaffolds/"; }}><span>03 · 整环实验结果</span><strong>实验骨架库</strong><p>按序列、环化方式和实验终点检索已报道的环肽骨架，定量结果保留体系与归因边界。</p><b>浏览首批14条骨架记录 →</b></button>
-            <button onClick={() => { window.location.href = "quality/"; }}><span>04 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
+            <button onClick={() => { window.location.href = "quality/"; }}><span>03 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
           </div>
 
           <div className="portal-overview-grid">

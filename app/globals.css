@@ -658,48 +658,6 @@ h1 em { color: var(--teal); font-style: normal; }
 .citation-box p { margin: 9px 0 0; color: var(--ink); font-size: 11px; line-height: 1.75; }
 .quality-sidebar { position: sticky; top: 88px; display: grid; gap: 10px; }
 
-.scaffold-library { max-width: 1450px; margin: 0 auto; padding: 54px 5vw 90px; }
-.scaffold-hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(330px, .8fr); gap: 50px; align-items: end; }
-.scaffold-hero h1 { margin: 13px 0 0; font-size: clamp(45px, 5vw, 70px); }
-.scaffold-hero h1 em { color: var(--teal); font-style: normal; }
-.scaffold-hero > p { margin: 0 0 8px; color: var(--muted); font-size: 13px; line-height: 1.9; }
-.scaffold-summary { margin-top: 34px; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); border-left: 1px solid var(--line); }
-.scaffold-summary article { min-height: 112px; padding: 17px; display: flex; flex-direction: column; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--surface); }
-.scaffold-summary strong { color: var(--gold); font-family: "Noto Serif SC", serif; font-size: 27px; font-weight: 500; }
-.scaffold-summary span { margin-top: auto; color: var(--muted); font-size: 10px; }
-.scaffold-boundary { margin-top: 14px; padding: 16px 18px; display: grid; grid-template-columns: 190px 1fr; gap: 20px; border-left: 3px solid var(--gold); background: #fff8e9; }
-.scaffold-boundary strong { font-size: 10px; }
-.scaffold-boundary p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.75; }
-.scaffold-filters { margin-top: 14px; padding: 17px; display: grid; grid-template-columns: minmax(300px, 1.5fr) repeat(2, minmax(190px, .75fr)); gap: 12px; border: 1px solid var(--line); background: white; }
-.scaffold-filters label { display: grid; gap: 7px; }
-.scaffold-filters span { color: var(--muted); font-size: 9px; font-weight: 600; }
-.scaffold-filters input, .scaffold-filters select { width: 100%; height: 43px; padding: 0 12px; border: 1px solid var(--line); color: var(--ink); background: white; }
-.scaffold-result-bar { margin: 24px 0 12px; display: flex; justify-content: space-between; color: var(--muted); font-size: 10px; }
-.scaffold-result-bar a { color: var(--teal-dark); font-weight: 700; text-decoration: none; }
-.scaffold-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
-.scaffold-card { padding: 22px; display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--surface); }
-.scaffold-card > header { display: flex; justify-content: space-between; gap: 12px; }
-.scaffold-card > header span { color: var(--teal); font-size: 9px; font-weight: 700; }
-.scaffold-card > header b { padding: 4px 7px; color: #755b21; background: #f5ead0; font-size: 8px; }
-.scaffold-card h2 { margin: 15px 0 6px; font-size: 19px; }
-.scaffold-sequence { min-height: 36px; margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.65; overflow-wrap: anywhere; }
-.scaffold-identity { margin: 14px 0 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
-.scaffold-identity div { padding: 10px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.scaffold-identity dt { color: var(--muted); font-size: 8px; }
-.scaffold-identity dd { margin: 5px 0 0; font-size: 9px; font-weight: 700; }
-.scaffold-residues { margin-top: 11px; display: flex; flex-wrap: wrap; gap: 5px; }
-.scaffold-residues span { padding: 5px 7px; border-left: 2px solid var(--gold); color: #526073; background: #f6f3eb; font-size: 8px; }
-.scaffold-endpoints { margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
-.scaffold-endpoints div { min-height: 77px; padding: 10px; display: flex; flex-direction: column; background: #edf6f3; }
-.scaffold-endpoints span, .scaffold-endpoints small { color: var(--muted); font-size: 8px; }
-.scaffold-endpoints strong { margin-top: 6px; color: var(--teal-dark); font-size: 13px; }
-.scaffold-endpoints small { margin-top: auto; }
-.scaffold-conclusion { margin: 14px 0 0; color: var(--ink-soft); font-size: 10px; line-height: 1.75; }
-.scaffold-attribution { margin: 10px 0 0; padding: 10px 12px; border-left: 3px solid var(--gold); color: #6e603e; background: #fff8e9; font-size: 9px; line-height: 1.7; }
-.scaffold-attribution b { margin-right: 8px; }
-.scaffold-card > footer { margin-top: auto; padding-top: 14px; display: grid; gap: 6px; }
-.scaffold-card > footer a { padding-top: 8px; display: grid; gap: 4px; border-top: 1px solid var(--line); color: var(--teal-dark); font-size: 9px; line-height: 1.5; text-decoration: none; }
-.scaffold-card > footer span { color: var(--muted); font-size: 8px; }
 .literature-list span { color: var(--gold); font-size: 11px; }
 .literature-list strong { font-size: 12px; line-height: 1.55; }
 .literature-list small { color: #aebaca; font-size: 10px; }
@@ -740,7 +698,6 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .evidence-integration-status { grid-template-columns: 1fr; }
   .evidence-integration-status nav { grid-template-columns: 1fr 1fr; }
   .detail-layout, .quality-layout { grid-template-columns: 1fr; }
-  .scaffold-hero { grid-template-columns: 1fr; gap: 18px; }
   .detail-sidebar, .quality-sidebar { position: static; grid-template-columns: repeat(3, 1fr); }
   .quality-evidence-model.five-level { grid-template-columns: repeat(3, 1fr); }
 }
@@ -825,10 +782,6 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .quality-metrics { grid-template-columns: 1fr 1fr; }
   .quality-evidence-model { grid-template-columns: 1fr; }
   .quality-evidence-model.five-level { grid-template-columns: 1fr; }
-  .scaffold-library { padding: 36px 18px 70px; }
-  .scaffold-summary, .scaffold-grid { grid-template-columns: 1fr 1fr; }
-  .scaffold-filters { grid-template-columns: 1fr; }
-  .scaffold-boundary { grid-template-columns: 1fr; gap: 7px; }
   .quality-component-classes { grid-template-columns: 1fr; }
   .quality-component-classes article:last-child { grid-column: auto; }
   .literature-toggle { width: 100%; margin-top: 22px; }
@@ -875,7 +828,6 @@ footer p { max-width: 720px; margin: 0; line-height: 1.7; text-align: right; }
   .detail-definition-list div { grid-template-columns: 1fr; gap: 5px; }
   .detail-structures a { grid-template-columns: 1fr; }
   .quality-metrics { grid-template-columns: 1fr; }
-  .scaffold-summary, .scaffold-grid { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
