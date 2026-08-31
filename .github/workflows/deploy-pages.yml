@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Validate catalog integrity
-        run: npm run screen:development && npm run screen:manual-review && npm run build:manual-review-batch-1 && npm run build:manual-review-batch-2 && npm run build:manual-review-batch-3 && npm run build:manual-review-92-final && npm run audit:catalog
+        run: npm run screen:development && npm run screen:manual-review && npm run build:manual-review-batch-1 && npm run build:manual-review-batch-2 && npm run build:manual-review-batch-3 && npm run build:manual-review-92-final && npm run audit:catalog && npm run build:unified-structure-catalog && npm run build:research-alignment
 
       - name: Build static site
         run: npm run build:github

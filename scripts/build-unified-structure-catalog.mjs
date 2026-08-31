@@ -1,6 +1,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { evidenceConfirmsUse, originalResearchLinks, originalUnmappedResearchRecords } from "./research-evidence-links.mjs";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
@@ -119,6 +120,17 @@ const coreReviewByCcd = new Map([...corePriorityBatch1.records, ...corePriorityB
 const synthesisByCcd = new Map(synthesisBatch1.records.map((record) => [record.ccdId.toUpperCase(), record]));
 const pdbContextByCcd = new Map(pdbContextAudit.records.map((record) => [record.ccdId.toUpperCase(), record]));
 const pendingTriageByCcd = new Map(pendingCandidateTriage.records.map((record) => [record.ccdId.toUpperCase(), record]));
+const originalResearchByCcd = new Map(originalResearchLinks.map((record) => [record.ccdId.toUpperCase(), record]));
+const researchEvidenceFor = (ccdId) => {
+  const entries = [];
+  const original = originalResearchByCcd.get(ccdId);
+  const deep = reviewedByCcd.get(ccdId);
+  const core = coreReviewByCcd.get(ccdId);
+  if (original) entries.push({ recordId: original.recordId, level: original.evidenceLevel, name: original.name, origin: "original-curated", confirmsUse: evidenceConfirmsUse(original.evidenceLevel) });
+  if (deep) entries.push({ recordId: `CCD-${ccdId}-REVIEW`, level: `审核${deep.grade}`, name: deep.name, origin: "manual-92-review", confirmsUse: ["A", "B"].includes(deep.grade) });
+  if (core && ["A", "B"].includes(core.grade)) entries.push({ recordId: `CCD-${ccdId}-CORE`, level: `核心审核${core.grade}`, name: core.name, origin: "core-priority-review", confirmsUse: true });
+  return entries;
+};
 const evidenceProfileFor = (record) => {
   const reviewed = reviewedByCcd.get(record.primaryCcdId);
   const coreReviewed = coreReviewByCcd.get(record.primaryCcdId);
@@ -161,28 +173,32 @@ const evidenceProfileFor = (record) => {
   };
 };
 const componentClassMeta = {
-  "evidence-reviewed-residue": { label: "已人工确认肽／宏环构件", shortLabel: "人工确认构件", description: "人工来源审核确认该CCD实际进入过肽、环肽或宏环体系；不自动等同于商业化保护单体，也不把完整骨架口服性归因于单个残基。" },
-  "pdb-peptide-occurrence": { label: "PDB肽中出现，单体资料待补", shortLabel: "PDB肽中出现", description: "PDB聚合物序列确认该CCD进入过肽，但独立保护单体、偶联条件和环肽应用尚未完成人工核查。" },
-  "special-reference": { label: "特殊构件／结构参考", shortLabel: "特殊或参考", description: "可能是天然产物残基、交联片段、战头、非典型骨架或仅供结构比较的组分，不应按普通氨基酸单体理解。" },
-  "candidate-pending": { label: "氨基酸样候选，身份待验证", shortLabel: "待验证候选", description: "结构规则提示具有氨基酸或肽连接特征，但肽中使用、保护形式和独立单体证据仍不足。" },
+  "evidence-reviewed-residue": { label: "已确认非天然残基／肽构件", shortLabel: "已确认残基", description: "结构身份明确，并有人工来源支持其作为肽、环肽或宏环构件使用；是否易于购买、合成或改善口服性仍需分别判断。" },
+  "pdb-peptide-occurrence": { label: "PDB肽中出现，独立单体资料待补", shortLabel: "PDB中出现", description: "PDB序列确认该结构进入过肽，但尚未全部确认它是否以独立保护单体加入、如何偶联或是否用于环肽。" },
+  "special-reference": { label: "特殊用途构件／结构参考", shortLabel: "特殊用途", description: "包括天然产物特殊残基、连接体、交联片段、战头和非典型骨架；有研究资料也不等于普通氨基酸单体。" },
+  "candidate-pending": { label: "结构像氨基酸，身份仍待确认", shortLabel: "待确认候选", description: "结构规则提示可能是非天然氨基酸，但独立单体身份或用途资料仍不足。专利提及会单独显示，不自动升级为已确认使用。" },
   "excluded-nonmonomer": { label: "非单体／明确排除", shortLabel: "非单体排除", description: "已识别为完整药物、短肽、辅因子、保护体、复杂缀合物或其他不应作为普通氨基酸单体推荐的结构。" },
 };
 const classifyComponent = (record, evidenceProfile) => {
   const deepReview = reviewedByCcd.get(record.primaryCcdId);
   const coreReview = coreReviewByCcd.get(record.primaryCcdId);
+  const originalResearch = originalResearchByCcd.get(record.primaryCcdId);
   if (record.screening.tier === "exclude" || deepReview?.grade === "EXCLUDE" || coreReview?.grade === "EXCLUDE") return { id: "excluded-nonmonomer", basis: "结构规则或人工审核已给出明确非单体/排除结论", method: deepReview || coreReview ? "manual-review" : "rule-based" };
   if (record.screening.tier === "reference" || deepReview?.grade === "C") return { id: "special-reference", basis: deepReview?.conclusion || "当前仅适合作为特殊构件或结构参考，不进入普通单体推荐层", method: deepReview ? "manual-review" : "rule-based" };
   if (["A", "B"].includes(deepReview?.grade) || ["A", "B"].includes(coreReview?.grade)) return { id: "evidence-reviewed-residue", basis: coreReview?.conclusion || deepReview?.conclusion || "人工来源审核确认肽中使用", method: "manual-review" };
+  if (originalResearch && evidenceConfirmsUse(originalResearch.evidenceLevel)) return { id: "evidence-reviewed-residue", basis: `${originalResearch.evidenceLevel}已关联至研发证据记录${originalResearch.recordId}`, method: "manual-review" };
   if (evidenceProfile.peptideUse.status === "confirmed") return { id: "pdb-peptide-occurrence", basis: evidenceProfile.peptideUse.label, method: "pdb-sequence-audit" };
   return { id: "candidate-pending", basis: "结构筛选保留，但尚无足够证据确认其为可独立使用的肽合成单体", method: "rule-based" };
 };
 const records = preliminaryRecords.map((record) => {
   const evidenceProfile = evidenceProfileFor(record);
   const componentClass = classifyComponent(record, evidenceProfile);
+  const researchEvidence = researchEvidenceFor(record.primaryCcdId);
   return {
     ...record,
     componentClass,
     evidenceProfile,
+    researchEvidence,
     ...(coreReviewByCcd.has(record.primaryCcdId) ? { corePriorityReview: coreReviewByCcd.get(record.primaryCcdId) } : {}),
     ...(synthesisByCcd.has(record.primaryCcdId) ? { synthesisUsability: synthesisByCcd.get(record.primaryCcdId) } : {}),
     ...(componentClass.id === "pdb-peptide-occurrence" && pdbContextByCcd.has(record.primaryCcdId) ? { pdbContextAudit: pdbContextByCcd.get(record.primaryCcdId) } : {}),
@@ -191,12 +207,13 @@ const records = preliminaryRecords.map((record) => {
 });
 const tierCounts = Object.fromEntries(["priority", "conditional", "reference", "exclude"].map((tier) => [tier, records.filter((record) => record.screening.tier === tier).length]));
 const componentClassCounts = Object.fromEntries(Object.keys(componentClassMeta).map((id) => [id, records.filter((record) => record.componentClass.id === id).length]));
+const researchEvidenceLinkedCcdCount = records.filter((record) => record.researchEvidence.length > 0).length;
 const unifiedCatalog = {
   metadata: {
     ...catalog.metadata,
     count: records.length,
     generatedDate: "2026-08-31",
-    scope: "1,687 structure-screened CCD cores, 92 research-evidence-linked CCD records, and 286 conditional candidates awaiting synthesis and cyclic-peptide evidence review.",
+    scope: "2,065 unique CCD structure records. Structure identity is the master layer; source-origin labels describe how a record entered the catalog and are not evidence or usability classes.",
     tierCounts,
     componentClassMeta,
     componentClassCounts,
@@ -204,7 +221,8 @@ const unifiedCatalog = {
     pdbContextAudit: pdbContextAudit.metadata,
     pendingCandidateTriage: pendingCandidateTriage.metadata,
     originCounts: { "core-structure-screen": catalog.records.length, "research-evidence-linked": addedRecords.length, "conditional-review": conditionalRecords.length },
-    researchDatabaseCoverage: { researchRecords: 139, ccdMappedResearchRecords: 125, coveredCcdMappedResearchRecords: 125, recordsWithoutUniqueCcd: 14 },
+    researchDatabaseCoverage: { researchRecords: 159, ccdMappedResearchRecords: 145, coveredCcdMappedResearchRecords: 145, recordsWithoutUniqueCcd: 14 },
+    researchEvidenceAlignment: { researchRecords: 159, ccdMappedResearchRecords: 145, linkedCcdStructures: researchEvidenceLinkedCcdCount, recordsWithoutUniqueCcd: originalUnmappedResearchRecords.length, model: "CCD-first; research evidence is linked to the structure master by exact CCD ID." },
   },
   records,
 };
@@ -249,7 +267,7 @@ const unifiedUsage = {
   records: usageRecords,
 };
 
-const csvFields = ["primaryCcdId", "name", "formula", "formulaWeight", "parentIds", "linkageTypes", "smiles", "categoryLabel", "catalogOrigin", "screeningTier", "componentClass", "componentClassLabel", "componentClassBasis", "classificationMethod", "pdbContextStatus", "pdbContextLabel", "candidateTriageStatus", "candidateTriageLabel", "candidateTriageReasons", "synthesisUsabilityStatus", "protectedForms", "sppsCompatibility", "synthesisGuidance", "synthesisRisks", "structureIdentity", "peptideUse", "cyclicPeptideUse", "synthesisUse", "oralEvidence", "tags", "sourceUrl"];
+const csvFields = ["primaryCcdId", "name", "formula", "formulaWeight", "parentIds", "linkageTypes", "smiles", "categoryLabel", "catalogOrigin", "screeningTier", "componentClass", "componentClassLabel", "componentClassBasis", "classificationMethod", "researchEvidenceCount", "researchEvidenceLevels", "researchEvidenceRecordIds", "pdbContextStatus", "pdbContextLabel", "candidateTriageStatus", "candidateTriageLabel", "candidateTriageReasons", "synthesisUsabilityStatus", "protectedForms", "sppsCompatibility", "synthesisGuidance", "synthesisRisks", "structureIdentity", "peptideUse", "cyclicPeptideUse", "synthesisUse", "oralEvidence", "tags", "sourceUrl"];
 const csvRows = records.map((record) => ({
   ...record,
   parentIds: record.parentIds.join(" / "),
@@ -259,6 +277,9 @@ const csvRows = records.map((record) => ({
   componentClassLabel: componentClassMeta[record.componentClass.id].label,
   componentClassBasis: record.componentClass.basis,
   classificationMethod: record.componentClass.method,
+  researchEvidenceCount: record.researchEvidence.length,
+  researchEvidenceLevels: record.researchEvidence.map((item) => item.level).join(" / "),
+  researchEvidenceRecordIds: record.researchEvidence.map((item) => item.recordId).join(" / "),
   pdbContextStatus: record.pdbContextAudit?.status ?? "not-applicable",
   pdbContextLabel: record.pdbContextAudit?.statusLabel ?? "",
   candidateTriageStatus: record.candidateTriage?.status ?? "not-applicable",
@@ -285,4 +306,4 @@ await Promise.all([
   writeFile(join(publicDir, "ccd-unified-polymer-usage.json"), `${JSON.stringify(unifiedUsage)}\n`, "utf8"),
 ]);
 
-console.log(JSON.stringify({ catalogCount: records.length, researchLinkedCount: addedRecords.length, conditionalCandidateCount: conditionalRecords.length, tierCounts, componentClassCounts, usageStatusCounts: statusCounts, researchCoverage: unifiedCatalog.metadata.researchDatabaseCoverage }, null, 2));
+console.log(JSON.stringify({ catalogCount: records.length, sourceOriginCounts: unifiedCatalog.metadata.originCounts, tierCounts, componentClassCounts, usageStatusCounts: statusCounts, researchCoverage: unifiedCatalog.metadata.researchDatabaseCoverage }, null, 2));

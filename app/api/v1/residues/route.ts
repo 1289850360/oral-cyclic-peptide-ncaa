@@ -14,7 +14,8 @@ export function GET() {
       releaseDate: "2026-08-31",
       recordCount: masterRecords.length + reviewOnlyRecords.length,
       schema: "ocpr-master-record-v1",
-      scope: "53条原研发记录与92条人工审核数据按CCD去重后的统一研发数据库；包含排除记录并明确标注。",
+      ccdFirstModel: true,
+      scope: "以CCD结构为主键，合并53条原研发记录、92条审核中去重后的86条新增记录，以及20条核心结构审核记录；特殊构件、排除记录与无唯一CCD概念分别标注。",
     },
     records: [...masterRecords.map((record) => ({
       id: record.id,
@@ -52,9 +53,9 @@ export function GET() {
       secondarySources: record.sources.slice(1).map((source) => ({ citation: source.title, url: source.url, evidenceType: source.evidenceType })),
       ccdStructures: [{ ccd: record.ccdId, label: record.name }],
       recordVersion: "3.3",
-      reviewedAt: "2026-08-28",
+      reviewedAt: record.reviewedAt,
       detailPath: null,
-      recordOrigin: "merged-92-review",
+      recordOrigin: record.recordOrigin,
     }))],
   });
 }
