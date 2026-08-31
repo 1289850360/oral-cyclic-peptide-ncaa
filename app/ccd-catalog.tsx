@@ -114,7 +114,7 @@ type DeepReviewPayload = {
 };
 
 const USAGE_META: Record<PolymerUsageStatus, { label: string; shortLabel: string }> = {
-  "short-polymer": { label: "短肽聚合物命中（≤50残基）", shortLabel: "短肽序列命中" },
+  "short-polymer": { label: "≤50残基聚合物命中", shortLabel: "短聚合物命中" },
   "polymer-only": { label: "仅较长聚合物命中", shortLabel: "长聚合物命中" },
   "no-polymer-hit": { label: "暂无聚合物序列命中", shortLabel: "暂无序列命中" },
 };
@@ -341,7 +341,7 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
         <strong>先看结构，再看证据</strong>
         <p>每个CCD只保留一条结构主记录；论文、专利、PDB使用和合成资料都挂在这条记录下面。有资料不等于一定是普通氨基酸，也不等于能够改善口服性。</p>
       </div>
-      <details className="ccd-method-progress"><summary>查看审核进度、自动初筛与方法文件</summary><div><div className="ccd-review-progress"><strong>核心候选深审：40 / 221</strong><p>已逐条核对结构身份、PDB使用、环肽情境、合成边界和口服资料。</p><div><a href={`${assetPrefix}ccd-core-priority-review-batch-1.csv`} download>第一批</a><a href={`${assetPrefix}ccd-core-priority-review-batch-2.csv`} download>第二批</a></div></div><div className="ccd-review-progress ccd-synthesis-progress"><strong>合成可用性：20 / 114</strong><p>已核查首批商业保护形式与SPPS边界；目录记录不代表实时库存。</p><div><a href={`${assetPrefix}ccd-synthesis-usability-batch-1.csv`} download>下载结果</a></div></div><div className="ccd-audit-progress-grid"><article><span>自动初筛</span><strong>PDB语境：162 / 162</strong><p>用于安排人工审核顺序，不代表环化方式已确认。</p><a href={`${assetPrefix}ccd-pdb-context-audit.csv`} download>下载逐条结果</a></article><article><span>结构字段分层</span><strong>待确认候选：1,266 / 1,266</strong><p>954条较像独立单体，其余属于特殊反应、可疑或信息不足结构。</p><a href={`${assetPrefix}ccd-pending-candidate-triage.csv`} download>下载逐条结果</a></article></div></div></details>
+      <details className="ccd-method-progress"><summary>查看审核进度、自动初筛与方法文件</summary><div><div className="ccd-review-progress"><strong>PDB序列核查：2,065 / 2,065</strong><p>全部结构已查询PDB聚合物序列；命中只证明出现过，不代表环肽或口服证据。</p><div><a href={`${assetPrefix}ccd-polymer-usage-audit.csv`} download>下载全量结果</a></div></div><div className="ccd-review-progress ccd-synthesis-progress"><strong>合成可用性：20 / 114</strong><p>已核查首批商业保护形式与SPPS边界；目录记录不代表实时库存。</p><div><a href={`${assetPrefix}ccd-synthesis-usability-batch-1.csv`} download>下载结果</a></div></div><div className="ccd-audit-progress-grid"><article><span>人工证据深审</span><strong>核心候选：40 / 221</strong><p>已逐条核对结构身份、PDB使用、环肽情境、合成边界和口服资料。</p><a href={`${assetPrefix}ccd-core-priority-review-batch-2.csv`} download>下载最近一批</a></article><article><span>后续工作</span><strong>PDB命中语境复核</strong><p>下一步区分线性肽、环肽、蛋白和其他聚合物，不把序列命中直接当作环肽证据。</p></article></div></div></details>
 
       {payload && <div className="ccd-component-overview" aria-label="构件身份分类概览">{(Object.keys(payload.metadata.componentClassMeta) as ComponentClass[]).map((id) => <button className={componentClass === id ? "active" : ""} onClick={() => changeComponentClass(id)} key={id}><strong>{payload.metadata.componentClassCounts[id].toLocaleString("en-US")}</strong><span>{payload.metadata.componentClassMeta[id].shortLabel}</span></button>)}</div>}
 

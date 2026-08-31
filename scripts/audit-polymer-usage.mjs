@@ -4,15 +4,17 @@ import { fileURLToPath } from "node:url";
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = path.join(rootDir, "public");
-const screenPath = path.join(publicDir, "ccd-development-screen.json");
+const catalogPath = path.join(publicDir, "ccd-unified-structure-catalog.json");
+const existingUsagePath = path.join(publicDir, "ccd-unified-polymer-usage.json");
 const outputJsonPath = path.join(publicDir, "ccd-polymer-usage-audit.json");
 const outputCsvPath = path.join(publicDir, "ccd-polymer-usage-audit.csv");
 const searchEndpoint = "https://search.rcsb.org/rcsbsearch/v2/query";
 const MAX_SHORT_POLYMER_LENGTH = 50;
 const CONCURRENCY = 8;
 
-const screen = JSON.parse(await readFile(screenPath, "utf8"));
-const candidates = screen.records.filter((record) => record.screening.tier === "priority");
+const catalog = JSON.parse(await readFile(catalogPath, "utf8"));
+const existingUsage = JSON.parse(await readFile(existingUsagePath, "utf8"));
+const candidates = catalog.records;
 
 const componentNode = (ccdIds) => ccdIds.length === 1
   ? {
@@ -60,7 +62,7 @@ const delay = (milliseconds) => new Promise((resolve) => setTimeout(resolve, mil
 
 async function queryRcsb(ccdIds, shortOnly) {
   const body = makeRequest(ccdIds, shortOnly);
-  for (let attempt = 1; attempt <= 3; attempt += 1) {
+  for (let attempt = 1; attempt <= 5; attempt += 1) {
     const response = await fetch(searchEndpoint, {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -75,10 +77,10 @@ async function queryRcsb(ccdIds, shortOnly) {
       };
     }
     const message = await response.text();
-    if (attempt === 3 || (response.status < 500 && response.status !== 429)) {
+    if (attempt === 5 || (response.status < 500 && response.status !== 429)) {
       throw new Error(`RCSB search failed for ${ccdIds.join("/")} (${response.status}): ${message.slice(0, 300)}`);
     }
-    await delay(500 * attempt);
+    await delay((response.status === 429 ? 1500 : 500) * attempt);
   }
   throw new Error(`RCSB search failed for ${ccdIds.join("/")}`);
 }
@@ -105,31 +107,37 @@ async function auditCandidate(record) {
   };
 }
 
-const results = new Array(candidates.length);
+const resultsById = new Map(existingUsage.records.map((record) => [record.id, record]));
+const pendingCandidates = candidates.filter((record) => !resultsById.has(record.id));
 let cursor = 0;
 async function worker() {
-  while (cursor < candidates.length) {
+  while (cursor < pendingCandidates.length) {
     const index = cursor;
     cursor += 1;
-    results[index] = await auditCandidate(candidates[index]);
-    if ((index + 1) % 25 === 0 || index + 1 === candidates.length) {
-      console.log(`Audited ${index + 1}/${candidates.length}`);
+    const result = await auditCandidate(pendingCandidates[index]);
+    resultsById.set(result.id, result);
+    if ((index + 1) % 25 === 0 || index + 1 === pendingCandidates.length) {
+      console.log(`Audited ${index + 1}/${pendingCandidates.length} remaining records (${resultsById.size}/${candidates.length} total)`);
     }
   }
 }
-await Promise.all(Array.from({ length: Math.min(CONCURRENCY, candidates.length) }, () => worker()));
+console.log(`Reusing ${resultsById.size} completed records; querying ${pendingCandidates.length} remaining records.`);
+await Promise.all(Array.from({ length: Math.min(CONCURRENCY, pendingCandidates.length) }, () => worker()));
+
+const results = candidates.map((record) => ({ ...record, ...resultsById.get(record.id) }));
+if (results.some((record) => !record)) throw new Error("Polymer usage audit ended with missing records");
 
 const statusCounts = Object.fromEntries(["short-polymer", "polymer-only", "no-polymer-hit"].map((status) => [status, results.filter((record) => record.status === status).length]));
 const output = {
   metadata: {
-    auditDate: screen.metadata.snapshotDate,
+    auditDate: new Date().toISOString().slice(0, 10),
     source: "RCSB PDB Search API",
     sourceUrl: "https://search.rcsb.org/",
-    candidateTier: "priority",
+    candidateTier: "all unified catalog records",
     candidateCount: candidates.length,
     shortPolymerMaxLength: MAX_SHORT_POLYMER_LENGTH,
     statusCounts,
-    scope: "Sequence occurrence audit only. A short polymer hit does not prove cyclicity, synthetic accessibility, permeability improvement, or oral exposure.",
+    scope: "Complete PDB polymer-sequence occurrence audit for the unified CCD catalog. A short polymer hit does not prove cyclicity, synthetic accessibility, permeability improvement, or oral exposure.",
   },
   records: results,
 };

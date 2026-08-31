@@ -254,7 +254,9 @@ const conditionalUsage = conditionalRecords.map((record) => {
     exampleEntryIds: manual.exampleEntryIds ?? [],
   };
 });
-const usageRecords = [...catalogUsage.records, ...addedUsage, ...conditionalUsage];
+const usageByRecordId = new Map(catalogUsage.records.map((record) => [record.id, record]));
+[...addedUsage, ...conditionalUsage].forEach((record) => { if (!usageByRecordId.has(record.id)) usageByRecordId.set(record.id, record); });
+const usageRecords = [...usageByRecordId.values()];
 const statusCounts = Object.fromEntries(["short-polymer", "polymer-only", "no-polymer-hit"].map((status) => [status, usageRecords.filter((record) => record.status === status).length]));
 const unifiedUsage = {
   metadata: {
@@ -262,7 +264,7 @@ const unifiedUsage = {
     candidateTier: "all unified catalog records with completed PDB usage audit",
     candidateCount: usageRecords.length,
     statusCounts,
-    scope: "PDB polymer-sequence occurrence for 221 original priority structures, 92 evidence-linked additions, and 286 conditional candidates.",
+    scope: usageRecords.length === records.length ? "Complete PDB polymer-sequence occurrence audit for all unified catalog records." : "PDB polymer-sequence occurrence audit for the currently completed catalog subset.",
   },
   records: usageRecords,
 };

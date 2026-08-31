@@ -243,15 +243,15 @@ export default function Home() {
             <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
             <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
           </form>
-          <div className="version-line"><span>Version 3.3</span><span>最近更新：2026-08-31</span><span>研究用途数据库</span></div>
+          <div className="version-line"><span>Version 3.4</span><span>最近更新：2026-08-31</span><span>研究用途数据库</span></div>
         </section>
 
         <section className="portal-stats" aria-label="数据库概览">
           <article><strong>2,065</strong><span>网站收录的全部结构</span><small>下面五类相加等于2,065，没有重复计算</small></article>
           <article><strong>114</strong><span>已有明确使用资料</span><small>确认曾作为肽或环状分子的组成部分使用</small></article>
-          <article><strong>162</strong><span>在PDB的肽中找到</span><small>确认出现过，但具体用途和合成资料还没查全</small></article>
+          <article><strong>952</strong><span>在PDB的肽中找到</span><small>确认出现过，但具体用途和合成资料还没查全</small></article>
           <article><strong>294</strong><span>特殊用途结构</span><small>可能用于连接、交联或反应，不一定是普通氨基酸</small></article>
-          <article><strong>1,266</strong><span>看起来像氨基酸，仍待确认</span><small>其中954条结构上很像可独立使用的非天然氨基酸</small></article>
+          <article><strong>476</strong><span>看起来像氨基酸，仍待确认</span><small>全量PDB序列核查后仍缺少实际使用证据</small></article>
           <article><strong>229</strong><span>不是普通氨基酸单体</span><small>包括完整药物、短肽等，保留是为了避免以后误收</small></article>
         </section>
 
@@ -264,7 +264,7 @@ export default function Home() {
           </div>
 
           <div className="portal-overview-grid">
-            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>已有资料</b><span>114条经来源审核确认使用；162条只确认在PDB肽中出现</span></li><li><b>仍需判断</b><span>294条属于特殊结构；1,266条氨基酸样候选待验证</span></li><li><b>明确不推荐</b><span>229条属于非单体或明确排除对象，但保留用于追溯</span></li></ol></article>
+            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>已有资料</b><span>114条经来源审核确认使用；952条已在PDB肽或聚合物序列中出现</span></li><li><b>仍需判断</b><span>294条属于特殊结构；476条氨基酸样候选仍待验证</span></li><li><b>明确不推荐</b><span>229条属于非单体或明确排除对象，但保留用于追溯</span></li></ol></article>
             <article className="portal-boundary-card"><span>证据口径</span><h3>记录按证据层级解释</h3><p>CCD记录用于确认化学身份，PDB命中用于确认其在聚合物中的使用。只有在相同或可比环肽骨架中设有实验对照时，才将性质变化归因于具体残基。</p><button onClick={() => { window.location.href = "quality/"; }}>查看证据分级与数据质量 →</button></article>
           </div>
         </section>

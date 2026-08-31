@@ -75,6 +75,7 @@ const manualReview92Final = JSON.parse(await readFile(path.join(publicDir, "ccd-
 const manualReview92FinalCsv = parseCsv(await readFile(path.join(publicDir, "ccd-manual-review-92-final.csv"), "utf8"));
 const developmentScreen = JSON.parse(await readFile(path.join(publicDir, "ccd-development-screen.json"), "utf8"));
 const developmentScreenCsv = parseCsv(await readFile(path.join(publicDir, "ccd-development-screen.csv"), "utf8"));
+const unifiedCatalog = JSON.parse(await readFile(path.join(publicDir, "ccd-unified-structure-catalog.json"), "utf8"));
 const polymerUsage = JSON.parse(await readFile(path.join(publicDir, "ccd-polymer-usage-audit.json"), "utf8"));
 const polymerUsageCsv = parseCsv(await readFile(path.join(publicDir, "ccd-polymer-usage-audit.csv"), "utf8"));
 
@@ -320,21 +321,20 @@ for (const tier of screeningTiers) {
   }
 }
 
-const priorityScreenRecords = developmentScreen.records.filter((record) => record.screening.tier === "priority");
-const priorityScreenById = new Map(priorityScreenRecords.map((record) => [record.id, record]));
+const unifiedCatalogById = new Map(unifiedCatalog.records.map((record) => [record.id, record]));
 const usageStatuses = new Set(["short-polymer", "polymer-only", "no-polymer-hit"]);
 const usageCounts = Object.fromEntries([...usageStatuses].map((status) => [status, 0]));
-if (polymerUsage.records.length !== priorityScreenRecords.length) {
-  addIssue("error", "polymer-usage", "all", "row-count", `Usage JSON contains ${polymerUsage.records.length} rows; priority screen contains ${priorityScreenRecords.length}.`);
+if (polymerUsage.records.length !== unifiedCatalog.records.length) {
+  addIssue("error", "polymer-usage", "all", "row-count", `Usage JSON contains ${polymerUsage.records.length} rows; unified catalog contains ${unifiedCatalog.records.length}.`);
 }
 if (polymerUsageCsv.length !== polymerUsage.records.length) {
   addIssue("error", "polymer-usage", "all", "csv-row-count", `Usage CSV contains ${polymerUsageCsv.length} rows; JSON contains ${polymerUsage.records.length}.`);
 }
 polymerUsage.records.forEach((record, index) => {
-  const source = priorityScreenById.get(record.id);
+  const source = unifiedCatalogById.get(record.id);
   const label = record.primaryCcdId || `row-${index + 1}`;
   if (!source || source.ccdIds.join("|") !== record.ccdIds.join("|")) {
-    addIssue("error", "polymer-usage", label, "source-match", "Usage record does not map to a current priority candidate.");
+    addIssue("error", "polymer-usage", label, "source-match", "Usage record does not map to the current unified catalog.");
   }
   if (!usageStatuses.has(record.status)) {
     addIssue("error", "polymer-usage", label, "status", `Unknown usage status: ${record.status ?? "missing"}.`);

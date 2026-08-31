@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T03:28:33.879Z",
+  "generatedAt": "2026-08-31T07:22:24.590Z",
   "result": "passed",
   "scope": {
     "statement": "This report checks local field completeness, uniqueness, cross-file consistency, and deterministic CCD-to-URL mapping. It does not prove peptide-synthesis suitability or property effects.",
@@ -93,13 +93,13 @@
     }
   },
   "polymerUsage": {
-    "rows": 221,
-    "csvRows": 221,
+    "rows": 2065,
+    "csvRows": 2065,
     "shortPolymerMaxLength": 50,
     "statusCounts": {
-      "short-polymer": 176,
-      "polymer-only": 11,
-      "no-polymer-hit": 34
+      "short-polymer": 955,
+      "polymer-only": 505,
+      "no-polymer-hit": 605
     }
   },
   "issues": {

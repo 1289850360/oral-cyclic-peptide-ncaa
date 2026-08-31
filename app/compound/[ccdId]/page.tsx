@@ -86,7 +86,7 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
 
         <aside className="detail-sidebar">
           <section><span>永久结构标识</span><p>CCD {record.primaryCcdId}</p><small>网站记录ID：{record.id}</small></section>
-          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {record.name}. 结构目录版本3.3, 2026-08-31.</p></section>
+          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {record.name}. 结构目录版本3.4, 2026-08-31.</p></section>
           <section><span>原始结构来源</span><a href={record.sourceUrl} target="_blank" rel="noreferrer">打开RCSB CCD记录 ↗</a><Link href="/quality/">查看版本与质量说明 →</Link></section>
         </aside>
       </div>

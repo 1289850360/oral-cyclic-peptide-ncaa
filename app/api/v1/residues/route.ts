@@ -21,7 +21,7 @@ export function GET() {
   return Response.json({
     metadata: {
       title: "口服环肽非天然残基证据库主记录",
-      version: "3.3",
+      version: "3.4",
       releaseDate: "2026-08-31",
       recordCount: masterRecords.length + reviewOnlyRecords.length,
       schema: "ocpr-master-record-v1",
@@ -73,7 +73,7 @@ export function GET() {
       primarySource: record.sources[0] ? { citation: record.sources[0].title, url: record.sources[0].url } : null,
       secondarySources: record.sources.slice(1).map((source) => ({ citation: source.title, url: source.url, evidenceType: source.evidenceType })),
       ccdStructures: [{ ccd: record.ccdId, label: record.name }],
-      recordVersion: "3.3",
+      recordVersion: "3.4",
       reviewedAt: record.reviewedAt,
       detailPath: null,
       recordOrigin: record.recordOrigin,
