@@ -378,21 +378,25 @@ export default function CcdCatalog({ mode = "catalog", assetPrefix = "" }: { mod
         <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || screeningTier !== "all" || usageStatus !== "all" || targetProperty !== "all" || catalogOrigin !== "all" || componentClass !== "all" || synthesisStatus !== "all" || pdbContextStatus !== "all" || candidateTriageStatus !== "all" || researchEvidenceStatus !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeScreeningTier("all"); changeUsageStatus("all"); changeTargetProperty("all"); changeCatalogOrigin("all"); setComponentClass("all"); setSynthesisStatus("all"); setPdbContextStatus("all"); setCandidateTriageStatus("all"); setResearchEvidenceStatus("all"); }}>清除筛选</button>}</div>
         {shown.length ? <div className="ccd-record-grid">{shown.map((record) => <article className="ccd-record-card" key={record.id}>
           <div className="ccd-card-head"><div><span>CCD {record.ccdIds.join(" / ")}</span>{record.catalogOrigin === "research-evidence-linked" && <b className="ccd-origin-badge">研发证据关联</b>}{record.catalogOrigin === "conditional-review" && <b className="ccd-origin-badge candidate">待验证</b>}{record.corePriorityReview && <b className="ccd-origin-badge reviewed">优先层深审 {record.corePriorityReview.grade}</b>}</div><em className={`screening-tier screening-${record.screening.tier}`}>{payload.metadata.tierMeta[record.screening.tier].shortLabel}</em></div>
-          <div className="ccd-card-main">
-            <a className="ccd-structure" href={record.sourceUrl} target="_blank" rel="noreferrer" aria-label={`打开CCD ${record.primaryCcdId}`}>
-              <img src={record.structureImageUrl} alt={`${record.name}二维结构`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />
-              <b>{record.primaryCcdId}</b>
-            </a>
-            <div><h3>{chineseNameFor(record.name)}</h3><p className="ccd-english-name">{record.name}</p>{record.synonyms.length > 0 && <p className="ccd-synonyms">{record.synonyms.slice(0, 2).join(" · ")}</p>}<p className="ccd-formula">{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</p></div>
-          </div>
-          <div className="ccd-effect-tags">{record.predictedEffects.map((effect) => <span key={effect}>{effect}</span>)}</div>
-          <div className={`ccd-component-class component-${record.componentClass.id}`}><strong>{payload.metadata.componentClassMeta[record.componentClass.id].shortLabel}</strong><span>{record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : "结构规则初分"}</span></div>
-          {record.researchEvidence.length > 0 && <div className="ccd-research-link"><strong>已关联{record.researchEvidence.length}条研发资料</strong><span>{record.researchEvidence.map((item) => item.level).join(" / ")}</span></div>}
-          {record.pdbContextAudit && <div className={`ccd-secondary-audit audit-${record.pdbContextAudit.status}`}><strong>{record.pdbContextAudit.statusLabel}</strong><span>代表PDB标题自动初筛</span></div>}
-          {record.candidateTriage && <div className={`ccd-secondary-audit triage-${record.candidateTriage.status}`}><strong>{record.candidateTriage.statusLabel}</strong><span>结构字段二次分层</span></div>}
-          {record.synthesisUsability && <div className={`ccd-synthesis-usability ${record.synthesisUsability.compatibility}`}><strong>{record.synthesisUsability.statusLabel}</strong><span>{record.synthesisUsability.protectedForms.join(" / ")}</span></div>}
-          <div className="ccd-evidence-strip" aria-label="五层证据状态">
-            <span data-status={record.evidenceProfile.structureIdentity.status}>结构身份</span><span data-status={record.evidenceProfile.peptideUse.status}>肽中使用</span><span data-status={record.evidenceProfile.cyclicPeptideUse.status}>环肽使用</span><span data-status={record.evidenceProfile.synthesisUse.status}>合成资料</span><span data-status={record.evidenceProfile.oralEvidence.status}>口服证据</span>
+          <div className="ccd-card-row">
+            <div className="ccd-card-main">
+              <a className="ccd-structure" href={record.sourceUrl} target="_blank" rel="noreferrer" aria-label={`打开CCD ${record.primaryCcdId}`}>
+                <img src={record.structureImageUrl} alt={`${record.name}二维结构`} loading="lazy" onError={(event) => { event.currentTarget.style.display = "none"; }} />
+                <b>{record.primaryCcdId}</b>
+              </a>
+              <div><h3>{chineseNameFor(record.name)}</h3><p className="ccd-english-name">{record.name}</p>{record.synonyms.length > 0 && <p className="ccd-synonyms">{record.synonyms.slice(0, 2).join(" · ")}</p>}<p className="ccd-formula">{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</p></div>
+            </div>
+            <div className="ccd-card-summary">
+              <div className="ccd-effect-tags">{record.predictedEffects.map((effect) => <span key={effect}>{effect}</span>)}</div>
+              <div className={`ccd-component-class component-${record.componentClass.id}`}><strong>{payload.metadata.componentClassMeta[record.componentClass.id].shortLabel}</strong><span>{record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : "结构规则初分"}</span></div>
+              {record.researchEvidence.length > 0 && <div className="ccd-research-link"><strong>已关联{record.researchEvidence.length}条研发资料</strong><span>{record.researchEvidence.map((item) => item.level).join(" / ")}</span></div>}
+              {record.pdbContextAudit && <div className={`ccd-secondary-audit audit-${record.pdbContextAudit.status}`}><strong>{record.pdbContextAudit.statusLabel}</strong><span>代表PDB标题自动初筛</span></div>}
+              {record.candidateTriage && <div className={`ccd-secondary-audit triage-${record.candidateTriage.status}`}><strong>{record.candidateTriage.statusLabel}</strong><span>结构字段二次分层</span></div>}
+              {record.synthesisUsability && <div className={`ccd-synthesis-usability ${record.synthesisUsability.compatibility}`}><strong>{record.synthesisUsability.statusLabel}</strong><span>{record.synthesisUsability.protectedForms.join(" / ")}</span></div>}
+              <div className="ccd-evidence-strip" aria-label="五层证据状态">
+                <span data-status={record.evidenceProfile.structureIdentity.status}>结构身份</span><span data-status={record.evidenceProfile.peptideUse.status}>肽中使用</span><span data-status={record.evidenceProfile.cyclicPeptideUse.status}>环肽使用</span><span data-status={record.evidenceProfile.synthesisUse.status}>合成资料</span><span data-status={record.evidenceProfile.oralEvidence.status}>口服证据</span>
+              </div>
+            </div>
           </div>
           <details className="ccd-details"><summary>结构信息与判断边界</summary><dl>
             <div><dt>研发分档</dt><dd>{payload.metadata.tierMeta[record.screening.tier].label}</dd></div>
