@@ -229,7 +229,7 @@ export default function Home() {
 
   return (
     <main id="top">
-      <SiteHeader active={portalView} onDownload={downloadCsv} />
+      <SiteHeader active={portalView} onDownload={downloadCsv} onNavigate={(section) => navigateTo(section, section === "home" ? "top" : "database")} />
 
       {portalView === "home" && <>
         <section className="portal-hero" aria-labelledby="portal-title">
