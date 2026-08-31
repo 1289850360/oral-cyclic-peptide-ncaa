@@ -65,7 +65,7 @@ export default async function ResidueDetailPage({ params }: { params: Promise<{ 
         <aside className="detail-sidebar">
           <section><span>推荐引用</span><p>{citation}</p><small>访问日期请由引用者按实际日期补充。</small></section>
           <section><span>证据解释</span><p>“进入肽”“存在于口服骨架”和“单点改善口服吸收”是不同结论，本记录按字段分别陈述。</p></section>
-          <section><span>机器可读数据</span><a href="../../api/v1/residues/">下载主记录JSON ↗</a><Link href="/quality/">查看版本与质量报告 →</Link></section>
+          <section><span>机器可读数据</span><a href="../../api/v1/residues">下载主记录JSON ↗</a><Link href="/quality/">查看版本与质量报告 →</Link></section>
         </aside>
       </div>
 

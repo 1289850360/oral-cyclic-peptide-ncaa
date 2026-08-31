@@ -33,7 +33,7 @@ export default function QualityPage() {
         </div>
 
         <aside className="quality-sidebar">
-          <section><span>机器读取</span><a href="../api/v1/residues/">OCPR主记录 API</a><a href="../api/v1/compounds/">CCD结构目录 API</a><a href="../api/v1/scaffolds/">实验骨架 API</a><a href="../ccd-unified-structure-catalog.csv">统一结构目录 CSV</a><a href="../cyclic-scaffold-evidence.csv">实验骨架 CSV</a></section>
+          <section><span>机器读取</span><a href="../api/v1/residues">OCPR主记录 API</a><a href="../api/v1/compounds">CCD结构目录 API</a><a href="../api/v1/scaffolds">实验骨架 API</a><a href="../ccd-unified-structure-catalog.csv">统一结构目录 CSV</a><a href="../cyclic-scaffold-evidence.csv">实验骨架 CSV</a></section>
           <section><span>数据目录</span><Link href="/catalog/">CCD结构参考库</Link><Link href="/#database">统一研发证据库（139条）</Link><Link href="/scaffolds/">实验骨架库（14条）</Link><a href="../ccd-pdb-context-audit.csv">PDB语境初筛</a><a href="../ccd-pending-candidate-triage.csv">待验证候选分层</a></section>
           <section><span>开发文档</span><p>字段定义位于仓库中的 <code>docs/master-record-schema.md</code>。</p></section>
         </aside>
