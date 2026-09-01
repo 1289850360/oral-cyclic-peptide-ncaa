@@ -149,17 +149,27 @@ export const experimentData: Record<string, ExperimentDatum> = {
   "(4R)-4-[(E)-2-butenyl]-4,N-dimethyl-L-threonine": { comparison: "环孢素A完整天然产物骨架", endpoint: "口服生物利用度", result: "平均F约20.8%", system: "健康受试者", formulation: "临床制剂与完整骨架共同作用" },
   "hydroxy-acid / depsipeptide substitution": { comparison: "酰胺→酯与母体／N-甲基类似物", endpoint: "PAMPA", result: "5个酯类似物均高于母体；4个高于相应N-甲基体", system: "模型环六肽与8–9元环", formulation: "体外渗透；需另测酯键水解" },
   "thioamide substitution": { comparison: "单个C=O→C=S与母体", endpoint: "PAMPA／Caco-2与口服血浆暴露", result: "多处替换改善渗透性；优选类似物口服暴露显著提高", system: "6–8元大环；体外与大鼠口服", formulation: "作用强度明显依赖替换位置，不能套用统一倍数" },
+  "connected hydrophobic surface design": { comparison: "6组仅改变N-甲基或Cα-甲基位置的环肽异构体", endpoint: "实验膜渗透性／三维疏水表面", result: "只有连接或扩大连续疏水表面的甲基位置与更高渗透性对应", system: "环肽结构与渗透实验", formulation: "结论属于表面连通性规律，不等于增加任意疏水基团都能增渗" },
+  "cyclic peptide-peptoid hybrid scaffold": { comparison: "改变侧链和骨架几何的环六聚peptomer文库", endpoint: "PAMPA", result: "接近一半的侧链组合Papp超过1 × 10⁻⁶ cm/s", system: "分池合成文库与体外渗透实验", formulation: "不同骨架几何差异明显，不能把结果归因于peptoid单一因素" },
+  "ester and N-methyl-amide depsipeptide backbone": { comparison: "ent-verticilide模板的5组逐点骨架替换", endpoint: "PAMPA／Caco-2", result: "含酯骨架通常具有较好渗透性，但最高Papp来自一次酯→N-H酰胺替换", system: "体外渗透实验", formulation: "骨架组成和替换位置需要逐项比较" },
+  "N-methylation and lipophilic tyrosine substitution in semipeptidic macrocycles": { comparison: "同一四氨基酸—连接体骨架的56个大环", endpoint: "PAMPA", result: "第2位N-甲基化及酪氨酸侧链增脂与更高渗透性相关", system: "体外渗透与构象系列", formulation: "属于该系列的相关性，不能外推为所有位置的单点因果" },
+  "amino-acid-to-azole backbone replacement": { comparison: "模型大环中逐步进行氨基酸→唑环替换", endpoint: "PAMPA／NMR构象", result: "部分替换提高脂溶性与被动渗透性；增加唑环数量不保证继续改善", system: "体外渗透、NMR与分子动力学", formulation: "效果取决于替换位置和完整骨架" },
+  "stapled and stitched all-D macrocyclic peptides": { comparison: "全D线性肽与订书／双重缝合类似物", endpoint: "蛋白酶稳定性／螺旋构象／细胞活性", result: "优化类似物提高螺旋度、结合力和蛋白酶稳定性，并出现细胞活性", system: "体外稳定性、结构和细胞实验", formulation: "细胞活性不等同于被动渗透或口服吸收" },
+  "tolerance of D and helix-breaking residues in stapled peptides": { comparison: "50个ATSP-7041相关订书肽替换系列", endpoint: "螺旋构象／结合与细胞活性", result: "部分D-残基替换保持活性，界面D-Phe或D-Cba替换则损害活性", system: "结构、结合与细胞实验", formulation: "结果强烈依赖替换位置，不支持D构型的普适改善" },
+  "reversible methionine bis-alkylation stapling": { comparison: "不同连接体和环尺寸的Met双烷基化肽", endpoint: "流式细胞摄取", result: "部分双烷基化环肽的细胞摄取提高", system: "荧光标记肽与流式细胞术", formulation: "荧光摄取不等于胞质到达，也不能外推至口服吸收" },
+  "negative evidence: cyclization alone does not ensure cell permeability": { comparison: "环肽与对应线性肽", endpoint: "定量报告基因细胞进入", result: "环状分子总体上不比线性对应物更易进入细胞", system: "细胞报告基因法", formulation: "用于否定‘环化必然增渗’，不评价口服吸收" },
+  "negative evidence: lower permeability after DPDPE-like cyclization": { comparison: "D-Pen或Cys的环状／非环状配对", endpoint: "模型膜渗透性", result: "线性肽的模型膜渗透性约为相应环肽的3–7倍", system: "配对模型膜实验", formulation: "结论只适用于所测闭环方式和骨架" },
+  "(1S,2S)-2-ACPC · trans-2-aminocyclopentanecarboxylic acid": { comparison: "含ACPC的α/β-肽与α-Ala或β-Ala对照", endpoint: "螺旋构象／血清稳定性／CAPA细胞质进入", result: "含ACPC的肽表现出更高螺旋性和血清稳定性，并显示细胞质进入", system: "α/β-肽结构、稳定性与CAPA实验", formulation: "研究对象是螺旋α/β-肽，不是口服药代实验" },
 };
 
 export const supportScope = (record: Residue): string[] => {
   const scope: string[] = [];
-  const text = `${record.effect} ${record.evidence}`;
-  if (/Papp|PAMPA|Caco-2|RRCK|渗透/.test(text)) scope.push("渗透性");
-  if (/稳定|抗酶解|半衰期|t½/.test(text)) scope.push("稳定性");
-  if (/口服|生物利用度|血浆暴露/.test(text)) scope.push("口服暴露");
-  if (/溶解度|水溶/.test(text)) scope.push("溶解度");
-  if (record.level === "专利证据") scope.push("专利化学空间");
-  if (record.level === "临床骨架") scope.push("成功骨架兼容性");
-  if (!scope.length) scope.push("构象／活性骨架");
+  const endpoint = experimentData[record.english]?.endpoint ?? "";
+  if (/Papp|PAMPA|Caco-2|RRCK|渗透|细胞摄取|细胞进入|细胞质进入|CAPA/.test(endpoint)) scope.push("渗透性");
+  if (/稳定|半衰期|t½/.test(endpoint)) scope.push("稳定性");
+  if (/口服|生物利用度|血浆暴露|药代/.test(endpoint)) scope.push("口服暴露");
+  if (/溶解度|水溶/.test(endpoint)) scope.push("溶解度");
+  if (/构象|低介电|螺旋/.test(endpoint)) scope.push("构象");
+  if (!scope.length && endpoint) scope.push("其他实验终点");
   return [...new Set(scope)];
 };

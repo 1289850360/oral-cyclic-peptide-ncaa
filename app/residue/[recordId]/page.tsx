@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { masterRecordBySlug, masterRecords } from "../../master-records";
+import { propertyEvidenceMasterRecordBySlug, propertyEvidenceMasterRecords } from "../../master-records";
 import { ccdEntryUrl, ccdImageUrl, getStructures, structureNotesByEnglish } from "../../structure-data";
 import { experimentData, getDesignGuide, supportScope } from "../../v22-data";
 import SiteFooter from "../../site-footer";
@@ -9,12 +9,12 @@ import SiteHeader from "../../site-header";
 import { deepReviewByCcd } from "../../deep-review-data";
 
 export function generateStaticParams() {
-  return masterRecords.map((record) => ({ recordId: record.slug }));
+  return propertyEvidenceMasterRecords.map((record) => ({ recordId: record.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ recordId: string }> }): Promise<Metadata> {
   const { recordId } = await params;
-  const record = masterRecordBySlug.get(recordId.toLowerCase());
+  const record = propertyEvidenceMasterRecordBySlug.get(recordId.toLowerCase());
   if (!record) return {};
   return {
     title: `${record.name}（${record.id}）｜口服环肽残基证据库`,
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: { params: Promise<{ recordId:
 
 export default async function ResidueDetailPage({ params }: { params: Promise<{ recordId: string }> }) {
   const { recordId } = await params;
-  const record = masterRecordBySlug.get(recordId.toLowerCase());
+  const record = propertyEvidenceMasterRecordBySlug.get(recordId.toLowerCase());
   if (!record) notFound();
 
   const structures = getStructures(record.english);
@@ -34,9 +34,9 @@ export default async function ResidueDetailPage({ params }: { params: Promise<{ 
   const experiment = experimentData[record.english];
   const design = getDesignGuide(record);
   const scopes = supportScope(record);
-  const recordIndex = masterRecords.findIndex((item) => item.id === record.id);
-  const previous = recordIndex > 0 ? masterRecords[recordIndex - 1] : null;
-  const next = recordIndex < masterRecords.length - 1 ? masterRecords[recordIndex + 1] : null;
+  const recordIndex = propertyEvidenceMasterRecords.findIndex((item) => item.id === record.id);
+  const previous = recordIndex > 0 ? propertyEvidenceMasterRecords[recordIndex - 1] : null;
+  const next = recordIndex < propertyEvidenceMasterRecords.length - 1 ? propertyEvidenceMasterRecords[recordIndex + 1] : null;
   const citation = `口服环肽非天然残基证据库. ${record.name} (${record.id}). Version ${record.recordVersion}, ${record.reviewedAt}.`;
 
   return <main>
@@ -70,8 +70,8 @@ export default async function ResidueDetailPage({ params }: { params: Promise<{ 
       </div>
 
       <nav className="detail-record-nav" aria-label="相邻残基记录">
-        {previous ? <Link className="record-nav-card record-nav-previous" href={`/residue/${previous.slug}/`}><b aria-hidden="true">←</b><span>上一条记录</span><strong>{previous.name}</strong><small>{previous.id}</small></Link> : <Link className="record-nav-card record-nav-back" href="/#database"><b aria-hidden="true">⌂</b><span>返回</span><strong>研发证据库</strong><small>浏览全部53条整理记录</small></Link>}
-        {next ? <Link className="record-nav-card record-nav-next" href={`/residue/${next.slug}/`}><b aria-hidden="true">→</b><span>下一条记录</span><strong>{next.name}</strong><small>{next.id}</small></Link> : <Link className="record-nav-card record-nav-back record-nav-next" href="/#database"><b aria-hidden="true">⌂</b><span>已到最后一条</span><strong>返回研发证据库</strong><small>重新筛选或比较记录</small></Link>}
+        {previous ? <Link className="record-nav-card record-nav-previous" href={`/residue/${previous.slug}/`}><b aria-hidden="true">←</b><span>上一条性质证据</span><strong>{previous.name}</strong><small>{previous.id}</small></Link> : <Link className="record-nav-card record-nav-back" href="/#database"><b aria-hidden="true">⌂</b><span>返回</span><strong>研发证据库</strong><small>浏览全部性质证据</small></Link>}
+        {next ? <Link className="record-nav-card record-nav-next" href={`/residue/${next.slug}/`}><b aria-hidden="true">→</b><span>下一条性质证据</span><strong>{next.name}</strong><small>{next.id}</small></Link> : <Link className="record-nav-card record-nav-back record-nav-next" href="/#database"><b aria-hidden="true">⌂</b><span>已到最后一条</span><strong>返回研发证据库</strong><small>重新筛选或比较记录</small></Link>}
       </nav>
     </article>
     <SiteFooter />

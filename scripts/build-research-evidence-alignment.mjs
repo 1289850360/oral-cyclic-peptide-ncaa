@@ -41,7 +41,8 @@ const missingEvidenceAttachments = [...allLinkedCcdIds].filter((ccdId) => !catal
 const orphanEvidenceAttachments = [...catalogLinkedCcdIds].filter((ccdId) => !allLinkedCcdIds.has(ccdId));
 const mappingCounts = Object.fromEntries(["mapped-single", "mapped-multiple", "unmapped-concept"].map((status) => [status, records.filter((record) => record.mappingStatus === status).length]));
 const originCounts = Object.fromEntries(["original-curated", "manual-92-review", "core-priority-review"].map((origin) => [origin, records.filter((record) => record.origin === origin).length]));
-const validation = { missingCcdIds, missingEvidenceAttachments, orphanEvidenceAttachments, passed: !missingCcdIds.length && !missingEvidenceAttachments.length && !orphanEvidenceAttachments.length && records.length === 159 && allLinkedCcdIds.size === 146 };
+const expectedRecordCount = originalByRecord.size + deepRecords.length + coreRecords.length;
+const validation = { missingCcdIds, missingEvidenceAttachments, orphanEvidenceAttachments, passed: !missingCcdIds.length && !missingEvidenceAttachments.length && !orphanEvidenceAttachments.length && records.length === expectedRecordCount };
 if (!validation.passed) throw new Error(`Research alignment failed: ${JSON.stringify(validation)}`);
 
 const payload = { metadata: { generatedAt: new Date().toISOString(), model: "CCD-first evidence alignment", recordCount: records.length, linkedCcdStructureCount: allLinkedCcdIds.size, mappingCounts, originCounts, validation }, records };

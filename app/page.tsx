@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { groups, type EvidenceLevel, type Residue } from "./residue-data";
 import { experimentData, getDesignGuide, patentTierByEnglish, patentTierMeta, supportScope } from "./v22-data";
 import { ccdEntryUrl, ccdImageUrl, getStructures, structureNotesByEnglish } from "./structure-data";
-import { masterRecords, type MasterRecord } from "./master-records";
+import { propertyEvidenceMasterRecords, type MasterRecord } from "./master-records";
 import SiteFooter from "./site-footer";
 import SiteHeader from "./site-header";
 import Link from "next/link";
@@ -14,7 +14,9 @@ import { allUnifiedRecords, reviewOnlyRecords } from "./unified-records";
 type DatabaseRecord = MasterRecord;
 type Insight = { takeaway: string; caution: string };
 type PortalView = "home" | "evidence" | "about";
-type HomeSearchTarget = "catalog" | "evidence";
+type HomeSearchTarget = "catalog" | "ncaa" | "evidence";
+type EvidenceCollection = "all" | "ncaa" | "special";
+type CcdIdentityPayload = { records: Array<{ primaryCcdId: string; ccdIds: string[]; componentClass: { id: string } }> };
 
 const reviewGradeMeta = {
   A: { label: "环肽直接使用", category: "环肽应用记录", description: "有直接环肽或宏环使用证据。" },
@@ -33,7 +35,7 @@ const unifiedEvidenceMeta: Record<UnifiedEvidenceTier, { number: string; label: 
   excluded: { number: "排除", label: "非独立单体", shortLabel: "非独立单体", description: "有资料可追溯，但不是可按普通氨基酸理解的独立单体，不纳入常规残基候选。" },
 };
 
-const masterEvidenceTier = (level: EvidenceLevel): UnifiedEvidenceTier => level === "直接证据" || level === "改造证据" ? "direct-effect" : level === "骨架证据" || level === "临床骨架" ? "whole-molecule" : "design-lead";
+const masterEvidenceTier = (level: EvidenceLevel): UnifiedEvidenceTier => level === "直接证据" || level === "改造证据" ? "direct-effect" : level === "骨架证据" || level === "临床骨架" ? "whole-molecule" : level === "实际使用证据" ? "use-confirmed" : "design-lead";
 const reviewEvidenceTier = (grade: keyof typeof reviewGradeMeta): UnifiedEvidenceTier => grade === "A" || grade === "B" ? "use-confirmed" : grade === "C" ? "design-lead" : "excluded";
 const evidenceTierForItem = (item: (typeof allUnifiedRecords)[number]): UnifiedEvidenceTier => {
   if (item.kind === "review") return reviewEvidenceTier(item.record.grade);
@@ -41,6 +43,7 @@ const evidenceTierForItem = (item: (typeof allUnifiedRecords)[number]): UnifiedE
   if (!item.review || baseTier === "direct-effect" || baseTier === "whole-molecule") return baseTier;
   return reviewEvidenceTier(item.review.grade);
 };
+const propertyEvidenceRecords = allUnifiedRecords.filter((item) => evidenceTierForItem(item) === "direct-effect");
 
 const insights: Record<string, Insight> = {
   "N-Me-D-Leu": { takeaway: "适合在疏水位优先扫描：它把D-构型和N-甲基化放在同一个残基上，常用于同时处理渗透性与抗酶解性。", caution: "现有28%口服生物利用度来自完整环六肽，不能把全部改善归因于这一处残基。" },
@@ -98,30 +101,36 @@ const insights: Record<string, Insight> = {
   "5-F-Trp · 5-fluoro-L-tryptophan": { takeaway: "5-F-Trp 保留 Trp 的芳香结合特征，并可通过氟取代微调电子性质和代谢稳定性。", caution: "它与经过 N-取代或交联的 5-F-Trp 构件不是同一种设计，证据需要分开解释。" },
 };
 
-const modernCyclosporineSources = [
-  { paper: "Wang et al., Journal of Medicinal Chemistry, 2018", href: "https://pubmed.ncbi.nlm.nih.gov/29400464/", note: "用NMR与分子模拟研究环孢素构象柔性和跨膜过程。" },
-  { paper: "Ono et al., Journal of Chemical Information and Modeling, 2021", href: "https://pubmed.ncbi.nlm.nih.gov/34672629/", note: "现代研究支持环孢素的环境依赖构象与变色龙特性。" },
-  { paper: "Limbach et al., Journal of Medicinal Chemistry, 2025", href: "https://pubmed.ncbi.nlm.nih.gov/40077929/", note: "进一步分析环孢素膜渗透所需的构象平衡和能垒。" },
-];
-
 const propertyFilters = [
-  { id: "all", label: "全部性质", keywords: [] },
-  { id: "permeability", label: "渗透性", keywords: ["渗透"] },
-  { id: "hydrophobicity", label: "疏水性", keywords: ["疏水", "脂溶"] },
-  { id: "solubility", label: "溶解度", keywords: ["水溶", "溶解度"] },
-  { id: "stability", label: "稳定性", keywords: ["稳定性", "抗酶解", "蛋白酶"] },
-  { id: "polarity", label: "降低极性", keywords: ["极性 ↓", "氢键供体 ↓"] },
-  { id: "conformation", label: "构象控制", keywords: ["构象", "转角", "刚性"] },
+  { id: "all", label: "全部实验性质", scope: null },
+  { id: "permeability", label: "渗透性／细胞转运", scope: "渗透性" },
+  { id: "solubility", label: "水溶性／溶解度", scope: "溶解度" },
+  { id: "stability", label: "蛋白酶／代谢稳定性", scope: "稳定性" },
+  { id: "oral-exposure", label: "口服暴露／生物利用度", scope: "口服暴露" },
+  { id: "mechanism", label: "构象实验", scope: "构象" },
 ];
 
-const allRecords: DatabaseRecord[] = masterRecords;
-const mappedResearchRecordCount = allUnifiedRecords.filter((item) => item.kind === "review" || getStructures(item.record.english).length > 0).length;
-const unmappedResearchRecordCount = allUnifiedRecords.length - mappedResearchRecordCount;
-const linkedResearchCcdCount = new Set(allUnifiedRecords.flatMap((item) => item.kind === "review" ? [item.record.ccdId.toUpperCase()] : getStructures(item.record.english).map((structure) => structure.ccd.toUpperCase()))).size;
-const evidenceTierCounts = allUnifiedRecords.reduce<Record<UnifiedEvidenceTier, number>>((counts, item) => { counts[evidenceTierForItem(item)] += 1; return counts; }, { "direct-effect": 0, "whole-molecule": 0, "use-confirmed": 0, "design-lead": 0, excluded: 0 });
+const allRecords: DatabaseRecord[] = propertyEvidenceMasterRecords;
+const mappedResearchRecordCount = propertyEvidenceRecords.filter((item) => item.kind === "review" || getStructures(item.record.english).length > 0).length;
+const unmappedResearchRecordCount = propertyEvidenceRecords.length - mappedResearchRecordCount;
+const linkedResearchCcdCount = new Set(propertyEvidenceRecords.flatMap((item) => item.kind === "review" ? [item.record.ccdId.toUpperCase()] : getStructures(item.record.english).map((structure) => structure.ccd.toUpperCase()))).size;
+const evidenceCategoryOptions = groups.map((group) => ({
+  id: group.id,
+  label: group.title,
+  count: propertyEvidenceRecords.filter((item) => item.kind === "master" && item.record.categoryId === group.id).length,
+})).filter((item) => item.count > 0);
+const propertyFilterOptions = propertyFilters.map((propertyFilter) => ({
+  ...propertyFilter,
+  count: propertyFilter.scope === null ? propertyEvidenceRecords.length : propertyEvidenceRecords.filter((item) => item.kind === "master" && supportScope(item.record).includes(propertyFilter.scope)).length,
+}));
 const effectParts = (effect: string) => effect.split("；").map((part) => part.trim()).filter(Boolean);
 const sourceYear = (paper: string) => paper.match(/(19|20)\d{2}/)?.[0] ?? "—";
 const PAGE_SIZE = 12;
+
+const ccdIdsForEvidenceItem = (item: (typeof allUnifiedRecords)[number]) => item.kind === "review"
+  ? [item.record.ccdId.toUpperCase()]
+  : getStructures(item.record.english).map((structure) => structure.ccd.toUpperCase());
+const collectionForEvidenceItem = (item: (typeof allUnifiedRecords)[number], identityByCcd: Map<string, string>) => ccdIdsForEvidenceItem(item).some((ccdId) => identityByCcd.get(ccdId) === "evidence-reviewed-residue") ? "ncaa" : "special";
 
 export default function Home() {
   const [portalView, setPortalView] = useState<PortalView>("home");
@@ -129,8 +138,9 @@ export default function Home() {
   const [homeSearchTarget, setHomeSearchTarget] = useState<HomeSearchTarget>("catalog");
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
-  const [evidence, setEvidence] = useState("all");
   const [property, setProperty] = useState("all");
+  const [evidenceCollection, setEvidenceCollection] = useState<EvidenceCollection>("all");
+  const [identityByCcd, setIdentityByCcd] = useState<Map<string, string> | null>(null);
   const [openRecords, setOpenRecords] = useState<string[]>([]);
   const [selected, setSelected] = useState<string[]>([]);
   const [literatureOpen, setLiteratureOpen] = useState(false);
@@ -139,7 +149,9 @@ export default function Home() {
 
   const papers = useMemo(() => {
     const sourceMap = new Map<string, { paper: string; href: string; level: EvidenceLevel; residue: string }>();
-    allRecords.forEach((record) => {
+    propertyEvidenceRecords.forEach((item) => {
+      if (item.kind !== "master") return;
+      const record = item.record;
       sourceMap.set(record.href, { paper: record.paper, href: record.href, level: record.level, residue: record.name });
       if (record.secondary) sourceMap.set(record.secondary.href, { paper: record.secondary.paper, href: record.secondary.href, level: record.secondary.level, residue: record.name });
     });
@@ -155,17 +167,39 @@ export default function Home() {
     if (["evidence-guide", "literature", "about"].includes(hash)) setPortalView("about");
   }, []);
 
+  useEffect(() => {
+    let active = true;
+    fetch("ccd-unified-structure-catalog.json")
+      .then((response) => response.ok ? response.json() as Promise<CcdIdentityPayload> : Promise.reject(new Error("CCD identity map unavailable")))
+      .then((payload) => {
+        if (!active) return;
+        const next = new Map<string, string>();
+        payload.records.forEach((record) => record.ccdIds.forEach((ccdId) => next.set(ccdId.toUpperCase(), record.componentClass.id)));
+        setIdentityByCcd(next);
+      })
+      .catch(() => { if (active) setIdentityByCcd(new Map()); });
+    return () => { active = false; };
+  }, []);
+
+  const evidenceCollectionCounts = useMemo(() => {
+    if (!identityByCcd) return null;
+    return propertyEvidenceRecords.reduce((counts, item) => {
+      counts[collectionForEvidenceItem(item, identityByCcd)] += 1;
+      return counts;
+    }, { ncaa: 0, special: 0 });
+  }, [identityByCcd]);
+
   const filtered = useMemo(() => {
     const normalized = query.trim().toLowerCase();
     const propertyConfig = propertyFilters.find((item) => item.id === property);
-    return allUnifiedRecords.filter((item) => {
+    return propertyEvidenceRecords.filter((item) => {
+      if (evidenceCollection !== "all" && identityByCcd && collectionForEvidenceItem(item, identityByCcd) !== evidenceCollection) return false;
       if (item.kind === "review") {
         const record = item.record;
         const searchable = [record.id, record.ccdId, record.name, record.conclusion, record.synthesisEvidence, record.cyclicEvidence, record.oralEvidence, record.recommendation, ...record.sources.flatMap((source) => [source.title, source.evidenceType])].join(" ").toLowerCase();
         const categoryMatch = category === "all" || category === `review-${record.grade}`;
-        const evidenceMatch = evidence === "all" || evidence === evidenceTierForItem(item);
-        const propertyMatch = !propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => searchable.includes(keyword.toLowerCase()));
-        return (!normalized || searchable.includes(normalized)) && categoryMatch && evidenceMatch && propertyMatch;
+        const propertyMatch = !propertyConfig?.scope;
+        return (!normalized || searchable.includes(normalized)) && categoryMatch && propertyMatch;
       }
       const record = item.record;
       const structures = getStructures(record.english);
@@ -173,32 +207,23 @@ export default function Home() {
       const searchable = [record.name, record.english, record.category, record.effect, record.evidence, record.paper, ...structures.flatMap((structure) => [structure.ccd, structure.label]), structureNotesByEnglish[record.english], linkedReview?.conclusion, linkedReview?.cyclicEvidence, linkedReview?.oralEvidence].join(" ").toLowerCase();
       return (!normalized || searchable.includes(normalized))
         && (category === "all" || record.categoryId === category || (linkedReview && category === `review-${linkedReview.grade}`))
-        && (evidence === "all" || evidence === evidenceTierForItem(item))
-        && (!propertyConfig || propertyConfig.keywords.length === 0 || propertyConfig.keywords.some((keyword) => record.effect.includes(keyword)))
+        && (!propertyConfig?.scope || supportScope(record).includes(propertyConfig.scope))
         && (!structureOnly || structures.length > 0);
     });
-  }, [query, category, evidence, property, structureOnly]);
+  }, [query, category, property, structureOnly, evidenceCollection, identityByCcd]);
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const paginatedRecords = filtered.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
 
-  useEffect(() => { setPage(1); }, [query, category, evidence, property, structureOnly]);
+  useEffect(() => { setPage(1); }, [query, category, property, structureOnly, evidenceCollection]);
   useEffect(() => { if (page > totalPages) setPage(totalPages); }, [page, totalPages]);
 
-  const literatureSources = useMemo(() => [
-    ...papers,
-    ...modernCyclosporineSources.map((source) => ({
-      paper: source.paper,
-      href: source.href,
-      level: "临床骨架" as EvidenceLevel,
-      residue: "环孢素整体机制",
-    })),
-  ], [papers]);
+  const literatureSources = papers;
 
   const selectedRecords = selected.map((id) => allRecords.find((record) => record.id === id)).filter((record): record is DatabaseRecord => Boolean(record));
   const toggleDetails = (id: string) => setOpenRecords((current) => current.includes(id) ? current.filter((item) => item !== id) : [...current, id]);
   const toggleCompare = (id: string) => setSelected((current) => current.includes(id) ? current.filter((item) => item !== id) : current.length >= 3 ? current : [...current, id]);
-  const clearFilters = () => { setQuery(""); setCategory("all"); setEvidence("all"); setProperty("all"); setStructureOnly(false); };
+  const clearFilters = () => { setQuery(""); setCategory("all"); setProperty("all"); setEvidenceCollection("all"); setStructureOnly(false); };
   const navigateTo = (view: PortalView, targetId?: string) => {
     setPortalView(view);
     window.history.replaceState(null, "", targetId ? `#${targetId}` : view === "home" ? "#top" : `#${view}`);
@@ -208,6 +233,7 @@ export default function Home() {
     event.preventDefault();
     const encoded = encodeURIComponent(homeQuery.trim());
     if (homeSearchTarget === "catalog") { window.location.href = `catalog/${encoded ? `?q=${encoded}` : ""}`; return; }
+    if (homeSearchTarget === "ncaa") { window.location.href = `ncaa/${encoded ? `?q=${encoded}` : ""}`; return; }
     setQuery(homeQuery.trim());
     window.history.replaceState(null, "", `${encoded ? `?q=${encoded}` : ""}#database`);
     setPortalView("evidence");
@@ -215,16 +241,16 @@ export default function Home() {
   };
 
   const downloadCsv = () => {
-    const header = ["中文名", "英文名", "类别", "残基简介", "CCD编号", "性质变化", "证据支持范围", "优先替换", "主要目标", "不建议位置", "原始骨架与改造方式", "实验终点", "实验结果", "实验环境", "证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
-    const rows = [...allRecords.map((record) => {
+    const header = ["中文名", "英文名", "类别", "残基简介", "CCD编号", "性质变化", "论文测量范围", "优先替换", "主要目标", "不建议位置", "原始骨架与改造方式", "实验终点", "实验结果", "实验环境", "证据边界", "证据说明", "证据等级", "专利子等级", "论文或专利", "链接"];
+    const rows = allRecords.filter((record) => masterEvidenceTier(record.level) === "direct-effect").map((record) => {
       const design = getDesignGuide(record); const experiment = experimentData[record.english]; const patentTier = patentTierByEnglish[record.english];
       const structures = getStructures(record.english);
       const tier = masterEvidenceTier(record.level); const tierMeta = unifiedEvidenceMeta[tier];
       return [record.name, record.english, record.category, insights[record.english]?.takeaway ?? effectParts(record.effect)[0], structures.map((item) => item.ccd).join(" / ") || "—", record.effect, supportScope(record).join("、"), design.replace, design.goal, design.avoid, experiment?.comparison ?? "完整分子或候选集合；未报告单残基定量对照", experiment?.endpoint ?? "—", experiment?.result ?? "—", experiment?.system ?? "—", experiment?.formulation ?? "—", record.evidence, `${tierMeta.number}-${tierMeta.label}`, patentTier ? `${patentTier}-${patentTierMeta[patentTier].label}` : "—", record.paper, record.href];
-    }), ...reviewOnlyRecords.map((record) => { const tierMeta = unifiedEvidenceMeta[reviewEvidenceTier(record.grade)]; return ["中文名待规范", record.name, reviewGradeMeta[record.grade].category, record.conclusion, record.ccdId, record.recommendation, reviewGradeMeta[record.grade].description, "需结合目标位点判断", record.recommendation, record.grade === "EXCLUDE" ? "不可作为独立单体" : "不能据此推断口服性", "统一证据库中的结构审核记录", "—", record.cyclicEvidence, "论文／PDB／专利来源核对", record.oralEvidence, record.synthesisEvidence, `${tierMeta.number}-${tierMeta.label}`, "—", record.sources.map((source) => source.title).join("；"), record.sources[0]?.url ?? `https://www.rcsb.org/ligand/${record.ccdId}`]; })];
+    });
     const csv = [header, ...rows].map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
     const url = URL.createObjectURL(new Blob(["\uFEFF", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-residue-database-v3-0.csv"; link.click(); URL.revokeObjectURL(url);
+    const link = document.createElement("a"); link.href = url; link.download = "oral-cyclic-peptide-property-evidence.csv"; link.click(); URL.revokeObjectURL(url);
   };
 
   return (
@@ -240,31 +266,32 @@ export default function Home() {
           </div>
           <form className="portal-search" onSubmit={searchFromHome}>
             <label htmlFor="portal-search-input">搜索数据库</label>
-            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "catalog" ? "输入中文名、英文名、CCD编号或分子式" : "输入残基名称、CCD、目标性质或证据结论"} /><button type="submit">搜索</button></div>
-            <p>{homeSearchTarget === "catalog" ? "例如：AIB、02A、N-methyl、C8 H9 N O2" : "例如：N-Me-Leu、STA、渗透性、环肽直接使用"}</p>
+            <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="ncaa">非天然氨基酸库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "evidence" ? "输入残基名称、CCD、目标性质或证据结论" : "输入英文名、CCD编号、同义词或分子式"} /><button type="submit">搜索</button></div>
+            <p>{homeSearchTarget === "evidence" ? "例如：N-Me-Leu、STA、渗透性、环肽直接使用" : "例如：AIB、02A、N-methyl、C8 H9 N O2"}</p>
           </form>
-          <div className="version-line"><span>Version 3.4</span><span>最近更新：2026-08-31</span><span>研究用途数据库</span></div>
+          <div className="version-line"><span>Version 5.0</span><span>最近更新：2026-09-01</span><span>研究用途数据库</span></div>
         </section>
 
         <section className="portal-stats" aria-label="数据库概览">
-          <article><strong>2,065</strong><span>网站收录的全部结构</span><small>下面五类相加等于2,065，没有重复计算</small></article>
-          <article><strong>114</strong><span>已有明确使用资料</span><small>确认曾作为肽或环状分子的组成部分使用</small></article>
-          <article><strong>952</strong><span>在PDB的肽中找到</span><small>确认出现过，但具体用途和合成资料还没查全</small></article>
-          <article><strong>294</strong><span>特殊用途结构</span><small>可能用于连接、交联或反应，不一定是普通氨基酸</small></article>
-          <article><strong>476</strong><span>看起来像氨基酸，仍待确认</span><small>全量PDB序列核查后仍缺少实际使用证据</small></article>
-          <article><strong>229</strong><span>不是普通氨基酸单体</span><small>包括完整药物、短肽等，保留是为了避免以后误收</small></article>
+          <article><strong>2,065</strong><span>网站收录的全部结构</span><small>身份分为后面三类；PDB和性质数据另外统计</small></article>
+          <article><strong>1,316</strong><span>已确认非天然氨基酸</span><small>CCD单体类型或人工来源支持其非天然氨基酸身份</small></article>
+          <article><strong>446</strong><span>特殊用途结构</span><small>连接、交联、战头和非典型肽模拟构件等</small></article>
+          <article><strong>303</strong><span>非单体／排除项</span><small>完整药物、短肽和复杂加合物等，保留用于追溯</small></article>
+          <article><strong>955</strong><span>短PDB聚合物中出现</span><small>在不超过50残基的PDB聚合物序列中命中</small></article>
+          <article><strong>13</strong><span>已关联直接性质实验</span><small>身份或PDB出现不计作性质实验</small></article>
         </section>
 
         <section className="portal-body">
           <div className="portal-section-heading"><div><p className="eyebrow">EXPLORE THE DATABASE</p><h2>数据库内容</h2></div><p>结构检索与研发证据分别编目，记录详情保留结构来源、实验条件和结论适用范围。</p></div>
           <div className="portal-entry-grid">
-            <button onClick={() => navigateTo("evidence", "database")}><span>01 · 设计决策</span><strong>研发证据库</strong><p>从CCD结构主记录关联论文、专利与人工审核；有结构的证据不会再单独维护另一份名单。</p><b>浏览{allUnifiedRecords.length}条证据记录 →</b></button>
-            <button onClick={() => { window.location.href = "catalog/"; }}><span>02 · 扩展化学空间</span><strong>CCD结构库</strong><p>浏览结构、五层证据状态、PDB使用与单体可用性线索。</p><b>进入2,065条结构目录 →</b></button>
-            <button onClick={() => { window.location.href = "quality/"; }}><span>03 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
+            <button onClick={() => navigateTo("evidence", "database")}><span>01 · 设计决策</span><strong>研发证据库</strong><p>只收录有实验资料支持溶解度、渗透性、稳定性、口服暴露等性质变化的记录。</p><b>浏览{propertyEvidenceRecords.length}条性质证据记录 →</b></button>
+            <button onClick={() => { window.location.href = "ncaa/"; }}><span>02 · 核心研究集合</span><strong>非天然氨基酸库</strong><p>集中查看已完成身份核验、具有CCD编号的非天然氨基酸及明确衍生物。</p><b>进入非天然氨基酸专库 →</b></button>
+            <button onClick={() => { window.location.href = "catalog/"; }}><span>03 · 完整结构底库</span><strong>CCD结构库</strong><p>浏览结构、五层证据状态、PDB使用与单体可用性线索。</p><b>进入2,065条结构目录 →</b></button>
+            <button onClick={() => { window.location.href = "quality/"; }}><span>04 · 方法与质量</span><strong>版本与数据质量</strong><p>查看合并规则、证据等级、排除边界和机器可读文件。</p><b>查看质量说明 →</b></button>
           </div>
 
           <div className="portal-overview-grid">
-            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>已有资料</b><span>114条经来源审核确认使用；952条已在PDB肽或聚合物序列中出现</span></li><li><b>仍需判断</b><span>294条属于特殊结构；476条氨基酸样候选仍待验证</span></li><li><b>明确不推荐</b><span>229条属于非单体或明确排除对象，但保留用于追溯</span></li></ol></article>
+            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>非天然氨基酸</b><span>1,316条已完成身份核验，进入非天然氨基酸专库</span></li><li><b>特殊用途结构</b><span>446条连接、交联、战头或非典型构件单独管理</span></li><li><b>非单体／排除项</b><span>303条完整药物、短肽和复杂加合物保留用于检索与追溯</span></li></ol></article>
             <article className="portal-boundary-card"><span>证据口径</span><h3>记录按证据层级解释</h3><p>CCD记录用于确认化学身份，PDB命中用于确认其在聚合物中的使用。只有在相同或可比环肽骨架中设有实验对照时，才将性质变化归因于具体残基。</p><button onClick={() => { window.location.href = "quality/"; }}>查看证据分级与数据质量 →</button></article>
           </div>
         </section>
@@ -272,24 +299,30 @@ export default function Home() {
 
       {portalView === "evidence" && <>
       <section className="database-section" id="database" aria-labelledby="database-title">
-        <div className="section-heading"><div><p className="eyebrow">EVIDENCE-CURATED RECORDS</p><h2 id="database-title">口服性质与研发证据库</h2></div><p>汇总论文、专利和临床骨架中的残基记录。证据等级依据对照设计和归因强度划分，定量结果仅在实验条件可对应时列示。</p></div>
+        <div className="section-heading"><div><p className="eyebrow">EXPERIMENTALLY SUPPORTED PROPERTY EVIDENCE</p><h2 id="database-title">性质改善研发证据库</h2></div><p>只收录有实验对照支持性质变化的记录。CCD、PDB出现和单纯身份资料不在这里计数。</p></div>
         <aside className="evidence-integration-status" aria-labelledby="integration-status-title">
-          <div><span>CCD-FIRST EVIDENCE VIEW</span><strong id="integration-status-title">研发证据库共收录{allUnifiedRecords.length}条记录</strong><p>证据以CCD结构为主键自动关联：{mappedResearchRecordCount}条记录已有CCD映射，{unmappedResearchRecordCount}条属于尚无唯一CCD的设计概念或组合构件。</p></div>
-          <dl><div><dt>{allUnifiedRecords.length}</dt><dd>全部证据记录</dd></div><div><dt>{mappedResearchRecordCount}</dt><dd>已有CCD映射</dd></div><div><dt>{linkedResearchCcdCount}</dt><dd>关联CCD结构</dd></div><div><dt>{unmappedResearchRecordCount}</dt><dd>暂无唯一CCD</dd></div></dl>
-          <nav><a href="ccd-research-evidence-alignment.csv" download>下载CCD—证据对应表</a><a href="ccd-manual-review-92-final.csv" download>下载审核来源</a></nav>
+          <div><span>PROPERTY-EVIDENCE VIEW</span><strong id="integration-status-title">研发证据库收录{propertyEvidenceRecords.length}条性质证据记录</strong><p>{mappedResearchRecordCount}条已有CCD映射，{unmappedResearchRecordCount}条属于尚无唯一CCD的骨架策略；这里只统计能够支持性质变化判断的实验资料。</p></div>
+          <dl><div><dt>{propertyEvidenceRecords.length}</dt><dd>性质证据记录</dd></div><div><dt>{mappedResearchRecordCount}</dt><dd>已有CCD映射</dd></div><div><dt>{linkedResearchCcdCount}</dt><dd>关联CCD结构</dd></div><div><dt>{unmappedResearchRecordCount}</dt><dd>暂无唯一CCD</dd></div></dl>
+          <nav><a href="ccd-research-evidence-alignment.csv" download>下载全量审计对应表</a><a href="ccd-manual-review-92-final.csv" download>下载身份审核来源</a></nav>
         </aside>
-        <div className="filter-panel">
+        <div className="evidence-collection-switch" aria-label="研发证据记录类型">
+          <button className={evidenceCollection === "all" ? "active" : ""} onClick={() => setEvidenceCollection("all")}><strong>{propertyEvidenceRecords.length}</strong><span>全部性质证据</span><small>以下两类合计</small></button>
+          <button className={evidenceCollection === "ncaa" ? "active ncaa" : "ncaa"} onClick={() => setEvidenceCollection("ncaa")} disabled={!evidenceCollectionCounts}><strong>{evidenceCollectionCounts?.ncaa ?? "—"}</strong><span>具体非天然氨基酸证据</span><small>能够与已确认非天然氨基酸及CCD结构对应</small></button>
+          <button className={evidenceCollection === "special" ? "active special" : "special"} onClick={() => setEvidenceCollection("special")} disabled={!evidenceCollectionCounts}><strong>{evidenceCollectionCounts?.special ?? "—"}</strong><span>骨架与改造策略证据</span><small>完整骨架、等排替换或尚无唯一CCD的策略</small></button>
+        </div>
+        <div className="evidence-collection-note"><strong>收录原则</strong><p>这里只保留能够支持溶解度、渗透性、稳定性、代谢稳定性、口服暴露等性质变化的实验记录。单纯身份确认、PDB出现、肽中使用或专利列举不再作为研发证据收录。</p></div>
+        <div className="evidence-judgment-guide">
+          <article><span>如何确认是非天然氨基酸</span><strong>先确认化学身份，再确认它能作为残基理解</strong><p>核对CCD编号、名称、分子式和立体化学；同时要求CCD单体类型、标准母体关系或原始论文明确支持其作为独立氨基酸／肽链残基。完整药物、短肽、连接体和反应加合物不会因为“长得像氨基酸”就纳入。</p></article>
+          <article><span>如何判断会影响目标性质</span><strong>必须有原始实验和可解释的比较对象</strong><p>优先采用相同或可比骨架中的替换对照，并记录PAMPA、RRCK、Caco-2、溶解度、血浆／蛋白酶稳定性或口服药代等实际终点。只有完整分子有效、但无法归因到具体残基的资料，不记作该残基的直接性质证据。</p></article>
+        </div>
+        <div className="filter-panel property-evidence-filters">
           <label className="search-field"><span>搜索名称、缩写、作用或论文</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="例如：N-Me-Leu、Pye、Caco-2、提高溶解度" /></label>
-          <label><span>残基类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部类别</option>{groups.map((group) => <option value={group.id} key={group.id}>{group.title}</option>)}<option value="review-A">环肽直接使用</option><option value="review-B">肽中使用候选</option><option value="review-C">特殊构件</option><option value="review-EXCLUDE">排除记录</option></select></label>
-          <label><span>证据等级</span><select value={evidence} onChange={(event) => setEvidence(event.target.value)}><option value="all">全部等级（{allUnifiedRecords.length}）</option><option value="direct-effect">1级｜直接效果证据（{evidenceTierCounts["direct-effect"]}）</option><option value="whole-molecule">2级｜完整分子证据（{evidenceTierCounts["whole-molecule"]}）</option><option value="use-confirmed">3级｜已确认实际使用（{evidenceTierCounts["use-confirmed"]}）</option><option value="design-lead">4级｜设计线索（{evidenceTierCounts["design-lead"]}）</option><option value="excluded">排除｜非独立单体（{evidenceTierCounts.excluded}）</option></select></label>
-          <label><span>目标性质</span><select value={property} onChange={(event) => setProperty(event.target.value)}>{propertyFilters.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label>
+          <label><span>证据对象类别</span><select value={category} onChange={(event) => setCategory(event.target.value)}><option value="all">全部实际收录类别（{propertyEvidenceRecords.length}）</option>{evidenceCategoryOptions.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label>
+          <label><span>论文实际测量的性质</span><select value={property} onChange={(event) => setProperty(event.target.value)}>{propertyFilterOptions.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label>
           <label className="structure-filter"><span>结构信息</span><button className={structureOnly ? "active" : ""} onClick={() => setStructureOnly((current) => !current)}>{structureOnly ? "仅显示已核对 CCD" : "显示全部记录"}</button></label>
         </div>
-        <div className="evidence-tier-guide" aria-label="证据等级说明">
-          {(Object.keys(unifiedEvidenceMeta) as UnifiedEvidenceTier[]).map((tier) => <article className={`tier-${tier}`} key={tier}><span>{unifiedEvidenceMeta[tier].number}</span><strong>{unifiedEvidenceMeta[tier].label} · {evidenceTierCounts[tier]}条</strong><p>{unifiedEvidenceMeta[tier].description}</p></article>)}
-        </div>
-        <div className="category-chips"><button className={category === "all" ? "active" : ""} onClick={() => setCategory("all")}>全部 {allUnifiedRecords.length}</button>{groups.map((group) => <button className={category === group.id ? "active" : ""} onClick={() => setCategory(group.id)} key={group.id}>{group.title} {group.residues.length}</button>)}{(["A", "B", "C", "EXCLUDE"] as const).map((grade) => <button className={category === `review-${grade}` ? "active" : ""} onClick={() => setCategory(`review-${grade}`)} key={grade}>{reviewGradeMeta[grade].label} {reviewOnlyRecords.filter((record) => record.grade === grade).length}</button>)}</div>
-        <div className="result-bar"><span>找到 <strong>{filtered.length}</strong> 条记录 · 第 {page}/{totalPages} 页</span>{(query || category !== "all" || evidence !== "all" || property !== "all" || structureOnly) && <button onClick={clearFilters}>清除筛选</button>}</div>
+        <div className="property-evidence-definition"><strong>收录门槛</strong><p>必须有可追溯的论文实验数据，并能够比较或判断某项性质发生变化；完整分子口服结果若无法归因于具体残基，仅作为来源背景，不计作该残基的直接改善证据。</p></div>
+        <div className="result-bar"><span>找到 <strong>{filtered.length}</strong> 条记录 · 第 {page}/{totalPages} 页</span>{(query || category !== "all" || property !== "all" || evidenceCollection !== "all" || structureOnly) && <button onClick={clearFilters}>清除筛选</button>}</div>
 
         {filtered.length ? <div className="record-grid">{paginatedRecords.map((item) => {
           if (item.kind === "review") {
@@ -318,7 +351,7 @@ export default function Home() {
             <div className="source-summary"><span>{sourceYear(record.paper)}</span><strong>{record.paper}</strong></div>
             <button className="details-toggle" onClick={() => toggleDetails(record.id)} aria-expanded={isOpen}>{isOpen ? "收起完整记录" : "查看完整记录"}<span>{isOpen ? "−" : "+"}</span></button>
             {isOpen && <div className="record-details">
-              <div><h4>证据支持范围</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
+              <div><h4>论文测量范围</h4><div className="scope-tags">{scope.map((item) => <span key={item}>{item}</span>)}</div></div>
               <div className="design-guide"><h4>残基扫描建议</h4><dl><div><dt>优先替换</dt><dd>{design.replace}</dd></div><div><dt>主要目标</dt><dd>{design.goal}</dd></div><div><dt>限制条件</dt><dd>{design.avoid}</dd></div></dl></div>
               <div className="experiment-panel"><h4>原始骨架与实验环境</h4>{experiment ? <dl><div><dt>骨架／改造</dt><dd>{experiment.comparison}</dd></div><div><dt>观察指标</dt><dd>{experiment.endpoint}</dd></div><div><dt>性质变化</dt><dd><strong>{experiment.result}</strong></dd></div><div><dt>实验环境</dt><dd>{experiment.system}</dd></div><div><dt>证据边界</dt><dd>{experiment.formulation}</dd></div></dl> : <p className="no-metric">来源给出了完整分子、候选集合或权利要求范围，但未公开可归属于该单个残基的定量替换对照。该条目用于扩展候选空间，不用于预测具体数值变化。</p>}</div>
               <div><h4>预期性质影响</h4><p>{record.effect}</p></div><div><h4>原始来源结论</h4><p>{record.evidence}</p></div>
@@ -334,7 +367,7 @@ export default function Home() {
         <div className="section-heading light"><div><p className="eyebrow">SIDE-BY-SIDE REVIEW</p><h2 id="compare-title">残基比较</h2></div><p>{selected.length === 0 ? "在数据库卡片中选择2—3项，即可比较设计定位与证据边界。" : `已选择 ${selected.length}/3 项`}</p></div>
         {selectedRecords.length ? <div className="comparison-table-wrap"><table className="comparison-table"><thead><tr><th>比较项目</th>{selectedRecords.map((record) => <th key={record.id}>{record.name}<small>{record.english}</small></th>)}</tr></thead><tbody>
           <tr><th>类别</th>{selectedRecords.map((record) => <td key={record.id}>{record.category}</td>)}</tr><tr><th>证据</th>{selectedRecords.map((record) => { const tier = masterEvidenceTier(record.level); return <td key={record.id}><span className="mini-level">{unifiedEvidenceMeta[tier].number}</span>{unifiedEvidenceMeta[tier].label}</td>; })}</tr>
-          <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>优先替换</th>{selectedRecords.map((record) => <td key={record.id}>{getDesignGuide(record).replace}</td>)}</tr><tr><th>证据支持</th>{selectedRecords.map((record) => <td key={record.id}>{supportScope(record).join("、")}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
+          <tr><th>设计定位</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.takeaway}</td>)}</tr><tr><th>优先替换</th>{selectedRecords.map((record) => <td key={record.id}>{getDesignGuide(record).replace}</td>)}</tr><tr><th>论文测量范围</th>{selectedRecords.map((record) => <td key={record.id}>{supportScope(record).join("、")}</td>)}</tr><tr><th>性质变化</th>{selectedRecords.map((record) => <td key={record.id}>{effectParts(record.effect).slice(0, 4).join("；")}</td>)}</tr><tr><th>主要限制</th>{selectedRecords.map((record) => <td key={record.id}>{insights[record.english]?.caution}</td>)}</tr>
         </tbody></table><button className="clear-comparison" onClick={() => setSelected([])}>清空比较</button></div> : null}
       </section>
       </>}
