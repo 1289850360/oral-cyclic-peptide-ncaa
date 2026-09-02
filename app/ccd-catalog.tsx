@@ -29,7 +29,7 @@ type CcdCoreRecord = {
   sourceUrl: string;
   structureImageUrl: string;
   catalogOrigin?: CatalogOrigin;
-  componentClass: { id: ComponentClass; basis: string; method: "manual-review" | "pdb-sequence-audit" | "rule-based" | "ccd-linkage-identity-audit" | "manual-pdb-context-review" };
+  componentClass: { id: ComponentClass; basis: string; method: "manual-review" | "pdb-sequence-audit" | "rule-based" | "ccd-linkage-identity-audit" | "manual-pdb-context-review" | "complete-ccd-identity-recheck" };
   evidenceProfile: {
     structureIdentity: EvidenceState;
     peptideUse: EvidenceState;
@@ -110,7 +110,9 @@ const CCD_PROPERTY_FILTERS = [
   { id: "conformation", label: "构象控制", keywords: ["构象", "刚性", "折叠", "骨架间距"] },
 ] as const;
 
-const propertyEvidenceFor = (record: CcdCoreRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据");
+const NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS = new Set(["OCPR000001", "OCPR000011", "OCPR000012", "OCPR000013", "OCPR000015", "OCPR000016", "OCPR000047", "OCPR000049", "OCPR000050", "OCPR000074", "OCPR000560", "OCPR000561"]);
+const propertyEvidenceFor = (record: CcdCoreRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据" || NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS.has(item.recordId));
+const propertyEvidenceLabel = (level: string) => level === "直接证据" || level === "改造证据" ? "直接实验" : level === "专利证据" ? "专利实例" : "完整分子证据";
 const componentBasisForDisplay = (record: CcdCoreRecord) => record.componentClass.id === "evidence-reviewed-residue" ? "CCD单体类型或人工来源支持其非天然氨基酸身份" : record.componentClass.basis;
 
 const EXACT_CHINESE_NAMES: Record<string, string> = {
@@ -268,7 +270,7 @@ export default function CcdCatalog({ assetPrefix = "" }: { assetPrefix?: string 
       <div className="ccd-catalog-summary">
         <div><strong>{payload ? payload.metadata.count.toLocaleString("en-US") : "—"}</strong><span>统一结构目录</span></div>
         <div><strong>{payload?.metadata.componentClassCounts["evidence-reviewed-residue"].toLocaleString("en-US") ?? "—"}</strong><span>已确认非天然氨基酸</span></div>
-        <div><strong>{payload ? propertyEvidenceCcdCount : "—"}</strong><span>已关联直接性质实验</span></div>
+        <div><strong>{payload ? propertyEvidenceCcdCount : "—"}</strong><span>已关联性质实验</span></div>
         <details className="catalog-download-menu"><summary>下载与审计文件</summary><div className="catalog-downloads"><a href={`${assetPrefix}ccd-unified-structure-catalog.csv`} download>统一结构目录 CSV</a><a href={`${assetPrefix}ccd-research-evidence-alignment.csv`} download>CCD—研发证据对应表</a><a href={`${assetPrefix}ccd-pdb-context-audit.csv`} download>PDB环肽语境初筛 CSV</a><a href={`${assetPrefix}ccd-pending-candidate-triage.csv`} download>待验证候选分层 CSV</a><a href={`${assetPrefix}ccd-verified-cores-1687.csv`} download>原始结构核心 CSV</a><a href={`${assetPrefix}catalog-integrity-report.json`} download>原始核心完整性报告</a></div></details>
       </div>
 
@@ -276,14 +278,14 @@ export default function CcdCatalog({ assetPrefix = "" }: { assetPrefix?: string 
         <strong>先看结构，再看证据</strong>
         <p>每个CCD只保留一条结构主记录；论文、专利、PDB使用和合成资料都挂在这条记录下面。有资料不等于一定是普通氨基酸，也不等于能够改善口服性。</p>
       </div>
-      <details className="ccd-method-progress"><summary>查看数据核验状态与方法文件</summary><div><div className="ccd-review-progress"><strong>结构身份分类：2,065 / 2,065</strong><p>{payload ? `${payload.metadata.componentClassCounts["evidence-reviewed-residue"]}条确认为非天然氨基酸，${payload.metadata.componentClassCounts["special-reference"]}条归入特殊用途结构，${payload.metadata.componentClassCounts["excluded-nonmonomer"]}条归入非单体或排除项。` : "全部结构均已进入统一身份分类。"}</p><div><a href={`${assetPrefix}ccd-ncaa-identity-audit.csv`} download>下载身份核验</a></div></div><div className="ccd-review-progress ccd-synthesis-progress"><strong>合成可用性：20 / {payload?.metadata.componentClassCounts["evidence-reviewed-residue"] ?? "—"}</strong><p>已核查首批商业保护形式与SPPS边界；身份确认不代表实时供应或可直接合成。</p><div><a href={`${assetPrefix}ccd-synthesis-usability-batch-1.csv`} download>下载结果</a></div></div><div className="ccd-audit-progress-grid"><article><span>PDB聚合物序列核查</span><strong>{usagePayload ? `${usagePayload.metadata.candidateCount} / ${usagePayload.metadata.candidateCount}` : "载入中"}</strong><p>{usagePayload ? `≤50残基聚合物命中${usagePayload.metadata.statusCounts["short-polymer"]}条，仅较长聚合物命中${usagePayload.metadata.statusCounts["polymer-only"]}条，暂无序列命中${usagePayload.metadata.statusCounts["no-polymer-hit"]}条。` : "正在读取PDB使用状态。"}</p></article><article><span>性质实验对齐</span><strong>{propertyEvidenceCcdCount}个CCD结构</strong><p>只计算直接性质实验；身份确认、PDB出现、专利列举和一般使用记录不再作为性质证据计数。</p></article></div></div></details>
+      <details className="ccd-method-progress"><summary>查看数据核验状态与方法文件</summary><div><div className="ccd-review-progress"><strong>结构身份分类：2,065 / 2,065</strong><p>{payload ? `${payload.metadata.componentClassCounts["evidence-reviewed-residue"]}条确认为非天然氨基酸，${payload.metadata.componentClassCounts["special-reference"]}条归入特殊用途结构，${payload.metadata.componentClassCounts["excluded-nonmonomer"]}条归入非单体或排除项。` : "全部结构均已进入统一身份分类。"}</p><div><a href={`${assetPrefix}ccd-ncaa-identity-audit.csv`} download>下载身份核验</a></div></div><div className="ccd-review-progress ccd-synthesis-progress"><strong>合成可用性：20 / {payload?.metadata.componentClassCounts["evidence-reviewed-residue"] ?? "—"}</strong><p>已核查首批商业保护形式与SPPS边界；身份确认不代表实时供应或可直接合成。</p><div><a href={`${assetPrefix}ccd-synthesis-usability-batch-1.csv`} download>下载结果</a></div></div><div className="ccd-audit-progress-grid"><article><span>PDB聚合物序列核查</span><strong>{usagePayload ? `${usagePayload.metadata.candidateCount} / ${usagePayload.metadata.candidateCount}` : "载入中"}</strong><p>{usagePayload ? `≤50残基聚合物命中${usagePayload.metadata.statusCounts["short-polymer"]}条，仅较长聚合物命中${usagePayload.metadata.statusCounts["polymer-only"]}条，暂无序列命中${usagePayload.metadata.statusCounts["no-polymer-hit"]}条。` : "正在读取PDB使用状态。"}</p></article><article><span>性质实验对齐</span><strong>{propertyEvidenceCcdCount}个CCD结构</strong><p>包括单点／同骨架直接实验和完整分子性质实验；两类证据分级显示，不把完整分子结果归因于单个残基。</p></article></div></div></details>
 
       {payload && <div className="ccd-component-overview" aria-label="构件身份分类概览">{(Object.keys(payload.metadata.componentClassMeta) as ComponentClass[]).filter((id) => payload.metadata.componentClassCounts[id] > 0).map((id) => <button className={componentClass === id ? "active" : ""} onClick={() => changeComponentClass(id)} key={id}><strong>{payload.metadata.componentClassCounts[id].toLocaleString("en-US")}</strong><span>{payload.metadata.componentClassMeta[id].shortLabel}</span></button>)}</div>}
 
       <div className="ccd-filter-panel">
         <label><span>搜索CCD编号、名称、同义词或分子式</span><input value={query} onChange={(event) => changeQuery(event.target.value)} placeholder="例如：AIB、N-methyl、phenylglycine、C8 H9 N O2" /></label>
         <label><span>构件身份</span><select value={componentClass} onChange={(event) => changeComponentClass(event.target.value as "all" | ComponentClass)}><option value="all">全部构件身份</option>{payload && (Object.keys(payload.metadata.componentClassMeta) as ComponentClass[]).filter((id) => payload.metadata.componentClassCounts[id] > 0).map((id) => <option value={id} key={id}>{payload.metadata.componentClassMeta[id].label}（{payload.metadata.componentClassCounts[id]}）</option>)}</select></label>
-        <label><span>性质实验数据</span><select value={researchEvidenceStatus} onChange={(event) => changeResearchEvidenceStatus(event.target.value as "all" | ResearchEvidenceStatus)}><option value="all">全部实验状态</option><option value="linked">已有直接性质实验（{propertyEvidenceCcdCount}）</option><option value="none">暂无直接性质实验</option></select></label>
+        <label><span>性质实验数据</span><select value={researchEvidenceStatus} onChange={(event) => changeResearchEvidenceStatus(event.target.value as "all" | ResearchEvidenceStatus)}><option value="all">全部实验状态</option><option value="linked">已有性质实验资料（{propertyEvidenceCcdCount}）</option><option value="none">暂无性质实验资料</option></select></label>
       </div>
       <details className="ccd-advanced-filters"><summary>高级筛选</summary><div><label><span>PDB聚合物序列出现情况</span><select value={usageStatus} onChange={(event) => changeUsageStatus(event.target.value as PolymerUsageStatus | "all")}><option value="all">全部PDB状态</option>{usagePayload && (["short-polymer", "polymer-only", "no-polymer-hit"] as const).map((status) => <option value={status} key={status}>{USAGE_META[status].label}（{usagePayload.metadata.statusCounts[status]}）</option>)}</select></label><label><span>目标性质（结构提示）</span><select value={targetProperty} onChange={(event) => changeTargetProperty(event.target.value as (typeof CCD_PROPERTY_FILTERS)[number]["id"])}>{CCD_PROPERTY_FILTERS.map((item) => <option value={item.id} key={item.id}>{item.label}</option>)}</select></label><label><span>结构类别</span><select value={category} onChange={(event) => changeCategory(event.target.value)}><option value="all">全部结构类别</option>{categories.map((item) => <option value={item.id} key={item.id}>{item.label}（{item.count}）</option>)}</select></label></div></details>
       <p className="ccd-name-note">中文辅助名用于快速阅读，由常见氨基酸母体和系统命名规则生成；涉及复杂杂环或多官能团时仍以英文系统名、立体化学SMILES和CCD记录为准。</p>
@@ -291,7 +293,7 @@ export default function CcdCatalog({ assetPrefix = "" }: { assetPrefix?: string 
       {loadError ? <div className="ccd-loading"><strong>结构名录暂时没有载入</strong><p>可以先下载CSV，或稍后刷新页面重试。</p></div> : !payload ? <div className="ccd-loading">正在载入CCD结构名录…</div> : <>
         <div className="ccd-result-bar"><span>找到 <strong>{filtered.length}</strong> 个结构 · 第 {safePage}/{totalPages} 页</span>{(query || category !== "all" || usageStatus !== "all" || targetProperty !== "all" || componentClass !== "all" || researchEvidenceStatus !== "all") && <button onClick={() => { changeQuery(""); changeCategory("all"); changeUsageStatus("all"); changeTargetProperty("all"); setComponentClass("all"); setResearchEvidenceStatus("all"); }}>清除筛选</button>}</div>
         {shown.length ? <div className="ccd-record-grid">{shown.map((record) => <article className="ccd-record-card" key={record.id}>
-          <div className="ccd-card-head"><div><span>CCD {record.ccdIds.join(" / ")}</span>{propertyEvidenceFor(record).length > 0 && <b className="ccd-origin-badge">直接性质实验</b>}{record.corePriorityReview && <b className="ccd-origin-badge reviewed">人工审核记录</b>}</div></div>
+          <div className="ccd-card-head"><div><span>CCD {record.ccdIds.join(" / ")}</span>{propertyEvidenceFor(record).length > 0 && <b className="ccd-origin-badge">性质实验资料</b>}{record.corePriorityReview && <b className="ccd-origin-badge reviewed">人工审核记录</b>}</div></div>
           <div className="ccd-card-row">
             <div className="ccd-card-main">
               <a className="ccd-structure" href={record.sourceUrl} target="_blank" rel="noreferrer" aria-label={`打开CCD ${record.primaryCcdId}`}>
@@ -302,8 +304,8 @@ export default function CcdCatalog({ assetPrefix = "" }: { assetPrefix?: string 
             </div>
             <div className="ccd-card-summary">
               <div className="ccd-effect-tags">{record.predictedEffects.map((effect) => <span key={effect}>{effect}</span>)}</div>
-              <div className={`ccd-component-class component-${record.componentClass.id}`}><strong>{payload.metadata.componentClassMeta[record.componentClass.id].shortLabel}</strong><span>{record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : record.componentClass.method === "ccd-linkage-identity-audit" ? "CCD官方单体类型核验" : record.componentClass.method === "manual-pdb-context-review" ? "PDB语境人工核验" : "结构规则初分"}</span></div>
-              {propertyEvidenceFor(record).length > 0 && <div className="ccd-research-link"><strong>已关联{propertyEvidenceFor(record).length}条直接性质实验</strong><span>{propertyEvidenceFor(record).map((item) => item.name).join(" / ")}</span></div>}
+              <div className={`ccd-component-class component-${record.componentClass.id}`}><strong>{payload.metadata.componentClassMeta[record.componentClass.id].shortLabel}</strong><span>{record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : record.componentClass.method === "ccd-linkage-identity-audit" ? "CCD官方单体类型核验" : record.componentClass.method === "complete-ccd-identity-recheck" ? "完整CCD身份复核" : record.componentClass.method === "manual-pdb-context-review" ? "PDB语境人工核验" : "结构规则初分"}</span></div>
+              {propertyEvidenceFor(record).length > 0 && <div className="ccd-research-link"><strong>已关联{propertyEvidenceFor(record).length}条性质实验记录</strong><span>{propertyEvidenceFor(record).map((item) => item.name).join(" / ")}</span></div>}
               {record.synthesisUsability && <div className={`ccd-synthesis-usability ${record.synthesisUsability.compatibility}`}><strong>{record.synthesisUsability.statusLabel}</strong><span>{record.synthesisUsability.protectedForms.join(" / ")}</span></div>}
               <div className="ccd-evidence-strip" aria-label="五层证据状态">
                 <span data-status={record.evidenceProfile.structureIdentity.status}>结构身份</span><span data-status={record.evidenceProfile.peptideUse.status}>肽中使用</span><span data-status={record.evidenceProfile.cyclicPeptideUse.status}>环肽使用</span><span data-status={record.evidenceProfile.synthesisUse.status}>合成资料</span><span data-status={record.evidenceProfile.oralEvidence.status}>口服证据</span>
@@ -313,7 +315,7 @@ export default function CcdCatalog({ assetPrefix = "" }: { assetPrefix?: string 
           <details className="ccd-details"><summary>结构信息与判断边界</summary><dl>
             <div><dt>构件身份</dt><dd>{payload.metadata.componentClassMeta[record.componentClass.id].label}</dd></div>
             <div><dt>分类依据</dt><dd>{componentBasisForDisplay(record)}</dd></div>
-            {propertyEvidenceFor(record).length > 0 && <><div><dt>直接性质实验</dt><dd>{propertyEvidenceFor(record).map((item) => item.name).join("；")}</dd></div><div><dt>证据库记录</dt><dd><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>查看相关性质证据 →</Link></dd></div></>}
+            {propertyEvidenceFor(record).length > 0 && <><div><dt>性质实验记录</dt><dd>{propertyEvidenceFor(record).map((item) => `${item.name}（${propertyEvidenceLabel(item.level)}）`).join("；")}</dd></div><div><dt>证据库记录</dt><dd><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>查看相关性质证据 →</Link></dd></div></>}
             {record.synthesisUsability && <><div><dt>保护形式</dt><dd>{record.synthesisUsability.protectedForms.join(" / ")}</dd></div><div><dt>SPPS判断</dt><dd>{record.synthesisUsability.compatibilityLabel}</dd></div><div><dt>合成提示</dt><dd>{record.synthesisUsability.guidance}</dd></div><div><dt>合成风险</dt><dd>{record.synthesisUsability.risks}</dd></div></>}
             {usageById.has(record.id) && <>
               <div><dt>PDB聚合物序列出现情况</dt><dd>{USAGE_META[usageById.get(record.id)!.status].label}</dd></div>

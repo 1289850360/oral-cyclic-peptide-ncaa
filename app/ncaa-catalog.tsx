@@ -19,7 +19,7 @@ type CatalogRecord = {
   predictedEffects: string[];
   sourceUrl: string;
   structureImageUrl: string;
-  componentClass: { id: ComponentClass; basis: string; method: "manual-review" | "pdb-sequence-audit" | "rule-based" | "ccd-linkage-identity-audit" };
+  componentClass: { id: ComponentClass; basis: string; method: "manual-review" | "pdb-sequence-audit" | "rule-based" | "ccd-linkage-identity-audit" | "complete-ccd-identity-recheck" };
   researchEvidence: Array<{ recordId: string; level: string; name: string; confirmsUse: boolean }>;
 };
 
@@ -40,7 +40,7 @@ const TARGET_PROPERTY_FILTERS = [
 ] as const;
 
 const propertyEvidenceFor = (record: CatalogRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据");
-const reviewMethodLabel = (record: CatalogRecord) => record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : record.componentClass.method === "ccd-linkage-identity-audit" ? "CCD官方单体类型核验" : "结构规则初分";
+const reviewMethodLabel = (record: CatalogRecord) => record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : record.componentClass.method === "ccd-linkage-identity-audit" ? "CCD官方单体类型核验" : record.componentClass.method === "complete-ccd-identity-recheck" ? "完整CCD身份复核" : "结构规则初分";
 
 export default function NcaaCatalog({ assetPrefix = "" }: { assetPrefix?: string }) {
   const [payload, setPayload] = useState<CatalogPayload | null>(null);
@@ -105,7 +105,7 @@ export default function NcaaCatalog({ assetPrefix = "" }: { assetPrefix?: string
 
       <div className="ncaa-scope-note">
         <strong>这个库回答什么？</strong>
-        <p>它用于判断一个CCD化学组分是否可以作为非天然氨基酸理解。论文中的溶解度、渗透性、稳定性等性质证据仍统一放在研发证据库中。<a className="ncaa-audit-download" href={`${assetPrefix}ccd-ncaa-identity-audit.csv`} download>下载本轮身份核验结果</a></p>
+        <p>它用于判断一个CCD化学组分是否可以作为非天然氨基酸或单一非标准残基理解。当前1,844条已经确认身份；另有1条待确认记录仅保留在完整CCD结构库中。官方肽链连接型候选的全库复核已经完成，性质和用途不再反向决定化学身份。论文中的溶解度、渗透性、稳定性等性质证据仍统一放在研发证据库中。<a className="ncaa-audit-download" href={`${assetPrefix}ccd-peptide-linking-identity-recheck.csv`}>下载完整身份复核表</a></p>
       </div>
 
       <div className="ncaa-filter-panel">

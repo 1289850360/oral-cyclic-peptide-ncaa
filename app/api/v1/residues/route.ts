@@ -8,8 +8,8 @@ export function GET() {
   return Response.json({
     metadata: {
       title: "口服环肽性质改善研发证据",
-      version: "5.0",
-      releaseDate: "2026-09-01",
+      version: "5.1",
+      releaseDate: "2026-09-02",
       recordCount: propertyEvidenceMasterRecords.length,
       schema: "ocpr-property-evidence-v1",
       scope: "仅包含具有实验性质终点的正式研发证据。身份确认、PDB出现、专利列举和一般使用资料不在本API中计数。",
@@ -25,7 +25,11 @@ export function GET() {
         categoryId: record.categoryId,
         category: record.category,
         recordType: record.recordType,
-        evidenceLevel: "直接性质实验",
+        evidenceLevel: record.level === "直接证据" || record.level === "改造证据"
+          ? "直接性质实验"
+          : record.level === "专利证据"
+            ? "专利性质实例"
+            : "完整分子性质证据",
         sourceEvidenceLevel: record.level,
         measuredProperties: supportScope(record),
         experiment: experiment ? {

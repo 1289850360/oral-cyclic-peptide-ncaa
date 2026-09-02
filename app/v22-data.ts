@@ -23,6 +23,8 @@ export const patentTierMeta: Record<PatentTier, { label: string; description: st
 };
 
 export const patentTierByEnglish: Record<string, PatentTier> = {
+  "αMeVal8 · GLP-1 DPP-4 patent example": "D2",
+  "2-Nal7 · GLP-1 DPP-4 patent example": "D2",
   "D-Ile": "D2",
   "D-Phe": "D2",
   "cis-4-F-Pro · (2S,4S)-4-fluoroproline": "D2",
@@ -41,6 +43,14 @@ export const patentTierByEnglish: Record<string, PatentTier> = {
 };
 
 const specificGuides: Record<string, DesignGuide> = {
+  "Aib8 · GLP-1 DPP-4 resistance": { replace: "已知蛋白酶切割位点上的Ala", goal: "利用α,α-二取代位阻阻断DPP-4样切割", avoid: "没有明确切割位点，或该位点侧链直接参与受体结合时" },
+  "Abu8 · GLP-1 plasma stability": { replace: "蛋白酶切割位点上的Ala", goal: "以轻度增大的疏水侧链提高切割位点耐受性", avoid: "把线性GLP-1结果直接外推为环肽口服增益" },
+  "αMePro · HIV-1 macrocycle proteolytic stability": { replace: "大环中的Pro转角位", goal: "以α-甲基位阻提高蛋白酶稳定性并固定局部构象", avoid: "未做位置扫描；原文其他位置α-甲基化可降低活性" },
+  "αMeVal · HIV-1 macrocycle proteolytic stability": { replace: "大环中的Val位", goal: "在保留支化疏水侧链时增加α位位阻", avoid: "结合界面几何严格或α位拥挤的位置" },
+  "(1S,2S)-2-ACPC · GLP-1 α/β analogue": { replace: "螺旋区的Ala、Gly、Ser或Lys位；必须按周期布置", goal: "用受限β骨架抑制多处蛋白酶切割并维持螺旋", avoid: "把多残基组合结果解释为单个ACPC的固定倍数" },
+  "D-Phg · D-phenylglycine L-DOPA carrier": { replace: "不建议直接用于普通残基替换；更适合作为PepT1前药载体端", goal: "形成可被肠道肽转运体识别的二肽型前药", avoid: "把主动转运前药结果当作被动膜渗透或环肽规则" },
+  "αMeVal8 · GLP-1 DPP-4 patent example": { replace: "GLP-1样序列第8位Ala", goal: "增加DPP-4切割位点的位阻", avoid: "专利未公开可归属于该残基的独立半衰期数值" },
+  "2-Nal7 · GLP-1 DPP-4 patent example": { replace: "GLP-1样序列N端His位；需与第8位共同优化", goal: "重塑N端蛋白酶识别并保留受体结合", avoid: "该实例同时改变第8位，不能拆分2-Nal单点贡献" },
   "N-Me-D-Leu": { replace: "Leu／D-Leu，优先放在疏水位或转角邻位", goal: "同时减少主链NH、增强疏水接触和抗酶解性", avoid: "主链NH直接参与靶点氢键，或侧链构型高度受限的位置" },
   "N-Me-Leu": { replace: "Leu", goal: "降低主链供氢与暴露极性，扩大连续疏水表面", avoid: "依赖Leu主链NH结合靶点的位置" },
   "N-Me-Ile": { replace: "Ile；可与N-Me-Leu成对比较", goal: "兼顾疏水占位、支链几何和主链极性屏蔽", avoid: "空间狭窄或需要未甲基化主链NH的位置" },
@@ -96,6 +106,14 @@ export const getDesignGuide = (record: Residue): DesignGuide => specificGuides[r
 };
 
 export const experimentData: Record<string, ExperimentDatum> = {
+  "Aib8 · GLP-1 DPP-4 resistance": { comparison: "GLP-1 Ala8→Aib与母体GLP-1", endpoint: "猪血浆DPP-4降解／受体亲和力", result: "Aib8在6 h内未检测到降解；母体t½ = 28 min", system: "猪血浆、静脉输注与GLP-1R细胞实验", formulation: "线性GLP-1位点对照；不是口服或环肽实验" },
+  "Abu8 · GLP-1 plasma stability": { comparison: "GLP-1 Ala8→L-Abu与母体GLP-1", endpoint: "人血浆半衰期／细胞信号与小鼠药效", result: "(Abu8)GLP-1 t½ > 12 h；母体约6.2 h", system: "人血浆、细胞与ob/ob小鼠", formulation: "稳定性和药效直接；未测口服吸收" },
+  "αMePro · HIV-1 macrocycle proteolytic stability": { comparison: "HIV-1抑制大环第3位Pro→αMePro", endpoint: "人肝S9稳定性／细胞抗病毒活性／后续大鼠PK", result: "稳定性与细胞活性改善；保留该构件的后续化合物获得口服暴露", system: "人肝S9、MT-4细胞与大鼠", formulation: "位置依赖；后续候选还有其他同步优化" },
+  "αMeVal · HIV-1 macrocycle proteolytic stability": { comparison: "HIV-1抑制大环第4位Val→αMeVal", endpoint: "人肝S9稳定性／细胞抗病毒活性", result: "两项均改善", system: "人肝S9与MT-4细胞", formulation: "原文未给出可独立抄录的单点口服F%；其他位置甲基化可能有害" },
+  "(1S,2S)-2-ACPC · GLP-1 α/β analogue": { comparison: "5处环状β残基＋2处Aib的GLP-1类似物与母体", endpoint: "DPP-4／neprilysin稳定性及持续药效", result: "DPP-4 7 d无可测切割；NEP t½ 83 h对20 min", system: "体外蛋白酶与小鼠腹腔给药", formulation: "多处联合替换；不是ACPC单点，也不是口服实验" },
+  "D-Phg · D-phenylglycine L-DOPA carrier": { comparison: "D-Phg-L-DOPA二肽前药与L-DOPA", endpoint: "空肠通透参数／口服生物利用度", result: "Pm* 2.58对0.94；大鼠口服生物利用度提高31.7倍", system: "大鼠刷状缘囊泡、空肠灌流与口服PK", formulation: "PepT1主动转运前药；不能外推为环肽被动增渗" },
+  "αMeVal8 · GLP-1 DPP-4 patent example": { comparison: "具体序列CBP0015：GLP-1第8位αMeVal", endpoint: "DPP-4稳定性／GLP-1R激动", result: "专利报告高于野生型并列为高稳定实例", system: "WO2025093774A1具体序列与实验声明", formulation: "D2专利证据；公开文本未给出αMeVal可独立读取的半衰期" },
+  "2-Nal7 · GLP-1 DPP-4 patent example": { comparison: "[2Nal]-GLP-1，同时第8位改为Glu", endpoint: "DPP-4稳定性／BLI受体结合", result: "所示实验中保持稳定；Kd = 37.4 nM", system: "WO2025093774A1蛋白酶与BLI实验", formulation: "两处联合改造，不能拆分2-Nal单点作用" },
   "N-Me-D-Leu": { comparison: "含该残基的完整环六肽；非单点对照", endpoint: "口服生物利用度", result: "F = 28%", system: "大鼠", formulation: "原文给药条件；结果属于完整骨架" },
   "N-Me-Leu": { comparison: "同一环六肽骨架的残基系列", endpoint: "RRCK被动渗透性", result: "Papp = 13.0 × 10⁻⁶ cm/s", system: "RRCK细胞单层", formulation: "体外渗透实验；未报告口服F%" },
   "N-Me-Ile": { comparison: "N-Me-Leu位点替换系列", endpoint: "RRCK被动渗透性", result: "Papp = 8.9 × 10⁻⁶ cm/s", system: "RRCK细胞单层", formulation: "体外渗透实验；未报告口服F%" },
@@ -110,6 +128,7 @@ export const experimentData: Record<string, ExperimentDatum> = {
   "N-Me-Val": { comparison: "环孢素A完整天然产物骨架", endpoint: "口服生物利用度", result: "平均F约20.8%", system: "健康受试者", formulation: "临床制剂与完整骨架共同作用" },
   "Sarcosine · Sar · N-Me-Gly": { comparison: "环孢素A完整天然产物骨架", endpoint: "口服生物利用度", result: "平均F约20.8%", system: "健康受试者", formulation: "临床制剂与完整骨架共同作用" },
   "D-Val": { comparison: "多种6–12元从头设计大环", endpoint: "PAMPA", result: "84个设计Papp > 1 × 10⁻⁶ cm/s", system: "PAMPA／设计集合", formulation: "组合骨架统计；非D-Val单点结果" },
+  "D-Pen · D-penicillamine": { comparison: "D-Pen或Cys参与闭环的DPDPE样肽与线性对应物", endpoint: "模型膜渗透性", result: "线性对应物的渗透性约为相应环肽的3–7倍", system: "配对模型膜实验", formulation: "这是特定二硫键闭环方式的负向证据，不证明D-Pen普遍降低渗透性" },
   "D-Leu": { comparison: "同类环六肽立体化学位置异构体", endpoint: "RRCK被动渗透性", result: "1.8 对 0.5 × 10⁻⁶ cm/s", system: "RRCK细胞单层", formulation: "位置依赖的直接比较" },
   "D-Pro": { comparison: "环十肽 β-turn i+1 位引入 D-Pro", endpoint: "渗透性／清除与口服暴露", result: "优化骨架兼具较好渗透性、清除性质和口服暴露", system: "体外 ADME 与动物药代", formulation: "多参数优化结果；不是单一渗透终点" },
   "D-Ala": { comparison: "54个环六肽模板围绕 D-Ala 转角及邻位 N-甲基化进行组合", endpoint: "Caco-2渗透性", result: "高渗透模板均依赖特定 D-Ala 转角环境", system: "Caco-2与构象分析", formulation: "组合模板证据；未拆分 D-Ala 单独贡献" },
@@ -165,8 +184,8 @@ export const experimentData: Record<string, ExperimentDatum> = {
 export const supportScope = (record: Residue): string[] => {
   const scope: string[] = [];
   const endpoint = experimentData[record.english]?.endpoint ?? "";
-  if (/Papp|PAMPA|Caco-2|RRCK|渗透|细胞摄取|细胞进入|细胞质进入|CAPA/.test(endpoint)) scope.push("渗透性");
-  if (/稳定|半衰期|t½/.test(endpoint)) scope.push("稳定性");
+  if (/Papp|PAMPA|Caco-2|RRCK|Pm\*|渗透|通透参数|转运|细胞摄取|细胞进入|细胞质进入|CAPA/.test(endpoint)) scope.push("渗透性");
+  if (/稳定|半衰期|t½|降解|DPP-4|蛋白酶/.test(endpoint)) scope.push("稳定性");
   if (/口服|生物利用度|血浆暴露|药代/.test(endpoint)) scope.push("口服暴露");
   if (/溶解度|水溶/.test(endpoint)) scope.push("溶解度");
   if (/构象|低介电|螺旋/.test(endpoint)) scope.push("构象");

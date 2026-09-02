@@ -182,6 +182,19 @@ originalResearchLinks.push(...pdbBatch10EvidenceRecords.map((record, index) => (
   componentClassOverride: record.componentClass,
 })));
 
+// Property-focused additions reviewed on 2026-09-02. These are kept as
+// separate evidence records even when a CCD already has an earlier source.
+originalResearchLinks.push(...[
+  ["AIB", "OCPR000554", "直接证据", "Aib8 · GLP-1 DPP-4 resistance"],
+  ["ABA", "OCPR000555", "直接证据", "Abu8 · GLP-1 plasma stability"],
+  ["3WX", "OCPR000556", "直接证据", "αMePro · HIV-1 macrocycle proteolytic stability"],
+  ["A1A8T", "OCPR000557", "直接证据", "αMeVal · HIV-1 macrocycle proteolytic stability"],
+  ["XCP", "OCPR000558", "改造证据", "(1S,2S)-2-ACPC · GLP-1 α/β analogue"],
+  ["PG9", "OCPR000559", "改造证据", "D-Phg · D-phenylglycine L-DOPA carrier"],
+  ["A1A8T", "OCPR000560", "专利证据", "αMeVal8 · GLP-1 DPP-4 patent example"],
+  ["NAL", "OCPR000561", "专利证据", "2-Nal7 · GLP-1 DPP-4 patent example"],
+].map(([ccdId, recordId, evidenceLevel, name]) => ({ ccdId, recordId, evidenceLevel, name })));
+
 export const originalUnmappedResearchRecords = [
   ["OCPR000005", "N-Me-Thr", "直接证据"], ["OCPR000009", "N-Me-D-Trp", "骨架证据"],
   ["OCPR000022", "β-homoproline · β-HPro", "骨架证据"], ["OCPR000023", "(1R,2S)-2-ACPC · β¹", "直接证据"],

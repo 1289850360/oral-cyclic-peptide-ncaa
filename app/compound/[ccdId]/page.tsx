@@ -31,7 +31,9 @@ const recordByCcd = new Map(records.flatMap((record) => record.ccdIds.map((id) =
 const usageById = new Map((usageJson.records as UsageRecord[]).map((record) => [record.id, record]));
 const reviewByCcd = new Map((reviewJson.records as ReviewRecord[]).map((record) => [record.ccdId.toLowerCase(), record]));
 const componentClassMeta = catalogJson.metadata.componentClassMeta as Record<CatalogRecord["componentClass"]["id"], { label: string; shortLabel: string; description: string }>;
-const propertyEvidenceFor = (record: CatalogRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据");
+const NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS = new Set(["OCPR000001", "OCPR000011", "OCPR000012", "OCPR000013", "OCPR000015", "OCPR000016", "OCPR000047", "OCPR000049", "OCPR000050", "OCPR000074", "OCPR000560", "OCPR000561"]);
+const propertyEvidenceFor = (record: CatalogRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据" || NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS.has(item.recordId));
+const propertyEvidenceLabel = (level: string) => level === "直接证据" || level === "改造证据" ? "直接实验" : level === "专利证据" ? "专利实例" : "完整分子证据";
 const componentBasisForDisplay = (record: CatalogRecord) => record.componentClass.id === "evidence-reviewed-residue" ? "CCD单体类型或人工来源支持其非天然氨基酸身份" : record.componentClass.basis;
 
 export function generateStaticParams() {
@@ -66,13 +68,13 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
     <article className="residue-detail-page compound-detail-page">
       <nav className="detail-breadcrumb" aria-label="面包屑"><Link href="/">首页</Link><span>›</span><Link href="/catalog/">CCD结构库</Link><span>›</span><strong>CCD {record.primaryCcdId}</strong></nav>
       <header className="detail-hero compound-hero">
-        <div><p className="eyebrow">CHEMICAL COMPONENT RECORD · CCD {record.primaryCcdId}</p><h1>{record.name}</h1><p className="detail-english-name">{record.synonyms.join(" · ") || "无已收录同义词"}</p><div className="detail-badges"><span>{componentClassMeta[record.componentClass.id].shortLabel}</span><span>{record.categoryLabel}</span>{propertyEvidence.length > 0 && <span>已有直接性质实验</span>}</div></div>
+        <div><p className="eyebrow">CHEMICAL COMPONENT RECORD · CCD {record.primaryCcdId}</p><h1>{record.name}</h1><p className="detail-english-name">{record.synonyms.join(" · ") || "无已收录同义词"}</p><div className="detail-badges"><span>{componentClassMeta[record.componentClass.id].shortLabel}</span><span>{record.categoryLabel}</span>{propertyEvidence.length > 0 && <span>已有性质实验资料</span>}</div></div>
         <div className="compound-hero-structure"><img src={record.structureImageUrl} alt={`${record.name}二维结构`} /><span>CCD {record.ccdIds.join(" / ")}</span></div>
       </header>
 
       <div className="detail-layout">
         <div className="detail-main-column">
-          <section className="detail-section"><div className="detail-section-title"><span>01</span><h2>构件身份与资料状态</h2></div><div className={`compound-classification component-${record.componentClass.id}`}><div><span>当前构件分类</span><strong>{componentClassMeta[record.componentClass.id].label}</strong></div><p>{componentClassMeta[record.componentClass.id].description}</p><small>分类依据：{componentBasisForDisplay(record)} · {record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : "CCD结构与单体类型核验"}</small></div><div className="compound-evidence-grid">{evidenceRows.map(([label, state]) => <article data-status={state.status} key={label}><span>{label}</span><strong>{state.label}</strong></article>)}</div>{propertyEvidence.length > 0 && <div className="compound-research-evidence"><div><span>直接性质实验</span><strong>{propertyEvidence.length}条实验资料已与CCD {record.primaryCcdId}对齐</strong></div><ul>{propertyEvidence.map((item) => <li key={`${item.recordId}-${item.level}`}><b>{item.level}</b><span>{item.name}</span></li>)}</ul><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>在研发证据库中查看 →</Link></div>}<p className="detail-boundary">各项状态分别回答不同问题。CCD结构身份成立不等于已有合成方法；PDB中出现也不能证明能够改善目标环肽的口服吸收。</p></section>
+          <section className="detail-section"><div className="detail-section-title"><span>01</span><h2>构件身份与资料状态</h2></div><div className={`compound-classification component-${record.componentClass.id}`}><div><span>当前构件分类</span><strong>{componentClassMeta[record.componentClass.id].label}</strong></div><p>{componentClassMeta[record.componentClass.id].description}</p><small>分类依据：{componentBasisForDisplay(record)} · {record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : "CCD结构与单体类型核验"}</small></div><div className="compound-evidence-grid">{evidenceRows.map(([label, state]) => <article data-status={state.status} key={label}><span>{label}</span><strong>{state.label}</strong></article>)}</div>{propertyEvidence.length > 0 && <div className="compound-research-evidence"><div><span>性质实验资料</span><strong>{propertyEvidence.length}条实验资料已与CCD {record.primaryCcdId}对齐</strong></div><ul>{propertyEvidence.map((item) => <li key={`${item.recordId}-${item.level}`}><b>{propertyEvidenceLabel(item.level)}</b><span>{item.name}</span></li>)}</ul><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>在研发证据库中查看 →</Link></div>}<p className="detail-boundary">各项状态分别回答不同问题。完整分子性质证据只说明该残基可以存在于相应骨架中，不能把整个分子的效果归因于这一处残基。</p></section>
 
           <section className="detail-section"><div className="detail-section-title"><span>02</span><h2>结构身份</h2></div><dl className="detail-definition-list"><div><dt>CCD编号</dt><dd>{record.ccdIds.join(" / ")}</dd></div><div><dt>分子式／分子量</dt><dd>{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</dd></div><div><dt>连接类型</dt><dd>{record.linkageTypes.join("；")}</dd></div><div><dt>标准母体</dt><dd>{record.parentIds.join(" / ") || "CCD未指定"}</dd></div><div><dt>立体化学SMILES</dt><dd className="smiles-value">{record.smiles}</dd></div><div><dt>结构标签</dt><dd>{record.tags.join("、") || "未自动归类"}</dd></div></dl></section>
 
@@ -87,7 +89,7 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
 
         <aside className="detail-sidebar">
           <section><span>永久结构标识</span><p>CCD {record.primaryCcdId}</p><small>网站记录ID：{record.id}</small></section>
-          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {record.name}. 结构目录版本5.0, 2026-09-01.</p></section>
+          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {record.name}. 结构目录版本5.1, 2026-09-02.</p></section>
           <section><span>原始结构来源</span><a href={record.sourceUrl} target="_blank" rel="noreferrer">打开RCSB CCD记录 ↗</a><Link href="/quality/">查看版本与质量说明 →</Link></section>
         </aside>
       </div>

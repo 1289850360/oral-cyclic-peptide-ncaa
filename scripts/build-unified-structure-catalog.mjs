@@ -15,7 +15,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const publicDir = join(root, "public");
 const readJson = async (name) => JSON.parse(await readFile(join(publicDir, name), "utf8"));
 
-const [catalog, catalogUsage, reviewPayload, manualReview, reviewUsage, corePriorityBatch1, corePriorityBatch2, synthesisBatch1, pdbContextAudit, pendingCandidateTriage] = await Promise.all([
+const [catalog, catalogUsage, reviewPayload, manualReview, reviewUsage, corePriorityBatch1, corePriorityBatch2, synthesisBatch1, pdbContextAudit, pendingCandidateTriage, completeIdentityRecheck] = await Promise.all([
   readJson("ccd-development-screen.json"),
   readJson("ccd-polymer-usage-audit.json"),
   readJson("ccd-manual-review-92-final.json"),
@@ -26,6 +26,7 @@ const [catalog, catalogUsage, reviewPayload, manualReview, reviewUsage, corePrio
   readJson("ccd-synthesis-usability-batch-1.json"),
   readJson("ccd-pdb-context-audit.json"),
   readJson("ccd-pending-candidate-triage.json"),
+  readJson("ccd-peptide-linking-identity-recheck.json"),
 ]);
 
 const existingCcdIds = new Set(catalog.records.flatMap((record) => record.ccdIds.map((id) => id.toUpperCase())));
@@ -128,13 +129,20 @@ const coreReviewByCcd = new Map([...corePriorityBatch1.records, ...corePriorityB
 const synthesisByCcd = new Map(synthesisBatch1.records.map((record) => [record.ccdId.toUpperCase(), record]));
 const pdbContextByCcd = new Map(pdbContextAudit.records.map((record) => [record.ccdId.toUpperCase(), record]));
 const pendingTriageByCcd = new Map(pendingCandidateTriage.records.map((record) => [record.ccdId.toUpperCase(), record]));
-const originalResearchByCcd = new Map(originalResearchLinks.map((record) => [record.ccdId.toUpperCase(), record]));
+const completeIdentityRecheckByCcd = new Map(completeIdentityRecheck.records.map((record) => [record.ccdId.toUpperCase(), record]));
+const originalResearchByCcd = new Map();
+for (const record of originalResearchLinks) {
+  const ccdId = record.ccdId.toUpperCase();
+  const records = originalResearchByCcd.get(ccdId) ?? [];
+  records.push(record);
+  originalResearchByCcd.set(ccdId, records);
+}
 const researchEvidenceFor = (ccdId) => {
   const entries = [];
-  const original = originalResearchByCcd.get(ccdId);
+  const originals = originalResearchByCcd.get(ccdId) ?? [];
   const deep = reviewedByCcd.get(ccdId);
   const core = coreReviewByCcd.get(ccdId);
-  if (original) entries.push({ recordId: original.recordId, level: original.evidenceLevel, name: original.name, origin: "original-curated", confirmsUse: evidenceConfirmsUse(original.evidenceLevel) });
+  for (const original of originals) entries.push({ recordId: original.recordId, level: original.evidenceLevel, name: original.name, origin: "original-curated", confirmsUse: evidenceConfirmsUse(original.evidenceLevel) });
   if (deep) entries.push({ recordId: `CCD-${ccdId}-REVIEW`, level: `审核${deep.grade}`, name: deep.name, origin: "manual-92-review", confirmsUse: ["A", "B"].includes(deep.grade) });
   if (core && ["A", "B"].includes(core.grade)) entries.push({ recordId: `CCD-${ccdId}-CORE`, level: `核心审核${core.grade}`, name: core.name, origin: "core-priority-review", confirmsUse: true });
   return entries;
@@ -189,6 +197,8 @@ const componentClassMeta = {
 };
 const hasOfficialPeptideLinkingType = (record) => record.linkageTypes.some((type) => /peptide.*linking/i.test(type));
 const classifyComponent = (record, evidenceProfile, applyIdentityAudit = true) => {
+  const completeIdentity = record.ccdIds.map((ccdId) => completeIdentityRecheckByCcd.get(ccdId.toUpperCase())).find(Boolean);
+  if (completeIdentity && applyIdentityAudit) return { id: completeIdentity.identityDecision, basis: completeIdentity.identityBasis, method: "complete-ccd-identity-recheck" };
   const deepReview = reviewedByCcd.get(record.primaryCcdId);
   const coreReview = coreReviewByCcd.get(record.primaryCcdId);
   const originalResearch = originalResearchByCcd.get(record.primaryCcdId);
@@ -222,6 +232,7 @@ const records = preliminaryRecords.map((record) => {
   const preAuditClass = classifyComponent(record, evidenceProfile, false);
   const componentClass = classifyComponent(record, evidenceProfile, true);
   const researchEvidence = researchEvidenceFor(record.primaryCcdId);
+  const completeIdentityRecheckRecord = record.ccdIds.map((ccdId) => completeIdentityRecheckByCcd.get(ccdId.toUpperCase())).find(Boolean);
   return {
     ...record,
     componentClass,
@@ -237,6 +248,7 @@ const records = preliminaryRecords.map((record) => {
     }} : {}),
     evidenceProfile,
     researchEvidence,
+    ...(completeIdentityRecheckRecord ? { completeIdentityRecheck: completeIdentityRecheckRecord } : {}),
     ...(coreReviewByCcd.has(record.primaryCcdId) ? { corePriorityReview: coreReviewByCcd.get(record.primaryCcdId) } : {}),
     ...(synthesisByCcd.has(record.primaryCcdId) ? { synthesisUsability: synthesisByCcd.get(record.primaryCcdId) } : {}),
     ...(componentClass.id === "pdb-peptide-occurrence" && pdbContextByCcd.has(record.primaryCcdId) ? { pdbContextAudit: pdbContextByCcd.get(record.primaryCcdId) } : {}),
@@ -284,7 +296,7 @@ const unifiedCatalog = {
   metadata: {
     ...catalog.metadata,
     count: records.length,
-    generatedDate: "2026-09-01",
+    generatedDate: "2026-09-02",
     scope: "2,065 unique CCD structure records. Structure identity is the master layer; source-origin labels describe how a record entered the catalog and are not evidence or usability classes.",
     tierCounts,
     componentClassMeta,
@@ -349,6 +361,11 @@ const unifiedCatalog = {
     researchDatabaseCoverage: { researchRecords: researchRecordCount, ccdMappedResearchRecords: ccdMappedResearchRecordCount, coveredCcdMappedResearchRecords: ccdMappedResearchRecordCount, recordsWithoutUniqueCcd: originalUnmappedResearchRecords.length },
     researchEvidenceAlignment: { researchRecords: researchRecordCount, ccdMappedResearchRecords: ccdMappedResearchRecordCount, linkedCcdStructures: researchEvidenceLinkedCcdCount, recordsWithoutUniqueCcd: originalUnmappedResearchRecords.length, model: "CCD-first; research evidence is linked to the structure master by exact CCD ID." },
     ncaaIdentityAudit: { ...identityAuditCounts, basis: "Official wwPDB _chem_comp.type peptide-linking monomer classification; standard amino acids were excluded from the source candidate set. Non-polymer and peptide-like records remain unresolved pending record-level evidence.", auditedAt: "2026-09-01" },
+    completePeptideLinkingIdentityRecheck: {
+      ...completeIdentityRecheck.metadata,
+      appliedCatalogRecords: records.filter((record) => record.completeIdentityRecheck).length,
+      absentFromWebsiteSnapshot: completeIdentityRecheck.records.filter((record) => record.currentClass === "absent").map((record) => record.ccdId),
+    },
   },
   records,
 };
