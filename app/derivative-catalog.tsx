@@ -155,11 +155,11 @@ export default function DerivativeCatalog() {
       <div className="derivative-training-downloads">
         <div><span>AGENT TRAINING DATA</span><strong>结构化训练数据下载</strong><p>1109条可直接数值训练；A1IPL 1条因特殊硼价态单独保存。Excel内含逐列解释。</p></div>
         <nav>
-          <a className="primary" href="/downloads/natural-parent-derivative-agent-training-1110.xlsx" download>下载Excel汇总</a>
-          <a href="/downloads/natural-parent-derivative-training-1109.csv" download>CSV · 1109条</a>
-          <a href="/downloads/natural-parent-derivative-training-1109.json" download>JSON · 完整字段</a>
-          <a href="/downloads/natural-parent-derivative-training-1109.jsonl" download>JSONL · 一行一条</a>
-          <a className="special" href="/downloads/natural-parent-derivative-a1ipl-special.json" download>A1IPL单独JSON</a>
+          <a className="primary" href="../downloads/natural-parent-derivative-agent-training-1110.xlsx" download="natural-parent-derivative-agent-training-1110.xlsx">下载Excel汇总</a>
+          <a href="../downloads/natural-parent-derivative-training-1109.csv" download="natural-parent-derivative-training-1109.csv">CSV · 1109条</a>
+          <a href="../downloads/natural-parent-derivative-training-1109.json" download="natural-parent-derivative-training-1109.json">JSON · 完整字段</a>
+          <a href="../downloads/natural-parent-derivative-training-1109.jsonl" download="natural-parent-derivative-training-1109.jsonl">JSONL · 一行一条</a>
+          <a className="special" href="../downloads/natural-parent-derivative-a1ipl-special.json" download="natural-parent-derivative-a1ipl-special.json">A1IPL单独JSON</a>
         </nav>
         <small>旧版审计文件：<a href="../natural-parent-derivative-analysis.csv" download>首轮结构分析</a> · <a href="../natural-parent-manual-structure-review.csv" download>二次核验结果</a></small>
       </div>
