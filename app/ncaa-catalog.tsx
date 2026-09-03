@@ -105,7 +105,7 @@ export default function NcaaCatalog({ assetPrefix = "" }: { assetPrefix?: string
 
       <div className="ncaa-scope-note">
         <strong>这个库回答什么？</strong>
-        <p>它用于判断一个CCD化学组分是否可以作为非天然氨基酸或单一非标准残基理解。当前1,844条已经确认身份；另有1条待确认记录仅保留在完整CCD结构库中。官方肽链连接型候选的全库复核已经完成，性质和用途不再反向决定化学身份。论文中的溶解度、渗透性、稳定性等性质证据仍统一放在研发证据库中。<a className="ncaa-audit-download" href={`${assetPrefix}ccd-peptide-linking-identity-recheck.csv`}>下载完整身份复核表</a></p>
+        <p>它用于判断一个CCD化学组分是否可以作为非天然氨基酸或单一非标准残基理解。当前1,845条已经确认身份，没有遗留的身份待确认记录。官方肽链连接型候选及最后一条边界记录CCD 96Z均已完成核验。论文中的溶解度、渗透性、稳定性等性质证据仍统一放在研发证据库中。<a className="ncaa-audit-download" href={`${assetPrefix}ccd-peptide-linking-identity-recheck.csv`}>下载完整身份复核表</a></p>
       </div>
 
       <div className="ncaa-filter-panel">

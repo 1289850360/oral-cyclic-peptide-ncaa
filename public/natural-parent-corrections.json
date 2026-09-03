@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "reviewedAt": "2026-09-03",
+    "method": "人工复核官方名称，并用RDKit比较22种天然氨基酸完整骨架",
+    "boundary": "只修正名称与完整结构同时明确冲突的项目；碳链偶然相似、复杂交联或可由多种母体解释的项目不自动改写。"
+  },
+  "records": [
+    {
+      "ccdId": "4BF",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "苯环对位溴代",
+      "changedPosition": "苯丙氨酸侧链苯环的4位（对位）",
+      "changeDescription": "苯丙氨酸侧链苯环4位的氢替换为溴，主链和L-构型保持不变。",
+      "descriptorDeltas": { "exactmw": 77.911, "NumHBD": 0, "NumHBA": 0, "NumRotatableBonds": 0, "NumRings": 0, "tpsa": 0, "CrippenClogP": 0.762 },
+      "rationale": "官方名称为4-bromo-L-phenylalanine；PHE完整骨架可匹配，而TYR的酚羟基并不存在。"
+    },
+    {
+      "ccdId": "6CV",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "苯环间位溴代",
+      "changedPosition": "苯丙氨酸侧链苯环的3位（间位）",
+      "changeDescription": "苯丙氨酸侧链苯环3位的氢替换为溴，主链和L-构型保持不变。",
+      "descriptorDeltas": { "exactmw": 77.911, "NumHBD": 0, "NumHBA": 0, "NumRotatableBonds": 0, "NumRings": 0, "tpsa": 0, "CrippenClogP": 0.762 },
+      "rationale": "官方名称为3-bromo-L-phenylalanine，且PHE完整骨架在衍生物中保留；ALA只是较小的公共片段。"
+    },
+    {
+      "ccdId": "IAM",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "苯环对位增加异丙氨甲基",
+      "changedPosition": "苯丙氨酸侧链苯环的4位（对位）",
+      "changeDescription": "苯丙氨酸侧链苯环4位的氢替换为—CH₂—NH—CH(CH₃)₂，主链和L-构型保持不变。",
+      "descriptorDeltas": { "exactmw": 71.073, "NumHBD": 1, "NumHBA": 1, "NumRotatableBonds": 3, "NumRings": 0, "tpsa": 12.03, "CrippenClogP": 0.498 },
+      "rationale": "官方名称直接写明phenylalanine，且PHE完整骨架在衍生物中保留；ALA只是较小的公共片段。"
+    },
+    {
+      "ccdId": "O6H",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "苯环2、4、6位三甲基化",
+      "changedPosition": "苯丙氨酸侧链苯环的2、4、6位",
+      "changeDescription": "苯丙氨酸侧链苯环2、4、6位的三个氢分别替换为甲基，主链和L-构型保持不变。",
+      "descriptorDeltas": { "exactmw": 42.047, "NumHBD": 0, "NumHBA": 0, "NumRotatableBonds": 0, "NumRings": 0, "tpsa": 0, "CrippenClogP": 0.925 },
+      "rationale": "官方名称为2,4,6-trimethyl-L-phenylalanine；PHE完整骨架可匹配，衍生物不含TRP的吲哚氮和稠合五元环。"
+    },
+    {
+      "ccdId": "A1IID",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "苯环对位巯基化",
+      "changedPosition": "苯丙氨酸侧链苯环的4位（对位）",
+      "changeDescription": "苯丙氨酸侧链苯环4位的氢替换为巯基（—SH），主链保持不变。",
+      "descriptorDeltas": { "exactmw": 31.972, "NumHBD": 1, "NumHBA": 1, "NumRotatableBonds": 0, "NumRings": 0, "tpsa": 0, "CrippenClogP": 0.289 },
+      "rationale": "官方名称为4-mercaptophenyl-alanine，且PHE完整骨架在衍生物中保留；ALA只是较小的公共片段。"
+    },
+    {
+      "ccdId": "ALS",
+      "correctedParent": "SER",
+      "parentName": "丝氨酸",
+      "changeLabel": "丝氨酸侧链3位增加硫酸氧基",
+      "changedPosition": "丝氨酸侧链的β碳（3位碳）",
+      "changeDescription": "丝氨酸侧链β碳上的一个氢被硫酸氧基（—O—SO₃H）替换，原有羟基、主链和构型保留。",
+      "descriptorDeltas": { "exactmw": 95.952, "NumHBD": 1, "NumHBA": 3, "NumRotatableBonds": 2, "NumRings": 0, "tpsa": 63.6, "CrippenClogP": -0.854 },
+      "rationale": "官方名称明确写明L-serine，且SER完整骨架在衍生物中保留；ALA只是较小的公共片段。"
+    },
+    {
+      "ccdId": "A1AT6",
+      "correctedParent": "PHE",
+      "parentName": "苯丙氨酸",
+      "changeLabel": "主链氮与苯环邻位成环",
+      "changedPosition": "苯丙氨酸的氨基氮与侧链苯环邻位",
+      "changeDescription": "苯丙氨酸的氨基氮与侧链苯环邻位形成新的C—N键，并脱去两个氢，形成构象受限的二氢吲哚羧酸骨架。",
+      "descriptorDeltas": { "exactmw": -2.016, "NumHBD": 0, "NumHBA": 0, "NumRotatableBonds": -2, "NumRings": 1, "tpsa": -13.99, "CrippenClogP": 0.467 },
+      "rationale": "衍生物可以由PHE完整重原子骨架通过一次分子内C—N成环得到；以ALA为母体则需要额外构建整个苯环。"
+    }
+  ],
+  "retainedAfterReview": [
+    { "ccdId": "02Y", "parent": "ALA", "reason": "norleucine是系统命名参照，不等于天然亮氨酸来源；终端重氮酮使多个直链母体都可部分匹配。" },
+    { "ccdId": "5GM", "parent": "ILE", "reason": "CCD的ILE关系与支链和立体化学相符；名称中的norleucine用于描述主链长度。" },
+    { "ccdId": "66D", "parent": "ILE", "reason": "CCD的ILE关系与支链和立体化学相符；名称中的norleucine用于描述主链长度。" },
+    { "ccdId": "7VN", "parent": "ALA", "reason": "环戊基与多种脂肪族侧链产生偶然子结构匹配，不能唯一指定ILE。" },
+    { "ccdId": "FGL", "parent": "GLY", "reason": "氨基丙二酸可解释为甘氨酸α位羧基化；SER匹配来自羧基中的氧，不代表丝氨酸羟基被保留。" },
+    { "ccdId": "HSL", "parent": "SER", "reason": "高丝氨酸内酯是丝氨酸同系化并内酯化的结果；ALA完整匹配只是小骨架重合。" },
+    { "ccdId": "HTI", "parent": "CYS", "reason": "该结构含多个氨基酸样片段和硫醚连接，单纯按最大公共子结构会误选MET。" },
+    { "ccdId": "PCA", "parent": "GLN", "reason": "焦谷氨酸可由谷氨酰胺环化形成；与PRO环大小相似不等于脯氨酸母体。" },
+    { "ccdId": "SIB", "parent": "CYS", "reason": "核糖基硫醚带来MET样直链，但不能仅凭公共子结构推翻CCD的CYS残基关系。" },
+    { "ccdId": "SIC", "parent": "ASP", "reason": "该条同时含琥珀酰亚胺和巯基片段，属于复杂成环/偶联；CYS完整片段不是唯一母体证据。" }
+  ]
+}

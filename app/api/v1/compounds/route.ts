@@ -7,7 +7,7 @@ export function GET() {
     ...catalog,
     api: {
       version: "v1",
-      databaseVersion: "5.1",
+      databaseVersion: "5.2",
       releaseDate: "2026-09-02",
       detailPathTemplate: "/compound/{lowercase-ccd-id}/",
     },

@@ -1,0 +1,1111 @@
+﻿ccd_id,name,primary_parent,category,reason,peptide_linking,backbone_sites,unblocked_sites,heavy_atoms,added_heavy_atoms,added_rings,derivative_coverage,source_url
+02K,1-aminocyclohexanecarboxylic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,1,1,https://www.rcsb.org/ligand/02K
+02L,"N-(2,2-dimethylpropyl)-L-asparagine",ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,5,0,1,https://www.rcsb.org/ligand/02L
+02O,"3-(3-tert-butyl-1,2,4-oxadiazol-5-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,1,1,https://www.rcsb.org/ligand/02O
+02Y,6-diazonio-5-oxo-L-norleucine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,0,1,https://www.rcsb.org/ligand/02Y
+037,"(1S,3aR,6aS)-octahydrocyclopenta[c]pyrrole-1-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,1,1,https://www.rcsb.org/ligand/037
+03Y,2-methyl-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/03Y
+04U,"azanylidene-[(3S,5S)-5-carboxypyrrolidin-3-yl]imino-azanium",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,0,1,https://www.rcsb.org/ligand/04U
+04V,(2S)-pyrrolidine-2-carboximidic acid,PRO,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,0.7778,https://www.rcsb.org/ligand/04V
+05N,"(3R,4R)-4-hydroxy-3-methyl-L-proline",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/05N
+07O,S-[(2S)-2-phenylpropanoyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/07O
+0A0,2-methyl-L-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/0A0
+0A1,O-methyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/0A1
+0A2,"[(1R)-1,5-diaminopentyl][bis(ethanolato)]hydroxyborate(1-)",LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,15,0,0,0.4667,https://www.rcsb.org/ligand/0A2
+0A8,S-[(2-chloroethyl)carbamoyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/0A8
+0A9,methyl L-phenylalaninate,PHE,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,13,1,0,1,https://www.rcsb.org/ligand/0A9
+0AB,"(3S,4S)-3-amino-4-methyl-3,4-dihydro-2H-pyran-2-one",VAL,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,1,1,1,https://www.rcsb.org/ligand/0AB
+0AF,7-hydroxy-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/0AF
+0AH,O-(bromoacetyl)-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/0AH
+0AK,(2S)-2-amino-4-(2-chloroethoxy)-4-oxobutanoic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,3,0,1,https://www.rcsb.org/ligand/0AK
+0AR,N-[N-[(4S)-4-azanyl-5-hydroxy-5-oxo-pentyl]carbamimidoyl]ethanamide,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.75,https://www.rcsb.org/ligand/0AR
+0BN,4-carbamimidoyl-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,4,0,1,https://www.rcsb.org/ligand/0BN
+0CS,3-[(S)-HYDROPEROXYSULFINYL]-L-ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/0CS
+0E5,"(2S,3R)-2-azanyl-3-methyl-3-oxidanyl-pentanoic acid",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,0.8,https://www.rcsb.org/ligand/0E5
+0EA,"(betaR)-beta,3-dihydroxy-N-methyl-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/0EA
+0FL,3-amino-N-formyl-L-alanine,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,9,3,0,1,https://www.rcsb.org/ligand/0FL
+0LF,(4R)-4-(4-phenylbutoxy)-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,11,1,1,https://www.rcsb.org/ligand/0LF
+0PR,N-({3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl)-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,28,15,1,1,https://www.rcsb.org/ligand/0PR
+0QL,3-[(2-aminoethyl)disulfanyl]-L-alanine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/0QL
+0TD,(3S)-3-(methylsulfanyl)-L-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/0TD
+0WZ,3-(1H-pyrazol-1-yl)-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,5,1,1,https://www.rcsb.org/ligand/0WZ
+0X9,N~2~-sulfamoyl-L-arginine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/0X9
+0Y8,(4R)-4-[(7-bromoisoquinolin-1-yl)oxy]-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,12,2,1,https://www.rcsb.org/ligand/0Y8
+11Q,1-(cyclohexylmethyl)-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,7,1,1,https://www.rcsb.org/ligand/11Q
+11W,(4R)-4-[(2E)-3-{4-[(E)-phenyldiazenyl]phenyl}prop-2-en-1-yl]-L-glutamic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,27,17,2,1,https://www.rcsb.org/ligand/11W
+12L,"(1R,2S,5S)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,1,1,https://www.rcsb.org/ligand/12L
+12X,"(4R)-4-[(8-bromo-7-methoxy-2-{2-[(2-methylpropanoyl)amino]-1,3-thiazol-4-yl}quinolin-4-yl)oxy]-L-proline",PRO,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,33,25,3,1,https://www.rcsb.org/ligand/12X
+12Y,"(4R)-4-[(7-methoxy-2-{2-[(2-methylpropanoyl)amino]-1,3-thiazol-4-yl}quinolin-4-yl)oxy]-L-proline",PRO,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,32,24,3,1,https://www.rcsb.org/ligand/12Y
+143,"S-2,3-DIHYDRO-5-GLYCIN-2-YL-ISOXAZOL-3-YL-CYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,10,1,1,https://www.rcsb.org/ligand/143
+1AC,1-AMINOCYCLOPROPANECARBOXYLIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,1,1,https://www.rcsb.org/ligand/1AC
+1L1,3-cyclohexyl-N-sulfamoyl-D-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,1,1,https://www.rcsb.org/ligand/1L1
+1OP,O-(5-hydroxypentyl)-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,6,0,1,https://www.rcsb.org/ligand/1OP
+1PA,4-(carboxymethyl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/1PA
+1PI,(3R)-3-[(2S)-2-amino-3-oxopropyl]piperidine-1-carboximidamide,ALA,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,14,0,1,0.3333,https://www.rcsb.org/ligand/1PI
+1TQ,6-(FORMYLAMINO)-7-HYDROXY-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,4,0,1,https://www.rcsb.org/ligand/1TQ
+1TY,"3-{(3E)-4-HYDROXY-6-OXO-3-[(2-PHENYLETHYL)IMINO]CYCLOHEXA-1,4-DIEN-1-YL}ALANINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,1,0.5652,https://www.rcsb.org/ligand/1TY
+1X6,O-[(2E)-3-AMINOPROP-2-ENOYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/1X6
+200,4-CHLORO-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/200
+23F,(2Z)-2-AMINO-3-PHENYLACRYLIC ACID,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,1.0,https://www.rcsb.org/ligand/23F
+23P,3-(propanoylamino)-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,0,1,https://www.rcsb.org/ligand/23P
+28X,"O-[(R)-{[(3R)-3,4-dihydroxybutyl]oxy}(hydroxy)phosphoryl]-L-threonine",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,10,0,1,https://www.rcsb.org/ligand/28X
+2AG,(2S)-2-aminopent-4-enoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/2AG
+2CO,S-HYDROPEROXYCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/2CO
+2FM,S-(DIFLUOROMETHYL)HOMOCYSTEINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/2FM
+2GX,beta-phenyl-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,6,1,1,https://www.rcsb.org/ligand/2GX
+2HF,2-fluoro-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,1,0,1,https://www.rcsb.org/ligand/2HF
+2JG,(2S)-2-amino-3-oxopropyl hexanoate,SER,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.4615,https://www.rcsb.org/ligand/2JG
+2KK,N~6~-(4-fluorobenzoyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,1,0.5263,https://www.rcsb.org/ligand/2KK
+2KP,N~6~-(4-bromobenzoyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,1,0.5263,https://www.rcsb.org/ligand/2KP
+2LT,"3,5-dichloro-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/2LT
+2ML,2-METHYLLEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/2ML
+2MR,"N3, N4-DIMETHYLARGININE",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.8571,https://www.rcsb.org/ligand/2MR
+2MT,"(4R)-2,2-DIMETHYL-1,3-THIAZOLIDINE-4-CARBOXYLIC ACID",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.7,https://www.rcsb.org/ligand/2MT
+2OR,"amino{[(2R,3R,4S)-4-amino-2,3,5-trihydroxy-5-oxopentyl]amino}methaniminium",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/2OR
+2P0,1-({[(S)-hydroxy(phosphonooxy)phosphoryl]oxy}acetyl)-L-proline,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,12,0,1,https://www.rcsb.org/ligand/2P0
+2QZ,"N,N-dimethyl-L-threonine",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/2QZ
+2R3,(betaR)-beta-hydroxy-O-methyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/2R3
+2RA,3-amino-D-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/2RA
+2RX,O-thiophosphono-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/2RX
+2SO,"3-{3-[(3R)-3,4-dihydroxybutyl]-1-(8-phenyloctyl)-1H-imidazol-3-ium-5-yl}-L-alanine",HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,31,0,1,0.3548,https://www.rcsb.org/ligand/2SO
+2TY,2-HYDROXY-5-{[(1E)-2-PHENYLETHYLIDENE]AMINO}-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,10,1,1,https://www.rcsb.org/ligand/2TY
+2VA,2'-(L-VALYL)AMINO-2'-DEOXYADENOSINE,VAL,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,0,0,26,0,3,0.2692,https://www.rcsb.org/ligand/2VA
+2XA,(2R)-2-AMINO-3-[(4-CHLOROPHENYL)-DIPHENYL-METHYL]SULFANYL-PROPANOIC ACID,CYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,27,20,3,1,https://www.rcsb.org/ligand/2XA
+2ZC,O-{[4-(2-aminoethyl)phenyl]sulfonyl}-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/2ZC
+30F,(2Z)-2-amino-3-selanylprop-2-enoic acid,SEC,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,0,0,1.0,https://www.rcsb.org/ligand/30F
+30V,S-[(2-carbamoylphenyl)selanyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/30V
+31Q,(4-carboxyphenyl)(L-cysteinato-kappaS~3~)mercury,CYS,special-adduct-or-label,结构含金属元素Hg，属于配合物而不是普通单残基替换,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/31Q
+32S,6-Seleno-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.9286,https://www.rcsb.org/ligand/32S
+32T,"(S)-2-AMINO-3-(4H-THIENO[3,2-B]-PYRROL-6-YL)-PROPIONIC ACID",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.9286,https://www.rcsb.org/ligand/32T
+33S,3-iodo-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/33S
+33W,3-(5-bromothiophen-2-yl)-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,1,1,https://www.rcsb.org/ligand/33W
+34E,(3R)-4-[4-(2-methoxyethyl)piperazin-1-yl]-N-methyl-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,11,1,1,https://www.rcsb.org/ligand/34E
+3AH,"[HISTIDIN-1-YL-4H-[1,2,4]TRIAZOL-5-YL]-AMINE",HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,1,0.6471,https://www.rcsb.org/ligand/3AH
+3BY,1-methyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/3BY
+3CF,3-cyano-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/3CF
+3CT,3-chloro-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/3CT
+3GA,(3S)-3-[(2S)-2-amino-3-oxopropyl]piperidine-1-carboximidamide,ALA,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,14,0,1,0.3333,https://www.rcsb.org/ligand/3GA
+3GL,"(2S,4S)-2-amino-4-hydroxy-pentanedioic acid",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/3GL
+3MY,3-chloro-D-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/3MY
+3NF,N-acetyl-L-tyrosine,TYR,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,3,0,1,https://www.rcsb.org/ligand/3NF
+3O3,N-[(3S)-3-amino-3-carboxypropyl]-L-glutamic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,7,0,1,https://www.rcsb.org/ligand/3O3
+3PX,(3S)-3-(propan-2-yloxy)-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/3PX
+3QN,(E)-N~6~-{2-hydroxy-3-methyl-6-[(phosphonooxy)methyl]benzylidene}-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.4,https://www.rcsb.org/ligand/3QN
+3TY,3-(Phenylhydrazono)-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,1,0.5652,https://www.rcsb.org/ligand/3TY
+3WS,"N,2-dimethyl-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/3WS
+3X9,"3-{[(1-hydroxy-2,2,5,5-tetramethyl-2,5-dihydro-1H-pyrrol-3-yl)methyl]disulfanyl}-L-alanine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/3X9
+3XH,3-Hydroxyhippuric acid,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,14,9,1,1,https://www.rcsb.org/ligand/3XH
+3YM,3-methoxy-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/3YM
+3ZH,"11-{4-[(2S)-2-amino-2-carboxyethyl]-3-(8-phenyloctyl)-2,3-dihydro-1H-imidazol-1-yl}undecanoic acid",HIS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,38,0,1,0.2895,https://www.rcsb.org/ligand/3ZH
+41H,(betaS)-beta-methyl-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/41H
+41Q,4-imino-L-homoserine,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.9,https://www.rcsb.org/ligand/41Q
+432,O-butanoyl-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/432
+4AF,4-ACETYL-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/4AF
+4AK,N~6~-sulfo-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/4AK
+4AR,"amino({(4S)-4-amino-6-[(2,6-dimethylbenzoyl)oxy]-5-oxohexyl}amino)methaniminium",ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,23,0,1,0.4783,https://www.rcsb.org/ligand/4AR
+4AW,4-AZATRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.9333,https://www.rcsb.org/ligand/4AW
+4BF,4-BROMO-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/4BF
+4CF,4-cyano-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/4CF
+4CY,nitrilo-L-methionine,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/4CY
+4D4,"(2S,3R)-2-azanyl-5-carbamimidamido-3-oxidanyl-pentanoic acid",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8571,https://www.rcsb.org/ligand/4D4
+4DP,"3-[5-(DIMETHYLAMINO)-1,3-DIOXO-1,3-DIHYDRO-2H-ISOINDOL-2-YL]-L-ALANINE",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.45,https://www.rcsb.org/ligand/4DP
+4FB,(4S)-4-FLUORO-L-PROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/4FB
+4FW,4-FLUOROTRYPTOPHANE,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/4FW
+4GJ,3-(pyridin-4-yldisulfanyl)-L-alanine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,1,1,https://www.rcsb.org/ligand/4GJ
+4HH,4'-phosphopanthetheine-serine,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,28,21,0,1,https://www.rcsb.org/ligand/4HH
+4HJ,"O-[(R)-hydroxy{[(3R)-3-hydroxy-4-{[3-({2-[(2-hydroxybenzoyl)sulfanyl]ethyl}amino)-3-oxopropyl]amino}-2,2-dimethyl-4-oxobutyl]oxy}phosphoryl]-L-serine",SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,37,30,1,1,https://www.rcsb.org/ligand/4HJ
+4HL,"(6E)-4-[(2S)-2-amino-2-carboxyethyl]-6-[2-(4-hydroxybenzyl)hydraziniumylidene]-3-oxocyclohexa-1,4-dien-1-olate",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,1,0.5417,https://www.rcsb.org/ligand/4HL
+4HT,4-HYDROXYTRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/4HT
+4II,(2~{S})-2-azanyl-3-(4-azidophenyl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/4II
+4IN,4-AMINO-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/4IN
+4J4,"S-(2-{[(2',4'-difluorobiphenyl-4-yl)methyl]amino}-2-oxoethyl)-L-cysteine",CYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,26,19,2,1,https://www.rcsb.org/ligand/4J4
+4J5,amino{[(3S)-3-amino-3-carboxypropyl]amino}methaniminium,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.7273,https://www.rcsb.org/ligand/4J5
+4KY,(4R)-1-acetyl-4-(oct-7-en-1-yloxy)-L-proline,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,12,0,1,https://www.rcsb.org/ligand/4KY
+4L0,(4R)-1-acetyl-4-(hexyloxy)-L-proline,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,18,10,0,1,https://www.rcsb.org/ligand/4L0
+4LZ,"O-[2-(triaza-1,2-dien-2-ium-1-yl)ethyl]-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,5,0,1,https://www.rcsb.org/ligand/4LZ
+4OG,3-(1-benzothiophen-3-yl)-L-alanine,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.9333,https://www.rcsb.org/ligand/4OG
+4OU,4-(acryloylamino)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/4OU
+4OV,"(2R)-2-[(1R)-2-[(2S)-2-amino-2-carboxyethoxy]-1-{[(2R)-2-amino-2-phenylacetyl]amino}-2-oxoethyl]-5-methyl-3,6-dihydro-2H-1,3-thiazine-4-carboxylic acid",SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,2,2,31,24,2,1,https://www.rcsb.org/ligand/4OV
+4PH,4-methyl-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/4PH
+4PQ,5-hydroxy-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/4PQ
+4SJ,"N,beta,beta-trimethyl-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/4SJ
+4U7,"[(5S)-5-amino-5-carboxy-6,6-difluorohexyl](trihydroxy)borate(1-)",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,0,0.375,https://www.rcsb.org/ligand/4U7
+4WQ,"(2S)-2-amino-7,7-dimethyloctanoic acid",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,0,1,https://www.rcsb.org/ligand/4WQ
+51T,"2,3,6-trifluoro-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/51T
+54C,(betaR)-beta-hydroxy-1-{2-[(2R)-oxiran-2-yl]propan-2-yl}-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.6818,https://www.rcsb.org/ligand/54C
+55I,4-(trifluoromethyl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/55I
+56A,3-(8-phenyloctyl)-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.44,https://www.rcsb.org/ligand/56A
+5AB,[(5S)-5-amino-5-carboxyhexyl](trihydroxy)borate,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,8,0,0.4286,https://www.rcsb.org/ligand/5AB
+5CR,N-acetyl-L-phenylalanine,PHE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,3,0,1,https://www.rcsb.org/ligand/5CR
+5CS,2-AMINO-3-(CYSTEIN-S-YL)-ISOXAZOLIDIN-5-YL-ACETIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,10,1,1,https://www.rcsb.org/ligand/5CS
+5CT,Hypusine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/5CT
+5CW,5-chloro-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/5CW
+5FQ,N-pentyl-L-alaninamide,ALA,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,11,0,0,0.4545,https://www.rcsb.org/ligand/5FQ
+5GG,Deoxyhypusine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/5GG
+5GM,"(4S)-2,4-dimethyl-L-norleucine",ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.7273,https://www.rcsb.org/ligand/5GM
+5MW,"(2~{S})-5-[4-(aminomethyl)-1,2,3-triazol-1-yl]-2-azanyl-pentanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,1,0.5333,https://www.rcsb.org/ligand/5MW
+5OH,"(2S)-amino[(4R,6S)-2-amino-6-hydroxy-3,4,5,6-tetrahydropyrimidin-4-yl]ethanoic acid",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,1,1,https://www.rcsb.org/ligand/5OH
+5OW,(2~{S})-2-azanyl-6-[[(~{Z})-~{C}-[2-methyl-3-oxidanyl-5-(phosphonooxymethyl)pyridin-4-yl]-~{N}-[(2~{R})-1-oxidanyl-1-oxidanylidene-3-sulfanyl-propan-2-yl]carbonimidoyl]amino]hexanoic acid,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,2,2,32,0,1,0.3125,https://www.rcsb.org/ligand/5OW
+5PG,(2S)-(4-hydroxyphenyl)(methylamino)ethanoic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,8,1,1,https://www.rcsb.org/ligand/5PG
+5R5,methyl L-serinate,SER,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,8,1,0,1,https://www.rcsb.org/ligand/5R5
+5T3,N~6~-ethyl-N~6~-propan-2-yl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/5T3
+5VV,N-carbamoyl-L-Asparagine,ASN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,3,0,1,https://www.rcsb.org/ligand/5VV
+5XU,(2~{S})-2-azanylpropanal,ALA,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,5,0,0,1.0,https://www.rcsb.org/ligand/5XU
+60F,(2~{R})-2-azanyl-3-[(~{E})-3-(4-hydroxyphenyl)prop-2-enoyl]sulfanyl-propanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,11,1,1,https://www.rcsb.org/ligand/60F
+66D,"(4R)-2,4-dimethyl-L-norleucine",ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.7273,https://www.rcsb.org/ligand/66D
+6BR,threoninevanadate,THR,special-adduct-or-label,结构含金属元素V，属于配合物而不是普通单残基替换,True,1,1,13,5,0,1,https://www.rcsb.org/ligand/6BR
+6CL,6-CARBOXYLYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,13,3,0,1,https://www.rcsb.org/ligand/6CL
+6CV,3-bromo-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/6CV
+6CW,6-CHLORO-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/6CW
+6G4,4-oxononanoyl lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,0,0.4762,https://www.rcsb.org/ligand/6G4
+6GL,5-(phosphonooxy)-L-norvaline,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,0,1,https://www.rcsb.org/ligand/6GL
+6HN,6-nitro-L-norleucine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/6HN
+6M6,S-[(2-phenylethyl)carbamothioyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,11,1,1,https://www.rcsb.org/ligand/6M6
+6V1,"(2~{R})-2-azanyl-3-[(3~{R})-1-ethyl-2,5-bis(oxidanylidene)pyrrolidin-3-yl]sulfanyl-propanoic acid",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/6V1
+6WK,"(2~{R})-2-azanyl-3-[[(2~{S},3~{S})-2,3-bis(oxidanyl)-4-sulfanyl-butyl]disulfanyl]propanoic acid",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/6WK
+6Y9,"(2~{R})-1,2-dimethylpyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/6Y9
+73C,(2~{S})-2-azanyl-3-butoxy-propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/73C
+73N,(2~{S})-5-carbamimidamido-2-(carboxyamino)pentanoic acid,ARG,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,0,0,0.75,https://www.rcsb.org/ligand/73N
+73O,(2~{S})-2-azanyl-4-(4-hydroxyphenyl)butanoic acid,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/73O
+73P,(2~{S})-6-azanyl-2-(carboxyamino)hexanoic acid,LYS,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,13,0,0,0.7692,https://www.rcsb.org/ligand/73P
+74P,(E)-N~6~-(1-carboxy-3-oxobutylidene)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,18,0,0,0.5556,https://www.rcsb.org/ligand/74P
+7ID,(2~{S})-4-[[(2~{S})-5-[[azanyl($l^{4}-azanylidene)methyl]amino]-1-$l^{1}-oxidanyl-1-oxidanylidene-pentan-2-yl]amino]-2-$l^{2}-azanyl-4-oxidanylidene-butanoic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,20,0,0,0.381,https://www.rcsb.org/ligand/7ID
+7JA,"N-({(1R,2S)-3-oxo-2-[(2Z)-pent-2-en-1-yl]cyclopentyl}acetyl)-L-isoleucine",ILE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,23,14,1,1,https://www.rcsb.org/ligand/7JA
+7N8,4-Borono-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/7N8
+7O5,(2~{S})-2-azanyl-3-(2-sulfanylethanoylamino)propanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,0,1,https://www.rcsb.org/ligand/7O5
+7OZ,(S)-2-amino-4-fluorobutanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/7OZ
+7QK,N~6~-acetyl-N~6~-methyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/7QK
+7T2,(2S)-3-(4-chlorophenyl)-2-(methylamino)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/7T2
+7TK,(3S)-3-azanyl-4-oxidanylidene-4-pyrrolidin-1-yl-butanoic acid,ASP,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,1,0.6154,https://www.rcsb.org/ligand/7TK
+7VN,(2S)-2-cyclopentyl-2-(methylamino)ethanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,1,1,https://www.rcsb.org/ligand/7VN
+7VU,(2S)-2-(ethylamino)-3-(4-methylphenyl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/7VU
+7W2,"(2S)-2-azanyl-4-[3,5-bis(fluoranyl)-4-(trifluoromethyl)phenyl]butanoic acid",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,0,0.4737,https://www.rcsb.org/ligand/7W2
+7XC,(2R)-2-azanyl-3-(4-carbamimidamidophenyl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,5,0,1,https://www.rcsb.org/ligand/7XC
+7YO,(2R)-5-oxidanylidenepyrrolidine-2-carboxylic acid,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,9,1,0,1,https://www.rcsb.org/ligand/7YO
+823,"N,N-bis(3-sulfanylpropyl)-L-asparagine",ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,8,0,1,https://www.rcsb.org/ligand/823
+85F,(2R)-2-azanyl-3-[(2R)-2-azanyl-3-oxidanyl-3-oxidanylidene-propyl]sulfanyl-propanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,13,6,0,1,https://www.rcsb.org/ligand/85F
+85L,[[(2~{R})-2-azanyl-3-oxidanylidene-propyl]-(chloranylaurio)sulfanuidyl]-chloranyl-gold,CYS,special-adduct-or-label,结构含金属元素Au，属于配合物而不是普通单残基替换,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/85L
+86N,"(2S)-5-[[5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)furan-2-yl]methoxy-oxidanyl-phosphoryl]oxy-2-azanyl-5-oxidanylidene-pentanoic acid",GLU,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,32,22,3,1,https://www.rcsb.org/ligand/86N
+8JB,"(2~{R})-2-azanyl-3-[[(5~{S})-5-[(1~{S})-1-azanyl-2-oxidanyl-2-oxidanylidene-ethyl]-4,5-dihydro-1,2-oxazol-3-yl]sulfanyl]propanoic acid",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,10,1,1,https://www.rcsb.org/ligand/8JB
+8LJ,"(2S)-2,3-dihydro-1H-pyrrole-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,1.0,https://www.rcsb.org/ligand/8LJ
+8RE,"3,4-dihydroxylysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/8RE
+8SP,"O-[(R)-{[(2R)-2,3-bis(octanoyloxy)propyl]oxy}(hydroxy)phosphoryl]-L-serine",SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,34,27,0,1,https://www.rcsb.org/ligand/8SP
+8WY,"5,5-dihydroxy-L-norleucine",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.7273,https://www.rcsb.org/ligand/8WY
+999,(3S)-3-hydroxy-D-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/999
+9DN,DANSYL-L-ASPARAGINE,ASN,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,25,16,2,1,https://www.rcsb.org/ligand/9DN
+9DS,DANSYL-L-SARCOSINE,GLY,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,22,17,2,1,https://www.rcsb.org/ligand/9DS
+9DT,(2~{S})-2-azanyl-3-(2-fluorophenyl)-2-methyl-propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/9DT
+9E7,N~6~-(sulfanylmethyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/9E7
+9KP,(E)-N~6~-[(2E)-1-carboxy-3-(2-carboxyphenyl)prop-2-en-1-ylidene]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,25,0,1,0.4,https://www.rcsb.org/ligand/9KP
+9NE,DANSYL-L-GLUTAMATE,GLU,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,26,16,2,1,https://www.rcsb.org/ligand/9NE
+9NF,DANSYL-L-PHENYLALANINE,PHE,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,28,16,2,1,https://www.rcsb.org/ligand/9NF
+9NR,DANSYL-L-ARGININE,ARG,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,28,0,2,0.4286,https://www.rcsb.org/ligand/9NR
+9NV,DANSYL-L-NORVALINE,VAL,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,24,0,2,0.2917,https://www.rcsb.org/ligand/9NV
+9TR,N6-{[(3-azidophenyl)methoxy]carbonyl}-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,1,0.4348,https://www.rcsb.org/ligand/9TR
+9TU,N6-[({3-[3-(trifluoromethyl)-3H-diaziren-3-yl]phenyl}methoxy)carbonyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,27,0,2,0.3704,https://www.rcsb.org/ligand/9TU
+9TX,N6-{[(3-ethynylphenyl)methoxy]carbonyl}-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.4545,https://www.rcsb.org/ligand/9TX
+9U0,"N6-({[(1S,2E)-cyclooct-2-en-1-yl]oxy}carbonyl)-L-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,1,0.4762,https://www.rcsb.org/ligand/9U0
+9WV,beta-alanyl-3-amino-L-alanine,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,6,0,1,https://www.rcsb.org/ligand/9WV
+A1A3M,"(5S)-4,5-dihydro-1H-pyrazole-5-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/A1A3M
+A1A5S,1-[(3S)-4-chloro-3-hydroxy-2-methylbutan-2-yl]-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,0,0.6818,https://www.rcsb.org/ligand/A1A5S
+A1A5T,(4S)-5-butoxy-N-methyl-L-leucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,6,0,1,https://www.rcsb.org/ligand/A1A5T
+A1A7R,"3-[(2S)-2-{[(2R,3S,3aR,5aS,6R,11bR,11cS)-10-hydroxy-3a-methoxy-3,14-dimethyl-2-phenyl-2,3,3a,4,5,6,7,11c-octahydro-1H-6,11b-(epiminoethano)-3,5a-methanonaphtho[2,1-g]indol-1-yl]oxy}-2,3-dihydro-1H-imidazol-4-yl]-L-alanine",HIS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,44,0,8,0.25,https://www.rcsb.org/ligand/A1A7R
+A1A7V,S-lactoyl-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/A1A7V
+A1A8T,3-methyl-L-isovaline,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/A1A8T
+A1ADO,(4R)-5-fluoro-L-leucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/A1ADO
+A1AL8,1-(2-methylbut-3-en-2-yl)-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.75,https://www.rcsb.org/ligand/A1AL8
+A1ALE,(2S)-2-amino-7-(dimethylamino)-7-oxoheptanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,8,0,1,https://www.rcsb.org/ligand/A1ALE
+A1AMB,"3-(1H-1,2,3-triazol-1-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,1,1,https://www.rcsb.org/ligand/A1AMB
+A1AMC,"(2S)-2-(methylamino)pentane-1,1,5-triol",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/A1AMC
+A1AS0,5-selanyl-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/A1AS0
+A1ASZ,5-sulfanyl-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/A1ASZ
+A1AT6,"(2S)-2,3-dihydro-1H-indole-2-carboxylic acid",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,1,1,https://www.rcsb.org/ligand/A1AT6
+A1AT7,"(1S)-6-methyl-1,2-dihydroisoquinoline-1-carboxylic acid",ALA,complex-skeletal-transformation,丙氨酸侧链被扩展并形成二氢异喹啉构象限制环；属于骨架重构，不应写成单一原子取代,True,1,1,14,0,2,0.2143,https://www.rcsb.org/ligand/A1AT7
+A1AVU,(3S)-4-fluoro-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/A1AVU
+A1AWS,4-cyano-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,2,0,1,https://www.rcsb.org/ligand/A1AWS
+A1AZ2,3-methyl-D-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/A1AZ2
+A1AZQ,N-(2-phenylethyl)glycine,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,8,1,1,https://www.rcsb.org/ligand/A1AZQ
+A1B9V,"3-[(1S,3S)-1-oxo-2,3-dihydro-1H-1lambda~4~-benzothiophen-3-yl]-L-alanine",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.875,https://www.rcsb.org/ligand/A1B9V
+A1BC0,"N,N-dimethyl-L-cysteinamide",CYS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,0,0,0.6667,https://www.rcsb.org/ligand/A1BC0
+A1BC5,L-seryl-N-[(2S)-2-amino-2-carboxyethyl]glycinamide,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.3529,https://www.rcsb.org/ligand/A1BC5
+A1BDE,N~6~-L-seryl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/A1BDE
+A1BEB,2-Methyllysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/A1BEB
+A1BX4,N~6~-hydroxy-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/A1BX4
+A1BZO,O-octanoyl-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,0,1,https://www.rcsb.org/ligand/A1BZO
+A1C0O,3-(acetamidomethyl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/A1C0O
+A1C3V,N-(tert-butoxycarbonyl)-L-phenylalanine,PHE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,19,7,0,1,https://www.rcsb.org/ligand/A1C3V
+A1CAB,"(2S)-3,4-dihydro-2H-pyrrole-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,1.0,https://www.rcsb.org/ligand/A1CAB
+A1CCQ,(2S)-2-hydrazinyl-3-(4-hydroxyphenyl)propanoic acid,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/A1CCQ
+A1CCR,(2S)-2-hydrazinyl-3-phenylpropanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/A1CCR
+A1CCS,(2S)-5-carbamimidamido-2-hydrazinylpentanoic acid,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8571,https://www.rcsb.org/ligand/A1CCS
+A1CH8,"N~5~-[N-(2,2,2-trifluoroethyl)carbamimidoyl]-L-ornithine",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.6667,https://www.rcsb.org/ligand/A1CH8
+A1CHT,(4S)-4-hydroxy-4-(4-hydroxyphenyl)-L-threonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,8,1,1,https://www.rcsb.org/ligand/A1CHT
+A1CLH,1-benzyl-D-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.6818,https://www.rcsb.org/ligand/A1CLH
+A1CM8,"(2~{S})-2-azanyl-3-[(~{E})-[4-[oxidanyl(oxidanylidene)-$l^{4}-azanyl]-6~{H}-2,1,3-benzoxadiazol-7-ylidene]amino]propanal",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,13,2,1,https://www.rcsb.org/ligand/A1CM8
+A1CM9,"3-[(7-nitro-2,1,3-benzoselenadiazol-4-yl)amino]-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,13,2,1,https://www.rcsb.org/ligand/A1CM9
+A1CRT,(4S)-4-{[(1R)-1-carboxy-2-sulfanylethyl]amino}-4-hydroxybutanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,0,1,https://www.rcsb.org/ligand/A1CRT
+A1CTT,2-phenyl-D-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,1,1,https://www.rcsb.org/ligand/A1CTT
+A1D5B,"methyl (2~{S})-2,6-bis(azanyl)hexanoate",LYS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,11,0,0,0.9091,https://www.rcsb.org/ligand/A1D5B
+A1D5E,"(2~{S},4~{R})-4-(2-azanylethylcarbamoyloxy)pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,7,0,1,https://www.rcsb.org/ligand/A1D5E
+A1D5P,"(2~{R},3~{S})-2-azanyl-3-(4-hydroxyphenyl)-3-oxidanyl-propanoic acid",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/A1D5P
+A1D64,(2~{R})-3-(4-aminophenyl)sulfanyl-2-azanyl-propanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,1,1,https://www.rcsb.org/ligand/A1D64
+A1D7R,(2~{S})-2-azanyl-3-[6-(3-methylbut-2-enyl)-1~{H}-indol-3-yl]propanoic acid,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,5,0,1,https://www.rcsb.org/ligand/A1D7R
+A1D9O,"(2~{S},3~{S},4~{S})-3,4-bis(oxidanyl)pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/A1D9O
+A1ECI,5-[(2R)-2-azanyl-3-oxidanyl-3-oxidanylidene-propyl]sulfanyl-5-oxidanylidene-pentanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/A1ECI
+A1ECK,(2S)-3-(4-fluorophenyl)-2-(methylsulfonylamino)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/A1ECK
+A1ECL,"(2S)-3-[3,5-bis(fluoranyl)phenyl]-2-(methylsulfonylamino)propanoic acid",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,6,0,1,https://www.rcsb.org/ligand/A1ECL
+A1ECM,"(2S)-3,3-dimethyl-2-(methylsulfonylamino)butanoic acid",VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,5,0,1,https://www.rcsb.org/ligand/A1ECM
+A1EFT,"(2~{S})-2-azanyl-5-[[(5~{R})-5-[4-[[9-chloranyl-7-(2-fluoranyl-6-methoxy-phenyl)-5~{H}-pyrimido[5,4-d][2]benzazepin-2-yl]amino]-2-methoxy-phenyl]-4-oxidanylidene-1,5-dihydroimidazol-2-yl]amino]pentanoic acid",ARG,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,49,0,6,0.1837,https://www.rcsb.org/ligand/A1EFT
+A1EG1,(2~{S})-2-azanyl-6-[(1~{S})-3-azanylidene-6-[[4-[4-[(3-cyclopropyl-1~{H}-pyrazol-5-yl)amino]-6-(prop-2-ynylcarbamoyl)pyrimidin-2-yl]piperazin-1-yl]methyl]-1-oxidanyl-1~{H}-isoindol-2-yl]hexanoic acid,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,48,0,6,0.1837,https://www.rcsb.org/ligand/A1EG1
+A1EIC,O-Methylcarbamoyl-L-Serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/A1EIC
+A1EIU,"(2~{S})-2-azanyl-6-[(~{E})-[7-methyl-2,4-bis(oxidanyl)-5-oxidanylidene-cyclohepta-1,3,6-trien-1-yl]methylideneamino]hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.4545,https://www.rcsb.org/ligand/A1EIU
+A1EJ1,"(2~{S})-6-[(~{E})-[(2~{S},3~{R},4~{S},5~{R})-2-acetamido-3,4,5,6-tetrakis(oxidanyl)hexylidene]amino]-2-azanyl-hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,0,0.4167,https://www.rcsb.org/ligand/A1EJ1
+A1EJ4,(2~{S})-6-[(~{E})-2-acetamidoethylideneamino]-2-azanyl-hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/A1EJ4
+A1EJR,(2S)-2-azanyl-6-[6-[[(2R)-1-[4-[2-[3-bromanyl-2-(2-hydroxy-2-oxoethyloxy)-5-methyl-phenyl]ethynyl]phenyl]-4-(methylamino)-4-oxidanylidene-butan-2-yl]carbamoyl]-3-oxidanylidene-1H-indazol-2-yl]hexanoic acid,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,50,0,4,0.18,https://www.rcsb.org/ligand/A1EJR
+A1EJS,"(2S)-2-azanyl-6-[[2-[[4-[(5-fluoranyl-2-methoxycarbonyl-phenyl)amino]-2-[[3-(1-methylimidazol-2-yl)phenyl]methylamino]pyrimidin-5-yl]amino]-3,4-bis(oxidanylidene)cyclobuten-1-yl]amino]hexanoic acid",LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,49,0,5,0.2041,https://www.rcsb.org/ligand/A1EJS
+A1EJT,"(2~{S})-6-[(~{E})-[(2~{S},3~{S},4~{R})-5-[[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl]oxy-oxidanyl-phosphoryl]oxy-2,3,4-tris(oxidanyl)pentylidene]amino]-2-azanyl-hexanoic acid",LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,45,0,3,0.2222,https://www.rcsb.org/ligand/A1EJT
+A1EJZ,"(2~{S})-6-[(~{E})-[(2~{S},3~{R},4~{R},5~{R})-2-acetamido-3,4,5,6-tetrakis(oxidanyl)hexylidene]amino]-2-azanyl-hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,0,0.4167,https://www.rcsb.org/ligand/A1EJZ
+A1EMP,"(2~{S})-2-azanyl-6-[(1~{S})-7-[6-(3,5-dimethyl-1,2-oxazol-4-yl)-1-[(1~{S})-1-pyridin-2-ylethyl]pyrrolo[3,2-b]pyridin-3-yl]-3-methylidene-1-oxidanyl-1~{H}-isoindol-2-yl]hexanoic acid",LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,44,0,6,0.2045,https://www.rcsb.org/ligand/A1EMP
+A1ER5,(2~{S})-2-azanyl-4-oxidanylidene-4-[(2~{R})-1-oxidanyl-1-oxidanylidene-3-phenyl-propan-2-yl]oxy-butanoic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,11,1,1,https://www.rcsb.org/ligand/A1ER5
+A1EUR,(2~{S})-2-azanyl-4-methoxy-butanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/A1EUR
+A1EYP,"(2S)-2-azanyl-6-[[(1S,4R,5S)-4-methyl-5-(nitromethyl)-4-phenyl-cyclohex-2-en-1-yl]amino]hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,27,0,2,0.3704,https://www.rcsb.org/ligand/A1EYP
+A1H2H,(2~{S})-2-azanyl-3-(3-fluoranyl-4-nitro-phenyl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/A1H2H
+A1H2I,"(2~{S})-2-azanyl-3-[(3~{S})-5-oxidanyl-2-oxidanylidene-1,3-dihydroindol-3-yl]propanoic acid",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/A1H2I
+A1H45,"(2~{S})-2-azanyl-3-[(3~{R})-5-oxidanyl-2-oxidanylidene-1,3-dihydroindol-3-yl]propanoic acid",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/A1H45
+A1H5N,2-Imino-2-phenylethanol-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,1,0.5263,https://www.rcsb.org/ligand/A1H5N
+A1H5W,3-azido-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/A1H5W
+A1H96,(2~{S})-2-azanyl-6-(propan-2-ylcarbamothioylamino)hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/A1H96
+A1I9G,3(S)-methyl-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/A1I9G
+A1ICB,"(2S,4S)-4-[(2-chloranyl-5-methyl-phenyl)carbonylamino]pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,11,1,1,https://www.rcsb.org/ligand/A1ICB
+A1ICC,"(2S,4S)-4-(isoquinolin-1-ylcarbonylamino)pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,13,2,1,https://www.rcsb.org/ligand/A1ICC
+A1IHG,(S)-2-amino-3-(9-oxo-9H-thioxanthen-2-yl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,9,2,1,https://www.rcsb.org/ligand/A1IHG
+A1IID,4-mercaptophenyl-alanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/A1IID
+A1IKP,TRIPHOSPHOSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,0,1,https://www.rcsb.org/ligand/A1IKP
+A1IPL,para-boronophenylalanine,PHE,direct-substitutable-residue,官方CCD名称和二维结构确认其为对位硼酸基苯丙氨酸；保留游离氨基、羧基和peptide-linking类型，可作为单残基替换候选,True,1,1,,0,0,1,https://www.rcsb.org/ligand/A1IPL
+A1IQX,NE2-acetamide-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/A1IQX
+A1JCN,(2~{S})-2-azanyl-3-[3-methyl-1-[(1~{S})-2-methylidene-3-oxidanylidene-cyclohexyl]imidazol-4-yl]propanoic acid,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,1,0.55,https://www.rcsb.org/ligand/A1JCN
+A1JNL,"(2~{S})-2-[3-(1~{H}-1,2,3-triazol-4-yl)propylamino]butanoic acid",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,1,1,https://www.rcsb.org/ligand/A1JNL
+A1L2U,1-(6-azanylhexanoyl)pyrrolidine-2-carboxylic acid,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,8,0,1,https://www.rcsb.org/ligand/A1L2U
+A1L4B,(2S)-2-azanyl-5-nitroso-5-oxidanylidene-pentanoic acid,GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/A1L4B
+A1L4D,(2~{S})-2-benzamido-3-phenyl-propanoic acid,PHE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,8,1,1,https://www.rcsb.org/ligand/A1L4D
+A1L7E,(2~{S})-2-azanyl-3-(7-iodanyl-1~{H}-indol-3-yl)propanoic acid,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/A1L7E
+A1LTQ,ADP-RIBOXANATED ARGININE,ARG,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,46,0,5,0.1702,https://www.rcsb.org/ligand/A1LTQ
+A1LUD,S-METHYL-METHIONINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/A1LUD
+A1LUT,(3R)-3-HYDROXY-ASPARAGINE,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/A1LUT
+A1LUV,(5S)-5-HYDROXY-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/A1LUV
+A1LWV,(2~{S})-2-azanyl-6-(5-oxidanylidenepentanoylamino)hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.5882,https://www.rcsb.org/ligand/A1LWV
+A1MCG,(2~{S})-2-azanyl-3-[4-(pyrimidin-2-ylamino)phenyl]propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,7,1,1,https://www.rcsb.org/ligand/A1MCG
+A1MF6,(2~{S})-2-(aminomethyl)-4-methyl-pentanoic acid,LEU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.8,https://www.rcsb.org/ligand/A1MF6
+A30,O-ethyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/A30
+A3U,4-acetamido-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/A3U
+A5N,O-carboxy-4-imino-L-homoserine,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6923,https://www.rcsb.org/ligand/A5N
+A66,"N-(3,7-Diaminopurin-6-ylacetyl)-L-lysine",LYS,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,26,0,2,0.3846,https://www.rcsb.org/ligand/A66
+A8E,(2S)-2-amino-4-bromopent-4-enoic acid,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.7778,https://www.rcsb.org/ligand/A8E
+AA4,2-AMINO-5-HYDROXYPENTANOIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/AA4
+AAR,ARGININEAMIDE,ARG,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,12,0,0,0.9167,https://www.rcsb.org/ligand/AAR
+ABA,ALPHA-AMINOBUTYRIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/ABA
+AEA,(2-AMINO-2-CARBAMOYL-ETHYLSULFANYL)-ACETIC ACID,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,0.5455,https://www.rcsb.org/ligand/AEA
+AEI,THREONINE-ASPARTIC ESTER,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,8,0,1,https://www.rcsb.org/ligand/AEI
+AFA,"N-[7-METHYL-OCT-2,4-DIENOYL]ASPARAGINE",ASN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,19,10,0,1,https://www.rcsb.org/ligand/AFA
+AGM,5-METHYL-ARGININE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/AGM
+AGQ,"3-[(3E)-3-(carbamimidoylhydrazono)-4-hydroxy-6-oxocyclohexa-1,4-dien-1-yl]-L-alanine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,0,0.65,https://www.rcsb.org/ligand/AGQ
+AGT,S-{(S)-AMINO[(4-AMINOBUTYL)AMINO]METHYL}-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/AGT
+AHB,BETA-HYDROXYASPARAGINE,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/AHB
+AHO,N-ACETYL-N-HYDROXY-L-ORNITHINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,0,1,https://www.rcsb.org/ligand/AHO
+AHP,2-AMINO-HEPTANOIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/AHP
+AIB,ALPHA-AMINOISOBUTYRIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/AIB
+ALC,2-AMINO-3-CYCLOHEXYL-PROPIONIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,1,1,https://www.rcsb.org/ligand/ALC
+ALN,NAPHTHALEN-2-YL-3-ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,2,1,https://www.rcsb.org/ligand/ALN
+ALO,ALLO-THREONINE,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,1,https://www.rcsb.org/ligand/ALO
+ALS,(3S)-3-(sulfooxy)-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,0.5833,https://www.rcsb.org/ligand/ALS
+ALT,THIOALANINE,ALA,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,6,0,0,0.8333,https://www.rcsb.org/ligand/ALT
+ALY,N(6)-ACETYLLYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/ALY
+AN6,5'-{[(3S)-3-amino-3-carboxypropyl](ethyl)amino}-5'-deoxyadenosine,LEU,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,1,1,28,0,3,0.25,https://www.rcsb.org/ligand/AN6
+AN8,(2S)-2-aminononanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,0,1,https://www.rcsb.org/ligand/AN8
+API,"2,6-DIAMINOPIMELIC ACID",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,13,0,0,0.7692,https://www.rcsb.org/ligand/API
+APK,5'-O-[(S)-{[(5S)-5-AMINO-6-OXOHEXYL]AMINO}(HYDROXY)PHOSPHORYL]ADENOSINE,LYS,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,0,0,31,0,3,0.2903,https://www.rcsb.org/ligand/APK
+AR2,ARGINYL-BENZOTHIAZOLE-6-CARBOXYLIC ACID,ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,23,0,2,0.4583,https://www.rcsb.org/ligand/AR2
+ARM,DEOXY-METHYL-ARGININE,ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,12,0,0,0.9167,https://www.rcsb.org/ligand/ARM
+ARO,C-GAMMA-HYDROXY ARGININE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/ARO
+AS7,N4-(4-cyanobenzyl)-L-asparagine,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,9,1,1,https://www.rcsb.org/ligand/AS7
+ASA,ASPARTIC ALDEHYDE,ASP,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,1.0,https://www.rcsb.org/ligand/ASA
+ASB,ASPARTIC ACID-4-CARBOXYMETHYL ESTER,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,4,0,1,https://www.rcsb.org/ligand/ASB
+ASL,ASPARTIC ACID-4-CARBOXYETHYL ESTER,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,5,0,1,https://www.rcsb.org/ligand/ASL
+AYA,N-ACETYLALANINE,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,9,3,0,1,https://www.rcsb.org/ligand/AYA
+AZH,AZIDOHOMOALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/AZH
+AZK,(S)-2-AMINO-6-AZIDOHEXANOIC ACID,LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,0.8182,https://www.rcsb.org/ligand/AZK
+AZS,O-DIAZOACETYL-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/AZS
+AZY,3-AZIDO-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/AZY
+B3A,(3S)-3-AMINOBUTANOIC ACID,ALA,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,7,0,0,0.7143,https://www.rcsb.org/ligand/B3A
+B3D,3-AMINOPENTANEDIOIC ACID,ASP,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.7,https://www.rcsb.org/ligand/B3D
+B3E,(3S)-3-AMINOHEXANEDIOIC ACID,GLU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,0.7273,https://www.rcsb.org/ligand/B3E
+B3K,"(3S)-3,7-DIAMINOHEPTANOIC ACID",LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,0.7273,https://www.rcsb.org/ligand/B3K
+B3U,2-amino-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/B3U
+B3X,"(3S)-3,5-DIAMINO-5-OXOPENTANOIC ACID",ASN,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.7,https://www.rcsb.org/ligand/B3X
+B3Y,(3S)-3-AMINO-4-(4-HYDROXYPHENYL)BUTANOIC ACID,TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,14,0,0,0.7857,https://www.rcsb.org/ligand/B3Y
+BB6,(2Z)-2-amino-3-sulfanylbut-2-enoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/BB6
+BB7,(2Z)-2-amino-4-methoxy-3-sulfanylbut-2-enoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.7,https://www.rcsb.org/ligand/BB7
+BB8,"(2S,3S)-BETA-HYDROXY-PHENYLALANINE",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/BB8
+BB9,(2Z)-2-amino-3-sulfanylprop-2-enoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,0,0,1.0,https://www.rcsb.org/ligand/BB9
+BBC,3-[(4-AMINOBUTYL)SULFINYL]-2-IMINOPROPAN-1-OL,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,12,0,0,0.4615,https://www.rcsb.org/ligand/BBC
+BCS,BENZYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,1,1,https://www.rcsb.org/ligand/BCS
+BCX,(3R)-3-amino-4-sulfanylbutanoic acid,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,0.625,https://www.rcsb.org/ligand/BCX
+BFD,ASPARTATE BERYLLIUM TRIFLUORIDE,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,4,0,1,https://www.rcsb.org/ligand/BFD
+BG1,O-[(2S)-2-{methyl[(methylamino)sulfonyl]amino}pentanoyl]-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,13,0,1,https://www.rcsb.org/ligand/BG1
+BG4,5-(HYDROXY-METHYL-AMINO)-3-METHYL-PYRROLIDINE-2-CARBOXYLIC ACID,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/BG4
+BG5,5-HYDROXYAMINO-3-METHYL-PYRROLIDINE-2-CARBOXYLIC ACID,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,0,1,https://www.rcsb.org/ligand/BG5
+BH2,(3R)-3-hydroxy-L-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/BH2
+BHD,(3S)-3-hydroxy-L-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/BHD
+BIF,(R)-2-AMINO-3-(4-PHENYLCYCLOHEXYL)PROPANOIC ACID,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,6,1,1,https://www.rcsb.org/ligand/BIF
+BIU,5-bromo-L-isoleucine,ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/BIU
+BL2,N-(tert-butoxycarbonyl)-L-leucine,LEU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,7,0,1,https://www.rcsb.org/ligand/BL2
+BMT,"4-METHYL-4-[(E)-2-BUTENYL]-4,N-METHYL-THREONINE",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,6,0,1,https://www.rcsb.org/ligand/BMT
+BNN,ACETYL-P-AMIDINOPHENYLALANINE,PHE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,18,7,0,1,https://www.rcsb.org/ligand/BNN
+BP5,"3-(2,2'-BIPYRIDIN-5-YL)-L-ALANINE",ALA,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,18,12,2,1,https://www.rcsb.org/ligand/BP5
+BPE,(2S)-2-AMINO-3-[(3-AMINOPROPYL)SULFANYL]PROPAN-1-OL,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.6,https://www.rcsb.org/ligand/BPE
+BSE,BETA-3-SERINE,SER,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,0.75,https://www.rcsb.org/ligand/BSE
+BTK,N~6~-butanoyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/BTK
+BTR,6-BROMO-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/BTR
+BUC,"S,S-BUTYLTHIOCYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/BUC
+BWV,N~5~-(N-butylcarbamimidoyl)-L-ornithine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/BWV
+BXT,(2~{S})-2-azanyl-3-[ethyl(methyl)carbamoyl]oxy-propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/BXT
+BYR,3-bromo-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/BYR
+C1T,"S-[(1S,6R)-3,6-dihydroxy-4-methyl-2,5-dioxocyclohex-3-en-1-yl]-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,11,1,1,https://www.rcsb.org/ligand/C1T
+C1X,"(Z)-N~6~-[(4R,5S)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)DIHYDRO-2H-THIOPYRAN-3(4H)-YLIDENE]-L-LYSINE",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.4,https://www.rcsb.org/ligand/C1X
+C22,3-chloro-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/C22
+C3Y,S-[(1S)-1-HYDROXY-1-(HYDROXYAMINO)ETHYL]-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/C3Y
+C4R,"(R)-2-amino-3-(bicyclo[2.2.1]hepta-2,5-dien-7-ylthio)propanoic acid rhodium",CYS,special-adduct-or-label,结构含金属元素Rh，属于配合物而不是普通单残基替换,True,1,1,15,8,5,1,https://www.rcsb.org/ligand/C4R
+C5C,S-CYCLOPENTYL THIOCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,1,1,https://www.rcsb.org/ligand/C5C
+C6C,S-CYCLOHEXYL THIOCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,1,1,https://www.rcsb.org/ligand/C6C
+CAF,S-DIMETHYLARSINOYL-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CAF
+CAS,S-(DIMETHYLARSENIC)CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/CAS
+CCS,CARBOXYMETHYLATED CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CCS
+CE7,"(3S)-3-amino-4,4,4-trihydroxybutanamide",ASN,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,0.9,https://www.rcsb.org/ligand/CE7
+CG6,beta-Methyl-Cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CG6
+CGA,CARBOXYMETHYLATED GLUTAMIC ACID,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,4,0,1,https://www.rcsb.org/ligand/CGA
+CGU,GAMMA-CARBOXY-GLUTAMIC ACID,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,3,0,1,https://www.rcsb.org/ligand/CGU
+CGV,S-[(R)-carboxy(hydroxy)methyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/CGV
+CHP,3-CHLORO-4-HYDROXYPHENYLGLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,8,1,1,https://www.rcsb.org/ligand/CHP
+CIR,CITRULLINE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/CIR
+CLG,2-AMINO-6-[2-(2-AMINOOXY-ACETYLAMINO)-ACETYLAMINO]-HEXANOIC ACID,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,0,0.5263,https://www.rcsb.org/ligand/CLG
+CLH,2-AMINO-6-[2-(2-OXO-ACETYLAMINO)-ACETYLAMINO]-HEXANOIC ACID,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,0,0,0.5556,https://www.rcsb.org/ligand/CLH
+CLV,"{(2S)-2-[(1S)-1-AMINOETHYL]-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL}ACETIC ACID",ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,13,0,1,0.3077,https://www.rcsb.org/ligand/CLV
+CME,"S,S-(2-HYDROXYETHYL)THIOCYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CME
+CMH,S-(METHYLMERCURY)-L-CYSTEINE,CYS,special-adduct-or-label,结构含金属元素Hg，属于配合物而不是普通单残基替换,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/CMH
+CML,(2S)-2-{[(2R)-2-amino-2-carboxyethyl]sulfanyl}butanedioic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/CML
+CMT,O-METHYLCYSTEINE,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,1,0,1,https://www.rcsb.org/ligand/CMT
+CR0,"[2-(1-AMINO-2-HYDROXYPROPYL)-2-HYDROXY-4-ISOBUTYL-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETALDEHYDE",GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,0,1,0.2,https://www.rcsb.org/ligand/CR0
+CR2,"{(4Z)-2-(aminomethyl)-4-[(4-hydroxyphenyl)methylidene]-5-oxo-4,5-dihydro-1H-imidazol-1-yl}acetic acid",GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,0,2,0.2,https://www.rcsb.org/ligand/CR2
+CR5,"(2R)-2-(AMINOMETHYL)-2,4-DIHYDROXY-5-OXO-3-(2-OXOETHYL)-2,5-DIHYDRO-1H-IMIDAZOL-3-IUM",GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,9,1,1,https://www.rcsb.org/ligand/CR5
+CRG,"[2-(1-AMINO-2-HYDROXY-PROPYL)-4-(3H-IMIDAZOL-4-YLMETHYLENE)-5-OXO-4,5-DIHYDRO-IMIDAZOL-1-YL]-ACETIC ACID",GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,21,0,2,0.1905,https://www.rcsb.org/ligand/CRG
+CRX,[2-(1-AMINOETHYL)-2-HYDROXY-4-METHYLENE-5-OXOIMIDAZOLIDIN-1-YL]ACETIC ACID,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,0,1,0.2667,https://www.rcsb.org/ligand/CRX
+CS1,S-(2-ANILINYL-SULFANYL)-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/CS1
+CS3,S-[3-OXO-3-(2-THIENYL)PROPYL]-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/CS3
+CS4,"S-[3-(3,4-DICHLOROPHENYL)-3-OXOPROPYL]-L-CYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/CS4
+CSA,S-ACETONYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CSA
+CSB,CYS BOUND TO LEAD ION,CYS,special-adduct-or-label,结构含金属元素Pb，属于配合物而不是普通单残基替换,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CSB
+CSD,3-SULFINOALANINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/CSD
+CSH,[2-(2-HYDROXY-1-METHYL-ETHYL)-4-(1H-IMIDAZOL-4-YLMETHYL)-5-OXO-IMIDAZOLIDIN-1-YL]-ACETIC ACID,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,0,2,0.2,https://www.rcsb.org/ligand/CSH
+CSJ,S-[(2-aminophenyl)carbonyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/CSJ
+CSO,S-HYDROXYCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CSO
+CSP,S-PHOSPHOCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CSP
+CSR,S-ARSONOCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CSR
+CSS,S-MERCAPTOCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CSS
+CSU,CYSTEINE-S-SULFONIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/CSU
+CSX,S-OXY CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CSX
+CSZ,S-SELANYL CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/CSZ
+CTE,7-CHLOROTRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/CTE
+CTH,4-CHLOROTHREONINE,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/CTH
+CWD,"3-(5-chloro-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,1,1,https://www.rcsb.org/ligand/CWD
+CWR,"(4-methyl-5-oxo-2,5-dihydro-1H-imidazol-1-yl)acetic acid",SER,complex-skeletal-transformation,丝氨酸相关碳骨架并入取代咪唑酮环；属于成环和官能团重排，不能用单点替换描述,True,1,0,11,0,1,0.3636,https://www.rcsb.org/ligand/CWR
+CXM,N-CARBOXYMETHIONINE,MET,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,3,0,1,https://www.rcsb.org/ligand/CXM
+CY0,S-{3-[(4-ANILINOQUINAZOLIN-6-YL)AMINO]-3-OXOPROPYL}-L-CYSTEINE,CYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,29,22,3,1,https://www.rcsb.org/ligand/CY0
+CY1,ACETAMIDOMETHYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/CY1
+CY3,2-AMINO-3-MERCAPTO-PROPIONAMIDE,CYS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,7,0,0,0.8571,https://www.rcsb.org/ligand/CY3
+CY4,S-BUTYRYL-CYSTEIN,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/CY4
+CYF,"5-[2-(2-AMINO-2-CARBAMOYL-ETHYLSULFANYL)-ACETYLAMINO]-2-(3,6-DIHYDROXY-9,9A-DIHYDRO-3H-XANTHEN-9-YL)-BENZOIC ACID",CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,36,0,4,0.1667,https://www.rcsb.org/ligand/CYF
+CYG,2-AMINO-4-(AMINO-3-OXO-PROPYLSULFANYLCARBONYL)-BUTYRIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,9,0,1,https://www.rcsb.org/ligand/CYG
+CYJ,"(Z)-N~6~-[(4R,5S)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)PIPERIDIN-3-YLIDENE]-L-LYSINE",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.4,https://www.rcsb.org/ligand/CYJ
+CYQ,2-AMINO-3-PHOSPHONOMETHYLSULFANYL-PROPIONIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/CYQ
+CYR,N~5~-[{[(2R)-2-AMINO-2-CARBOXYETHYL]SULFANYL}(IMINIO)METHYL]-L-ORNITHINATE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,18,11,0,1,https://www.rcsb.org/ligand/CYR
+CYW,S-[(2R)-2-hydroxypropanoyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/CYW
+CZ2,S-(DIHYDROXYARSINO)CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/CZ2
+CZS,"3-(6-chloro-1,3-benzothiazol-2-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,2,1,https://www.rcsb.org/ligand/CZS
+CZZ,THIARSAHYDROXY-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/CZZ
+D2T,(3R)-3-(methylsulfanyl)-L-aspartic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/D2T
+D8R,N~6~-[(2R)-2-hydroxypropanoyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/D8R
+DA2,"NG,NG-DIMETHYL-L-ARGININE",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.8,https://www.rcsb.org/ligand/DA2
+DAB,"2,4-DIAMINOBUTYRIC ACID",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/DAB
+DAH,"3,4-DIHYDROXYPHENYLALANINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/DAH
+DBS,"2-(2,3-DIHYDROXY-BENZOYLAMINO)-3-HYDROXY-PROPIONIC ACID",SER,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,17,10,1,1,https://www.rcsb.org/ligand/DBS
+DBU,(2Z)-2-AMINOBUT-2-ENOIC ACID,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,0,0,1.0,https://www.rcsb.org/ligand/DBU
+DBY,"3,5 DIBROMOTYROSINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/DBY
+DBZ,3-(BENZOYLAMINO)-L-ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,1,1,https://www.rcsb.org/ligand/DBZ
+DC2,"N-acetyl-S-[(1S)-1,2-dichloroethyl]-L-cysteine",CYS,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,14,7,0,1,https://www.rcsb.org/ligand/DC2
+DDE,{3-[4-(2-AMINO-2-CARBOXY-ETHYL)-1H-IMIDAZOL-2-YL]-1-CARBAMOYL-PROPYL}-TRIMETHYL-AMMONIUM,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,0,0.5238,https://www.rcsb.org/ligand/DDE
+DDZ,"3,3-DIHYDROXY L-ALANINE",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/DDZ
+DHA,2-AMINO-ACRYLIC ACID,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,6,0,0,1.0,https://www.rcsb.org/ligand/DHA
+DI7,"2,6-dimethyl-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/DI7
+DIR,3-{[(E)-AMINO(HYDROXYIMINO)METHYL]AMINO}ALANINE,ARG,complex-skeletal-transformation,精氨酸侧链缩短并重排为羟基胍基丙氨酸结构；属于侧链重构,True,1,1,11,0,0,0.6364,https://www.rcsb.org/ligand/DIR
+DISEP,DIPHOSPHOSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/DISEP
+DJD,"4-(6-methyl-1,2,4,5-tetrazin-3-yl)-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,7,1,1,https://www.rcsb.org/ligand/DJD
+DLS,DI-ACETYL-LYSINE,LYS,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,0,0,0.625,https://www.rcsb.org/ligand/DLS
+DM0,"N~2~,N~2~,N~6~,N~6~-tetramethyl-L-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/DM0
+DMH,"N4,N4-DIMETHYL-ASPARAGINE",ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/DMH
+DMK,"3,3-DIMETHYL ASPARTIC ACID",ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/DMK
+DNL,6-AMINO-HEXANAL,LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,1.0,https://www.rcsb.org/ligand/DNL
+DNP,3-AMINO-ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/DNP
+DNS,N~6~-{[5-(DIMETHYLAMINO)-1-NAPHTHYL]SULFONYL}-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,26,0,2,0.3846,https://www.rcsb.org/ligand/DNS
+DNW,"3-[(2,4-dinitrophenyl)amino]-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,13,1,1,https://www.rcsb.org/ligand/DNW
+DON,6-DIAZENYL-5-OXO-L-NORLEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6667,https://www.rcsb.org/ligand/DON
+DPL,4-OXOPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/DPL
+DPP,DIAMINOPROPANOIC ACID,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/DPP
+DPQ,"(S)-2-AMINO-3-(4-HYDROXY-3-OXOCYCLOHEXA-1,4-DIENYL)PROPANOIC ACID",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.9286,https://www.rcsb.org/ligand/DPQ
+DV9,"(2S)-2-azanyl-6,6-bis(fluoranyl)-5-oxidanylidene-6-phosphono-hexanoic acid",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.5625,https://www.rcsb.org/ligand/DV9
+DYA,DIDEHYDROASPARTATE,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,1.0,https://www.rcsb.org/ligand/DYA
+DYJ,1-[(2E)-4-carboxy-4-oxobut-2-en-2-yl]-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,8,0,1,https://www.rcsb.org/ligand/DYJ
+DYS,"S-[5-(2-aminoethyl)-2,3-dihydroxyphenyl]-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,11,1,1,https://www.rcsb.org/ligand/DYS
+E0Y,"(3S,5R)-5-[(2R,3R)-1,3-dihydroxybutan-2-yl]-3-({(3R)-1-[(1E)-ethanimidoyl]pyrrolidin-3-yl}sulfanyl)-L-proline",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,16,1,1,https://www.rcsb.org/ligand/E0Y
+E9C,"(2S)-2-azanyl-3-[3,4,6-tris(oxidanylidene)cyclohexen-1-yl]propanoic acid",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.8667,https://www.rcsb.org/ligand/E9C
+E9M,N-methyl-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/E9M
+E9V,N-methyl-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/E9V
+ECC,(4S)-4-amino-5-hydroxypentanamide,GLN,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,0,0,1.0,https://www.rcsb.org/ligand/ECC
+ECX,S-ethyl-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/ECX
+EFC,"S,S-(2-FLUOROETHYL)THIOCYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/EFC
+EI4,Enduracididine,ARG,complex-skeletal-transformation,精氨酸型胍基侧链发生分子内成环，形成enduracididine的环状胍结构,True,1,1,12,0,1,0.4615,https://www.rcsb.org/ligand/EI4
+EJA,S-[(1Z)-2-carboxy-N-hydroxyethanimidoyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,0,1,https://www.rcsb.org/ligand/EJA
+EJJ,N-CARBAMOYL-GLYCINE,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,8,3,0,1,https://www.rcsb.org/ligand/EJJ
+ELY,"N~6~,N~6~-diethyl-L-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/ELY
+EME,N-methyl-L-glutamic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/EME
+ESB,"3-[(3E)-3-(ETHYLIMINO)-4-HYDROXY-6-OXOCYCLOHEXA-1,4-DIEN-1-YL]-L-ALANINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.7647,https://www.rcsb.org/ligand/ESB
+ESC,2-AMINO-4-ETHYL SULFANYL BUTYRIC ACID,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/ESC
+EU0,1-[(2~{S})-3-methyl-1-oxidanylidene-butan-2-yl]guanidine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,0,1,https://www.rcsb.org/ligand/EU0
+EUP,4-amino-L-allothreonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/EUP
+EW6,alpha-methyl-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/EW6
+EXA,N~6~-[(R)-[(E)-(1-carboxyethylidene)amino]{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl]-L-lysine,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,2,2,31,0,1,0.3226,https://www.rcsb.org/ligand/EXA
+EXL,1-Methyl-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.9375,https://www.rcsb.org/ligand/EXL
+EXY,6-[(2R)-oxiran-2-yl]-L-norleucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,1,0.6667,https://www.rcsb.org/ligand/EXY
+F2F,"3,4-difluoro-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/F2F
+F2Y,"3,5-difluoro-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/F2Y
+F6N,"2-(aminomethyl)-1,3-oxazole-4-carboxylic acid",GLY,complex-skeletal-transformation,"甘氨酸骨架扩展并氧化成1,3-噁唑环；属于杂环形成",True,1,1,10,0,1,0.3,https://www.rcsb.org/ligand/F6N
+F75,"2-(aminomethyl)-1,3-thiazole-4-carboxylic acid",CYS,complex-skeletal-transformation,"半胱氨酸相关骨架经成环和氧化形成1,3-噻唑环；属于杂环形成",True,1,1,10,0,1,0.3,https://www.rcsb.org/ligand/F75
+F7Q,"(2~{S})-2-azanyl-3-[1-(dioxidanyl)-4-oxidanylidene-cyclohexa-2,5-dien-1-yl]propanoic acid",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.8667,https://www.rcsb.org/ligand/F7Q
+F7W,7-Fluorotryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/F7W
+FAK,N~6~-(trifluoroacetyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/FAK
+FB5,2-(difluoromethyl)-6-(dihydroxyboranyl)-L-norleucine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,0,0.4,https://www.rcsb.org/ligand/FB5
+FB6,6-(dihydroxyboranyl)-2-methyl-L-norleucine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,0,0.4615,https://www.rcsb.org/ligand/FB6
+FCL,3-CHLORO-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/FCL
+FDL,N~6~-acetyl-N-(4-methyl-2-oxo-2H-chromen-7-yl)-L-lysinamide,LYS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,25,0,2,0.36,https://www.rcsb.org/ligand/FDL
+FF9,(2S)-2-azanyl-6-[(E)-(1-oxidanyl-1-oxidanylidene-butan-2-ylidene)amino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,0,0,0.625,https://www.rcsb.org/ligand/FF9
+FFM,"S-[(1R,2R)-2-hydroxy-1-methyl-2-phosphonoethyl]-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/FFM
+FGL,2-AMINOPROPANEDIOIC ACID,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,8,3,0,1,https://www.rcsb.org/ligand/FGL
+FGP,2-AMINO-3-HYDROXY-3-PHOSPHONOOXY-PROPIONIC ACID,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,0.5833,https://www.rcsb.org/ligand/FGP
+FH7,N^5^-formyl-N^5^-hydroxy-D-ornithine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6667,https://www.rcsb.org/ligand/FH7
+FHL,(E)-N~6~-[3-CARBOXY-1-(HYDROXYMETHYL)PROPYLIDENE]-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,0,0,0.5556,https://www.rcsb.org/ligand/FHL
+FHO,N^5^-FORMYL-N^5^-HYDROXY-L-ORNITHINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6667,https://www.rcsb.org/ligand/FHO
+FIO,N~5~-[(1E)-2-fluoroethanimidoyl]-L-ornithine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7857,https://www.rcsb.org/ligand/FIO
+FL6,(2S)-2-azanyl-4-methoxy-4-oxidanylidene-butanoic acid,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/FL6
+FLA,TRIFLUOROALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/FLA
+FLE,FUROYL-LEUCINE,LEU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,7,1,1,https://www.rcsb.org/ligand/FLE
+FLT,FLUOROMALONYL TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,8,0,1,https://www.rcsb.org/ligand/FLT
+FME,N-FORMYLMETHIONINE,MET,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,11,2,0,1,https://www.rcsb.org/ligand/FME
+FOE,2-(2-AMINO-3-OXO-PROPYLSULFANYL)-N-(4-FLUORO-PHENYL)-N-ISOPROPYL-ACETAMIDE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,14,1,1,https://www.rcsb.org/ligand/FOE
+FP9,(4R)-4-fluoro-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/FP9
+FPK,1-formyl-L-proline,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,10,2,0,1,https://www.rcsb.org/ligand/FPK
+FQA,N~6~-benzyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,1,0.5882,https://www.rcsb.org/ligand/FQA
+FT6,6-FLUORO-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/FT6
+FTR,FLUOROTRYPTOPHANE,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/FTR
+FTY,DEOXY-DIFLUOROMETHELENE-PHOSPHOTYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,0,0.6316,https://www.rcsb.org/ligand/FTY
+FVA,N-formyl-L-valine,VAL,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,10,2,0,1,https://www.rcsb.org/ligand/FVA
+FX9,(2S)-2-azanyl-3-[3-(trifluoromethyl)phenyl]propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/FX9
+FY2,"2,3-difluoro-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/FY2
+FY3,"2,3,5-trifluoro-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/FY3
+FZN,"(2S)-2-amino-6-{[(1Z)-1-{[(2R,3R,4S,5R)-5-({[(R)-{[(R)-{[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methoxy}(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]oxy}methyl)-3,4-dihydroxytetrahydrofuran-2-yl]sulfanyl}ethylidene]amino}hexanoic acid",LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,48,0,4,0.2083,https://www.rcsb.org/ligand/FZN
+G1X,"(2S)-2-azanyl-3-[3,4-bis(oxidanylidene)cyclohexa-1,5-dien-1-yl]propanoic acid",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.9286,https://www.rcsb.org/ligand/G1X
+G3M,(3S)-N~6~-carbamimidoyl-3-hydroxy-L-lysine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.6,https://www.rcsb.org/ligand/G3M
+G5G,"(2S,4S)-2-amino-4,5-dihydroxy-4-methylpentanoic acid",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/G5G
+G8M,"(1S,2R)-2-[(S)-amino(carboxy)methyl]cyclobutanecarboxylic acid",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,2,1,1,https://www.rcsb.org/ligand/G8M
+G8X,"(2~{S},3~{R})-3-oxidanylpyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/G8X
+GAM,ALPHA-METHYL-L-GLUTAMIC ACID,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/GAM
+GAU,(4S)-4-AMINO-5-HYDROXYPENTANOIC ACID,GLU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,0,0,1.0,https://www.rcsb.org/ligand/GAU
+GEE,ethyl glycinate,GLY,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,7,2,0,1,https://www.rcsb.org/ligand/GEE
+GFT,(2S)-2-azanyl-3-[cyclohexyloxy(methyl)phosphoryl]oxy-propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/GFT
+GHC,"N-({4-[(2-amino-6-ethyl-4-oxo-3,4-dihydrothieno[2,3-d]pyrimidin-5-yl)sulfanyl]phenyl}carbonyl)-L-glutamic acid",GLU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,32,22,3,1,https://www.rcsb.org/ligand/GHC
+GHG,"(2S,4S)-2,5-diamino-4-hydroxy-5-oxopentanoic acid (non-preferred name)",GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/GHG
+GHW,"N-({4-[(2-amino-6-methyl-4-oxo-3,4-dihydrothieno[2,3-d]pyrimidin-5-yl)sulfanyl]phenyl}carbonyl)-L-glutamic acid",GLU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,31,21,3,1,https://www.rcsb.org/ligand/GHW
+GL3,THIOGLYCIN,GLY,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,5,0,0,0.8,https://www.rcsb.org/ligand/GL3
+GLJ,"5,5-dihydroxy-L-norvaline",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,1.0,https://www.rcsb.org/ligand/GLJ
+GLZ,AMINO-ACETALDEHYDE,GLY,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,4,0,0,1.0,https://www.rcsb.org/ligand/GLZ
+GMA,4-AMIDO-4-CARBAMOYL-BUTYRIC ACID,GLU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.9,https://www.rcsb.org/ligand/GMA
+GME,5-O-methyl-glutamic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/GME
+GNC,N~2~-methyl-L-glutamine,GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/GNC
+GND,2-AMINO-5-GUANIDINO-PENTANOIC ACID,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6154,https://www.rcsb.org/ligand/GND
+GPL,LYSINE GUANOSINE-5'-MONOPHOSPHATE,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,33,0,3,0.303,https://www.rcsb.org/ligand/GPL
+GQI,(2R)-2-azanyl-3-[(E)-(2-oxidanyl-2-oxidanylidene-ethylidene)amino]oxysulfanyl-propanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,13,6,0,1,https://www.rcsb.org/ligand/GQI
+GSC,2-ETHYLTHIO GLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,3,0,1,https://www.rcsb.org/ligand/GSC
+GSU,O5'-(L-GLUTAMYL-SULFAMOYL)-ADENOSINE,GLU,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,0,0,32,0,3,0.2812,https://www.rcsb.org/ligand/GSU
+GT9,S-NONYL-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,0,1,https://www.rcsb.org/ligand/GT9
+GVL,"O-[(R)-{[(3R)-4-AMINO-3-HYDROXY-2,2-DIMETHYL-4-OXOBUTYL]OXY}(HYDROXY)PHOSPHORYL]-L-SERINE",SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,13,0,1,https://www.rcsb.org/ligand/GVL
+H14,"(2S,3R)-BETA-HYDROXY-PHENYLALANINE",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/H14
+H5M,TRANS-3-HYDROXY-5-METHYLPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/H5M
+H7V,3-cyclohexyl-N-methyl-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,1,1,https://www.rcsb.org/ligand/H7V
+HAR,N-OMEGA-HYDROXY-L-ARGININE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.9231,https://www.rcsb.org/ligand/HAR
+HBN,N-(2-NAPHTHYL)HISTIDINAMIDE,HIS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,21,0,2,0.4762,https://www.rcsb.org/ligand/HBN
+HCM,(2S)-2-amino-4-(methyldisulfanyl)butanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.6,https://www.rcsb.org/ligand/HCM
+HGY,(2S)-amino(hydroxy)ethanoic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,6,1,0,1,https://www.rcsb.org/ligand/HGY
+HHI,(2Z)-3-(1H-imidazol-5-yl)-2-iminopropanoic acid,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9167,https://www.rcsb.org/ligand/HHI
+HHK,"(2S)-2,8-DIAMINOOCTANOIC ACID",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.5,https://www.rcsb.org/ligand/HHK
+HIA,L-HISTIDINE AMIDE,HIS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,11,0,0,0.9091,https://www.rcsb.org/ligand/HIA
+HIC,4-METHYL-HISTIDINE,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/HIC
+HIP,ND1-PHOSPHONOHISTIDINE,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/HIP
+HIQ,"1-[1,2-DIHYDROXY-1-(HYDROXYMETHYL)ETHYL]-L-HISTIDINE",HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.6471,https://www.rcsb.org/ligand/HIQ
+HIX,"3-(1H-1,2,3-triazol-5-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,1,1,https://www.rcsb.org/ligand/HIX
+HL2,"(2S,3R)-2-amino-3-hydroxy-4-methylpentanoic acid",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/HL2
+HL5,"(2S,4R)-5-hydroxyleucine",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/HL5
+HLU,BETA-HYDROXYLEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/HLU
+HLY,(3~{R})-5-[[(5~{S})-5-azanyl-6-oxidanyl-6-oxidanylidene-hexyl]amino]-3-methyl-3-oxidanyl-5-oxidanylidene-pentanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.5,https://www.rcsb.org/ligand/HLY
+HMR,BETA-HOMOARGININE,ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.7692,https://www.rcsb.org/ligand/HMR
+HNC,"S-[(1S,2R)-2-hydroxy-1-(2-oxoethyl)heptyl]-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,11,0,1,https://www.rcsb.org/ligand/HNC
+HOO,"(2~{S})-2-azanyl-3-[2,5-bis(oxidanylidene)imidazol-4-yl]propanoic acid",HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8462,https://www.rcsb.org/ligand/HOO
+HOX,4-amino-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/HOX
+HP9,(2S)-2-azanyl-3-(7-fluoranyl-9-oxidanylidene-xanthen-2-yl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,10,2,1,https://www.rcsb.org/ligand/HP9
+HPE,HOMOPHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.6923,https://www.rcsb.org/ligand/HPE
+HPQ,HOMOPHENYLALANINYLMETHANE,PHE,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.6923,https://www.rcsb.org/ligand/HPQ
+HQA,3-(8-hydroxyquinolin-3-yl)-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,11,2,1,https://www.rcsb.org/ligand/HQA
+HR7,(3S)-3-amino-6-[(diaminomethylidene)amino]hexanoic acid,ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.7692,https://www.rcsb.org/ligand/HR7
+HRG,L-HOMOARGININE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.6923,https://www.rcsb.org/ligand/HRG
+HRP,5-HYDROXY-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/HRP
+HS8,3-(1-sulfo-1H-imidazol-3-ium-4-yl)-L-alanine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/HS8
+HS9,N-ALPHA-METHYL-L-HISTIDINAMIDE,HIS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,12,0,0,0.8333,https://www.rcsb.org/ligand/HS9
+HSE,L-HOMOSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.75,https://www.rcsb.org/ligand/HSE
+HSK,3-hydroxy-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/HSK
+HSL,HOMOSERINE LACTONE,SER,complex-skeletal-transformation,丝氨酸型侧链先延长为高丝氨酸骨架，再由羟基与羧基内酯化成环,True,0,0,7,0,1,0.1429,https://www.rcsb.org/ligand/HSL
+HSO,L-histidinol,HIS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,1.0,https://www.rcsb.org/ligand/HSO
+HSV,L-histidinal,HIS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,1.0,https://www.rcsb.org/ligand/HSV
+HT7,(3S)-3-AMINO-4-(1H-INDOL-3-YL)BUTANOIC ACID,TRP,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,16,0,0,0.8125,https://www.rcsb.org/ligand/HT7
+HTI,(4S)-4-{[(2S)-2-AMINO-3-OXOPROPYL]SULFANYL}-L-HOMOSERINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,15,8,0,1,https://www.rcsb.org/ligand/HTI
+HTR,BETA-HYDROXYTRYPTOPHANE,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/HTR
+HVA,3-hydroxy-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/HVA
+HY3,3-HYDROXYPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/HY3
+HYP,4-HYDROXYPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/HYP
+HZP,(4S)-4-hydroxy-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/HZP
+I2F,"(2~{S},4~{R},5~{E})-5-[(5~{S})-5-azanyl-6-oxidanyl-hexyl]iminohexane-1,2,4-triol",LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,19,0,0,0.5263,https://www.rcsb.org/ligand/I2F
+I2M,3-methyl-L-alloisoleucine,ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/I2M
+I3L,allyl-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/I3L
+I4G,N-(2-methylpropyl)glycine,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,4,0,1,https://www.rcsb.org/ligand/I4G
+I4O,Histidine oxo-vanadium complex,HIS,special-adduct-or-label,结构含金属元素V，属于配合物而不是普通单残基替换,True,1,1,16,0,0,0.6875,https://www.rcsb.org/ligand/I4O
+I58,4R-FLUORO-N6-ETHANIMIDOYL-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.6667,https://www.rcsb.org/ligand/I58
+I7F,O-hydroxy-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/I7F
+IAE,(2S)-2-azanyl-4-[4-(trifluoromethyl)phenyl]butanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.5294,https://www.rcsb.org/ligand/IAE
+IAM,4-[(ISOPROPYLAMINO)METHYL]PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/IAM
+IAR,(2E)-5-[(diaminomethylidene)amino]-2-iminopentanoic acid,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8571,https://www.rcsb.org/ligand/IAR
+IB9,Beta-tyrosine,TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.9231,https://www.rcsb.org/ligand/IB9
+IC0,Fmoc-(S)-2-(4-pentenyl)-glycine,GLY,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,10,5,0,1,https://www.rcsb.org/ligand/IC0
+ICY,S-(2-iodobenzyl)-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/ICY
+IEL,N~6~-[(1Z)-ethanimidoyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7143,https://www.rcsb.org/ligand/IEL
+IGL,ALPHA-AMINO-2-INDANACETIC ACID,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,9,2,1,https://www.rcsb.org/ligand/IGL
+IIC,4-IMIDAZOLMETHYLENE-5-IMIDAZOLONE CHROMOPHORE,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,0,2,0.2,https://www.rcsb.org/ligand/IIC
+IIL,ISO-ISOLEUCINE,ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,1,https://www.rcsb.org/ligand/IIL
+ILX,"4,5-DIHYDROXYISOLEUCINE",ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/ILX
+IML,N-METHYL-ISOLEUCINE,ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/IML
+IO8,2-[2-(aminomethyl)-4-(1H-indol-3-ylmethyl)-5-oxidanylidene-4H-imidazol-1-yl]ethanoic acid,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,22,0,3,0.1818,https://www.rcsb.org/ligand/IO8
+IOR,"N~5~-[(5R)-5-methyl-4-oxo-4,5-dihydro-1H-imidazol-2-yl]-L-ornithine",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,1,0.5625,https://www.rcsb.org/ligand/IOR
+IPG,N-ISOPROPYL GLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,3,0,1,https://www.rcsb.org/ligand/IPG
+IYR,3-IODO-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/IYR
+IZO,(2S)-2-AMINOHEX-5-YNOIC ACID,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.7778,https://www.rcsb.org/ligand/IZO
+J2F,(2~{S})-2-azanyl-3-[4-[(2-nitrophenyl)methoxy]phenyl]propanoic acid,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,10,1,1,https://www.rcsb.org/ligand/J2F
+J3D,N-carboxy-L-cysteine,CYS,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,10,3,0,1,https://www.rcsb.org/ligand/J3D
+J8W,(2~{S})-2-azanyl-3-(3-oxidanyl-3-oxidanylidene-propanoyl)oxy-propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/J8W
+J9Y,(2S)-2-amino-5-{[(E)-amino(methylamino)methylidene](hydroxy)azaniumyl}pentanoate,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.8571,https://www.rcsb.org/ligand/J9Y
+JGO,"meso-2,6-diaminopimelic acid NH2",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/JGO
+JJJ,S-(pyridin-3-ylcarbonyl)-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/JJJ
+JJK,S-[(S)-hydroxy(pyridin-3-yl)methyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/JJK
+JJL,S-[(S)-hydroxy(5-methoxypyridin-3-yl)methyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/JJL
+JKH,4-amino-Proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/JKH
+JLP,(2S)-2-azanyl-6-[E-[5-(hydroxymethyl)-2-methyl-3-oxidanyl-pyridin-4-yl]methylideneamino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,1,0.4762,https://www.rcsb.org/ligand/JLP
+K1R,(2S)-2-AMINO-4-[({[(2R)-2-AMINO-2-CARBOXYETHYL]THIO}AMINO)SULFINYL]BUTANOIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,10,0,1,https://www.rcsb.org/ligand/K1R
+K5H,"(2~{R})-2-azanyl-3-[3,3,3-tris(fluoranyl)-2,2-bis(oxidanyl)propyl]sulfanyl-propanoic acid",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/K5H
+K5L,(2~{R})-2-azanyl-3-(3-oxidanyl-3-oxidanylidene-propanoyl)oxy-propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/K5L
+K7K,2-azanyl-3-[hexyl-[2-(3-oxidanylpyridin-2-yl)pyridin-3-yl]oxy-phosphoryl]oxy-propanal,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,29,22,2,1,https://www.rcsb.org/ligand/K7K
+KBE,beta-lysine,LYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.9,https://www.rcsb.org/ligand/KBE
+KCR,N-6-crotonyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/KCR
+KCX,LYSINE NZ-CARBOXYLIC ACID,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/KCX
+KEO,e(R)-beta-lysyl-hydroxylysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.5,https://www.rcsb.org/ligand/KEO
+KFP,"N~6~-[(2-amino-4-oxo-3,4-dihydropteridin-6-yl)methyl]-D-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,2,0.4348,https://www.rcsb.org/ligand/KFP
+KGC,N~6~-[(2R)-2-CARBOXY-5-OXOTETRAHYDROFURAN-2-YL]-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,19,0,1,0.5263,https://www.rcsb.org/ligand/KGC
+KHB,N~6~-[(3S)-3-hydroxybutanoyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/KHB
+KKD,N-acetyl-L-aspartic acid,ASP,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,3,0,1,https://www.rcsb.org/ligand/KKD
+KLF,"(2~{S},4~{R})-4-oxidanylpyrrolidine-2-carboxamide",PRO,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,0,0,0.7778,https://www.rcsb.org/ligand/KLF
+KNB,3-(methylsulfonyl)-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/KNB
+KOR,L-HOMOCYSTEINE-S-N-S-L-CYSTEINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,0,0,0.4706,https://www.rcsb.org/ligand/KOR
+KPF,N-(1-carboxy-2-fluoro-ethenyl) lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,0,0,0.625,https://www.rcsb.org/ligand/KPF
+KPI,(2S)-2-amino-6-[(1-hydroxy-1-oxo-propan-2-ylidene)amino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,15,0,0,0.6667,https://www.rcsb.org/ligand/KPI
+KPY,(2R)-2-AZANYL-3-[2-[(E)-(1-OXIDANYL-1-OXIDANYLIDENE-PROPAN-2-YLIDENE)AMINO]ETHYLSULFANYL]PROPANOIC ACID,LYS,complex-skeletal-transformation,赖氨酸母体发生含硫侧链连接和亚胺/羧酸官能团重构；不是简单的赖氨酸单点取代,True,2,2,15,0,0,0.4,https://www.rcsb.org/ligand/KPY
+KR3,N~6~-(ethoxycarbonyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/KR3
+KST,N~6~-(5-CARBOXY-3-THIENYL)-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,0,1,0.5556,https://www.rcsb.org/ligand/KST
+KYN,(2S)-2-amino-4-(2-aminophenyl)-4-oxobutanoic acid,TRP,complex-skeletal-transformation,色氨酸吲哚环发生氧化开环，形成犬尿氨酸型邻氨基芳酮侧链,True,1,1,15,0,0,0.6,https://www.rcsb.org/ligand/KYN
+KYQ,(E)-N~6~-(1-carboxy-2-hydroxyethylidene)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,0,0,0.625,https://www.rcsb.org/ligand/KYQ
+L3O,"(2S,3S)-3-amino-2-hydroxy-5-methylhexanoic acid",LEU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,0.7273,https://www.rcsb.org/ligand/L3O
+L5P,"(2S)-2-azanyl-6-[[(3R,4R)-3,4-bis(oxidanyl)-2-oxidanylidene-5-phosphonooxy-pentyl]amino]hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,0,0.4348,https://www.rcsb.org/ligand/L5P
+LA2,"N~6~-[(6R)-6,8-disulfanyloctanoyl]-L-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,0,0.4762,https://www.rcsb.org/ligand/LA2
+LAL,"N,N-DIMETHYL-L-ALANINE",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/LAL
+LAY,N-acetyl-L-leucine,LEU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,3,0,1,https://www.rcsb.org/ligand/LAY
+LBY,N~6~-(tert-butoxycarbonyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.5882,https://www.rcsb.org/ligand/LBY
+LBZ,(2~{S})-2-azanyl-6-benzamido-hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,0,1,0.5556,https://www.rcsb.org/ligand/LBZ
+LCK,(Z)-N~6~-(2-carboxy-1-methylethylidene)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/LCK
+LDH,N~6~-ETHYL-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/LDH
+LE1,3-sulfanyl-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/LE1
+LED,(4R)-5-OXO-L-LEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/LED
+LEF,(4S)-5-FLUORO-L-LEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/LEF
+LEH,N-[12-(1H-imidazol-1-yl)dodecanoyl]-L-leucine,LEU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,27,18,1,1,https://www.rcsb.org/ligand/LEH
+LET,(Z)-N^6-{3-CARBOXY-1-[(4-CARBOXY-2-OXOBUTOXY)METHYL]PROPYLIDENE}-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,26,0,0,0.3846,https://www.rcsb.org/ligand/LET
+LGY,(E)-N~6~-(4-oxobutylidene)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/LGY
+LLO,"N~6~-[(1S)-3-hydroxy-1,3-dimethylbutyl]-L-lysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.5882,https://www.rcsb.org/ligand/LLO
+LLP,(2S)-2-amino-6-[[3-hydroxy-2-methyl-5-(phosphonooxymethyl)pyridin-4-yl]methylideneamino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.4,https://www.rcsb.org/ligand/LLP
+LLY,NZ-(DICARBOXYMETHYL)LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,3,3,17,0,0,0.5882,https://www.rcsb.org/ligand/LLY
+LLZ,N~6~-[(1S)-3-(6-methoxynaphthalen-2-yl)-1-methyl-3-oxopropyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,27,0,2,0.3704,https://www.rcsb.org/ligand/LLZ
+LME,"(2S,3R)-2-azanyl-3-methyl-pentanedioic acid",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/LME
+LMF,NZ(N-METHYL THIOFORMAMIDE) LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/LMF
+LMQ,(3S)-3-methyl-L-glutamine,GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/LMQ
+LNE,N-ethyl-L-leucinamide,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,11,0,0,0.7273,https://www.rcsb.org/ligand/LNE
+LNM,N-methyl-L-leucinamide,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,0.8,https://www.rcsb.org/ligand/LNM
+LOH,"3,4-dihydroxylysine",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/LOH
+LP6,6-piperidin-1-yl-L-norleucine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,1,0.6,https://www.rcsb.org/ligand/LP6
+LPD,L-PROLINAMIDE,PRO,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,8,0,0,0.875,https://www.rcsb.org/ligand/LPD
+LPG,(2S)-2-aminobut-3-ynoic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,2,0,1,https://www.rcsb.org/ligand/LPG
+LPS,O-{HYDROXY[((2R)-2-HYDROXY-3-{[(1S)-1-HYDROXYPENTADECYL]OXY}PROPYL)OXY]PHOSPHORYL}-L-SERINE,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,32,25,0,1,https://www.rcsb.org/ligand/LPS
+LRK,"(2S)-2-azanyl-6-[[(2R,4R)-1,4-bis(oxidanyl)-3-oxidanylidene-5-phosphonooxy-pentan-2-yl]amino]hexanoic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,0,0,0.4348,https://www.rcsb.org/ligand/LRK
+LSO,(Z)-N~6~-(3-CARBOXY-1-{[(4-CARBOXY-2-OXOBUTYL)SULFONYL]METHYL}PROPYLIDENE)-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,28,0,0,0.3571,https://www.rcsb.org/ligand/LSO
+LT0,D-tryptophyl-L-serine,SER,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,21,0,2,0.3333,https://www.rcsb.org/ligand/LT0
+LTU,2-Amino-3-hydroxy-3-[1-[2-(oxiran-2-yl)propan-2-yl]indol-3-yl]propanoic acid,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.6818,https://www.rcsb.org/ligand/LTU
+LVG,L-VINYLGLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,2,0,1,https://www.rcsb.org/ligand/LVG
+LVN,(3S)-4-oxo-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/LVN
+LWI,2-(aminomethyl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/LWI
+LYF,"(2E,4S)-2-{[(5S)-5-amino-5-carboxypentyl]imino}-4-hydroxyheptanedioic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,22,0,0,0.4545,https://www.rcsb.org/ligand/LYF
+LYN,"2,6-DIAMINO-HEXANOIC ACID AMIDE",LYS,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,0.9,https://www.rcsb.org/ligand/LYN
+LYO,4-HYDROXY-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/LYO
+LYR,"N~6~-[(2Z,4E,6E,8E)-3,7-DIMETHYL-9-(2,6,6-TRIMETHYLCYCLOHEX-1-EN-1-YL)NONA-2,4,6,8-TETRAENYL]LYSINE",LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,30,0,1,0.3333,https://www.rcsb.org/ligand/LYR
+LYU,N~6~-(4-methylpentyl)-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.625,https://www.rcsb.org/ligand/LYU
+LYX,N''-(2-COENZYME A)-PROPANOYL-LYSINE,LYS,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,1,1,62,0,3,0.1613,https://www.rcsb.org/ligand/LYX
+LYZ,5-HYDROXYLYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/LYZ
+M0H,S-(HYDROXYMETHYL)-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/M0H
+M2L,(2R)-2-amino-3-(2-dimethylaminoethylsulfanyl)propanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.5,https://www.rcsb.org/ligand/M2L
+M2S,3-{[(R)-methylsulfinyl]methyl}-L-valine,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,3,0,1,https://www.rcsb.org/ligand/M2S
+M30,N-cyclohexylglycine,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,6,1,1,https://www.rcsb.org/ligand/M30
+M3L,N-TRIMETHYLLYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/M3L
+MAA,N-methyl-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,1,0,1,https://www.rcsb.org/ligand/MAA
+MBQ,2-HYDROXY-5-({1-[(4-METHYLPHENOXY)METHYL]-3-OXOPROP-1-ENYL}AMINO)-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,28,15,1,1,https://www.rcsb.org/ligand/MBQ
+MCS,MALONYL CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/MCS
+MD3,N-(carboxycarbonyl)-S-(naphthalen-2-ylmethyl)-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,23,16,2,1,https://www.rcsb.org/ligand/MD3
+MD5,N-(carboxycarbonyl)-S-(3-nitrobenzyl)-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,22,15,1,1,https://www.rcsb.org/ligand/MD5
+MD6,N-[(3-hydroxypyridin-2-yl)carbonyl]glycine,GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,14,9,1,1,https://www.rcsb.org/ligand/MD6
+MDF,"META, META'-DI-HYDROXY-PHENYLALANINE",TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,14,0,0,0.5714,https://www.rcsb.org/ligand/MDF
+ME0,hydroxy-L-methionine,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/ME0
+MEA,N-METHYLPHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/MEA
+MEG,"(2S,3S)-2-azanyl-3-methyl-pentanedioic acid",GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/MEG
+MEN,N-METHYL ASPARAGINE,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/MEN
+MEQ,N5-METHYLGLUTAMINE,GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/MEQ
+MEU,O-METHYL-GLYCINE,GLY,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,6,1,0,1,https://www.rcsb.org/ligand/MEU
+MGG,2-(2-CARBOXY-ACETYLAMINO)-5-GUANIDINO-PENTANOIC ACID,ARG,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,18,6,0,1,https://www.rcsb.org/ligand/MGG
+MGN,2-METHYL-GLUTAMINE,GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,1,0,1,https://www.rcsb.org/ligand/MGN
+MH6,3-hydroxy-2-iminopropanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,7,0,0,0.875,https://www.rcsb.org/ligand/MH6
+MHL,N-METHYL-4-HYDROXY-LEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/MHL
+MHO,S-OXYMETHIONINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/MHO
+MHS,N1-METHYLATED HISTIDINE,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/MHS
+MHU,"4-N,N-(DIMETHYLAMINO)-L-PHENYLALANINE",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/MHU
+MIR,Monoethylphosphorylserine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/MIR
+MIS,MONOISOPROPYLPHOSPHORYLSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,0,1,https://www.rcsb.org/ligand/MIS
+MK8,2-methyl-L-norleucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.8,https://www.rcsb.org/ligand/MK8
+MKF,(2~{S})-2-azanyl-3-(dimethylcarbamoyloxy)propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/MKF
+ML3,"2-{[(2R)-2-amino-2-carboxyethyl]sulfanyl}-N,N,N-trimethylethanaminium",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.4615,https://www.rcsb.org/ligand/ML3
+MLE,N-METHYLLEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/MLE
+MLL,METHYL L-LEUCINATE,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,1,0,1,https://www.rcsb.org/ligand/MLL
+MLY,N-DIMETHYL-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/MLY
+MLZ,N-METHYL-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/MLZ
+MME,N-METHYL METHIONINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/MME
+MMO,N~2~-methyl-L-arginine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8571,https://www.rcsb.org/ligand/MMO
+MNL,"4,N-DIMETHYLNORLEUCINE",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/MNL
+MP8,(4R)-4-methyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/MP8
+MPQ,N-METHYL-ALPHA-PHENYL-GLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,7,1,1,https://www.rcsb.org/ligand/MPQ
+MS6,(2S)-2-amino-4-(methylsulfanyl)butane-1-thiol,MET,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,0,0,0.8889,https://www.rcsb.org/ligand/MS6
+MSA,(2-S-METHYL) SARCOSINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,3,0,1,https://www.rcsb.org/ligand/MSA
+MSE,SELENOMETHIONINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.7778,https://www.rcsb.org/ligand/MSE
+MSL,(2S)-2-AMINO-4-(METHYLSULFONIMIDOYL)BUTANOIC ACID,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/MSL
+MSO,SELENOMETHIONINE SELENOXIDE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.7,https://www.rcsb.org/ligand/MSO
+MT2,[(3S)-3-amino-3-carboxypropyl](ethyl)methylsulfonium,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,0.8182,https://www.rcsb.org/ligand/MT2
+MTY,META-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.9231,https://www.rcsb.org/ligand/MTY
+MVA,N-METHYLVALINE,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/MVA
+MYK,N~6~-tetradecanoyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,0,0.4,https://www.rcsb.org/ligand/MYK
+MYN,"(2S)-amino[(4R)-2-amino-1,4,5,6-tetrahydropyrimidin-4-yl]ethanoic acid",ARG,complex-skeletal-transformation,精氨酸型胍基侧链发生分子内成环，形成四氢嘧啶侧链,True,1,1,12,0,1,0.4167,https://www.rcsb.org/ligand/MYN
+N0A,3-fluoro-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/N0A
+N10,O-[(HEXYLAMINO)CARBONYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,0,1,https://www.rcsb.org/ligand/N10
+N65,(2~{S})-2-azanyl-6-[(~{E})-pentan-2-ylideneamino]hexanal,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/N65
+N7P,1-ACETYL-L-PROLINE,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,11,3,0,1,https://www.rcsb.org/ligand/N7P
+N80,1-ethenyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/N80
+N9P,3-pyridin-4-yl-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,1,1,https://www.rcsb.org/ligand/N9P
+NA8,(1S)-1-CARBOXY-2-NAPHTHALEN-2-YLETHANAMINIUM,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,2,1,https://www.rcsb.org/ligand/NA8
+NAL,BETA-(2-NAPHTHYL)-ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,10,2,1,https://www.rcsb.org/ligand/NAL
+NBQ,2-HYDROXY-5-({1-[(2-NAPHTHYLOXY)METHYL]-3-OXOPROP-1-ENYL}AMINO)TYROSINE,TYR,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,31,18,2,1,https://www.rcsb.org/ligand/NBQ
+NC1,NITROCEFIN ACYL-SERINE,SER,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,2,2,42,35,3,1,https://www.rcsb.org/ligand/NC1
+NCB,N-CARBAMOYL-ALANINE,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,9,3,0,1,https://www.rcsb.org/ligand/NCB
+NEP,N1-PHOSPHONOHISTIDINE,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/NEP
+NFA,PHENYLALANINE AMIDE,PHE,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,12,0,0,0.9167,https://www.rcsb.org/ligand/NFA
+NIY,META-NITRO-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/NIY
+NLB,6-(benzyloxy)-L-norleucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,1,0.4706,https://www.rcsb.org/ligand/NLB
+NLE,NORLEUCINE,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.8889,https://www.rcsb.org/ligand/NLE
+NLN,NORLEUCINE AMIDE,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,0,0,0.7778,https://www.rcsb.org/ligand/NLN
+NLO,O-METHYL-L-NORLEUCINE,LEU,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.8,https://www.rcsb.org/ligand/NLO
+NLP,(1-AMINO-PENTYL)-PHOSPHONIC ACID,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,0.5,https://www.rcsb.org/ligand/NLP
+NLQ,N~2~-ACETYL-L-GLUTAMINE,GLN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,13,3,0,1,https://www.rcsb.org/ligand/NLQ
+NLW,L-leucinamide,LEU,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,0,0,0.8889,https://www.rcsb.org/ligand/NLW
+NLY,N-(4-aminobutyl)glycine,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,5,0,1,https://www.rcsb.org/ligand/NLY
+NMC,N-CYCLOPROPYLMETHYL GLYCINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,4,1,1,https://www.rcsb.org/ligand/NMC
+NMM,(2S)-2-amino-5-[(N-methylcarbamimidoyl)amino]pentanoic acid,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8571,https://www.rcsb.org/ligand/NMM
+NNH,NOR-N-OMEGA-HYDROXY-L-ARGININE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.6154,https://www.rcsb.org/ligand/NNH
+NOT,6-Azido-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/NOT
+NPH,"CYSTEINE-METHYLENE-CARBAMOYL-1,10-PHENANTHROLINE",CYS,special-adduct-or-label,名称显示为反应加合物、核苷/辅因子连接物或金属相关构件,True,1,1,25,18,3,1,https://www.rcsb.org/ligand/NPH
+NPI,(2S)-2-aminoheptanedioic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,0,1,https://www.rcsb.org/ligand/NPI
+NTR,META-HYDROXY BETA NOR-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.6923,https://www.rcsb.org/ligand/NTR
+NVA,NORVALINE,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/NVA
+NWD,"3-(5-nitro-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,11,1,1,https://www.rcsb.org/ligand/NWD
+NYB,N-METHYL-S-[(1R)-1-METHYLPROPYL]-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/NYB
+NYS,"S-{5-[(1R)-2-amino-1-hydroxyethyl]-2,3-dihydroxyphenyl}-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/NYS
+NZC,N-methylidene-L-threonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/NZC
+NZH,(2S)-2-AMINO-3-[1-(1H-TETRAAZOL-5-YL)-1H-IMIDAZOL-4-YL]PROPANAL,HIS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,15,0,1,0.6667,https://www.rcsb.org/ligand/NZH
+O2E,"(2~{S},3~{R})-2-[(2~{S},3~{R})-1-[(2~{R})-2-azanyl-3-oxidanylidene-propoxy]-3-oxidanyl-1-oxidanylidene-butan-2-yl]-4-[(3~{S},5~{S})-5-[(3-carboxyphenyl)carbamoyl]pyrrolidin-3-yl]sulfanyl-3-methyl-3,4-dihydro-2~{H}-pyrrole-5-carboxylic acid",SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,39,0,3,0.1538,https://www.rcsb.org/ligand/O2E
+O6H,"2,4,6-trimethyl-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/O6H
+O7A,N-methyl-L-allothreonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/O7A
+O7D,4-methoxy-N-methyl-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,3,0,1,https://www.rcsb.org/ligand/O7D
+OAS,O-ACETYLSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/OAS
+OBS,"(Z)-N^6-[(4S,5R)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)-1-HYDROXYDIHYDRO-2H-THIOPYRANIUM-3(4H)-YLIDENE]-L-LYSINE",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,26,0,1,0.3846,https://www.rcsb.org/ligand/OBS
+OCS,CYSTEINESULFONIC ACID,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/OCS
+OCY,HYDROXYETHYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/OCY
+OGC,gamma-N-methyl-beta-OH-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8462,https://www.rcsb.org/ligand/OGC
+OHI,3-(2-OXO-2H-IMIDAZOL-4-YL)-L-ALANINE,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/OHI
+OHS,O-(CARBOXYSULFANYL)-4-OXO-L-HOMOSERINE,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,4,0,1,https://www.rcsb.org/ligand/OHS
+OLD,3-[2-(4-bromophenyl)-2-oxoethyl]-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,1,0.5238,https://www.rcsb.org/ligand/OLD
+OLT,O-METHYL-L-THREONINE,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/OLT
+OLZ,O-(2-aminoethyl)-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/OLZ
+OMH,O-[(S)-hydroxy(methoxy)phosphoryl]-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/OMH
+OMT,S-DIOXYMETHIONINE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/OMT
+OMX,(betaR)-beta-hydroxy-L-Tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/OMX
+OMY,(betaR)-3-chloro-beta-hydroxy-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/OMY
+ONH,N~5~-hydroxy-L-ornithine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/ONH
+ORN,L-ornithine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/ORN
+ORQ,N~5~-ACETYL-L-ORNITHINE,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.8333,https://www.rcsb.org/ligand/ORQ
+OSE,O-SULFO-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/OSE
+OTH,"N,O-dimethyl-L-threonine",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/OTH
+OTZ,"2-[2-(aminomethyl)-1,3-oxazol-4-yl]-1,3-thiazole-4-carboxylic acid",CYS,complex-skeletal-transformation,半胱氨酸相关骨架经连续成环和氧化形成噁唑-噻唑双杂环,True,1,1,15,0,2,0.2,https://www.rcsb.org/ligand/OTZ
+OXX,OXALYL-ASPARTYL ANHYDRIDE,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,5,0,1,https://www.rcsb.org/ligand/OXX
+OYL,1-ethyl-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8462,https://www.rcsb.org/ligand/OYL
+OZW,phenylhydrazinyl phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,8,1,1,https://www.rcsb.org/ligand/OZW
+P1L,S-PALMITOYL-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,17,0,1,https://www.rcsb.org/ligand/P1L
+P2Q,"2-hydroxy-5-{[(1S,2E)-1-formyl-4-phenoxybut-2-en-1yl]amino}-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,28,15,1,1,https://www.rcsb.org/ligand/P2Q
+P2Y,(2S)-PYRROLIDIN-2-YLMETHYLAMINE,PRO,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,7,0,0,0.8571,https://www.rcsb.org/ligand/P2Y
+P3Q,2-hydroxy-5-{[(1E)-1-(2-oxoethylidene)-4-phenylbutyl]amino}-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,28,15,1,1,https://www.rcsb.org/ligand/P3Q
+P9S,dihydroxypropylcysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/P9S
+PAQ,2-OXY-4-HYDROXY-5-(2-HYDRAZINOPYRIDINE)PHENYLALANINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.5909,https://www.rcsb.org/ligand/PAQ
+PAT,ALPHA-PHOSPHONO-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,4,0,1,https://www.rcsb.org/ligand/PAT
+PBB,S-(4-BROMOBENZYL)CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/PBB
+PBF,PARA-(BENZOYL)-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,8,1,1,https://www.rcsb.org/ligand/PBF
+PCA,PYROGLUTAMIC ACID,GLN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,9,0,1,0.3333,https://www.rcsb.org/ligand/PCA
+PCS,PHENYLALANYLMETHYLCHLORIDE,PHE,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,0,0.8462,https://www.rcsb.org/ligand/PCS
+PE1,N~2~-({3-HYDROXY-2-METHYL-5-[(PHOSPHONOOXY)METHYL]PYRIDIN-4-YL}METHYL)-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,0,1,0.4,https://www.rcsb.org/ligand/PE1
+PEC,"S,S-PENTYLTHIOCYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/PEC
+PF5,"2,3,4,5,6-PENTAFLUORO-L-PHENYLALANINE",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/PF5
+PFF,4-FLUORO-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/PFF
+PH6,(4S)-4-cyclohexyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,6,1,1,https://www.rcsb.org/ligand/PH6
+PHA,PHENYLALANINAL,PHE,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,1.0,https://www.rcsb.org/ligand/PHA
+PHD,ASPARTYL PHOSPHATE,ASP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,4,0,1,https://www.rcsb.org/ligand/PHD
+PHI,IODO-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,1,0,1,https://www.rcsb.org/ligand/PHI
+PHL,L-PHENYLALANINOL,PHE,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,11,0,0,1.0,https://www.rcsb.org/ligand/PHL
+PIA,"[(4Z)-2-[(1S)-1-aminoethyl]-4-(4-hydroxybenzylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid",ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,21,0,2,0.1905,https://www.rcsb.org/ligand/PIA
+PJ3,"(2~{S})-2-azanyl-3-[1-[[(2~{R},3~{S},4~{R},5~{R})-5-(2-azanyl-7-methyl-6-oxidanylidene-1,8-dihydropurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl]imidazol-4-yl]propanoic acid",HIS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,35,0,3,0.3143,https://www.rcsb.org/ligand/PJ3
+PLJ,methyl L-prolinate,PRO,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,9,1,0,1,https://www.rcsb.org/ligand/PLJ
+PM3,2-AMINO-3-(4-PHOSPHONOMETHYL-PHENYL)-PROPIONIC ACID,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/PM3
+POK,2-[[~{N}-[(4~{S})-4-azanyl-5-oxidanylidene-pentyl]carbamimidoyl]amino]ethanoic acid,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,16,0,0,0.7059,https://www.rcsb.org/ligand/POK
+POM,CIS-5-METHYL-4-OXOPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/POM
+PPN,PARA-NITROPHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/PPN
+PR3,"S,S-PROPYLTHIOCYSTEINE",CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,10,0,0,0.6,https://www.rcsb.org/ligand/PR3
+PR4,1-[(2R)-2-carboxy-2-hydroxyethyl]-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,6,0,1,https://www.rcsb.org/ligand/PR4
+PR7,1-[(2S)-2-carboxy-2-hydroxyethyl]-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,6,0,1,https://www.rcsb.org/ligand/PR7
+PR9,D-PROLINAMIDE,PRO,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,8,0,0,0.875,https://www.rcsb.org/ligand/PR9
+PRJ,"(2S,3aS,6R,7aS)-6-hydroxyoctahydro-1H-indole-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,5,1,1,https://www.rcsb.org/ligand/PRJ
+PRK,N~6~-propanoyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/PRK
+PRS,THIOPROLINE,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/PRS
+PRV,(2R)-amino(2-nitrophenyl)ethanoic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,9,1,1,https://www.rcsb.org/ligand/PRV
+PSH,1-thiophosphono-L-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/PSH
+PSW,3-(SULFANYLSELANYL)-L-ALANINE,SEC,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/PSW
+PTH,CE1-METHYLENE-HYDROXY-PHOSPHOTYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,6,0,1,https://www.rcsb.org/ligand/PTH
+PTM,ALPHA-METHYL-O-PHOSPHOTYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,5,0,1,https://www.rcsb.org/ligand/PTM
+PTR,O-PHOSPHOTYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,4,0,1,https://www.rcsb.org/ligand/PTR
+PVH,HISTIDINE-METHYL-ESTER,HIS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,12,1,0,1,https://www.rcsb.org/ligand/PVH
+PXU,2-hydroxy-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/PXU
+PYA,"3-(1,10-PHENANTHROL-2-YL)-L-ALANINE",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,14,3,1,https://www.rcsb.org/ligand/PYA
+PYX,S-[S-THIOPYRIDOXAMINYL]CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/PYX
+Q2E,(2~{S})-2-azanyl-3-(2-methylsulfanyl-1~{H}-indol-3-yl)propanal,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,2,0,1,https://www.rcsb.org/ligand/Q2E
+Q2K,"2-[2-(3-methylsulfanylpropanimidoyl)-4,5-bis(oxidanylidene)imidazol-1-yl]ethanoic acid",GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,17,0,1,0.2222,https://www.rcsb.org/ligand/Q2K
+Q3P,N~6~-glycyl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/Q3P
+Q75,Thiazole-histidine,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.9091,https://www.rcsb.org/ligand/Q75
+Q8X,(2~{R})-2-azanyl-3-[(6-pyridin-2-ylpyridin-3-yl)methylsulfanyl]propanal,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,13,2,1,https://www.rcsb.org/ligand/Q8X
+QCI,L-2-Aminoglutarimide,GLN,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,0,1,0.1111,https://www.rcsb.org/ligand/QCI
+QCS,S-carbamoyl-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/QCS
+QIL,N-formyl-L-isoleucine,ILE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,11,2,0,1,https://www.rcsb.org/ligand/QIL
+QLG,"[(4Z)-2-[(1Z)-4-AMINO-4-OXOBUTANIMIDOYL]-4-(2-METHYLPROPYLIDENE)-5-OXO-4,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETIC ACID",GLN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,21,0,1,0.3182,https://www.rcsb.org/ligand/QLG
+QM8,6-Sulfanyl-L-norleucine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,4,0,1,https://www.rcsb.org/ligand/QM8
+QMB,5-Mercapto-norvaline,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/QMB
+QMM,"N,N-dimethyl-L-glutamine",GLN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,2,0,1,https://www.rcsb.org/ligand/QMM
+QNQ,4-methylcatechol cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/QNQ
+QNT,"3,6-dimethylcatechol cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/QNT
+QNW,3-methylcatechol cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/QNW
+QNY,"O-[(3S)-3-amino-3-carboxy-1,1-dihydroxypropyl]-L-threonine",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,17,9,0,1,https://www.rcsb.org/ligand/QNY
+QO2,"4,5-dimethylcatechol cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/QO2
+QO5,"3,5-dimethylcatechol cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/QO5
+QO8,"3,4-dimethylcatechol cysteine",CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,17,0,1,0.4118,https://www.rcsb.org/ligand/QO8
+QPA,S-[(1S)-1-carboxy-1-(phosphonooxy)ethyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,0,1,https://www.rcsb.org/ligand/QPA
+QPH,N-formyl-L-phenylalanine,PHE,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,14,2,0,1,https://www.rcsb.org/ligand/QPH
+QQ8,(4~{S})-4-azanyl-5-formamido-pentanamide,GLN,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,12,0,0,0.6667,https://www.rcsb.org/ligand/QQ8
+QVA,"(2S,3R)-2-{[(2R)-2-amino-2-carboxyethyl]sulfanyl}-3-hydroxybutanedioic acid",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,0,1,https://www.rcsb.org/ligand/QVA
+QX7,N-acetyl-3-{[5-(fluorosulfonyl)-2-methylbenzene-1-carbonyl]amino}-L-alanine,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,23,17,1,1,https://www.rcsb.org/ligand/QX7
+R0K,(2~{S})-2-[[(4~{S})-4-azanyl-5-oxidanyl-5-oxidanylidene-pentanoyl]amino]hexanedioic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,20,0,0,0.45,https://www.rcsb.org/ligand/R0K
+R1A,"3-{[(2,2,5,5-TETRAMETHYL-1-OXO-2,5-DIHYDRO-1H-PYRROLIUM-3-YL)METHYL]DISULFANYL}-D-ALANINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,12,1,1,https://www.rcsb.org/ligand/R1A
+R4K,"(2S,3R)-2-azanyl-3-hydroxy-3-[(3S)-3-hydroxy-2-oxo-1H-indol-3-yl]propanoic acid",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,0,0,0.8333,https://www.rcsb.org/ligand/R4K
+RE0,"3-[(3R)-3-hydroxy-2-oxo-2,3-dihydro-1H-indol-3-yl]-L-alanine",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/RE0
+RE3,"3-[(3S)-3-hydroxy-2-oxo-2,3-dihydro-1H-indol-3-yl]-L-alanine",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/RE3
+RGL,ARGINAL,ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,11,0,0,1.0,https://www.rcsb.org/ligand/RGL
+RGP,GAMMA-GLUTAMYL PHOSPHATE,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,4,0,1,https://www.rcsb.org/ligand/RGP
+RPI,phospho-arginine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/RPI
+RT0,"(2S,4S)-4-[4-(4-fluorophenyl)-1,2,3-triazol-1-yl]pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,12,2,1,https://www.rcsb.org/ligand/RT0
+RVJ,3-triazan-1-yl-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,3,0,1,https://www.rcsb.org/ligand/RVJ
+RVX,O-[methyl(2-methylpropoxy)phosphoryl]-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/RVX
+RX9,Dehydroisoleucine,ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,1.0,https://www.rcsb.org/ligand/RX9
+RXL,Dehydrovaline,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,1.0,https://www.rcsb.org/ligand/RXL
+RZ4,O-tert-butyl-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/RZ4
+S0R,(2S)-2-benzamido-4-methyl-pentanoic acid,LEU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,17,8,1,1,https://www.rcsb.org/ligand/S0R
+S12,O-[(S)-hydroxy{[(2S)-2-hydroxy-3-(octadec-9-enoyloxy)propyl]oxy}phosphoryl]-L-serine,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,35,28,0,1,https://www.rcsb.org/ligand/S12
+S1H,1-HEXADECANOSULFONYL-O-L-SERINE,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,26,19,0,1,https://www.rcsb.org/ligand/S1H
+S2C,S-2-(BORONOETHYL)-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/S2C
+S2P,"(2S)-2-amino-3-(4-hydroxy-1,2,5-thiadiazol-3-yl)propanoic acid",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,6,1,1,https://www.rcsb.org/ligand/S2P
+SAC,N-ACETYL-SERINE,SER,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,10,3,0,1,https://www.rcsb.org/ligand/SAC
+SAR,SARCOSINE,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,6,1,0,1,https://www.rcsb.org/ligand/SAR
+SBL,L-NAPHTHYL-1-ACETAMIDO BORONIC ACID ALANINE,SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,26,19,2,1,https://www.rcsb.org/ligand/SBL
+SCH,S-METHYL-THIO-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/SCH
+SCS,3-(ethyldisulfanyl)-L-alanine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/SCS
+SCY,S-ACETYL-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,3,0,1,https://www.rcsb.org/ligand/SCY
+SD4,N-hydroxy-L-asparagine,ASN,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/SD4
+SDP,2-AMINO-3-(DIETHOXY-PHOSPHORYLOXY)-PROPIONIC ACID,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/SDP
+SE7,2-AMINO-3-SELENINO-PROPIONIC ACID,SEC,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.7778,https://www.rcsb.org/ligand/SE7
+SEB,O-BENZYLSULFONYL-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,1,1,https://www.rcsb.org/ligand/SEB
+SEE,trihydroxy(L-serinato-kappaO~3~)borate(1-),SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/SEE
+SEL,"2-AMINO-1,3-PROPANEDIOL",SER,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,6,0,0,1.0,https://www.rcsb.org/ligand/SEL
+SEM,O-benzyl-L-serine,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,1,1,https://www.rcsb.org/ligand/SEM
+SEN,"O-[N,N-dimethylphosphoramidate]-L-serine",SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/SEN
+SEP,PHOSPHOSERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/SEP
+SET,AMINOSERINE,SER,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,7,0,0,0.8571,https://www.rcsb.org/ligand/SET
+SGB,O-[(S)-METHYL(1-METHYLETHOXY)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,0,1,https://www.rcsb.org/ligand/SGB
+SHC,S-HEXYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/SHC
+SHP,(4-HYDROXYMALTOSEPHENYL)GLYCINE,GLY,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,34,29,3,1,https://www.rcsb.org/ligand/SHP
+SHR,N-(5-AMINO-5-CARBOXYPENTYL)GLUTAMIC ACID,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,19,0,0,0.5263,https://www.rcsb.org/ligand/SHR
+SIB,"(2S)-2-AMINO-4-({[(2S,3S,4R,5R)-3,4-DIHYDROXY-5-(6-OXO-1,6-DIHYDRO-9H-PURIN-9-YL)TETRAHYDROFURAN-2-YL]METHYL}THIO)BUTANOIC ACID",CYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,26,0,3,0.2308,https://www.rcsb.org/ligand/SIB
+SIC,"(2R)-2-[(3S)-3-amino-2,5-dioxopyrrolidin-1-yl]-3-sulfanylpropanoic acid",ASP,complex-skeletal-transformation,天冬氨酸相关骨架形成琥珀酰亚胺环并连接含巯基侧链；属于成环加偶联,True,1,0,14,0,1,0.3571,https://www.rcsb.org/ligand/SIC
+SKH,(3~{S})-5-[[(5~{S})-5-azanyl-6-oxidanyl-6-oxidanylidene-hexyl]amino]-3-methyl-3-oxidanyl-5-oxidanylidene-pentanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.5,https://www.rcsb.org/ligand/SKH
+SLL,(2S)-2-azanyl-6-[(4-hydroxy-4-oxo-butanoyl)amino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.5882,https://www.rcsb.org/ligand/SLL
+SLZ,L-THIALYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.6,https://www.rcsb.org/ligand/SLZ
+SMC,S-METHYLCYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,1,0,1,https://www.rcsb.org/ligand/SMC
+SME,METHIONINE SULFOXIDE,MET,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/SME
+SMF,4-SULFOMETHYL-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/SMF
+SNC,S-NITROSO-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/SNC
+SNK,(2~{R})-2-azanyl-3-(4-ethanoylsulfanyl-1~{H}-imidazol-5-yl)propanoic acid,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.7333,https://www.rcsb.org/ligand/SNK
+SNN,L-3-AMINOSUCCINIMIDE,ASN,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,1,0.125,https://www.rcsb.org/ligand/SNN
+SRZ,PROPOXY-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/SRZ
+SUI,"(3-AMINO-2,5-DIOXO-1-PYRROLIDINYL)ACETIC ACID",ASP,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,12,0,1,0.3333,https://www.rcsb.org/ligand/SUI
+SUN,O-[(R)-(DIMETHYLAMINO)(ETHOXY)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,0,1,https://www.rcsb.org/ligand/SUN
+SVA,SERINE VANADATE,SER,special-adduct-or-label,结构含金属元素V，属于配合物而不是普通单残基替换,True,1,1,12,5,0,1,https://www.rcsb.org/ligand/SVA
+SVV,O-[(S)-AMINO(HYDROXY)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/SVV
+SVW,O-[(R)-AMINO(HYDROXY)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/SVW
+SVX,O-[(R)-ETHOXY(METHYL)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,6,0,1,https://www.rcsb.org/ligand/SVX
+SVY,O-[BIS(1-METHYLETHOXY)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,10,0,1,https://www.rcsb.org/ligand/SVY
+SVZ,O-[(S)-HYDROXY(ISOPROPYLAMINO)PHOSPHORYL]-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,7,0,1,https://www.rcsb.org/ligand/SVZ
+SWW,(2~{S})-2-azanyl-3-(2-hydroxyethylsulfanyl)propanoic acid,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.6,https://www.rcsb.org/ligand/SWW
+SXE,O-{(S)-ETHOXY[(1-METHYLETHYL)AMINO]PHOSPHORYL}-L-SERINE,SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,0,1,https://www.rcsb.org/ligand/SXE
+SYS,3-[(2-amino-2-oxoethyl)selanyl]-L-alanine,SEC,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.6364,https://www.rcsb.org/ligand/SYS
+T0I,"(2S)-2-amino-3-(2,4-dihydroxy-5-imidazol-1-yl-phenyl)propanoic acid",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,6,1,1,https://www.rcsb.org/ligand/T0I
+T11,4-[3-(TRIFLUOROMETHYL)DIAZIRIDIN-3-YL]-L-PHENYLALANINE,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,7,1,1,https://www.rcsb.org/ligand/T11
+T3R,"N,5-dimethyl-L-norleucine",LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,0,0,0.7273,https://www.rcsb.org/ligand/T3R
+T8L,Thio-phosohothreonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/T8L
+T9E,Selenothreonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/T9E
+TAV,N-METHYL-N-{2-[(2-NAPHTHYLSULFONYL)AMINO]-5-[(2-NAPHTHYLSULFONYL)OXY]BENZOYL}-L-ASPARTIC ACID,ASP,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,46,37,5,1,https://www.rcsb.org/ligand/TAV
+TBG,3-methyl-L-valine,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/TBG
+TCQ,"(1S,2R)-N-{(1E)-5-[(2S)-2-amino-2-carboxyethyl]-2-hydroxy-4-oxocyclohexa-2,5-dien-1-ylidene}-2-phenylcyclopropanaminium",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,2,0.5417,https://www.rcsb.org/ligand/TCQ
+TCR,CYCLOMETHYLTRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,1,1,https://www.rcsb.org/ligand/TCR
+TEF,4-(2H-tetrazol-2-yl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,1,1,https://www.rcsb.org/ligand/TEF
+TFQ,"4-(2,2,2-TRIFLUOROETHYL)-L-PHENYLALANINE",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/TFQ
+TGH,6-{[(S)-carboxy(hydroxy)methyl]amino}-7-hydroxy-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,22,7,0,1,https://www.rcsb.org/ligand/TGH
+TH5,O-acetyl-L-threonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,0,1,https://www.rcsb.org/ligand/TH5
+TH6,4-HYDROXY-L-THREONINE,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/TH6
+THC,N-METHYLCARBONYLTHREONINE,THR,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,11,3,0,1,https://www.rcsb.org/ligand/THC
+THZ,"1-[(4S)-4-amino-5-(1,3-benzothiazol-2-yl)-5-oxopentyl]guanidine",ARG,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,20,0,2,0.5238,https://www.rcsb.org/ligand/THZ
+TIH,BETA(2-THIENYL)ALANINE,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,1,1,https://www.rcsb.org/ligand/TIH
+TIS,"O-(1,1-dihydroxyethyl)-L-serine",SER,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/TIS
+TLY,(2S)-2-azanyl-6-(ethanethioylamino)hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/TLY
+TMD,"(6,7-DIHYDRO)4-[(E)-BUTENYL]-4,N-DIMETHYL-THREONINE",THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,6,0,1,https://www.rcsb.org/ligand/TMD
+TNB,"S-(2,3,6-TRINITROPHENYL)CYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,15,1,1,https://www.rcsb.org/ligand/TNB
+TNQ,6-[(carboxymethyl)amino]-7-hydroxy-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,21,6,0,1,https://www.rcsb.org/ligand/TNQ
+TOQ,"6,7-dihydroxy-L-tryptophan",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,2,0,1,https://www.rcsb.org/ligand/TOQ
+TOX,1-hydroperoxy-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/TOX
+TOZ,"2-[2-(aminomethyl)-1,3-thiazol-4-yl]-1,3-oxazole-4-carboxylic acid",CYS,complex-skeletal-transformation,半胱氨酸相关骨架经连续成环和氧化形成噻唑-噁唑双杂环,True,1,1,15,0,2,0.2,https://www.rcsb.org/ligand/TOZ
+TPJ,(5R)-5-tert-butyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/TPJ
+TPK,"(1R)-1-[(2S)-pyrrolidin-2-yl]ethane-1,2-diol",PRO,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,0,0,0.7778,https://www.rcsb.org/ligand/TPK
+TPL,TRYPTOPHANOL,TRP,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,14,0,0,1.0,https://www.rcsb.org/ligand/TPL
+TPO,PHOSPHOTHREONINE,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/TPO
+TPQ,"5-(2-CARBOXY-2-AMINOETHYL)-2-HYDROXY-1,4-BENZOQUINONE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.8667,https://www.rcsb.org/ligand/TPQ
+TQI,N-{[4-CHLORO-3-(TRIFLUOROMETHYL)PHENYL]SULFONYL}-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,29,14,1,1,https://www.rcsb.org/ligand/TQI
+TQQ,"(S)-2-AMINO-3-(6,7-DIHYDRO-6-IMINO-7-OXO-1H-INDOL-3-YL)PROPANOIC ACID",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8333,https://www.rcsb.org/ligand/TQQ
+TQZ,2-AMINO-3-PENTASULFANYLPROPAN-1-OL,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/TQZ
+TRF,N1-FORMYL-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/TRF
+TRN,NZ2-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.9333,https://www.rcsb.org/ligand/TRN
+TRO,2-HYDROXY-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/TRO
+TRQ,"2-AMINO-3-(6,7-DIOXO-6,7-DIHYDRO-1H-INDOL-3-YL)-PROPIONIC ACID",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,0,0,0.8824,https://www.rcsb.org/ligand/TRQ
+TRW,TRW3-(2-AMINO-3-HYDROXY-PROPYL)-6-(N'-CYCLOHEXYL-HYDRAZINO)OCTAHYDRO-INDOL-7-OL,TRP,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,23,0,1,0.6087,https://www.rcsb.org/ligand/TRW
+TRX,6-HYDROXYTRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/TRX
+TRY,(2Z)-2-amino-3-(1H-indol-3-yl)prop-2-enoic acid,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,1.0,https://www.rcsb.org/ligand/TRY
+TS9,"(2S,3S,4R)-2-amino-3,4-dihydroxy-3-methylpentanoic acid",ILE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/TS9
+TSQ,4-(trimethylsilyl)-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/TSQ
+TSY,(2S)-2-amino-3-trisulfanylpropanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/TSY
+TTQ,6-AMINO-7-HYDROXY-L-TRYPTOPHAN,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,2,0,1,https://www.rcsb.org/ligand/TTQ
+TTS,"3-((3E)-4-HYDROXY-3-{[2-(4-HYDROXYPHENYL)ETHYL]IMINO}-6-OXOCYCLOHEXA-1,4-DIEN-1-YL)ALANINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,1,0.5417,https://www.rcsb.org/ligand/TTS
+TXY,"3-[(5S)-4,5-dihydroxycyclohexa-1,3-dien-1-yl]-L-alanine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,0,0,0.9286,https://www.rcsb.org/ligand/TXY
+TY1,O-tert-butyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,4,0,1,https://www.rcsb.org/ligand/TY1
+TY2,3-AMINO-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/TY2
+TY5,O-benzyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,7,1,1,https://www.rcsb.org/ligand/TY5
+TY8,"2,4-bis(hydroperoxy)-5-hydroxy-L-phenylalanine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,4,0,1,https://www.rcsb.org/ligand/TY8
+TY9,"3,4-bis(hydroperoxy)-5-hydroxy-L-phenylalanine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,4,0,1,https://www.rcsb.org/ligand/TY9
+TYB,TYROSINAL,TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,12,0,0,1.0,https://www.rcsb.org/ligand/TYB
+TYE,4-[(2S)-2-amino-3-hydroxypropyl]phenol,TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,12,0,0,1.0,https://www.rcsb.org/ligand/TYE
+TYI,"3,5-DIIODOTYROSINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/TYI
+TYJ,"2,5-dihydroxy-N-methyl-L-tyrosine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,3,0,1,https://www.rcsb.org/ligand/TYJ
+TYN,AMINOBENZOFURAZAN-O-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,23,10,2,1,https://www.rcsb.org/ligand/TYN
+TYO,"(4Z,6E)-2-AMINO-7-HYDROPEROXY-4-[(E)-2-HYDROXYVINYL]HEPTA-4,6-DIENOIC ACID",TYR,complex-skeletal-transformation,酪氨酸芳环发生氧化开环并形成共轭二烯和氢过氧基；属于氧化性骨架重排,True,1,1,15,0,0,0.4,https://www.rcsb.org/ligand/TYO
+TYQ,3-AMINO-6-HYDROXY-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,2,0,1,https://www.rcsb.org/ligand/TYQ
+TYS,O-SULFO-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,4,0,1,https://www.rcsb.org/ligand/TYS
+TYT,TYROSINE DERIVATIVE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,24,0,2,0.5417,https://www.rcsb.org/ligand/TYT
+TYY,"3-(4-HYDROXY-3-IMINO-6-OXO-CYCLOHEXA-1,4-DIENYL)-ALANINE",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.8667,https://www.rcsb.org/ligand/TYY
+U2X,O-(cyclohexylmethyl)-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,7,1,1,https://www.rcsb.org/ligand/U2X
+U3X,4-[(cyclohexylmethyl)amino]-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,8,1,1,https://www.rcsb.org/ligand/U3X
+UF0,"O-[(R)-hydroxy{[(3R)-3-hydroxy-4-{[3-({2-[(hydroxyacetyl)amino]ethyl}amino)-3-oxopropyl]amino}-2,2-dimethyl-4-oxobutyl]oxy}phosphoryl]-L-serine",SER,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,32,25,0,1,https://www.rcsb.org/ligand/UF0
+UGY,(2S)-amino(carbamoylamino)ethanoic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,9,4,0,0.5556,https://www.rcsb.org/ligand/UGY
+UJR,(2~{R})-2-azanyl-3-(5-iodanylpyrimidin-2-yl)sulfanyl-propanal,CYS,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,13,0,1,0.4615,https://www.rcsb.org/ligand/UJR
+UM1,(2R)-2-[[(2R)-2-(2-aminoethanoylamino)propanoyl]amino]propanoic acid,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,9,0,1,https://www.rcsb.org/ligand/UM1
+UM2,(2S)-2-amino-N-butyl-propanamide,ALA,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,10,0,0,0.5,https://www.rcsb.org/ligand/UM2
+UMA,URIDINE-5'-DIPHOSPHATE-N-ACETYLMURAMOYL-L-ALANINE,ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,49,43,3,1,https://www.rcsb.org/ligand/UMA
+UOX,3-(oxido-lambda~4~-selanyl)-L-alanine,SEC,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,0,0,0.875,https://www.rcsb.org/ligand/UOX
+UX8,"(2~{S},3~{R})-2-azanyl-3-(1~{H}-indol-3-yl)-3-oxidanyl-propanoic acid",TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/UX8
+UXQ,(2S)-2-azanyl-3-[4-[(2-chloranylethanoylamino)methyl]phenyl]propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,18,6,0,1,https://www.rcsb.org/ligand/UXQ
+V1C,(2S)-2-azanyl-3-[4-[1-(2-methylpropyl)pyrazol-4-yl]phenyl]propanoic acid,PHE,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,21,9,1,1,https://www.rcsb.org/ligand/V1C
+V3C,Trans-4-athyl-L-proline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,2,0,1,https://www.rcsb.org/ligand/V3C
+V3E,(2~{S})-2-azanyl-3-(2-hydroxyphenyl)propanoic acid,PHE,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,14,2,0,1,https://www.rcsb.org/ligand/V3E
+V44,"S-[2,2-bis(1-methyl-1H-imidazol-2-yl)ethyl]-L-cysteine",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,14,2,1,https://www.rcsb.org/ligand/V44
+V5N,"(2S,3S)-2-azanyl-3-(1H-imidazol-5-yl)-3-oxidanyl-propanoic acid",HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,0,0,0.9167,https://www.rcsb.org/ligand/V5N
+V61,"2,3,5,6-tetrafluoro-4-iodo-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,5,0,1,https://www.rcsb.org/ligand/V61
+V6W,NE-Acetyl-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,19,0,0,0.7895,https://www.rcsb.org/ligand/V6W
+VAD,DEAMINOHYDROXYVALINE,VAL,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,8,0,0,0.875,https://www.rcsb.org/ligand/VAD
+VAH,(3R)-3-hydroxy-L-norvaline,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,0,0,0.7778,https://www.rcsb.org/ligand/VAH
+VB1,N^6^-[(1R)-2-{[(1S)-1-carboxypropyl]amino}-2-oxo-1-(sulfanylmethyl)ethyl]-6-oxo-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,1,23,0,0,0.4348,https://www.rcsb.org/ligand/VB1
+VH0,"(2S,4S)-4-[4-(aminomethyl)-1,2,3-triazol-1-yl]pyrrolidine-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,7,1,1,https://www.rcsb.org/ligand/VH0
+VHF,(2~{S})-2-azanyl-5-oxidanylidene-5-phosphonooxy-pentanoic acid,GLU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,4,0,1,https://www.rcsb.org/ligand/VHF
+VI3,(2~{R})-2-azanyl-3-[bis(oxidanylidene)-$l^{5}-sulfanyl]propanoic acid,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/VI3
+VPV,"(2E,4R)-2-{[(5S)-5-amino-5-carboxypentyl]imino}-4-hydroxyheptanedioic acid",LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,2,2,22,0,0,0.4545,https://www.rcsb.org/ligand/VPV
+VR0,N~5~-[N-(methylcarbamoyl)carbamimidoyl]-L-ornithine,ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/VR0
+VVK,N-(2-methoxyphenyl)-2-methyl-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,9,1,1,https://www.rcsb.org/ligand/VVK
+WCR,"[(2R,4Z)-2-(aminomethyl)-2-hydroxy-4-(4-hydroxybenzylidene)-5-oxoimidazolidin-1-yl]acetic acid",GLY,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,21,0,2,0.1905,https://www.rcsb.org/ligand/WCR
+WFP,"3,5-difluoro-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/WFP
+WLU,(4R)-5-hydroxy-N-methyl-L-leucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,2,0,1,https://www.rcsb.org/ligand/WLU
+WPA,(betaR)-beta-methoxy-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/WPA
+WRP,(betaR)-beta-hydroxy-1-[(3R)-3-hydroxy-2-methylbutan-2-yl]-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,0,0.6818,https://www.rcsb.org/ligand/WRP
+WVL,"(2S,3R)-2-amino-3,5-dimethylhex-4-enoic acid",VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,3,0,1,https://www.rcsb.org/ligand/WVL
+WWB,5-(3-methylbut-2-en-1-yl)-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,5,0,1,https://www.rcsb.org/ligand/WWB
+WYK,"(2S,4S)-4-hydroxy-L-arginine",ARG,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.8571,https://www.rcsb.org/ligand/WYK
+X2W,N-ACETYL-L-GLUTAMYL 5-PHOSPHATE,GLU,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,17,7,0,1,https://www.rcsb.org/ligand/X2W
+X5U,(S)-alpha-methyl-4-Iodophenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/X5U
+X60,2-ethyl-L-norvaline,VAL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,0,0,0.7,https://www.rcsb.org/ligand/X60
+X9Q,"{(2S)-2-[(1S)-1-AMINOETHYL]-4-BENZYL-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL}ACETIC ACID",ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,20,0,2,0.2,https://www.rcsb.org/ligand/X9Q
+XA6,(2S)-3-(4-aminocarbonylphenyl)-2-azanyl-propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,3,0,1,https://www.rcsb.org/ligand/XA6
+XCN,S-cyano-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,2,0,1,https://www.rcsb.org/ligand/XCN
+XOK,(2~{S})-2-azanyl-6-[[(6~{S})-6-sulfanyloctanoyl]amino]hexanoic acid,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,0,0,0.5,https://www.rcsb.org/ligand/XOK
+XPL,"N~6~-[(3R,5R)-5-amino-3-methyl-D-prolyl]-L-lysine",PYL,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,0,0.9474,https://www.rcsb.org/ligand/XPL
+XPR,"(2S,3aS,6R,7aS)-6-(sulfooxy)octahydro-1H-indole-2-carboxylic acid",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,17,9,1,1,https://www.rcsb.org/ligand/XPR
+XRE,5-hydroxyproline,PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,9,1,0,1,https://www.rcsb.org/ligand/XRE
+XRW,N~6~-[(2S)-2-hydroxypropanoyl]-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/XRW
+XSN,L-alpha-asparagine,ASN,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,9,0,0,0.8889,https://www.rcsb.org/ligand/XSN
+XW1,(2S)-2-amino-7-ethoxy-7-oxoheptanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,8,0,1,https://www.rcsb.org/ligand/XW1
+XX1,N~6~-7H-PURIN-6-YL-L-LYSINE,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,19,0,2,0.5263,https://www.rcsb.org/ligand/XX1
+XXY,"2-[(1R,2R)-1-amino-2-hydroxypropyl]-1-(carboxymethyl)-4-(1H-imidazol-5-ylmethyl)-1H-imidazol-5-olate",GLY,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,21,0,2,0.1905,https://www.rcsb.org/ligand/XXY
+XYC,(2~{S})-2-azanyl-3-cyclopentyl-propanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,5,1,1,https://www.rcsb.org/ligand/XYC
+XYG,"[(4Z)-2-[(1Z)-ETHANIMIDOYL]-4-(4-HYDROXYBENZYLIDENE)-5-OXO-4,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETIC ACID",ASP,complex-skeletal-transformation,天冬氨酸相关骨架并入取代咪唑酮发色团；属于成环、缩合和共轭重构,True,1,0,21,0,2,0.1818,https://www.rcsb.org/ligand/XYG
+Y1V,(4R)-5-amino-L-leucine,LEU,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,10,1,0,1,https://www.rcsb.org/ligand/Y1V
+Y57,N~6~-(2-phenylethyl)-N~6~-propan-2-yl-L-lysine,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,0,1,0.4762,https://www.rcsb.org/ligand/Y57
+YC3,3-[2-(sulfanylmethyl)phenyl]-L-phenylalanine,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,20,8,1,1,https://www.rcsb.org/ligand/YC3
+YCM,S-(2-AMINO-2-OXOETHYL)-L-CYSTEINE,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,11,4,0,1,https://www.rcsb.org/ligand/YCM
+YFQ,beta-N-methylamino-L-alanine,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/YFQ
+YHA,Homocitrulline,LYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.7692,https://www.rcsb.org/ligand/YHA
+YNM,N-METHYL-L-TYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/YNM
+YOF,3-FLUOROTYROSINE,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/YOF
+YPR,(4R)-4-[(7-methoxy-2-phenylquinolin-4-yl)oxy]-L-proline,PRO,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,1,1,27,19,3,1,https://www.rcsb.org/ligand/YPR
+YPZ,"3-[(3Z)-4-hydroxy-6-oxo-3-(2-phenylhydrazinylidene)cyclohexa-1,4-dien-1-yl]-L-alanine",TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,0,1,0.5909,https://www.rcsb.org/ligand/YPZ
+YRV,S-[(3-methylphenyl)methyl]-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/YRV
+YTH,O-phosphono-L-allothreonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/YTH
+YTL,(2~{S})-2-(2-azanylethanoyloxy)-3-(4-hydroxyphenyl)propanoic acid,TYR,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,True,0,0,17,0,0,0.7059,https://www.rcsb.org/ligand/YTL
+Z01,"3-[(2,2-dimethylpropanoyl)amino]-L-alanine",ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,7,0,1,https://www.rcsb.org/ligand/Z01
+Z3E,O-benzyl-L-threonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,7,1,1,https://www.rcsb.org/ligand/Z3E
+Z70,(2S)-2-amino-4-(2-amino-1H-imidazol-5-yl)butanoic acid,HIS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,0,0,0.6154,https://www.rcsb.org/ligand/Z70
+ZAI,(2~{S})-2-azanyl-6-[[(~{R})-[2-methyl-3-oxidanyl-5-(phosphonooxymethyl)pyridin-4-yl]-[[(2~{S})-1-oxidanyl-1-oxidanylidene-3-sulfanyl-propan-2-yl]amino]methyl]amino]hexanoic acid,LYS,conditional-specialized-residue,保留可成肽骨架，但附加部分很大或母体仅占结构较小部分，建议作为专用大侧链构件而非普通扫描残基,True,2,2,32,0,1,0.3125,https://www.rcsb.org/ligand/ZAI
+ZBZ,S-(phenylcarbonyl)-L-cysteine,CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,15,8,1,1,https://www.rcsb.org/ligand/ZBZ
+ZCL,"3,4-dichloro-L-phenylalanine",PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,2,0,1,https://www.rcsb.org/ligand/ZCL
+ZDJ,3-methyl-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,14,1,0,1,https://www.rcsb.org/ligand/ZDJ
+ZI0,N-MALONYL-PROLINE,PRO,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,14,6,0,1,https://www.rcsb.org/ligand/ZI0
+ZIQ,alpha-methyl-L-tryptophan,TRP,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,1,0,1,https://www.rcsb.org/ligand/ZIQ
+ZJU,N-SUCCINYL-ASPARTIC ACID,ASP,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,16,7,0,1,https://www.rcsb.org/ligand/ZJU
+ZKO,N-SUCCINYL-GLUTAMINE,GLN,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,17,7,0,1,https://www.rcsb.org/ligand/ZKO
+ZLF,"S-(1-FLUORO-3,5-DIMETHYLBENZENE)-CYSTEINE",CYS,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,9,1,1,https://www.rcsb.org/ligand/ZLF
+ZQN,N-(TERT-BUTYLOXYCARBONYL)-VALINE,VAL,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,7,0,1,https://www.rcsb.org/ligand/ZQN
+ZRF,"2-[(4E)-2-[(1S)-1-aminoethyl]-4-(hydroxymethylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid",ALA,backbone-terminally-modified,检测到羧基骨架，但α-氨基已经酰化或被完整封闭,True,1,0,15,0,1,0.2667,https://www.rcsb.org/ligand/ZRF
+ZSX,(2R)-amino(4-methoxyphenyl)acetic acid,GLY,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,13,8,1,1,https://www.rcsb.org/ligand/ZSX
+ZT6,(betaR)-3-chloro-beta-{[tri(propan-2-yl)silyl]oxy}-L-tyrosine,TYR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,25,12,0,1,https://www.rcsb.org/ligand/ZT6
+ZTK,(2S)-2-amino-3-cyanopropanoic acid,ALA,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,8,2,0,1,https://www.rcsb.org/ligand/ZTK
+ZU0,O-tert-butyl-L-threonine,THR,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,12,4,0,1,https://www.rcsb.org/ligand/ZU0
+ZV4,(2S)-2-azanyl-3-(4-phosphonophenyl)propanoic acid,PHE,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,16,4,0,1,https://www.rcsb.org/ligand/ZV4
+ZYJ,"(4R)-4-({[(1E)-(3,4-dimethoxyphenyl)methylidene]amino}oxy)-L-proline",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,21,13,1,1,https://www.rcsb.org/ligand/ZYJ
+ZYK,"(4R)-4-({[(3,4-dimethoxyphenyl)carbonyl]amino}oxy)-L-proline",PRO,direct-substitutable-residue,保留未封闭的氨基酸成肽骨架且CCD标为peptide-linking；可作为单残基替换候选,True,1,1,22,14,1,1,https://www.rcsb.org/ligand/ZYK
+ZZD,S-TRITYL-L-CYSTEINE,CYS,special-adduct-or-label,名称显示带有荧光/亲和标记、保护基或专用螯合基团,True,1,1,26,19,3,1,https://www.rcsb.org/ligand/ZZD
+ZZJ,N^2^-methyl-L-alaninamide,ALA,backbone-terminally-modified,末端羧基或氨基已被还原、酰胺化、膦酸替代或封闭，不能直接按普通α-氨基酸残基使用,True,0,0,7,0,0,0.7143,https://www.rcsb.org/ligand/ZZJ
+3WX,2-methyl-L-proline,PRO,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,9,1,0,1,https://www.rcsb.org/ligand/3WX
+5JP,N-methyl-L-serine,SER,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,8,1,0,1,https://www.rcsb.org/ligand/5JP
+A1CHA,3-(aminomethyl)-L-phenylalanine,PHE,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,14,2,0,1,https://www.rcsb.org/ligand/A1CHA
+PSA,3-HYDROXY-4-AMINO-5-PHENYLPENTANOIC ACID,PHE,complex-skeletal-transformation,未检测到同时保留可用氨基和游离羧基的α-氨基酸成肽骨架,False,0,0,15,0,0,0.7333,https://www.rcsb.org/ligand/PSA
+V7T,(2R)-6-azanyl-2-carbamimidamido-hexanoic acid,LYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,13,0,0,0.7143,https://www.rcsb.org/ligand/V7T
+A1APM,alpha-methyl-L-phenylalanine,PHE,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,13,1,0,1,https://www.rcsb.org/ligand/A1APM
+0UO,4-methoxy-L-tryptophan,TRP,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,2,0,1,https://www.rcsb.org/ligand/0UO
+A1A2Y,5-methoxy-L-tryptophan,TRP,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,2,0,1,https://www.rcsb.org/ligand/A1A2Y
+45F,(4S)-4-(prop-2-yn-1-yloxy)-L-proline,PRO,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,12,4,0,1,https://www.rcsb.org/ligand/45F
+A1CZ7,"N,O-dimethyl-L-serine",SER,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,9,2,0,1,https://www.rcsb.org/ligand/A1CZ7
+A1J0G,dimethyl-glutamic acid,GLU,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,12,2,0,1,https://www.rcsb.org/ligand/A1J0G
+C67,N~5~-[N-(2-carboxyethyl)carbamimidoyl]-L-ornithine,ARG,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,0,0,0.6667,https://www.rcsb.org/ligand/C67
+C6D,N~5~-[N-(3-hydroxypropyl)carbamimidoyl]-L-ornithine,ARG,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/C6D
+LYP,N~6~-METHYL-N~6~-PROPYL-L-LYSINE,LYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,14,0,0,0.7143,https://www.rcsb.org/ligand/LYP
+9RI,"N~6~-[(1R,2S,4S)-bicyclo[2.2.1]heptan-2-yl]-N~6~-methyl-L-lysine",LYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,18,0,2,0.5556,https://www.rcsb.org/ligand/9RI
+A1BIE,N~6~-(2-methylprop-2-enoyl)-L-lysine,LYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,15,0,0,0.6667,https://www.rcsb.org/ligand/A1BIE
+A1IL6,"(2~{S},4~{S})-4-hexylsulfanylpyrrolidine-2-carboxylic acid",PRO,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,15,7,0,1,https://www.rcsb.org/ligand/A1IL6
+C1J,N~5~-(N-octylcarbamimidoyl)-L-ornithine,ARG,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,20,0,0,0.5714,https://www.rcsb.org/ligand/C1J
+C4G,N~5~-[N-(3-aminopropyl)carbamimidoyl]-L-ornithine,ARG,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,16,0,0,0.7059,https://www.rcsb.org/ligand/C4G
+ZT1,N~6~-[(1-methyl-1H-imidazol-5-yl)methyl]-N~6~-propan-2-yl-L-lysine,LYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,20,0,1,0.5,https://www.rcsb.org/ligand/ZT1
+8AY,"3-[6-(propan-2-yl)-1,3-benzothiazol-2-yl]-L-alanine",ALA,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,18,12,2,1,https://www.rcsb.org/ligand/8AY
+A1AV8,N-(prop-2-en-1-yl)glycine,GLY,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,8,3,0,1,https://www.rcsb.org/ligand/A1AV8
+A1JJC,N-Phenylglycine,GLY,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,11,6,1,1,https://www.rcsb.org/ligand/A1JJC
+AVJ,"N,N,N-trimethyl-histidine",HIS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,14,0,0,0.7857,https://www.rcsb.org/ligand/AVJ
+FFL,"5,5'-difluoroleucines",LEU,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,11,2,0,1,https://www.rcsb.org/ligand/FFL
+H1D,"(2S)-2-AMINO-4-[(2R,3S)-2,3-DIHYDROXY-3-N-HYDROXYCARBAMOYL-PROPYLMERCAPTO]BUTYRIC ACID",MET,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,8,0,1,https://www.rcsb.org/ligand/H1D
+HYI,"(2S)-2-AMINO-4-[(2R,3R)-2,3-DIHYDROXY-3-N-HYDROXYCARBAMOYL-PROPYLMERCAPTO]BUTYRIC ACID",MET,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,8,0,1,https://www.rcsb.org/ligand/HYI
+I3D,"5,6-difluoro-tryptophan",TRP,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,17,2,0,1,https://www.rcsb.org/ligand/I3D
+OO0,ALLIIN,CYS,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,11,4,0,1,https://www.rcsb.org/ligand/OO0
+SDB,"(4S)-2-[(1S)-1-amino-2-hydroxyethyl]-3,4,5,6-tetrahydropyrimidine-4-carboxylic acid",SER,complex-skeletal-transformation,丝氨酸型骨架扩展并与胍基片段分子内成环，形成四氢嘧啶羧酸,False,1,1,13,0,1,0.3077,https://www.rcsb.org/ligand/SDB
+TFW,"5,6,7-trifluoro-tryptophan",TRP,conditional-specialized-residue,保留可成肽骨架，但CCD未标为peptide-linking类型，合成使用前需单独确认,False,1,1,18,3,0,1,https://www.rcsb.org/ligand/TFW

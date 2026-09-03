@@ -1,0 +1,29 @@
+{
+  "summary": {
+    "generatedAt": "2026-09-03T04:05:34.168Z",
+    "recordCount": 1110,
+    "evidenceRecordCount": 324,
+    "directOrWholeEvidenceRecordCount": 134,
+    "classReferenceRecordCount": 190,
+    "structureRuleRecordCount": 786,
+    "reviewStatusCounts": {
+      "complete": 660,
+      "complex-transformation-resolved": 84,
+      "second-pass-complete": 321,
+      "semantic-resolved": 45
+    },
+    "propertyStatusCounts": {
+      "具体残基证据": 72,
+      "同类修饰参考": 190,
+      "同骨架证据": 18,
+      "完整肽证据": 44,
+      "结构规则建议": 786
+    },
+    "issueCounts": {
+      "error": 0,
+      "warning": 0
+    },
+    "boundary": "This audit checks internal consistency, parent alignment, evidence-level logic and source traceability. It does not independently reproduce every experiment in the cited papers."
+  },
+  "issues": []
+}

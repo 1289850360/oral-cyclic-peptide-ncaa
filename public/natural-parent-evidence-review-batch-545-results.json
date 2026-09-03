@@ -1,0 +1,5128 @@
+{
+  "reviewedAt": "2026-09-03",
+  "scope": "剩余545条原‘结构规则建议’记录的集中检索与逐条核验（累计完成全部845条待检索记录）",
+  "decisionRule": "以CCD精确结构为边界，先检索官方名称和同义词，再复核候选题名、摘要和可用全文。只有能对应精确结构，并报告实验体系、性质或功能方向及适用边界的证据才升级；同名误命中、仅合成、仅PDB出现、不同构型/化学状态、完整分子但无法归因、纯计算或综述不升级。无候选表示本轮系统检索未发现，不等于全球文献永久不存在。",
+  "searchCoverage": {
+    "database": "Europe PMC / PubMed-linked primary literature",
+    "recordsSearched": 545,
+    "recordsWithCandidates": 45,
+    "candidatePapersReviewed": 198,
+    "searchErrors": 0
+  },
+  "reviewedCount": 545,
+  "acceptedCount": 12,
+  "notUpgradedCount": 533,
+  "accepted": [
+    {
+      "ccdId": "EI4",
+      "reason": "含或不含Enduracididine的teixobactin相关骨架抗菌实验",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Synthesis of Enduracididine Free Linear Teixobactin Analogs: Molecular Docking, DFT Calculations, and Their Antimicrobial Activities, Bacterial Cell Wall Lysis and Glucose Assay.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41540518/",
+          "pmid": "41540518",
+          "doi": "10.2174/0109298673382051251001045242"
+        },
+        {
+          "title": "Biosynthesis of novel non-proteinogenic amino acids β-hydroxyenduracididine and β-methylphenylalanine in <i>Escherichia coli</i>.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11496134/",
+          "pmid": "39444519",
+          "doi": "10.3389/fbioe.2024.1468974"
+        },
+        {
+          "title": "Structural and Biochemical Characterization of MppQ, an L-Enduracididine Biosynthetic Enzyme from <i>Streptomyces hygroscopicus</i>.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37890134/",
+          "pmid": "37890134",
+          "doi": "10.1021/acs.biochem.3c00428"
+        },
+        {
+          "title": "Development of teixobactin analogues containing hydrophobic, non-proteogenic amino acids that are highly potent against multidrug-resistant bacteria and biofilms.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37857144/",
+          "pmid": "37857144",
+          "doi": "10.1016/j.ejmech.2023.115853"
+        }
+      ]
+    },
+    {
+      "ccdId": "GL3",
+      "reason": "McrA硫代甘氨酸形成与缺失修饰后的高温/低能量生长表型",
+      "candidateCountReviewed": 1,
+      "sources": [
+        {
+          "title": "Post-translational thioamidation of methyl-coenzyme M reductase, a key enzyme in methanogenic and methanotrophic Archaea.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5589413/",
+          "pmid": "28880150",
+          "doi": "10.7554/elife.29218"
+        }
+      ]
+    },
+    {
+      "ccdId": "TPL",
+      "reason": "色氨醇生成、敲除、回补和稳定同位素氮同化实验",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Tryptophanol, a novel auxin analog found in marine diatoms, enhances nitrogen assimilation",
+          "url": "https://doi.org/10.1101/2025.06.24.661426",
+          "pmid": "",
+          "doi": "10.1101/2025.06.24.661426"
+        },
+        {
+          "title": "Tryptophanol-derived oxazoloisoindolinone fluorescent probes for cellular localization studies of p53 activators.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39454498/",
+          "pmid": "39454498",
+          "doi": "10.1016/j.bioorg.2024.107898"
+        },
+        {
+          "title": "Gut microbiota-derived Tryptophanol driven by N-Carbamylglutamate alleviates premature ovarian failure through inhibiting oxidative stress.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/42243963/",
+          "pmid": "42243963",
+          "doi": "10.1186/s13048-026-02152-4"
+        },
+        {
+          "title": "Mechanistic Insights of a p53-Targeting Small Molecule.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12171893/",
+          "pmid": "40534675",
+          "doi": "10.1021/acsptsci.5c00110"
+        }
+      ]
+    },
+    {
+      "ccdId": "TYB",
+      "reason": "含酪氨醛末端的tyropeptin衍生物蛋白酶体抑制实验",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Synthesis and activity of tyropeptin A derivatives as potent and selective inhibitors of mammalian 20S proteasome.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16195592/",
+          "pmid": "16195592",
+          "doi": "10.1271/bbb.69.1733"
+        },
+        {
+          "title": "Development of a phosphatase-resistant, L-tyrosine derived LPA1/LPA3 dual antagonist.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3237054/",
+          "pmid": "22180836",
+          "doi": "10.1039/c0md00273a"
+        },
+        {
+          "title": "Salen-Type Copper(II) Complexes: Synthesis, Characterization, Computational Studies, Molecular Docking, Anticancer Potential, and Pharmacokinetic Prediction.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12409841/",
+          "pmid": "40591463",
+          "doi": "10.1002/open.202500061"
+        },
+        {
+          "title": "Methods for the discovery of small molecules to monitor and perturb the activity of the human proteasome.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7857359/",
+          "pmid": "33275045",
+          "doi": "10.4155/fmc-2020-0288"
+        }
+      ]
+    },
+    {
+      "ccdId": "ALT",
+      "reason": "硫代丙氨酸模型晶体结构及肽硫代酰胺的蛋白酶稳定性实验",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Synthesis, X-ray crystallographic structures of thio substituted N-acetyl N'-methylamide alanine and evaluation of sp sulfur parameters of the CFF91 force field.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/11454171/",
+          "pmid": "11454171",
+          "doi": "10.1034/j.1399-3011.2001.00898.x"
+        },
+        {
+          "title": "Rosetta Machine Learning Models Accurately Classify Positional Effects of Thioamides on Proteolysis.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7759720/",
+          "pmid": "32869996",
+          "doi": "10.1021/acs.jpcb.0c05981"
+        },
+        {
+          "title": "Integrating the intrinsic conformational preferences of noncoded α-amino acids modified at the peptide bond into the noncoded amino acids database.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3092812/",
+          "pmid": "21491493",
+          "doi": "10.1002/prot.23009"
+        },
+        {
+          "title": "Thioamide quenching of fluorescent probes through photoinduced electron transfer: mechanistic studies and applications.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4041396/",
+          "pmid": "24266520",
+          "doi": "10.1021/ja409709x"
+        }
+      ]
+    },
+    {
+      "ccdId": "BP5",
+      "reason": "联吡啶丙氨酸定点装入p19后产生铜依赖RNA内切活性",
+      "candidateCountReviewed": 1,
+      "sources": [
+        {
+          "title": "An unnatural enzyme with endonuclease activity towards small non-coding RNAs.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10290691/",
+          "pmid": "37355703",
+          "doi": "10.1038/s41467-023-39105-0"
+        }
+      ]
+    },
+    {
+      "ccdId": "MEU",
+      "reason": "O-甲基-Gly相对Gly的PAT1亲和力和转运下降实验",
+      "candidateCountReviewed": 4,
+      "sources": [
+        {
+          "title": "Substrate recognition by the mammalian proton-dependent amino acid transporter PAT1.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/12893527/",
+          "pmid": "12893527",
+          "doi": "10.1080/0968768031000100759"
+        },
+        {
+          "title": "Unstable reaction intermediates and hysteresis during the catalytic cycle of 5-aminolevulinate synthase: implications from using pseudo and alternate substrates and a promiscuous enzyme variant.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4132793/",
+          "pmid": "24920668",
+          "doi": "10.1074/jbc.m114.574731"
+        },
+        {
+          "title": "Semi-synthetic mithramycin SA derivatives with improved anticancer activity.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3636171/",
+          "pmid": "23331575",
+          "doi": "10.1111/cbdd.12107"
+        },
+        {
+          "title": "5-Aminolevulinate synthase catalysis: The catcher in heme biosynthesis.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6908770/",
+          "pmid": "31345668",
+          "doi": "10.1016/j.ymgme.2019.06.003"
+        }
+      ]
+    },
+    {
+      "ccdId": "NLP",
+      "reason": "正亮氨酸膦酸与甲硫氨酸氨肽酶的金属配位共晶结构",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Structural basis of catalysis by monometalated methionine aminopeptidase.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1480431/",
+          "pmid": "16769889",
+          "doi": "10.1073/pnas.0602433103"
+        },
+        {
+          "title": "Insights into the mechanism of Escherichia coli methionine aminopeptidase from the structural analysis of reaction products and phosphorus-based transition-state analogues.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/10555963/",
+          "pmid": "10555963",
+          "doi": "10.1021/bi991711g"
+        },
+        {
+          "title": "Analyzing the catalytic role of Asp97 in the methionine aminopeptidase from Escherichia coli.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2699115/",
+          "pmid": "19019076",
+          "doi": "10.1111/j.1742-4658.2008.06749.x"
+        },
+        {
+          "title": "Structural analysis of inhibition of E. coli methionine aminopeptidase: implication of loop adaptability in selective inhibition of bacterial enzymes.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2238726/",
+          "pmid": "18093325",
+          "doi": "10.1186/1472-6807-7-84"
+        }
+      ]
+    },
+    {
+      "ccdId": "ZZD",
+      "reason": "S-三苯甲基-L-半胱氨酸对Eg5/KSP马达蛋白和细胞有丝分裂的实验",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Suppression of the lipid-transport activity of OSBPL11 weakens the cytotoxicity of SAC-activating drugs by promoting mitotic slippage.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/41313943/",
+          "pmid": "41313943",
+          "doi": "10.1016/j.bbrc.2025.153045"
+        },
+        {
+          "title": "Development of a relapse-related RiskScore model to predict the drug sensitivity and prognosis for patients with ovarian cancer.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12352420/",
+          "pmid": "40821986",
+          "doi": "10.7717/peerj.19764"
+        },
+        {
+          "title": "A novel prognostic model for lung squamous cell carcinoma based on multi-omics analysis and machine learning.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12716744/",
+          "pmid": "41417784",
+          "doi": "10.1371/journal.pone.0336792"
+        },
+        {
+          "title": "Single-Cell Transcriptomic Analysis of Chemotherapy-Induced Changes in Osteosarcoma With a Pyroptosis-Related Gene-Based Prognostic Model.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13140991/",
+          "pmid": "41896410",
+          "doi": "10.1111/jcmm.71110"
+        }
+      ]
+    },
+    {
+      "ccdId": "HBN",
+      "reason": "L-组氨酸β-萘酰胺的HutP激活和β-葡萄糖苷酶抑制实验",
+      "candidateCountReviewed": 2,
+      "sources": [
+        {
+          "title": "A Multi-Modal Graph Neural Network Framework for Parkinson's Disease Therapeutic Discovery.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12072649/",
+          "pmid": "40362692",
+          "doi": "10.3390/ijms26094453"
+        },
+        {
+          "title": "Allosteric activation of HutP protein, that regulates transcription of hut operon in Bacillus subtilis, mediated by various analogs of histidine.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/14510449/",
+          "pmid": "14510449",
+          "doi": "10.1093/nass/3.1.199"
+        }
+      ]
+    },
+    {
+      "ccdId": "9NR",
+      "reason": "丹磺酰-L-精氨酸与人血清白蛋白药物位点1的共晶结构",
+      "candidateCountReviewed": 8,
+      "sources": [
+        {
+          "title": "Thermodynamic compensation upon binding to exosite 1 and the active site of thrombin.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3107735/",
+          "pmid": "21526769",
+          "doi": "10.1021/bi2004069"
+        },
+        {
+          "title": "Antagonistic chemical coupling in self-reconfigurable host-guest protocells.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6128866/",
+          "pmid": "30194369",
+          "doi": "10.1038/s41467-018-06087-3"
+        },
+        {
+          "title": "Ligand binding shuttles thrombin along a continuum of zymogen- and proteinase-like states.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2937891/",
+          "pmid": "20639195",
+          "doi": "10.1074/jbc.m110.154914"
+        },
+        {
+          "title": "Ratcheting of the substrate from the zymogen to proteinase conformations directs the sequential cleavage of prothrombin by prothrombinase.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1174926/",
+          "pmid": "16006504",
+          "doi": "10.1073/pnas.0504704102"
+        }
+      ]
+    },
+    {
+      "ccdId": "9NV",
+      "reason": "丹磺酰-L-正缬氨酸与人血清白蛋白药物位点2的共晶结构",
+      "candidateCountReviewed": 2,
+      "sources": [
+        {
+          "title": "Structural basis of binding of fluorescent, site-specific dansylated amino acids to human serum albumin.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3073228/",
+          "pmid": "20940056",
+          "doi": "10.1016/j.jsb.2010.10.004"
+        },
+        {
+          "title": "High Spatiotemporal Near-Infrared II Fluorescence Lifetime Imaging for Quantitative Detection of Clinical Tumor Margins.",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11791973/",
+          "pmid": "39652447",
+          "doi": "10.1002/advs.202411272"
+        }
+      ]
+    }
+  ],
+  "notUpgraded": [
+    {
+      "ccdId": "TRN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NZ2-TRYPTOPHAN"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CMT",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "O-METHYLCYSTEINE"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "5R5",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "methyl (2~{S})-2-azanyl-3-oxidanyl-propanoate",
+        "methyl L-serinate"
+      ],
+      "candidateCountReviewed": 3,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "5T3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-ethyl-N~6~-propan-2-yl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "66D",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-2,4-dimethyl-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "6CL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-CARBOXYLYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "73C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-butoxy-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9E7",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(sulfanylmethyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CH8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[N-(2,2,2-trifluoroethyl)carbamimidoyl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EUR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-4-methoxy-butanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1H45",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DMK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,3-DIMETHYL ASPARTIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DNW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(2,4-dinitrophenyl)amino]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LTU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-Amino-3-hydroxy-3-[1-[2-(oxiran-2-yl)propan-2-yl]indol-3-yl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PTH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CE1-METHYLENE-HYDROXY-PHOSPHOTYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XW1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-7-ethoxy-7-oxoheptanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YC3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[2-(sulfanylmethyl)phenyl]-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TRQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-(6,7-DIOXO-6,7-DIHYDRO-1H-INDOL-3-YL)-PROPIONIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "B3E",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-AMINOHEXANEDIOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AGM",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-METHYL-ARGININE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TOX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-hydroperoxy-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TRO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-HYDROXY-TRYPTOPHAN"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MGN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-METHYL-GLUTAMINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SEL",
+      "reason": "命中的是游离serinol代谢或核酸骨架研究，不是由天然氨基酸替换形成的肽残基实验",
+      "searchTerms": [
+        "SERINOL",
+        "2-AMINO-1,3-PROPANEDIOL"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "6V1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DDZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-HYDROXY-L-SERINE",
+        "3,3-DIHYDROXY L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LDH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-ETHYL-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PR9",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "D-PROLINAMIDE"
+      ],
+      "candidateCountReviewed": 6,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "4LZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[2-(triaza-1,2-dien-2-ium-1-yl)ethyl]-L-tyrosine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1D9O",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},3~{S},4~{S})-3,4-bis(oxidanyl)pyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BUC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S,S-BUTYLTHIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VHF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-5-oxidanylidene-5-phosphonooxy-pentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YTH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-phosphono-L-allothreonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IB9",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "(3S)-3-azanyl-3-(4-hydroxyphenyl)propanoic acid; Betatyrosine",
+        "Beta-tyrosine"
+      ],
+      "candidateCountReviewed": 6,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "ASB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ASPARTIC ACID-4-CARBOXYMETHYL ESTER"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TSY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-trisulfanylpropanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "B3K",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3,7-DIAMINOHEPTANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "60F",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OHI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(2-OXO-2H-IMIDAZOL-4-YL)-L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2TY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-HYDROXY-5-{[(1E)-2-PHENYLETHYLIDENE]AMINO}-L-TYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HSK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-hydroxy-L-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "R1A",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(THIOMETHYL-3-[2,2,5,5-TETRAMETHYL PYRROLINE-1-OXYL]) CYSTEINE",
+        "3-{[(2,2,5,5-TETRAMETHYL-1-OXO-2,5-DIHYDRO-1H-PYRROLIUM-3-YL)METHYL]DISULFANYL}-D-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2KK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(4-fluorobenzoyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2KP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(4-bromobenzoyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2MT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2,2-DIMETHYLTHIAZOLIDINE-4-CARBOXYLIC ACID; (DMT)THIAZOLIDINE",
+        "(4R)-2,2-DIMETHYL-1,3-THIAZOLIDINE-4-CARBOXYLIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2SO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-{3-[(3R)-3,4-dihydroxybutyl]-1-(8-phenyloctyl)-1H-imidazol-3-ium-5-yl}-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4DP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-(N,N-DIMETHYLAMINO)PHTHALIMIDOALANYL; DAPA",
+        "3-[5-(DIMETHYLAMINO)-1,3-DIOXO-1,3-DIHYDRO-2H-ISOINDOL-2-YL]-L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "54C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(betaR)-beta-hydroxy-1-{2-[(2R)-oxiran-2-yl]propan-2-yl}-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "5GM",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4S)-2,4-dimethyl-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "7O5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-(2-sulfanylethanoylamino)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "7QK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-acetyl-N~6~-methyl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AL8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-(2-methylbut-3-en-2-yl)-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AMB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(1H-1,2,3-triazol-1-yl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AZ2",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-methyl-D-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1BC5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-seryl-N-[(2S)-2-amino-2-carboxyethyl]glycinamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1BDE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-L-seryl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1BZO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-octanoyl-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1C0O",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(acetamidomethyl)-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CCS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-5-carbamimidamido-2-hydrazinylpentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CHT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4S)-4-hydroxy-4-(4-hydroxyphenyl)-L-threonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CLH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-benzyl-D-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CTT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-phenyl-D-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1D5P",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(betaS)-beta-hydroxy-D-tyrosine",
+        "(2~{R},3~{S})-2-azanyl-3-(4-hydroxyphenyl)-3-oxidanyl-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1H2I",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1ICC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,4S)-4-(isoquinolin-1-ylcarbonylamino)pyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1LUT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2,4-bis(azanyl)-3-oxidanyl-4-oxidanylidene-butanoic acid",
+        "(3R)-3-HYDROXY-ASPARAGINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1LWV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-6-(5-oxidanylidenepentanoylamino)hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BWV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-(N-butylcarbamimidoyl)-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CZS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(6-chloro-1,3-benzothiazol-2-yl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "D8R",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(2R)-2-hydroxypropanoyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DNS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "DANSYLLYSINE; DNS-LYSINE; N(EPSILON)-DANSYL-L-LYSINE",
+        "N~6~-{[5-(DIMETHYLAMINO)-1-NAPHTHYL]SULFONYL}-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DV9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-6,6-bis(fluoranyl)-5-oxidanylidene-6-phosphono-hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ESC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-4-ETHYL SULFANYL BUTYRIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "EUP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-amino-L-allothreonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FIO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[(1E)-2-fluoroethanimidoyl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FOE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-(2-AMINO-3-OXO-PROPYLSULFANYL)-N-(4-FLUORO-PHENYL)-N-ISOPROPYL-ACETAMIDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FQA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-benzyl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "H5M",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "TRANS-3-HYDROXY-5-METHYLPROLINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HLY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IAR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2E)-5-[(diaminomethylidene)amino]-2-iminopentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IGL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ALPHA-AMINO-2-INDANACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LMQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "beta-methylglutamine",
+        "(3S)-3-methyl-L-glutamine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "M2S",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,3-dimethyl-methionine sulfoxide",
+        "3-{[(R)-methylsulfinyl]methyl}-L-valine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NA8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(1S)-1-CARBOXY-2-NAPHTHALEN-2-YLETHANAMINIUM"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OGC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "gamma-N-methyl-beta-OH-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PAT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ALPHA-PHOSPHONO-TRYPTOPHAN"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PRJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,3aS,6R,7aS)-6-hydroxyoctahydro-1H-indole-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PTM",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ALPHA-METHYL-O-PHOSPHOTYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Q2E",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-(2-methylsulfanyl-1~{H}-indol-3-yl)propanal"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QMB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-5-sulfanyl-pentanoic acid",
+        "5-Mercapto-norvaline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "R4K",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,3R)-2-azanyl-3-hydroxy-3-[(3S)-3-hydroxy-2-oxo-1H-indol-3-yl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "RE3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(3S)-3-hydroxy-2-oxo-2,3-dihydro-1H-indol-3-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "RVJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-triazan-1-yl-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SKH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SRZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "PROPOXY-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "T3R",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N,5-dimethyl-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TLY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-N-thiolacetyl-L-lysine",
+        "(2S)-2-azanyl-6-(ethanethioylamino)hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "U3X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-[(cyclohexylmethyl)amino]-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "V3C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,4R)-4-ethylpyrrolidine-2-carboxylic acid; ethyl-L-proline",
+        "Trans-4-athyl-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "V6W",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NE-Acetyl-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "WWB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-(3-methylbut-2-en-1-yl)-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "X60",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-ethyl-L-norvaline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XOK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-6-[[(6~{S})-6-sulfanyloctanoyl]amino]hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XPR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,3aS,6R,7aS)-6-(sulfooxy)octahydro-1H-indole-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Y1V",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-5-amino-L-leucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Y57",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(2-phenylethyl)-N~6~-propan-2-yl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YRV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(3-methylphenyl)methyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZLF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-azanyl-3-[(3-fluoranyl-5-methyl-phenyl)methylsulfanyl]propanoic acid",
+        "S-(1-FLUORO-3,5-DIMETHYLBENZENE)-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZSX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2R)-amino(4-methoxyphenyl)acetic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZTK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-cyanopropanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZV4",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "phosphophenylalanine",
+        "(2S)-2-azanyl-3-(4-phosphonophenyl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZYJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-4-({[(1E)-(3,4-dimethoxyphenyl)methylidene]amino}oxy)-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZYK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,4-dimethoxybenzamidoxy proline",
+        "(4R)-4-({[(3,4-dimethoxyphenyl)carbonyl]amino}oxy)-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AVJ",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "Hercynine",
+        "N,N,N-trimethyl-histidine"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "LPS",
+      "reason": "命中的是完整磷脂分子的膜功能，不属于可归因到单个Ser残基的性质实验",
+      "searchTerms": [
+        "LYSOPHOSPHOTIDYLSERINE",
+        "O-{HYDROXY[((2R)-2-HYDROXY-3-{[(1S)-1-HYDROXYPENTADECYL]OXY}PROPYL)OXY]PHOSPHORYL}-L-SERINE"
+      ],
+      "candidateCountReviewed": 3,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "SGB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-METHYL(1-METHYLETHOXY)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AEI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "THREONINE-ASPARTIC ESTER"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QPA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(1S)-1-carboxy-1-(phosphonooxy)ethyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SE7",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-SELENINO-PROPIONIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "EFC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S,S-(2-FLUOROETHYL)THIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TQQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(6E)-6-IMINO-7-OXO-6,7-DIHYDRO-1H-INDOL-3-YL]-L-ALANINE",
+        "(S)-2-AMINO-3-(6,7-DIHYDRO-6-IMINO-7-OXO-1H-INDOL-3-YL)PROPANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DLS",
+      "reason": "论文中的‘diacetylated H3’是两个不同Lys位点各自乙酰化，不是CCD DLS所表示的同一个Lys同时Nα/Nε二乙酰化",
+      "searchTerms": [
+        "DI-ACETYL-LYSINE"
+      ],
+      "candidateCountReviewed": 6,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "GPL",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "LYSINE GUANOSINE-5'-MONOPHOSPHATE"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "A1A7V",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2S)-2-hydroxypropanoyl]-L-cysteine",
+        "S-lactoyl-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ALS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-(sulfooxy)-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CML",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-{[(2R)-2-amino-2-carboxyethyl]sulfanyl}butanedioic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HS8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(1-sulfo-1H-imidazol-3-ium-4-yl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PXU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-hydroxy-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "B3A",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-AMINOBUTANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NLW",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "L-leucinamide"
+      ],
+      "candidateCountReviewed": 7,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "BXT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-[ethyl(methyl)carbamoyl]oxy-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DJD",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-(6-methyl-1,2,4,5-tetrazin-3-yl)-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HTI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4S)-4-{[(2S)-2-AMINO-3-OXOPROPYL]SULFANYL}-L-HOMOSERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HTR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "BETA-HYDROXYTRYPTOPHANE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KST",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(5-CARBOXY-3-THIENYL)-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "M0H",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(HYDROXYMETHYL)-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MIR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-ethoxy(hydroxy)phosphoryl]-L-serine",
+        "Monoethylphosphorylserine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PSW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(SULFANYLSELANYL)-L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SCS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(ethyldisulfanyl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SDP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-(DIETHOXY-PHOSPHORYLOXY)-PROPIONIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HIA",
+      "reason": "命中的是组氨酰胺-胆固醇脂质纳米颗粒，没有游离HIA或His/HIA单变量对照",
+      "searchTerms": [
+        "L-HISTIDINAMIDE",
+        "L-HISTIDINE AMIDE"
+      ],
+      "candidateCountReviewed": 2,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "MLL",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "METHYL L-LEUCINATE"
+      ],
+      "candidateCountReviewed": 7,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "S12",
+      "reason": "命中的是完整溶血磷脂纳米颗粒和脂质转运，不能拆分为Ser衍生残基的贡献",
+      "searchTerms": [
+        "1-oleoyl-2-hydroxy-sn-glycero-3-phospho-L-serine",
+        "O-[(S)-hydroxy{[(2S)-2-hydroxy-3-(octadec-9-enoyloxy)propyl]oxy}phosphoryl]-L-serine"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "A1ER5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CSR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-ARSONOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FGP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-HYDROXY-3-PHOSPHONOOXY-PROPIONIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "J8W",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-(3-oxidanyl-3-oxidanylidene-propanoyl)oxy-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KEO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "e(R)-beta-lysyl-hydroxylysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TNQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-[(carboxymethyl)amino]-7-hydroxy-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TYY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(4-HYDROXY-3-IMINO-6-OXO-CYCLOHEXA-1,4-DIENYL)-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "UOX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(oxido-lambda~4~-selanyl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VI3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{R})-2-azanyl-3-[bis(oxidanylidene)-$l^{5}-sulfanyl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VPV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2E,4R)-2-{[(5S)-5-amino-5-carboxypentyl]imino}-4-hydroxyheptanedioic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "WYK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,4S)-2-azanyl-5-carbamimidamido-4-oxidanyl-pentanoic acid",
+        "(2S,4S)-4-hydroxy-L-arginine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FZN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TRW",
+      "reason": "命中的是蛋白醌辅因子的苯肼加合物，未证明CCD TRW作为氨基酸残基带来的性质",
+      "searchTerms": [
+        "PHENYLHYDRAZINE ADDUCT",
+        "TRW3-(2-AMINO-3-HYDROXY-PROPYL)-6-(N'-CYCLOHEXYL-HYDRAZINO)OCTAHYDRO-INDOL-7-OL"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "AZK",
+      "reason": "CCD AZK的二维结构实际为6-叠氮氨基醇，与检索到的6-叠氮-Lys羧酸论文不一致，不能跨结构升级",
+      "searchTerms": [
+        "EPSILON-AZIDO-LYSINE",
+        "(S)-2-AMINO-6-AZIDOHEXANOIC ACID"
+      ],
+      "candidateCountReviewed": 2,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "0A9",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "methyl L-phenylalaninate"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "PLJ",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "methyl L-prolinate"
+      ],
+      "candidateCountReviewed": 5,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "5CS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-(CYSTEIN-S-YL)-ISOXAZOLIDIN-5-YL-ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "6WK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1IHG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-3-(9-oxidanylidenethioxanthen-2-yl)propanoic acid",
+        "(S)-2-amino-3-(9-oxo-9H-thioxanthen-2-yl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A3U",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-acetamido-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ARO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "C-GAMMA-HYDROXY ARGININE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CGV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(R)-carboxy(hydroxy)methyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DM0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~2~,N~2~,N~6~,N~6~-tetramethyl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GHG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,4S)-2,5-diamino-4-hydroxy-5-oxopentanoic acid (non-preferred name)"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KFP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(2-amino-4-oxo-3,4-dihydropteridin-6-yl)methyl]-D-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KGC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(2R)-2-CARBOXY-5-OXOTETRAHYDROFURAN-2-YL]-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "L5P",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "POK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-[[~{N}-[(4~{S})-4-azanyl-5-oxidanylidene-pentyl]carbamimidoyl]amino]ethanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "R0K",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SEE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "trihydroxy(L-serinato-kappaO~3~)borate(1-)"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SEN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[N,N-dimethylphosphoramidate]-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SVY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[BIS(1-METHYLETHOXY)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SXE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-{(S)-ETHOXY[(1-METHYLETHYL)AMINO]PHOSPHORYL}-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4HH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-hydroxy{[(3R)-3-hydroxy-2,2-dimethyl-4-oxo-4-({3-oxo-3-[(2-sulfanylethyl)amino]propyl}amino)butyl]oxy}phosphoryl]-L-serine",
+        "4'-phosphopanthetheine-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "143",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-[5-(AMINO-CARBOXY-METHYL)-2,3-DIHYDRO-ISOXAZOL-3-YLSULFANYL]-PROPIONIC ACID",
+        "S-2,3-DIHYDRO-5-GLYCIN-2-YL-ISOXAZOL-3-YL-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "1TQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-(FORMYLAMINO)-7-HYDROXY-L-TRYPTOPHAN"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "1TY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-{(3E)-4-HYDROXY-6-OXO-3-[(2-PHENYLETHYL)IMINO]CYCLOHEXA-1,4-DIEN-1-YL}ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "1X6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(2E)-3-AMINOPROP-2-ENOYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "3TY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(3E)-3-(BENZYLHYDRAZONO)-4-HYDROXY-6-OXOCYCLOHEXA-1,4-DIEN-1-YL]-L-ALANINE",
+        "3-(Phenylhydrazono)-L-tyrosine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "41Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-imino-L-homoserine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4AK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-sulfo-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4OU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-(acryloylamino)-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "6M6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2-phenylethyl)carbamothioyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "74P",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(E)-N~6~-(1-carboxy-3-oxobutylidene)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EYP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1I9G",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},3~{R})-2-azanyl-3-(1~{H}-imidazol-5-yl)butanoic acid",
+        "3(S)-methyl-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AGT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-{(S)-AMINO[(4-AMINOBUTYL)AMINO]METHYL}-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ASL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ASPARTIC ACID-4-CARBOXYETHYL ESTER"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CGA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CARBOXYMETHYLATED GLUTAMIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CYR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-CYSTEIN-S-1-(IMINOMETHYL)-L-ORNITHINE",
+        "N~5~-[{[(2R)-2-AMINO-2-CARBOXYETHYL]SULFANYL}(IMINIO)METHYL]-L-ORNITHINATE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "EJA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(1Z)-2-carboxy-N-hydroxyethanimidoyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GFT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "Cyclosarin bound Serine",
+        "(2S)-2-azanyl-3-[cyclohexyloxy(methyl)phosphoryl]oxy-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GQI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "JLP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KYQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(E)-N~6~-(1-carboxy-2-hydroxyethylidene)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LED",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-5-OXO-L-LEUCINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PAQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-OXY-4-HYDROXY-5-(2-HYDRAZINOPYRIDINE)PHENYLALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QNY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(3S)-3-amino-3-carboxy-1,1-dihydroxypropyl]-L-threonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "RVX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[methyl(2-methylpropoxy)phosphoryl]-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SVV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-AMINO(HYDROXY)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TIS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-(1,1-dihydroxyethyl)-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TOQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6,7-dihydroxy-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TTQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-AMINO-7-HYDROXY-L-TRYPTOPHAN"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TY8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2,4-bis(hydroperoxy)-5-hydroxy-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TY9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,4-bis(hydroperoxy)-5-hydroxy-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "07O",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2S)-2-phenylpropanoyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0A8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2-chloroethyl)carbamoyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0AH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-(bromoacetyl)-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0AK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-4-(2-chloroethoxy)-4-oxobutanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0CS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(S)-HYDROPEROXYSULFINYL]-L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2ZC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-{[4-(2-aminoethyl)phenyl]sulfonyl}-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "30V",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2-carbamoylphenyl)selanyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "32S",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(S)-2-AMINO-3-(4H-SELENOLO[3,2-B]-PYRROL-6-YL)-PROPIONIC ACID",
+        "6-Seleno-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "32T",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(S)-2-AMINO-3-(4H-THIENO[3,2-B]-PYRROL-6-YL)-PROPIONIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "3AH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[HISTIDIN-1-YL-4H-[1,2,4]TRIAZOL-5-YL]-AMINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "3QN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(E)-N~6~-{2-hydroxy-3-methyl-6-[(phosphonooxy)methyl]benzylidene}-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "432",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-butanoyl-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4GJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(pyridin-4-yldisulfanyl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4HL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "5MW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-5-[4-(aminomethyl)-1,2,3-triazol-1-yl]-2-azanyl-pentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "8JB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9KP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(E)-N~6~-[(2E)-1-carboxy-3-(2-carboxyphenyl)prop-2-en-1-ylidene]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1ADO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-5-fluoro-L-leucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AVU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-4-fluoro-L-valine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1B9V",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(1S,3S)-1-oxo-2,3-dihydro-1H-1lambda~4~-benzothiophen-3-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CM8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CM9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(7-nitro-2,1,3-benzoselenadiazol-4-yl)amino]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1ECI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-[(2R)-2-azanyl-3-oxidanyl-3-oxidanylidene-propyl]sulfanyl-5-oxidanylidene-pentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EIC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-Methylcarbamoyl-L-Serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EIU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJ1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJ4",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-6-[(~{E})-2-acetamidoethylideneamino]-2-azanyl-hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1H5N",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-6-[(E)-(2-oxidanyl-1-phenyl-ethylidene)amino]hexanoic acid",
+        "2-Imino-2-phenylethanol-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1H96",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-6-(propan-2-ylcarbamothioylamino)hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1IQX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NE2-acetamide-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1JCN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1LUV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[5-azanyl-2,6-bis(oxidanyl)-6-oxidanylidene-hexyl]azanium",
+        "(5S)-5-HYDROXY-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A5N",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-carboxy-4-imino-L-homoserine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AGQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(3E)-3-(carbamimidoylhydrazono)-4-hydroxy-6-oxocyclohexa-1,4-dien-1-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BG1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(2S)-2-{methyl[(methylamino)sulfonyl]amino}pentanoyl]-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C1X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[5-(2-CARBOXY-ETHYL)-4-CARBOXYMETHYL-DIHYDRO-THIOPYRAN-3-YLIDENEAMINO]-HEXANOIC ACID",
+        "(Z)-N~6~-[(4R,5S)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)DIHYDRO-2H-THIOPYRAN-3(4H)-YLIDENE]-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C3Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(1S)-1-HYDROXY-1-(HYDROXYAMINO)ETHYL]-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C5C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-CYCLOPENTYL THIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C6C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-CYCLOHEXYL THIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CS1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(2-AMINOPHENYL)DITHIO]-L-ALANINE",
+        "S-(2-ANILINYL-SULFANYL)-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CS3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(R)-2-AMINO-3-(3-OXO-3-(THIOPHEN-2-YL)PROPYLTHIO)PROPANOIC ACID",
+        "S-[3-OXO-3-(2-THIENYL)PROPYL]-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CS4",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(R)-2-AMINO-3-(3-(3,4-DICHLOROPHENYL)-3-OXOPROPYLTHIO)PROPANOIC ACID",
+        "S-[3-(3,4-DICHLOROPHENYL)-3-OXOPROPYL]-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CSJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(2-aminophenyl)carbonyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CYJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-(3-CARBOXY-1-[(4-CARBOXY-2-OXO-BUTYLAMINO)-METHYL]-PROPYLIDENEAMINO)-HEXANOIC ACID",
+        "(Z)-N~6~-[(4R,5S)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)PIPERIDIN-3-YLIDENE]-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DPQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(S)-2-AMINO-3-(4-HYDROXY-3-OXOCYCLOHEXA-1,4-DIENYL)PROPANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DYS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[5-(2-aminoethyl)-2,3-dihydroxyphenyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "E9C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-3-[3,4,6-tris(oxidanylidene)cyclohexen-1-yl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ESB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(3E)-3-(ETHYLIMINO)-4-HYDROXY-6-OXOCYCLOHEXA-1,4-DIEN-1-YL]-L-ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "F7Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FF9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FHL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-(3-CARBOXY-1-HYDROXYMETHYL-PROPYLIDENEAMINO)-HEXANOIC ACID",
+        "(E)-N~6~-[3-CARBOXY-1-(HYDROXYMETHYL)PROPYLIDENE]-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GVL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(R)-{[(3R)-4-AMINO-3-HYDROXY-2,2-DIMETHYL-4-OXOBUTYL]OXY}(HYDROXY)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HIQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-[1,2-DIHYDROXY-1-(HYDROXYMETHYL)ETHYL]-L-HISTIDINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HNC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "Cysteine covalently modified with 4-hydroxy-2-nonenal",
+        "S-[(1S,2R)-2-hydroxy-1-(2-oxoethyl)heptyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HOO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-[2,5-bis(oxidanylidene)imidazol-4-yl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "I7F",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-hydroperoxypropanoic acid",
+        "O-hydroxy-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IZO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-AMINOHEX-5-YNOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "J2F",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-[4-[(2-nitrophenyl)methoxy]phenyl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "JJK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(S)-hydroxy(pyridin-3-yl)methyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "JJL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(S)-hydroxy(5-methoxypyridin-3-yl)methyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "K5H",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "K5L",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{R})-2-azanyl-3-(3-oxidanyl-3-oxidanylidene-propanoyl)oxy-propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KPF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N-(1-carboxy-2-fluoro-ethenyl) lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KR3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(ethoxycarbonyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LCK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(Z)-N~6~-(2-carboxy-1-methylethylidene)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LET",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[3-CARBOXY-1-(4-CARBOXY-2-OXO-BUTOXYMETHYL)-PROPYLIDENEAMINO]-HEXANOIC ACID",
+        "(Z)-N^6-{3-CARBOXY-1-[(4-CARBOXY-2-OXOBUTOXY)METHYL]PROPYLIDENE}-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LGY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(E)-N~6~-(4-oxobutylidene)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LLY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NZ-(DICARBOXYMETHYL)LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LP6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-piperidin-1-yl-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LRK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LSO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[3-CARBOXY-2-OXO-BUTANE-1-SULFONYLMETHYL-PROPYLIDENEAMINO]-HEXANOIC ACID",
+        "(Z)-N~6~-(3-CARBOXY-1-{[(4-CARBOXY-2-OXOBUTYL)SULFONYL]METHYL}PROPYLIDENE)-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LVN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,3S)-2-amino-3-methyl-4-oxo-butanoic acid",
+        "(3S)-4-oxo-L-valine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2E,4S)-2-{[(5S)-5-amino-5-carboxypentyl]imino}-4-hydroxyheptanedioic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MBQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-HYDROXY-5-({1-[(4-METHYLPHENOXY)METHYL]-3-OXOPROP-1-ENYL}AMINO)-L-TYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MKF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-(dimethylcarbamoyloxy)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "N10",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(HEXYLAMINO)CARBONYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "N65",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-6-[(~{E})-pentan-2-ylideneamino]hexanal"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NYS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-{5-[(1R)-2-amino-1-hydroxyethyl]-2,3-dihydroxyphenyl}-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OBS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[5-(2-CARBOXY-ETHYL)-4-CARBOXYMETHYL-1-OXO-TETRAHYDRO-1LAMBDA4-THIOPYRAN-3-YLIDENEAMINO]-HEXANOIC ACID",
+        "(Z)-N^6-[(4S,5R)-5-(2-CARBOXYETHYL)-4-(CARBOXYMETHYL)-1-HYDROXYDIHYDRO-2H-THIOPYRANIUM-3(4H)-YLIDENE]-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OMH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-hydroxy(methoxy)phosphoryl]-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OYL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-ethyl-L-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "P2Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-{[(1S,2E)-1-formyl-4-phenoxybut-2-en-1-yl]amino}-6-hydroxy-L-tyrosine",
+        "2-hydroxy-5-{[(1S,2E)-1-formyl-4-phenoxybut-2-en-1yl]amino}-L-tyrosine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "P3Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-hydroxy-5-{[(1E)-1-(2-oxoethylidene)-4-phenylbutyl]amino}-L-tyrosine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PEC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S,S-PENTYLTHIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PSH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-thiophosphono-L-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PYX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[S-THIOPYRIDOXAMINYL]CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Q75",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "Thiazole-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Q8X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{R})-2-azanyl-3-[(6-pyridin-2-ylpyridin-3-yl)methylsulfanyl]propanal"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QNQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-methylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QNT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,6-dimethylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QNW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-methylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QO2",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4,5-dimethylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QO5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,5-dimethylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QVA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,3R)-2-{[(2R)-2-amino-2-carboxyethyl]sulfanyl}-3-hydroxybutanedioic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SNK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{R})-2-azanyl-3-(4-ethanoylsulfanyl-1~{H}-imidazol-5-yl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SVW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(R)-AMINO(HYDROXY)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SVZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(S)-HYDROXY(ISOPROPYLAMINO)PHOSPHORYL]-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SWW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(2-hydroxyethyl)-D-cysteine",
+        "(2~{S})-2-azanyl-3-(2-hydroxyethylsulfanyl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SYS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-(Se-carboxamidomethyl)selenocysteine",
+        "3-[(2-amino-2-oxoethyl)selanyl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "T0I",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-(2,4-dihydroxy-5-imidazol-1-yl-phenyl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "T8L",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "Thio-phosohothreonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TCQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TGH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "6-{[(S)-carboxy(hydroxy)methyl]amino}-7-hydroxy-L-tryptophan"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TQZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-PENTASULFANYLPROPAN-1-OL"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TTS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-((3E)-4-HYDROXY-3-{[2-(4-HYDROXYPHENYL)ETHYL]IMINO}-6-OXOCYCLOHEXA-1,4-DIEN-1-YL)ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TXY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(5S)-4,5-dihydroxycyclohexa-1,3-dien-1-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TYN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "AMINOBENZOFURAZAN-O-TYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "V44",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[2,2-bis(1-methyl-1H-imidazol-2-yl)ethyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XPL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-amino reduced pyrrolysine",
+        "N~6~-[(3R,5R)-5-amino-3-methyl-D-prolyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XX1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-7H-PURIN-6-YL-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YPZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(3Z)-4-hydroxy-6-oxo-3-(2-phenylhydrazinylidene)cyclohexa-1,4-dien-1-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZBZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(phenylcarbonyl)-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GAU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-GLUTAMOL",
+        "(4S)-4-AMINO-5-HYDROXYPENTANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GMA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-AMIDO-4-CARBAMOYL-BUTYRIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CY3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-3-MERCAPTO-PROPIONAMIDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CR2",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "CHROMOPHORE (GLY-TYR-GLY)",
+        "{(4Z)-2-(aminomethyl)-4-[(4-hydroxyphenyl)methylidene]-5-oxo-4,5-dihydro-1H-imidazol-1-yl}acetic acid"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "02O",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(3-tert-butyl-1,2,4-oxadiazol-5-yl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "04U",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "azanylidene-[(3S,5S)-5-carboxypyrrolidin-3-yl]imino-azanium"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0A0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-methyl-L-aspartic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0X9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~2~-sulfamoyl-L-arginine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "28X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(R)-{[(3R)-3,4-dihydroxybutyl]oxy}(hydroxy)phosphoryl]-L-threonine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2OR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "amino{[(2R,3R,4S)-4-amino-2,3,5-trihydroxy-5-oxopentyl]amino}methaniminium"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4U7",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[(5S)-5-amino-5-carboxy-6,6-difluorohexyl](trihydroxy)borate(1-)"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "5AB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[(5S)-5-amino-5-carboxyhexyl](trihydroxy)borate"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "6GL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-(phosphonooxy)-L-norvaline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "8WY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5,5-dihydroxy-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "999",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-hydroxy-D-aspartic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9TR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N6-{[(3-azidophenyl)methoxy]carbonyl}-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9TU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N6-[({3-[3-(trifluoromethyl)-3H-diaziren-3-yl]phenyl}methoxy)carbonyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9TX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N6-{[(3-ethynylphenyl)methoxy]carbonyl}-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9U0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N6-({[(1S,2E)-cyclooct-2-en-1-yl]oxy}carbonyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AS0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-selanyl-L-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1ASZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-sulfanyl-L-histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1CAB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-3,4-dihydro-2H-pyrrole-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BG4",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-(HYDROXY-METHYL-AMINO)-3-METHYL-PYRROLIDINE-2-CARBOXYLIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BG5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-HYDROXYAMINO-3-METHYL-PYRROLIDINE-2-CARBOXYLIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BIU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-bromo-L-isoleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C1T",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(1S,6R)-3,6-dihydroxy-4-methyl-2,5-dioxocyclohex-3-en-1-yl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CLG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[2-(2-AMINOOXY-ACETYLAMINO)-ACETYLAMINO]-HEXANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CLH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-6-[2-(2-OXO-ACETYLAMINO)-ACETYLAMINO]-HEXANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DON",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(S)-2-AMINO-6-DIAZENYL-5-OXOHEXANOIC ACID",
+        "6-DIAZENYL-5-OXO-L-NORLEUCINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "E0Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "EXY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-7,8-epoxy octanoic acid",
+        "6-[(2R)-oxiran-2-yl]-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FB5",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-(difluoromethyl)-6-(dihydroxyboranyl)-L-norleucine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FFM",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-[(1R,2R)-2-hydroxy-1-methyl-2-phosphonoethyl]-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "G3M",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-N~6~-carbamimidoyl-3-hydroxy-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "G8X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},3~{R})-3-oxidanylpyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GSC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-ETHYLTHIO GLYCINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HCM",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-methylsulfanyl-homocystein",
+        "(2S)-2-amino-4-(methyldisulfanyl)butanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HHI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2Z)-3-(1H-imidazol-5-yl)-2-iminopropanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "I58",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4R-FLUORO-N6-ETHANIMIDOYL-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ICY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(2-iodobenzyl)-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IEL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(1Z)-ethanimidoyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IOR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[(5R)-5-methyl-4-oxo-4,5-dihydro-1H-imidazol-2-yl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "J9Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-5-{[(E)-amino(methylamino)methylidene](hydroxy)azaniumyl}pentanoate"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KNB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-(methylsulfonyl)-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LLZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(1S)-3-(6-methoxynaphthalen-2-yl)-1-methyl-3-oxopropyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LMF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NZ(N-METHYL THIOFORMAMIDE) LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LPG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINO-BUT-3-YNOIC ACID; 2-amino-3-butynoic acid",
+        "(2S)-2-aminobut-3-ynoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(4-methylpentyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MEG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-methyl-L-glutamic acid",
+        "(2S,3S)-2-azanyl-3-methyl-pentanedioic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NTR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "META-HYDROXY BETA NOR-TYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OXX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "OXALYL-ASPARTYL ANHYDRIDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PBB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(4-BROMOBENZYL)CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PE1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "PYRIDOXYL-GLUTAMIC ACID-5'-MONOPHOSPHATE",
+        "N~2~-({3-HYDROXY-2-METHYL-5-[(PHOSPHONOOXY)METHYL]PYRIDIN-4-YL}METHYL)-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "S2P",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-(4-hydroxy-1,2,5-thiadiazol-3-yl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SHC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-HEXYLCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SHR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N-(5-AMINO-5-CARBOXYPENTYL)GLUTAMIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TEF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "p-(2-tetrazolyl)-phenylalanine",
+        "4-(2H-tetrazol-2-yl)-L-phenylalanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TPJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(5R)-5-tert-butyl-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TRY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2Z)-2-amino-3-(1H-indol-3-yl)prop-2-enoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "UGY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(S)-2-ureidoglycine",
+        "(2S)-amino(carbamoylamino)ethanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VB1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N^6^-[(1R)-2-{[(1S)-1-carboxypropyl]amino}-2-oxo-1-(sulfanylmethyl)ethyl]-6-oxo-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VH0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S,4S)-4-[4-(aminomethyl)-1,2,3-triazol-1-yl]pyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "Z01",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(2,2-dimethylpropanoyl)amino]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MYN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-amino[(4R)-2-amino-1,4,5,6-tetrahydropyrimidin-4-yl]ethanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(2Z,4E,6E,8E)-3,7-DIMETHYL-9-(2,6,6-TRIMETHYLCYCLOHEX-1-EN-1-YL)NONA-2,4,6,8-TETRAENYL]LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XSN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-alpha-asparagine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IC0",
+      "reason": "论文使用烯基氨基酸完成闭环复分解；成环后已不再是CCD IC0的精确化学结构，不能把成品活性归给IC0",
+      "searchTerms": [
+        "(2S)-2-azanylhept-6-enoic acid",
+        "Fmoc-(S)-2-(4-pentenyl)-glycine"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "UJR",
+      "reason": "命中的是通用半胱氨酸芳基化，未使用CCD UJR的5-碘嘧啶基半胱氨醛精确结构",
+      "searchTerms": [
+        "arylated cysteine",
+        "(2~{R})-2-azanyl-3-(5-iodanylpyrimidin-2-yl)sulfanyl-propanal"
+      ],
+      "candidateCountReviewed": 6,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "Q2K",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "CHROMOPHORE (MET-TYR-GLY)",
+        "2-[2-(3-methylsulfanylpropanimidoyl)-4,5-bis(oxidanylidene)imidazol-1-yl]ethanoic acid"
+      ],
+      "candidateCountReviewed": 3,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "3ZH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "11-{4-[(2S)-2-amino-2-carboxyethyl]-3-(8-phenyloctyl)-2,3-dihydro-1H-imidazol-1-yl}undecanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "45F",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4S)-4-(prop-2-yn-1-yloxy)-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "9RI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(1R,2S,4S)-bicyclo[2.2.1]heptan-2-yl]-N~6~-methyl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1BIE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-(2-methylprop-2-enoyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1D5B",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "Methyl lysinate",
+        "methyl (2~{S})-2,6-bis(azanyl)hexanoate"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "A1IL6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},4~{S})-4-hexylsulfanylpyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C1J",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-(N-octylcarbamimidoyl)-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C4G",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[N-(3-aminopropyl)carbamimidoyl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C67",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[N-(2-carboxyethyl)carbamimidoyl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C6D",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~5~-[N-(3-hydroxypropyl)carbamimidoyl]-L-ornithine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-METHYL-N~6~-PROPYL-L-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NLN",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "2-AMINO-HEXANOIC ACID AMIDE",
+        "NORLEUCINE AMIDE"
+      ],
+      "candidateCountReviewed": 2,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "V1C",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-3-[4-[1-(2-methylpropyl)pyrazol-4-yl]phenyl]propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZT1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(1-methyl-1H-imidazol-5-yl)methyl]-N~6~-propan-2-yl-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GEE",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "ethyl glycinate"
+      ],
+      "candidateCountReviewed": 7,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "B3X",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3,5-DIAMINO-5-OXOPENTANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "B3Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-AMINO-4-(4-HYDROXYPHENYL)BUTANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TYE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "tyrosinol; bound form of TYROSINAL",
+        "4-[(2S)-2-amino-3-hydroxypropyl]phenol"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "VAD",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "DEAMINOHYDROXYVALINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HSO",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "L-histidinol"
+      ],
+      "candidateCountReviewed": 6,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "F75",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "2-(aminomethyl)-1,3-thiazole-4-carboxylic acid"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "DIR",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "DINOR-N(OMEGA)-HYDROXY-L-ARGININE",
+        "3-{[(E)-AMINO(HYDROXYIMINO)METHYL]AMINO}ALANINE"
+      ],
+      "candidateCountReviewed": 2,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "PVH",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "HISTIDINE-METHYL-ESTER"
+      ],
+      "candidateCountReviewed": 8,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "ECC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4S)-4-amino-5-hydroxypentanamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "FDL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-acetyl-N-(4-methyl-2-oxo-2H-chromen-7-yl)-L-lysinamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "APK",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "5'-O-[(S)-{[(5S)-5-AMINO-6-OXOHEXYL]AMINO}(HYDROXY)PHOSPHORYL]ADENOSINE"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "FFL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-azanyl-5-fluoranyl-4-(fluoranylmethyl)pentanoic acid",
+        "5,5'-difluoroleucines"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4OV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EG1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "EXA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N~6~-[(R)-[(E)-(1-carboxyethylidene)amino]{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl]-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYN",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2,6-DIAMINO-HEXANOIC ACID AMIDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "DNL",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "ALPHA-DEAMINO-LYSINAL",
+        "6-AMINO-HEXANAL"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "MS6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-4-(methylsulfanyl)butanethioic O-acid",
+        "(2S)-2-amino-4-(methylsulfanyl)butane-1-thiol"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NLO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-METHYL-L-NORLEUCINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4J4",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(2-{[(2',4'-difluorobiphenyl-4-yl)methyl]amino}-2-oxoethyl)-L-cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "5OW",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "86N",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1A7R",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EFT",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EJS",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1EMP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1LTQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ADP-RIBOXANATED ARGININE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CY0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-{3-[(4-ANILINOQUINAZOLIN-6-YL)AMINO]-3-OXOPROPYL}-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LNE",
+      "reason": "命中文章研究的是更大的热溶菌素膦酰胺抑制剂，不能把结果归给游离N-乙基-L-亮氨酰胺",
+      "searchTerms": [
+        "N-ethyl-L-leucinamide"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "LNM",
+      "reason": "命中文章研究的是更大的热溶菌素膦酰胺抑制剂，不能把结果归给游离N-甲基-L-亮氨酰胺",
+      "searchTerms": [
+        "N-methyl-L-leucinamide"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "NBQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-HYDROXY-5-({1-[(2-NAPHTHYLOXY)METHYL]-3-OXOPROP-1-ENYL}AMINO)TYROSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "O2E",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PJ3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "7GMP capped histidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "S1H",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-HEXADECANOSULFONYL-O-L-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SBL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "L-NAPHTHYL-1-ACETAMIDO BORONIC ACID ALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "UF0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XXY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE THR-HIS-GLY",
+        "2-[(1R,2R)-1-amino-2-hydroxypropyl]-1-(carboxymethyl)-4-(1H-imidazol-5-ylmethyl)-1H-imidazol-5-olate"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "12Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2XA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2R)-2-AMINO-3-[(4-CHLOROPHENYL)-DIPHENYL-METHYL]SULFANYL-PROPANOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "4HJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "8AY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[6-(propan-2-yl)-1,3-benzothiazol-2-yl]-L-alanine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "8SP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O-[(R)-{[(2R)-2,3-bis(octanoyloxy)propyl]oxy}(hydroxy)phosphoryl]-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "H1D",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HYI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "K7K",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-azanyl-3-[hexyl-[2-(3-oxidanylpyridin-2-yl)pyridin-3-yl]oxy-phosphoryl]oxy-propanal"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SHP",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4-HYDROXYMALTOSEPHENYL)GLYCINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SIB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YPR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4R)-4-[(7-methoxy-2-phenylquinolin-4-yl)oxy]-L-proline"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZAI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AEA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2-AMINO-2-CARBAMOYL-ETHYLSULFANYL)-ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CYF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5-[2-(2-AMINO-2-CARBAMOYL-ETHYLSULFANYL)-ACETYLAMINO]-2-(3,6-DIHYDROXY-9,9A-DIHYDRO-3H-XANTHEN-9-YL)-BENZOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "7TK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-azanyl-4-oxidanylidene-4-pyrrolidin-1-yl-butanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QQ8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4~{S})-4-azanyl-5-formamido-pentanamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2VA",
+      "reason": "已逐篇复核命中的题名和摘要；内容属于同名误命中、仅合成/结构鉴定、不同化学结构或无法从完整分子归因到该残基，不满足升级门槛",
+      "searchTerms": [
+        "2'-(L-VALYL)AMINO-2'-DEOXYADENOSINE"
+      ],
+      "candidateCountReviewed": 1,
+      "candidateDisposition": "reviewed-not-accepted"
+    },
+    {
+      "ccdId": "PIA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[(4Z)-2-[(1S)-1-aminoethyl]-4-(4-hydroxybenzylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "73N",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-5-carbamimidamido-2-(carboxyamino)pentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1AT7",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(1S)-6-methyl-1,2-dihydroisoquinoline-1-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1MF6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-(aminomethyl)-4-methyl-pentanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BCX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3R)-3-amino-4-sulfanylbutanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BSE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "BETA-3-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "MDF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "META, META'-DI-HYDROXY-PHENYLALANINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QCI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-azanylpiperidine-2,6-dione; (S)-2-Aminoglutarimide",
+        "L-2-Aminoglutarimide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "THZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-[(4S)-4-amino-5-(1,3-benzothiazol-2-yl)-5-oxopentyl]guanidine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "V3E",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-azanyl-3-(2-hydroxyphenyl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SUI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3-AMINO-2,5-DIOXO-1-PYRROLIDINYL)ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "XYG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (DECARBOXYLATED ASP-TYR-GLY)",
+        "[(4Z)-2-[(1Z)-ETHANIMIDOYL]-4-(4-HYDROXYBENZYLIDENE)-5-OXO-4,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "73P",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-6-azanyl-2-(carboxyamino)hexanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "7YO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2R)-5-oxidanylidenepyrrolidine-2-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A1BC0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N,N-dimethyl-L-cysteinamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "A66",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-AMINOETHYLLYSINE-CARBONYLMETHYLENE-ADENINE",
+        "N-(3,7-Diaminopurin-6-ylacetyl)-L-lysine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CE7",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-amino-4,4,4-trihydroxybutanamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HS9",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N-METHYL-L-HISTIDINAMIDE",
+        "N-ALPHA-METHYL-L-HISTIDINAMIDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZZJ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N^2^-methyl-L-alaninamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "OTZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-[2-(aminomethyl)-1,3-oxazol-4-yl]-1,3-thiazole-4-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "F6N",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-(aminomethyl)-1,3-oxazole-4-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "PR3",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S,S-PROPYLTHIOCYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TOZ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-[2-(aminomethyl)-1,3-thiazol-4-yl]-1,3-oxazole-4-carboxylic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LYX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N''-(2-COENZYME A)-PROPANOYL-LYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "2JG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-2-amino-3-oxopropyl hexanoate"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BBC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3-[(4-AMINOBUTYL)SULFINYL]-2-IMINOPROPAN-1-OL"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "BPE",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-PROPYLAMINE-L-CYSTEINE",
+        "(2S)-2-AMINO-3-[(3-AMINOPROPYL)SULFANYL]PROPAN-1-OL"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CWR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(ALA-SER-GLY) CHROMOPHORE",
+        "(4-methyl-5-oxo-2,5-dihydro-1H-imidazol-1-yl)acetic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "I2F",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},4~{R},5~{E})-5-[(5~{S})-5-azanyl-6-oxidanyl-hexyl]iminohexane-1,2,4-triol"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KPY",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "PYRUVOYL-L-THIALYSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NZH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "TETRAZOLYL HISTIDINE",
+        "(2S)-2-AMINO-3-[1-(1H-TETRAAZOL-5-YL)-1H-IMIDAZOL-4-YL]PROPANAL"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QO8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "3,4-dimethylcatechol cysteine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SIC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2R)-2-[(3S)-3-amino-2,5-dioxopyrrolidin-1-yl]-3-sulfanylpropanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TYO",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4Z,6E)-2-AMINO-7-HYDROPEROXY-4-[(E)-2-HYDROXYVINYL]HEPTA-4,6-DIENOIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "YTL",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S})-2-(2-azanylethanoyloxy)-3-(4-hydroxyphenyl)propanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CSH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[2-(2-HYDROXY-1-METHYL-ETHYL)-4-(1H-IMIDAZOL-4-YLMETHYL)-5-OXO-IMIDAZOLIDIN-1-YL]-ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CR0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "1-(2-ETHANONE)-2-HYDROXY-2-(1-AMINO-2-METHYL-2-ETHANOL)-4-(2-DIMETHYL)ETHANE-IMIDAZOLINE-5-ONE; CHROMOPHORE (THR-LEU-GLY)",
+        "[2-(1-AMINO-2-HYDROXYPROPYL)-2-HYDROXY-4-ISOBUTYL-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETALDEHYDE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CRG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[2-(1-AMINO-2-HYDROXY-PROPYL)-4-(3H-IMIDAZOL-4-YLMETHYLENE)-5-OXO-4,5-DIHYDRO-IMIDAZOL-1-YL]-ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IO8",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (GLY-TRP-GLY)",
+        "2-[2-(aminomethyl)-4-(1H-indol-3-ylmethyl)-5-oxidanylidene-4H-imidazol-1-yl]ethanoic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CRX",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (ALA-SER-GLY)",
+        "[2-(1-AMINOETHYL)-2-HYDROXY-4-METHYLENE-5-OXOIMIDAZOLIDIN-1-YL]ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "04V",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-pyrrolidine-2-carboximidic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0A2",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[(1R)-1,5-diaminopentyl][bis(ethanolato)]hydroxyborate(1-)"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "0AB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S,4S)-3-amino-4-methyl-3,4-dihydro-2H-pyran-2-one"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AR2",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "ARGINYL-BENZOTHIAZOLE-6-CARBOXYLIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "HPQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "HOMOPHENYLALANINYLMETHANE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "P2Y",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2S)-PYRROLIDIN-2-YLMETHYLAMINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SDB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "TPK",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(1R)-1-[(2S)-pyrrolidin-2-yl]ethane-1,2-diol"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CLV",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (ALA-PHE-GLY)",
+        "{(2S)-2-[(1S)-1-AMINOETHYL]-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL}ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "IIC",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "4-IMIDAZOLMETHYLENE-5-IMIDAZOLONE CHROMOPHORE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "QLG",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (GLN-LEU-GLY)",
+        "[(4Z)-2-[(1Z)-4-AMINO-4-OXOBUTANIMIDOYL]-4-(2-METHYLPROPYLIDENE)-5-OXO-4,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "WCR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[(2R,4Z)-2-(aminomethyl)-2-hydroxy-4-(4-hydroxybenzylidene)-5-oxoimidazolidin-1-yl]acetic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "X9Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CHROMOPHORE (ALA, PHE, GLY)",
+        "{(2S)-2-[(1S)-1-AMINOETHYL]-4-BENZYL-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL}ACETIC ACID"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "ZRF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "2-[(4~{E})-2-(1-azanylethyl)-5-oxidanylidene-4-(oxidanylmethylidene)imidazol-1-yl]ethanoic acid",
+        "2-[(4E)-2-[(1S)-1-aminoethyl]-4-(hydroxymethylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CMH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "S-(METHYLMERCURY)-L-CYSTEINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NC1",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "NITROCEFIN ACYL-SERINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "1PI",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3R)-3-[(2S)-2-amino-3-oxopropyl]piperidine-1-carboximidamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "3GA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(3S)-3-[(2S)-2-amino-3-oxopropyl]piperidine-1-carboximidamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "5FQ",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N-pentyl-L-alaninamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "KLF",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(2~{S},4~{R})-4-oxidanylpyrrolidine-2-carboxamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "LT0",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "D-tryptophyl-L-serine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "UM2",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "N-butyl-L-alaninamide",
+        "(2S)-2-amino-N-butyl-propanamide"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "85L",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[[(2~{R})-2-azanyl-3-oxidanylidene-propyl]-(chloranylaurio)sulfanuidyl]-chloranyl-gold"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "I4O",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "[4-[(2S)-2-azanyl-3-oxidanyl-3-oxidanylidene-propyl]imidazol-1-yl]-tris(oxidanidyl)-oxidanylidene-vanadium",
+        "Histidine oxo-vanadium complex"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "NPH",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CYSTEINE-METHYLENE-CARBAMOYL-1,10-PHENANTHROLINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "31Q",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(4-carboxyphenyl)(L-cysteinato-kappaS~3~)mercury"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "6BR",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "threoninevanadate"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "AN6",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "5'-{[(3S)-3-amino-3-carboxypropyl](ethyl)amino}-5'-deoxyadenosine"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "C4R",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "(bicyclo [2.2.1] hepta-2-ene)-cystein rhodium",
+        "(R)-2-amino-3-(bicyclo[2.2.1]hepta-2,5-dien-7-ylthio)propanoic acid rhodium"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "CSB",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "CYS BOUND TO LEAD ION"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "GSU",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "O5'-(L-GLUTAMYL-SULFAMOYL)-ADENOSINE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    },
+    {
+      "ccdId": "SVA",
+      "reason": "已用CCD精确名称及同义词检索Europe PMC；本轮没有找到可对应精确结构并报告性质方向的论文候选",
+      "searchTerms": [
+        "SERINE VANADATE"
+      ],
+      "candidateCountReviewed": 0,
+      "candidateDisposition": "no-candidate-found"
+    }
+  ]
+}

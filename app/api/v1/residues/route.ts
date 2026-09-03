@@ -8,7 +8,7 @@ export function GET() {
   return Response.json({
     metadata: {
       title: "口服环肽性质改善研发证据",
-      version: "5.1",
+      version: "5.2",
       releaseDate: "2026-09-02",
       recordCount: propertyEvidenceMasterRecords.length,
       schema: "ocpr-property-evidence-v1",

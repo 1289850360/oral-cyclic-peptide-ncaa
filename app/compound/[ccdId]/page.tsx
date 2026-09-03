@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import catalogJson from "../../../public/ccd-unified-structure-catalog.json";
 import usageJson from "../../../public/ccd-unified-polymer-usage.json";
 import reviewJson from "../../../public/ccd-manual-review-92-final.json";
+import { naturalParentModificationByCcd } from "../../natural-parent-modifications";
+import { ccdDisplayCorrectionById, displayNameForCcd } from "../../ccd-display-corrections";
 import SiteFooter from "../../site-footer";
 import SiteHeader from "../../site-header";
 
@@ -34,7 +36,6 @@ const componentClassMeta = catalogJson.metadata.componentClassMeta as Record<Cat
 const NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS = new Set(["OCPR000001", "OCPR000011", "OCPR000012", "OCPR000013", "OCPR000015", "OCPR000016", "OCPR000047", "OCPR000049", "OCPR000050", "OCPR000074", "OCPR000560", "OCPR000561"]);
 const propertyEvidenceFor = (record: CatalogRecord) => record.researchEvidence.filter((item) => item.level === "直接证据" || item.level === "改造证据" || NCAA_WHOLE_MOLECULE_PROPERTY_RECORDS.has(item.recordId));
 const propertyEvidenceLabel = (level: string) => level === "直接证据" || level === "改造证据" ? "直接实验" : level === "专利证据" ? "专利实例" : "完整分子证据";
-const componentBasisForDisplay = (record: CatalogRecord) => record.componentClass.id === "evidence-reviewed-residue" ? "CCD单体类型或人工来源支持其非天然氨基酸身份" : record.componentClass.basis;
 
 export function generateStaticParams() {
   return records.map((record) => ({ ccdId: record.primaryCcdId.toLowerCase() }));
@@ -44,7 +45,8 @@ export async function generateMetadata({ params }: { params: Promise<{ ccdId: st
   const { ccdId } = await params;
   const record = recordByCcd.get(ccdId.toLowerCase());
   if (!record) return {};
-  return { title: `CCD ${record.primaryCcdId}｜${record.name}`, description: `${record.name}的CCD结构身份、PDB聚合物序列出现情况与性质实验资料。`, alternates: { canonical: `/compound/${record.primaryCcdId.toLowerCase()}/` } };
+  const displayName = displayNameForCcd(record.primaryCcdId, record.name);
+  return { title: `CCD ${record.primaryCcdId}｜${displayName}`, description: `${displayName}的CCD结构身份、PDB聚合物序列出现情况与性质实验资料。`, alternates: { canonical: `/compound/${record.primaryCcdId.toLowerCase()}/` } };
 }
 
 export default async function CompoundDetailPage({ params }: { params: Promise<{ ccdId: string }> }) {
@@ -57,6 +59,9 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
   const previous = index > 0 ? records[index - 1] : null;
   const next = index < records.length - 1 ? records[index + 1] : null;
   const propertyEvidence = propertyEvidenceFor(record);
+  const naturalParentModification = naturalParentModificationByCcd[record.primaryCcdId];
+  const displayName = displayNameForCcd(record.primaryCcdId, record.name);
+  const nameCorrection = ccdDisplayCorrectionById[record.primaryCcdId];
   const evidenceRows = [
     ["结构身份", record.evidenceProfile.structureIdentity], ["肽中使用", record.evidenceProfile.peptideUse],
     ["环肽使用", record.evidenceProfile.cyclicPeptideUse], ["合成资料", record.evidenceProfile.synthesisUse],
@@ -68,17 +73,24 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
     <article className="residue-detail-page compound-detail-page">
       <nav className="detail-breadcrumb" aria-label="面包屑"><Link href="/">首页</Link><span>›</span><Link href="/catalog/">CCD结构库</Link><span>›</span><strong>CCD {record.primaryCcdId}</strong></nav>
       <header className="detail-hero compound-hero">
-        <div><p className="eyebrow">CHEMICAL COMPONENT RECORD · CCD {record.primaryCcdId}</p><h1>{record.name}</h1><p className="detail-english-name">{record.synonyms.join(" · ") || "无已收录同义词"}</p><div className="detail-badges"><span>{componentClassMeta[record.componentClass.id].shortLabel}</span><span>{record.categoryLabel}</span>{propertyEvidence.length > 0 && <span>已有性质实验资料</span>}</div></div>
-        <div className="compound-hero-structure"><img src={record.structureImageUrl} alt={`${record.name}二维结构`} /><span>CCD {record.ccdIds.join(" / ")}</span></div>
+        <div><p className="eyebrow">CHEMICAL COMPONENT RECORD · CCD {record.primaryCcdId}</p><h1>{displayName}</h1><p className="detail-english-name">{record.synonyms.join(" · ") || "无已收录同义词"}</p><div className="detail-badges"><span>{componentClassMeta[record.componentClass.id].shortLabel}</span><span>{record.categoryLabel}</span>{propertyEvidence.length > 0 && <span>已有性质实验资料</span>}</div></div>
+        <div className="compound-hero-structure"><img src={record.structureImageUrl} alt={`${displayName}二维结构`} /><span>CCD {record.ccdIds.join(" / ")}</span></div>
       </header>
 
       <div className="detail-layout">
         <div className="detail-main-column">
-          <section className="detail-section"><div className="detail-section-title"><span>01</span><h2>构件身份与资料状态</h2></div><div className={`compound-classification component-${record.componentClass.id}`}><div><span>当前构件分类</span><strong>{componentClassMeta[record.componentClass.id].label}</strong></div><p>{componentClassMeta[record.componentClass.id].description}</p><small>分类依据：{componentBasisForDisplay(record)} · {record.componentClass.method === "manual-review" ? "人工来源审核" : record.componentClass.method === "pdb-sequence-audit" ? "PDB序列审计" : "CCD结构与单体类型核验"}</small></div><div className="compound-evidence-grid">{evidenceRows.map(([label, state]) => <article data-status={state.status} key={label}><span>{label}</span><strong>{state.label}</strong></article>)}</div>{propertyEvidence.length > 0 && <div className="compound-research-evidence"><div><span>性质实验资料</span><strong>{propertyEvidence.length}条实验资料已与CCD {record.primaryCcdId}对齐</strong></div><ul>{propertyEvidence.map((item) => <li key={`${item.recordId}-${item.level}`}><b>{propertyEvidenceLabel(item.level)}</b><span>{item.name}</span></li>)}</ul><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>在研发证据库中查看 →</Link></div>}<p className="detail-boundary">各项状态分别回答不同问题。完整分子性质证据只说明该残基可以存在于相应骨架中，不能把整个分子的效果归因于这一处残基。</p></section>
+          <section className="detail-section identity-status-section">
+            <div className="detail-section-title"><span>01</span><h2>资料核验状态</h2></div>
+            {nameCorrection && <div className="ccd-name-correction"><strong>名称—结构校正</strong><p>{nameCorrection.note}</p><small>RCSB原常用名：{nameCorrection.sourceName}</small></div>}
+            <div className="compound-evidence-grid">{evidenceRows.map(([label, state]) => <article data-status={state.status} key={label}><span>{label}</span><strong>{state.label}</strong></article>)}</div>
+            {propertyEvidence.length > 0 && <div className="compound-research-evidence"><div><span>性质实验资料</span><strong>{propertyEvidence.length}条实验资料已与CCD {record.primaryCcdId}对齐</strong></div><ul>{propertyEvidence.map((item) => <li key={`${item.recordId}-${item.level}`}><b>{propertyEvidenceLabel(item.level)}</b><span>{item.name}</span></li>)}</ul><Link href={`/?q=${encodeURIComponent(record.primaryCcdId)}#database`}>在研发证据库中查看 →</Link></div>}
+          </section>
 
           <section className="detail-section"><div className="detail-section-title"><span>02</span><h2>结构身份</h2></div><dl className="detail-definition-list"><div><dt>CCD编号</dt><dd>{record.ccdIds.join(" / ")}</dd></div><div><dt>分子式／分子量</dt><dd>{record.formula} · {record.formulaWeight?.toFixed(3) ?? "—"} Da</dd></div><div><dt>连接类型</dt><dd>{record.linkageTypes.join("；")}</dd></div><div><dt>标准母体</dt><dd>{record.parentIds.join(" / ") || "CCD未指定"}</dd></div><div><dt>立体化学SMILES</dt><dd className="smiles-value">{record.smiles}</dd></div><div><dt>结构标签</dt><dd>{record.tags.join("、") || "未自动归类"}</dd></div></dl></section>
 
-          <section className="detail-section"><div className="detail-section-title"><span>03</span><h2>PDB聚合物序列出现情况</h2></div>{usage ? <><dl className="detail-definition-list"><div><dt>序列核查结果</dt><dd>{record.evidenceProfile.peptideUse.label}</dd></div><div><dt>包含该CCD的聚合物实体</dt><dd>{usage.polymerEntityCount}个</dd></div><div><dt>其中≤50残基实体</dt><dd>{usage.shortPolymerEntityCount}个</dd></div><div><dt>示例PDB</dt><dd className="pdb-example-links">{usage.exampleEntryIds.length ? usage.exampleEntryIds.map((id) => <a href={`https://www.rcsb.org/structure/${id}`} target="_blank" rel="noreferrer" key={id}>{id}</a>) : "暂无"}</dd></div></dl><p className="detail-boundary">这里仅表示CCD编号是否出现在PDB聚合物序列中；短链命中不等于环肽使用，也不代表具有口服性质。</p></> : <div className="detail-empty"><strong>尚未完成PDB序列核查</strong><p>没有核查结果不代表该组分未用于肽，只表示当前版本尚未完成检索。</p></div>}</section>
+          {naturalParentModification && <section className="detail-section natural-parent-section"><div className="detail-section-title"><span>03</span><h2>由哪种天然氨基酸改变而来</h2></div><div className="parent-change-summary"><article><span>天然氨基酸母体</span><div className="parent-structure-image"><img src={`https://www.ebi.ac.uk/pdbe/static/files/pdbechem_v2/${naturalParentModification.naturalParentCcd}_500.svg`} alt={`${naturalParentModification.naturalParent}二维结构`} /><small>天然母体 · CCD {naturalParentModification.naturalParentCcd}</small></div><strong>{naturalParentModification.naturalParent}</strong><a href={`https://www.rcsb.org/ligand/${naturalParentModification.naturalParentCcd}`} target="_blank" rel="noreferrer">查看天然母体 CCD {naturalParentModification.naturalParentCcd} ↗</a></article><div className="parent-change-arrow"><span aria-hidden="true">→</span><b>{naturalParentModification.changeLabel.split("\n").map((line, lineIndex) => <span className="change-label-line" key={line}>{lineIndex > 0 && <br />}{line}</span>)}</b></div><article><span>形成的非天然氨基酸</span><div className="parent-structure-image"><img src={record.structureImageUrl} alt={`${displayName}二维结构`} /><small>改造结果 · CCD {record.primaryCcdId}</small></div><strong>{displayName}</strong><a href={record.sourceUrl} target="_blank" rel="noreferrer">查看非天然结构 CCD {record.primaryCcdId} ↗</a></article></div><p className="parent-relationship-note">{naturalParentModification.relationship}</p><dl className="detail-definition-list parent-change-details"><div><dt>改变的位置</dt><dd>{naturalParentModification.changedPosition}</dd></div><div><dt>具体怎么改变</dt><dd>{naturalParentModification.structuralChange}</dd></div></dl><div className="parent-property-panel"><h3>改变后，能够确定的性质变化</h3><ul>{naturalParentModification.directlyCausedProperties.map((property) => <li key={property}>{property}</li>)}</ul></div><div className="parent-experiment-panel"><header><div><span>完整肽中的实验表现</span><strong>{naturalParentModification.peptideExperiment.conclusion}</strong></div><b>{naturalParentModification.peptideExperiment.confidence}</b></header><dl><div><dt>测到了什么</dt><dd>{naturalParentModification.peptideExperiment.measurement}</dd></div><div><dt>不能怎么解释</dt><dd>{naturalParentModification.peptideExperiment.attributionBoundary}</dd></div></dl></div>{naturalParentModification.propertyReview && <div className="parent-placement-review"><header><div><span>性质与替换位置分级核验</span><strong>这个残基更适合先替换肽的哪个位置？</strong></div><b>{naturalParentModification.propertyReview.status}</b></header><p>{naturalParentModification.propertyReview.plainMeaning}</p><dl><div><dt>优先尝试</dt><dd>{naturalParentModification.propertyReview.preferredPositions}</dd></div><div><dt>不建议直接替换</dt><dd>{naturalParentModification.propertyReview.positionsToAvoid}</dd></div><div><dt>依据能说明什么</dt><dd>{naturalParentModification.propertyReview.evidenceSummary}</dd></div><div><dt>证据边界</dt><dd>{naturalParentModification.propertyReview.boundary}</dd></div></dl>{naturalParentModification.propertyReview.sources.length > 0 && <nav>{naturalParentModification.propertyReview.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}>{source.title} ↗</a>)}</nav>}</div>}<div className="parent-source-list"><h3>判断依据</h3>{naturalParentModification.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span>{source.supports}</span><strong>{source.title} ↗</strong></a>)}</div></section>}
+
+          <section className="detail-section"><div className="detail-section-title"><span>{naturalParentModification ? "04" : "03"}</span><h2>PDB聚合物序列出现情况</h2></div>{usage ? <><dl className="detail-definition-list"><div><dt>序列核查结果</dt><dd>{record.evidenceProfile.peptideUse.label}</dd></div><div><dt>包含该CCD的聚合物实体</dt><dd>{usage.polymerEntityCount}个</dd></div><div><dt>其中≤50残基实体</dt><dd>{usage.shortPolymerEntityCount}个</dd></div><div><dt>示例PDB</dt><dd className="pdb-example-links">{usage.exampleEntryIds.length ? usage.exampleEntryIds.map((id) => <a href={`https://www.rcsb.org/structure/${id}`} target="_blank" rel="noreferrer" key={id}>{id}</a>) : "暂无"}</dd></div></dl><p className="detail-boundary">这里仅表示CCD编号是否出现在PDB聚合物序列中；短链命中不等于环肽使用，也不代表具有口服性质。</p></> : <div className="detail-empty"><strong>尚未完成PDB序列核查</strong><p>没有核查结果不代表该组分未用于肽，只表示当前版本尚未完成检索。</p></div>}</section>
 
           {record.synthesisUsability && <section className="detail-section"><div className="detail-section-title"><span>04</span><h2>合成资料核查</h2></div><div className={`compound-synthesis-panel ${record.synthesisUsability.compatibility}`}><header><div><span>合成可用性审核</span><strong>{record.synthesisUsability.statusLabel}</strong></div><b>{record.synthesisUsability.compatibilityLabel}</b></header><dl><div><dt>保护形式</dt><dd>{record.synthesisUsability.protectedForms.join(" / ")}</dd></div><div><dt>使用建议</dt><dd>{record.synthesisUsability.guidance}</dd></div><div><dt>主要风险</dt><dd>{record.synthesisUsability.risks}</dd></div></dl><p>{record.synthesisUsability.availabilityBoundary}</p><nav>{record.synthesisUsability.sources.map((source) => <a href={source.url} target="_blank" rel="noreferrer" key={source.url}><span>{source.type}</span>{source.title} ↗</a>)}</nav></div></section>}
 
@@ -89,14 +101,14 @@ export default async function CompoundDetailPage({ params }: { params: Promise<{
 
         <aside className="detail-sidebar">
           <section><span>永久结构标识</span><p>CCD {record.primaryCcdId}</p><small>网站记录ID：{record.id}</small></section>
-          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {record.name}. 结构目录版本5.1, 2026-09-02.</p></section>
+          <section><span>推荐引用</span><p>口服环肽残基证据库. CCD {record.primaryCcdId}: {displayName}. 结构目录版本5.2, 2026-09-02.</p></section>
           <section><span>原始结构来源</span><a href={record.sourceUrl} target="_blank" rel="noreferrer">打开RCSB CCD记录 ↗</a><Link href="/quality/">查看版本与质量说明 →</Link></section>
         </aside>
       </div>
 
       <nav className="detail-record-nav" aria-label="相邻结构记录">
-        {previous ? <Link className="record-nav-card record-nav-previous" href={`/compound/${previous.primaryCcdId.toLowerCase()}/`}><b>←</b><span>上一条结构</span><strong>{previous.name}</strong><small>CCD {previous.primaryCcdId}</small></Link> : <Link className="record-nav-card record-nav-back" href="/catalog/"><b>⌂</b><span>返回</span><strong>CCD结构库</strong></Link>}
-        {next ? <Link className="record-nav-card record-nav-next" href={`/compound/${next.primaryCcdId.toLowerCase()}/`}><b>→</b><span>下一条结构</span><strong>{next.name}</strong><small>CCD {next.primaryCcdId}</small></Link> : <Link className="record-nav-card record-nav-back record-nav-next" href="/catalog/"><b>⌂</b><span>返回</span><strong>CCD结构库</strong></Link>}
+        {previous ? <Link className="record-nav-card record-nav-previous" href={`/compound/${previous.primaryCcdId.toLowerCase()}/`}><b>←</b><span>上一条结构</span><strong>{displayNameForCcd(previous.primaryCcdId, previous.name)}</strong><small>CCD {previous.primaryCcdId}</small></Link> : <Link className="record-nav-card record-nav-back" href="/catalog/"><b>⌂</b><span>返回</span><strong>CCD结构库</strong></Link>}
+        {next ? <Link className="record-nav-card record-nav-next" href={`/compound/${next.primaryCcdId.toLowerCase()}/`}><b>→</b><span>下一条结构</span><strong>{displayNameForCcd(next.primaryCcdId, next.name)}</strong><small>CCD {next.primaryCcdId}</small></Link> : <Link className="record-nav-card record-nav-back record-nav-next" href="/catalog/"><b>⌂</b><span>返回</span><strong>CCD结构库</strong></Link>}
       </nav>
     </article>
     <SiteFooter />

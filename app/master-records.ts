@@ -10,7 +10,7 @@ export type MasterRecord = Residue & {
   recordType: "residue" | "whole-molecule" | "scaffold-study" | "patent-example";
 };
 
-export const DATABASE_VERSION = "5.1";
+export const DATABASE_VERSION = "5.2";
 export const DATABASE_RELEASE_DATE = "2026-09-02";
 
 export const masterRecords: MasterRecord[] = groups.flatMap((group) =>

@@ -275,12 +275,12 @@ export default function Home() {
             <div className="portal-search-controls"><select value={homeSearchTarget} onChange={(event) => setHomeSearchTarget(event.target.value as HomeSearchTarget)} aria-label="选择搜索范围"><option value="catalog">CCD结构库</option><option value="ncaa">非天然氨基酸库</option><option value="evidence">研发证据库</option></select><input id="portal-search-input" value={homeQuery} onChange={(event) => setHomeQuery(event.target.value)} placeholder={homeSearchTarget === "evidence" ? "输入残基名称、CCD、目标性质或证据结论" : "输入英文名、CCD编号、同义词或分子式"} /><button type="submit">搜索</button></div>
             <p>{homeSearchTarget === "evidence" ? "例如：N-Me-Leu、STA、渗透性、环肽直接使用" : "例如：AIB、02A、N-methyl、C8 H9 N O2"}</p>
           </form>
-          <div className="version-line"><span>Version 5.1</span><span>最近更新：2026-09-02</span><span>研究用途数据库</span></div>
+          <div className="version-line"><span>Version 5.2</span><span>最近更新：2026-09-02</span><span>研究用途数据库</span></div>
         </section>
 
         <section className="portal-stats" aria-label="数据库概览">
           <article><strong>2,065</strong><span>网站收录的全部结构</span><small>身份分为后面三类；PDB和性质数据另外统计</small></article>
-          <article><strong>1,844</strong><span>已确认非天然氨基酸／残基</span><small>另有1条身份待确认记录保留在CCD结构库</small></article>
+          <article><strong>1,845</strong><span>已确认非天然氨基酸／残基</span><small>当前没有遗留的身份待确认记录</small></article>
           <article><strong>176</strong><span>特殊用途结构</span><small>多残基融合、反应状态和非典型肽模拟构件等</small></article>
           <article><strong>44</strong><span>非单体／排除项</span><small>缺少单一氨基酸骨架的结构，保留用于追溯</small></article>
           <article><strong>955</strong><span>短PDB聚合物中出现</span><small>在不超过50残基的PDB聚合物序列中命中</small></article>
@@ -297,7 +297,7 @@ export default function Home() {
           </div>
 
           <div className="portal-overview-grid">
-            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>已确认非天然氨基酸／非标准残基</b><span>1,844条；单一母体修饰和明确氨基酸骨架均按身份收录</span></li><li><b>身份待确认</b><span>1条；CCD 96Z仍保留在完整结构库中</span></li><li><b>特殊用途结构</b><span>176条多残基融合、反应状态或非典型构件单独管理</span></li><li><b>非单体／排除项</b><span>44条缺少单一氨基酸骨架的结构保留用于追溯</span></li></ol></article>
+            <article className="portal-progress-card"><div><span>结构库分类口径</span><strong>2,065条结构使用同一套CCD主记录</strong></div><ol><li><b>已确认非天然氨基酸／非标准残基</b><span>1,845条；包括经原始论文确认进入肽体系的CCD 96Z</span></li><li><b>特殊用途结构</b><span>176条多残基融合、反应状态或非典型构件单独管理</span></li><li><b>非单体／排除项</b><span>44条缺少单一氨基酸骨架的结构保留用于追溯</span></li></ol></article>
             <article className="portal-boundary-card"><span>证据口径</span><h3>记录按证据层级解释</h3><p>CCD记录用于确认化学身份，PDB命中用于确认其在聚合物中的使用。只有在相同或可比环肽骨架中设有实验对照时，才将性质变化归因于具体残基。</p><button onClick={() => { window.location.href = "quality/"; }}>查看证据分级与数据质量 →</button></article>
           </div>
         </section>

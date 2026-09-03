@@ -1,0 +1,77 @@
+{
+  "summary": {
+    "generatedAt": "2026-09-03T04:05:34.554448+00:00",
+    "method": "RDKit parse screen plus manual comparison of flagged preferred names against current RCSB systematic names, formulae and SMILES",
+    "recordCount": 1110,
+    "initialAutomatedFlagCount": 19,
+    "dismissedAfterManualReviewCount": 12,
+    "rdkitParseSuccessCount": 1109,
+    "rdkitParseFailureCount": 1,
+    "displayCorrectedCount": 4,
+    "displayClarifiedCount": 2,
+    "statusCounts": {
+      "display-corrected": 4,
+      "display-clarified": 2
+    },
+    "parseFailureIds": [
+      "A1IPL"
+    ],
+    "boundary": "This audit catches parse failures and manually reviewed name/structure conflicts. Passing it does not independently certify every IUPAC stereodescriptor in all 1,110 records."
+  },
+  "records": [
+    {
+      "ccdId": "AZK",
+      "sourceName": "(S)-2-AMINO-6-AZIDOHEXANOIC ACID",
+      "formula": "C6 H14 N4 O",
+      "smiles": "C(CCN=[N+]=[N-])C[C@@H](CO)N",
+      "status": "display-corrected",
+      "message": "RCSB常用名写成羧酸，但系统命名、分子式和SMILES均为氨基醇。",
+      "sourceUrl": "https://www.rcsb.org/ligand/AZK"
+    },
+    {
+      "ccdId": "CR0",
+      "sourceName": "[2-(1-AMINO-2-HYDROXYPROPYL)-2-HYDROXY-4-ISOBUTYL-5-OXO-2,5-DIHYDRO-1H-IMIDAZOL-1-YL]ACETALDEHYDE",
+      "formula": "C12 H21 N3 O5",
+      "smiles": "C[C@H]([C@@H]([C@]1(N=C(C(=O)N1CC(=O)O)CC(C)C)O)N)O",
+      "status": "display-corrected",
+      "message": "RCSB常用名写有乙醛，但系统命名和SMILES显示乙酸端基。",
+      "sourceUrl": "https://www.rcsb.org/ligand/CR0"
+    },
+    {
+      "ccdId": "MDF",
+      "sourceName": "META, META'-DI-HYDROXY-PHENYLALANINE",
+      "formula": "C9 H11 N O4",
+      "smiles": "COC(=O)[C@H](c1cc(cc(c1)O)O)N",
+      "status": "display-corrected",
+      "message": "RCSB常用名会被理解为游离二羟基苯丙氨酸，但结构是二羟基苯基甘氨酸甲酯。",
+      "sourceUrl": "https://www.rcsb.org/ligand/MDF"
+    },
+    {
+      "ccdId": "PR3",
+      "sourceName": "S,S-PROPYLTHIOCYSTEINE",
+      "formula": "C6 H13 N O S2",
+      "smiles": "CCCSSC[C@@H](C=O)N",
+      "status": "display-clarified",
+      "message": "常用名较简略；系统命名和SMILES表明羧基端已还原为醛。",
+      "sourceUrl": "https://www.rcsb.org/ligand/PR3"
+    },
+    {
+      "ccdId": "SET",
+      "sourceName": "AMINOSERINE",
+      "formula": "C3 H8 N2 O2",
+      "smiles": "C([C@@H](C(=O)N)N)O",
+      "status": "display-clarified",
+      "message": "常用名较简略；系统命名和SMILES表明羧基端为酰胺。",
+      "sourceUrl": "https://www.rcsb.org/ligand/SET"
+    },
+    {
+      "ccdId": "V3E",
+      "sourceName": "(2~{S})-2-azanyl-3-(2-hydroxyphenyl)propanoic acid",
+      "formula": "C10 H13 N O3",
+      "smiles": "COC(=O)[C@H](Cc1ccccc1O)N",
+      "status": "display-corrected",
+      "message": "RCSB常用名写成游离羧酸，但系统命名、分子式和SMILES均显示甲酯。",
+      "sourceUrl": "https://www.rcsb.org/ligand/V3E"
+    }
+  ]
+}

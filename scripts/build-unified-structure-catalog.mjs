@@ -152,10 +152,14 @@ const evidenceProfileFor = (record) => {
   const coreReviewed = coreReviewByCcd.get(record.primaryCcdId);
   const coreUsage = coreUsageById.get(record.id);
   const conditional = manualByCcd.get(record.primaryCcdId);
+  const confirmingResearch = (originalResearchByCcd.get(record.primaryCcdId) ?? []).find((entry) => evidenceConfirmsUse(entry.evidenceLevel));
+  const hasMacrocycleResearch = confirmingResearch?.recordId === "OCPR000078";
   const usageStatus = coreReviewed
     ? (coreReviewed.grade === "A" || coreReviewed.grade === "B" ? "confirmed" : "not-found")
     : reviewed
     ? (reviewed.grade === "A" || reviewed.grade === "B" ? "confirmed" : reviewed.grade === "C" ? "limited" : "not-applicable")
+    : confirmingResearch
+      ? "confirmed"
     : coreUsage
       ? (coreUsage.status === "no-polymer-hit" ? "not-found" : "confirmed")
       : conditional?.evidenceStatus === "polymer-only" ? "confirmed" : conditional ? "not-found" : "not-reviewed";
@@ -163,6 +167,8 @@ const evidenceProfileFor = (record) => {
     ? (coreReviewed.grade === "A" || coreReviewed.grade === "B" ? "肽中使用已人工核对" : "尚未找到肽中使用证据")
     : reviewed
     ? (reviewed.grade === "A" || reviewed.grade === "B" ? "肽中使用已人工核对" : reviewed.grade === "C" ? "仅限特殊构件用途" : "不适用：非独立单体")
+    : confirmingResearch
+      ? "原始论文确认已进入肽体系"
     : coreUsage
       ? (coreUsage.status === "short-polymer" ? "PDB短聚合物命中" : coreUsage.status === "polymer-only" ? "仅较长PDB聚合物命中" : "PDB聚合物中暂未命中")
       : conditional?.evidenceStatus === "polymer-only" ? "仅较长PDB聚合物命中" : conditional ? "PDB聚合物中暂未命中" : "尚未核查肽中使用";
@@ -175,16 +181,21 @@ const evidenceProfileFor = (record) => {
       : coreReviewed ? { status: "not-found", label: "暂无直接环肽使用证据" }
       : reviewed?.grade === "A"
       ? { status: "confirmed", label: "环肽／宏环使用已核对" }
-      : reviewed ? { status: "not-found", label: "暂无直接环肽使用证据" } : { status: "not-reviewed", label: "尚未核查环肽使用" },
+      : reviewed ? { status: "not-found", label: "暂无直接环肽使用证据" }
+      : hasMacrocycleResearch ? { status: "confirmed", label: "原始论文与质谱确认进入体外翻译大环肽" }
+      : { status: "not-reviewed", label: "尚未核查环肽使用" },
     synthesisUse: synthesisByCcd.has(record.primaryCcdId)
       ? { status: "confirmed", label: "商业保护形式与SPPS适用性已核查" }
       : coreReviewed
       ? coreReviewed.grade === "PENDING" ? { status: "not-reviewed", label: "保护与肽偶联资料待补充" } : { status: "reviewed", label: "合成或肽中使用资料已核对" }
       : reviewed
       ? { status: "reviewed", label: "合成或身份资料已人工核对" }
+      : hasMacrocycleResearch
+      ? { status: "reviewed", label: "AzAla制备、tRNA装载与体外翻译资料已核对；常规SPPS仍未单独核验" }
       : { status: "not-reviewed", label: "SPPS／LPPS与保护策略待核查" },
     oralEvidence: oralHasContext
       ? { status: "context", label: "存在完整骨架口服证据" }
+      : hasMacrocycleResearch ? { status: "not-found", label: "已核对论文，但没有证据表明AzAla本身改善口服吸收" }
       : (reviewed || coreReviewed) ? { status: "not-found", label: "暂无可归因的口服证据" } : { status: "not-reviewed", label: "尚未核查口服证据" },
   };
 };
@@ -201,7 +212,9 @@ const classifyComponent = (record, evidenceProfile, applyIdentityAudit = true) =
   if (completeIdentity && applyIdentityAudit) return { id: completeIdentity.identityDecision, basis: completeIdentity.identityBasis, method: "complete-ccd-identity-recheck" };
   const deepReview = reviewedByCcd.get(record.primaryCcdId);
   const coreReview = coreReviewByCcd.get(record.primaryCcdId);
-  const originalResearch = originalResearchByCcd.get(record.primaryCcdId);
+  const originalResearchRecords = originalResearchByCcd.get(record.primaryCcdId) ?? [];
+  const specialResearch = originalResearchRecords.find((entry) => entry.componentClassOverride === "special-reference");
+  const confirmingResearch = originalResearchRecords.find((entry) => evidenceConfirmsUse(entry.evidenceLevel));
   const unresolvedIdentityReview = pdbUnresolvedIdentityReviewByCcd.get(record.primaryCcdId);
   if (unresolvedIdentityReview && applyIdentityAudit) return { id: unresolvedIdentityReview.componentClass, basis: unresolvedIdentityReview.conclusion, method: "source-level-pdb-identity-review" };
   const pendingIdentityReview = pendingIdentityReviewBatch1ByCcd.get(record.primaryCcdId);
@@ -219,10 +232,16 @@ const classifyComponent = (record, evidenceProfile, applyIdentityAudit = true) =
   const batch10Review = pdbBatch10ReviewByCcd.get(record.primaryCcdId);
   if (batch10Review && !(applyIdentityAudit && batch10Review.componentClass === "pdb-peptide-occurrence" && hasOfficialPeptideLinkingType(record))) return { id: batch10Review.componentClass, basis: batch10Review.conclusion, method: "manual-pdb-context-review" };
   if (record.screening.tier === "exclude" || deepReview?.grade === "EXCLUDE" || coreReview?.grade === "EXCLUDE") return { id: "excluded-nonmonomer", basis: "结构规则或人工审核已给出明确非单体/排除结论", method: deepReview || coreReview ? "manual-review" : "rule-based" };
-  if (originalResearch?.componentClassOverride === "special-reference") return { id: "special-reference", basis: `已确认实际用于肽体系，但人工复核判定为连接、交联、战头、peptoid或非典型肽模拟构件（${originalResearch.recordId}）`, method: "manual-review" };
+  if (specialResearch) return { id: "special-reference", basis: `已确认实际用于肽体系，但人工复核判定为连接、交联、战头、peptoid或非典型肽模拟构件（${specialResearch.recordId}）`, method: "manual-review" };
   if (record.screening.tier === "reference" || deepReview?.grade === "C") return { id: "special-reference", basis: deepReview?.conclusion || "当前仅适合作为特殊构件或结构参考，不进入普通单体推荐层", method: deepReview ? "manual-review" : "rule-based" };
   if (["A", "B"].includes(deepReview?.grade) || ["A", "B"].includes(coreReview?.grade)) return { id: "evidence-reviewed-residue", basis: coreReview?.conclusion || deepReview?.conclusion || "人工来源审核确认肽中使用", method: "manual-review" };
-  if (originalResearch && evidenceConfirmsUse(originalResearch.evidenceLevel)) return { id: "evidence-reviewed-residue", basis: `${originalResearch.evidenceLevel}已关联至研发证据记录${originalResearch.recordId}`, method: "manual-review" };
+  if (applyIdentityAudit && confirmingResearch) return {
+    id: "evidence-reviewed-residue",
+    basis: record.primaryCcdId === "96Z"
+      ? "RCSB将其定义为β-(1-azulenyl)-L-alanine；原始论文将AzAla作为非经典氨基酸，并以质谱确认其经起始重编程进入体外翻译大环肽（PMID 34236771）"
+      : `${confirmingResearch.evidenceLevel}已关联至研发证据记录${confirmingResearch.recordId}`,
+    method: "manual-review",
+  };
   if (applyIdentityAudit && hasOfficialPeptideLinkingType(record)) return { id: "evidence-reviewed-residue", basis: `wwPDB CCD将该化学组分定义为${record.linkageTypes.join(" / ")}单体；结构身份和聚合物连接角色明确，可归入有CCD定义的非标准氨基酸残基`, method: "ccd-linkage-identity-audit" };
   if (evidenceProfile.peptideUse.status === "confirmed") return { id: "pdb-peptide-occurrence", basis: evidenceProfile.peptideUse.label, method: "pdb-sequence-audit" };
   return { id: "candidate-pending", basis: "结构筛选保留，但尚无足够证据确认其为可独立使用的肽合成单体", method: "rule-based" };
@@ -244,7 +263,12 @@ const records = preliminaryRecords.map((record) => {
         : "still-unresolved",
       rationale: ["evidence-reviewed-residue", "special-reference", "excluded-nonmonomer"].includes(componentClass.id) ? componentClass.basis : "CCD未给出明确的peptide-linking单体类型；仅凭名称、PDB出现或氨基酸样结构不足以升级",
       officialCcdType: record.linkageTypes.join(" / "),
-      auditedAt: "2026-09-01",
+      auditedAt: record.primaryCcdId === "96Z" ? "2026-09-02" : "2026-09-01",
+      ...(record.primaryCcdId === "96Z" ? { sources: [
+        { type: "CCD", url: "https://www.rcsb.org/ligand/96Z", claim: "确认CCD编号、名称、分子式、立体化学和结构描述" },
+        { type: "论文", url: "https://pubmed.ncbi.nlm.nih.gov/34236771/", doi: "10.1002/cmdc.202100315", claim: "确认AzAla经flexizyme/tRNA起始重编程进入体外翻译大环肽，并由MALDI-TOF质谱检出" },
+        { type: "论文", url: "https://pubmed.ncbi.nlm.nih.gov/31513332/", doi: "10.1002/cbic.201900497", claim: "确认立体纯AzAla可由工程化TrpB从薁和L-丝氨酸制备" },
+      ]} : {}),
     }} : {}),
     evidenceProfile,
     researchEvidence,

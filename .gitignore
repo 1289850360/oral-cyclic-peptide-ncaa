@@ -4,5 +4,6 @@ out/
 dist/
 .wrangler/
 .cache/
+.task-appdata/
 *.log
 *.tsbuildinfo

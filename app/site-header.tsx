@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-type HeaderSection = "home" | "catalog" | "ncaa" | "evidence" | "about";
+type HeaderSection = "home" | "catalog" | "ncaa" | "derivatives" | "evidence" | "about";
 
 export default function SiteHeader({ active, onDownload, onNavigate }: { active: HeaderSection; onDownload?: () => void; onNavigate?: (section: "home" | "evidence") => void }) {
   return (
@@ -12,6 +12,7 @@ export default function SiteHeader({ active, onDownload, onNavigate }: { active:
         <Link className={active === "home" ? "active" : ""} href="/" onClick={(event) => { if (onNavigate) { event.preventDefault(); onNavigate("home"); } }}>首页概览</Link>
         <Link className={active === "catalog" ? "active" : ""} href="/catalog/">CCD结构库</Link>
         <Link className={active === "ncaa" ? "active" : ""} href="/ncaa/">非天然氨基酸库</Link>
+        <Link className={active === "derivatives" ? "active" : ""} href="/derivatives/">天然母体衍生库</Link>
         <Link className={active === "evidence" ? "active" : ""} href="/#database" onClick={(event) => { if (onNavigate) { event.preventDefault(); onNavigate("evidence"); } }}>研发证据库</Link>
         <Link className={active === "about" ? "active" : ""} href="/quality/">版本与质量</Link>
       </nav>
