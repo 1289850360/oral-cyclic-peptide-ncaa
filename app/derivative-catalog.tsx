@@ -125,6 +125,7 @@ export default function DerivativeCatalog() {
   const [selectedEvidence, setSelectedEvidence] = useState("all");
   const [query, setQuery] = useState("");
   const [page, setPage] = useState(1);
+  const [downloadStatus, setDownloadStatus] = useState("");
   const parentCounts = useMemo(() => new Map(naturalAminoAcidParents.map((parent) => [parent.ccd, records.filter((record) => record.parentIds.some((id) => id.toUpperCase() === parent.ccd)).length])), []);
   const modificationCounts = useMemo(() => new Map(modificationOptions.map((option) => [option, records.filter((record) => modificationTagsFor(record.primaryCcdId).includes(option)).length])), []);
   const propertyCounts = useMemo(() => new Map(propertyOptions.map((option) => [option, records.filter((record) => propertyTagsFor(record.primaryCcdId).includes(option)).length])), []);
@@ -145,6 +146,28 @@ export default function DerivativeCatalog() {
   const safePage = Math.min(page, totalPages);
   const visible = filtered.slice((safePage - 1) * PAGE_SIZE, safePage * PAGE_SIZE);
   const chooseParent = (ccd: string) => { setSelectedParent(ccd); setPage(1); };
+  const downloadTrainingFile = async (url: string, fileName: string) => {
+    setDownloadStatus(`正在准备 ${fileName}…`);
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const blob = await response.blob();
+      if (!blob.size) throw new Error("文件内容为空");
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = objectUrl;
+      link.download = fileName;
+      link.style.display = "none";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 60_000);
+      setDownloadStatus(`已准备好：${fileName}（${(blob.size / 1024).toFixed(1)} KB）`);
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : "未知错误";
+      setDownloadStatus(`下载失败：${reason}。可以换系统浏览器打开网站再试。`);
+    }
+  };
 
   return <div className="derivative-catalog">
     <section className="derivative-intro">
@@ -155,12 +178,13 @@ export default function DerivativeCatalog() {
       <div className="derivative-training-downloads">
         <div><span>AGENT TRAINING DATA</span><strong>结构化训练数据下载</strong><p>1109条可直接数值训练；A1IPL 1条因特殊硼价态单独保存。Excel内含逐列解释。</p></div>
         <nav>
-          <a className="primary" href="../downloads/natural-parent-derivative-agent-training-1110.xlsx" download="natural-parent-derivative-agent-training-1110.xlsx">下载Excel汇总</a>
-          <a href="../downloads/natural-parent-derivative-training-1109.csv" download="natural-parent-derivative-training-1109.csv">CSV · 1109条</a>
-          <a href="../downloads/natural-parent-derivative-training-1109.json" download="natural-parent-derivative-training-1109.json">JSON · 完整字段</a>
-          <a href="../downloads/natural-parent-derivative-training-1109.jsonl" download="natural-parent-derivative-training-1109.jsonl">JSONL · 一行一条</a>
-          <a className="special" href="../downloads/natural-parent-derivative-a1ipl-special.json" download="natural-parent-derivative-a1ipl-special.json">A1IPL单独JSON</a>
+          <button className="primary" type="button" onClick={() => downloadTrainingFile("../downloads/natural-parent-derivative-agent-training-1110.xlsx", "natural-parent-derivative-agent-training-1110.xlsx")}>下载Excel汇总</button>
+          <button type="button" onClick={() => downloadTrainingFile("../downloads/natural-parent-derivative-training-1109.csv", "natural-parent-derivative-training-1109.csv")}>CSV · 1109条</button>
+          <button type="button" onClick={() => downloadTrainingFile("../downloads/natural-parent-derivative-training-1109.json", "natural-parent-derivative-training-1109.json")}>JSON · 完整字段</button>
+          <button type="button" onClick={() => downloadTrainingFile("../downloads/natural-parent-derivative-training-1109.jsonl", "natural-parent-derivative-training-1109.jsonl")}>JSONL · 一行一条</button>
+          <button className="special" type="button" onClick={() => downloadTrainingFile("../downloads/natural-parent-derivative-a1ipl-special.json", "natural-parent-derivative-a1ipl-special.json")}>A1IPL单独JSON</button>
         </nav>
+        {downloadStatus && <p className="derivative-download-status" role="status">{downloadStatus}</p>}
         <small>旧版审计文件：<a href="../natural-parent-derivative-analysis.csv" download>首轮结构分析</a> · <a href="../natural-parent-manual-structure-review.csv" download>二次核验结果</a></small>
       </div>
     </section>

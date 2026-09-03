@@ -670,9 +670,10 @@ h1 em { color: var(--teal); font-style: normal; }
 .derivative-training-downloads > div strong { color: var(--teal-dark); font-family: "Noto Serif SC", serif; font-size: 18px; }
 .derivative-training-downloads > div p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
 .derivative-training-downloads nav { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
-.derivative-training-downloads nav a { padding: 9px 12px; border: 1px solid var(--teal); color: var(--teal-dark); background: #fff; font-size: 9px; font-weight: 700; text-decoration: none; }
-.derivative-training-downloads nav a.primary { color: #fff; background: var(--teal); }
-.derivative-training-downloads nav a.special { border-color: var(--gold); color: #765514; background: #fff8e8; }
+.derivative-training-downloads nav button { padding: 9px 12px; border: 1px solid var(--teal); color: var(--teal-dark); background: #fff; font: inherit; font-size: 9px; font-weight: 700; cursor: pointer; }
+.derivative-training-downloads nav button.primary { color: #fff; background: var(--teal); }
+.derivative-training-downloads nav button.special { border-color: var(--gold); color: #765514; background: #fff8e8; }
+.derivative-download-status { grid-column: 1 / -1; margin: 0; padding: 8px 10px; color: var(--teal-dark); background: #fff; font-size: 9px; line-height: 1.5; }
 .derivative-training-downloads > small { grid-column: 1 / -1; color: var(--muted); font-size: 8px; text-align: right; }
 .derivative-training-downloads > small a { color: var(--teal-dark); font-weight: 700; text-decoration: none; }
 .parent-selector { margin-top: 18px; padding: 18px; display: grid; grid-template-columns: repeat(8, 1fr); gap: 7px; border: 1px solid var(--line); background: #f6f8f7; }
