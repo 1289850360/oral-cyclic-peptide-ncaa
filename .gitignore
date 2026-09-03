@@ -7,3 +7,4 @@ dist/
 .task-appdata/
 *.log
 *.tsbuildinfo
+outputs/

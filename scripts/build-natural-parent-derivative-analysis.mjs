@@ -31,7 +31,7 @@ const round = (value, digits = 3) => Number(Number(value).toFixed(digits));
 const atomNumber = (atom) => atom.z ?? 6;
 const atomSymbol = (atom) => atomicSymbols.get(atomNumber(atom)) ?? `Z${atomNumber(atom)}`;
 const jsonGraph = (mol) => JSON.parse(mol.get_json()).molecules[0];
-const descriptors = (mol) => JSON.parse(mol.get_descriptors());
+const HBA_SMARTS_2_0_2 = "[$([O,S;H1;v2]-[!$(*=[O,N,P,S])]),$([O,S;H0;v2]),$([O,S;-]),$([N;v3;!$(N-*=!@[O,N,P,S])]),$([nH0X2,o,s;+0])]";
 const countElements = (atoms) => Object.fromEntries([...atoms.reduce((counts, atom) => counts.set(atomSymbol(atom), (counts.get(atomSymbol(atom)) ?? 0) + 1), new Map()).entries()].sort());
 const csvEscape = (value) => `"${String(value ?? "").replaceAll('"', '""')}"`;
 
@@ -51,6 +51,13 @@ for (const [ccdId, name] of parentMeta) {
 }
 
 const RDKit = await initRDKitModule();
+const hbaQuery = RDKit.get_qmol(HBA_SMARTS_2_0_2);
+if (!hbaQuery?.is_valid()) throw new Error("Unable to compile NumHBA 2.0.2 query");
+const standardHbaCount = (mol) => {
+  const matches = JSON.parse(mol.get_substruct_matches(hbaQuery) || "[]");
+  return Array.isArray(matches) ? matches.length : matches?.atoms ? 1 : 0;
+};
+const descriptors = (mol) => ({ ...JSON.parse(mol.get_descriptors()), NumHBA: standardHbaCount(mol) });
 const derivativeRecords = catalog.records.filter((record) => record.componentClass.id === "evidence-reviewed-residue" && record.parentIds.some((id) => parentCodes.has(id.toUpperCase())));
 const analyses = [];
 
@@ -165,6 +172,7 @@ const output = {
     generatedAt: new Date().toISOString(),
     method: "RCSB CCD parent relation + manually reviewed conflict corrections + RDKit full-parent substructure mapping; HBD/HBA use standard NumHBD/NumHBA site counts",
     rdkitVersion: RDKit.version(),
+    hbaDefinitionVersion: "2.0.2 (backported from RDKit fix #8997)",
     parentCount: parentMeta.length,
     derivativeRecordCount: analyses.length,
     statusCounts,
@@ -178,4 +186,5 @@ await writeFile(join(publicDir, "natural-parent-derivative-analysis.json"), JSON
 const csvHeaders = ["ccd_id", "name", "natural_parents", "primary_parent", "status", "reason", "match_count", "added_elements", "delta_exact_mw", "delta_hbd", "delta_hba", "delta_tpsa", "delta_clogp", "delta_rotatable_bonds", "delta_rings", "evidence_boundary"];
 const csvRows = analyses.map((record) => [record.ccdId, record.name, record.naturalParents.join(";"), record.primaryParent, record.status, record.reason, record.mapping?.matchCount ?? "", record.mapping ? JSON.stringify(record.mapping.addedElements) : "", record.descriptorDeltas?.exactmw ?? "", record.descriptorDeltas?.NumHBD ?? "", record.descriptorDeltas?.NumHBA ?? "", record.descriptorDeltas?.tpsa ?? "", record.descriptorDeltas?.CrippenClogP ?? "", record.descriptorDeltas?.NumRotatableBonds ?? "", record.descriptorDeltas?.NumRings ?? "", record.evidenceBoundary ?? ""]);
 await writeFile(join(publicDir, "natural-parent-derivative-analysis.csv"), [csvHeaders, ...csvRows].map((row) => row.map(csvEscape).join(",")).join("\n"), "utf8");
+hbaQuery.delete();
 console.log(JSON.stringify(output.metadata, null, 2));

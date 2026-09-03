@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.3-a1ipl-special",
+  "record_id": "PHE__A1IPL",
+  "natural_parent": {
+    "ccd_id": "PHE",
+    "name_zh": "苯丙氨酸",
+    "smiles": "c1ccc(cc1)C[C@@H](C(=O)O)N"
+  },
+  "derivative": {
+    "ccd_id": "A1IPL",
+    "name": "para-boronophenylalanine",
+    "formula": "C9 H13 B N O5",
+    "smiles": "B(c1ccc(cc1)C[C@@H](C(=O)O)N)(O)(O)O"
+  },
+  "transformation": {
+    "class": "极性或带电基团",
+    "all_classes": [
+      "极性或带电基团"
+    ],
+    "label_zh": "化学改造区域已确认",
+    "position_zh": "苯丙氨酸芳环对位的氢被硼酸基替换；RDKit因该CCD的硼价态表达无法读取，但官方名称和结构可明确定位",
+    "description_zh": "RDKit无法读取该CCD的特殊价态表达；已用官方CCD名称和二维结构完成人工化学区域确认。苯丙氨酸芳环对位的氢被硼酸基替换；RDKit因该CCD的硼价态表达无法读取，但官方名称和结构可明确定位。RCSB CCD A1IPL采用四配位中性硼的特殊SMILES表达，RDKit标准价态检查无法可靠计算；为避免虚构数值，本条不生成描述符差值。相对天然母体：精确分子量未计算，氢键供体未计算，氢键受体未计算，拓扑极性表面积未计算，计算脂水分配系数未计算。",
+    "mapping_status": "manual-review"
+  },
+  "descriptors": {
+    "method": "RDKit 2026.03.5",
+    "scope": "isolated_free_residue",
+    "status": "not_computed_special_valence_representation",
+    "parent": {
+      "exact_mw": 165.079,
+      "hbd": 2,
+      "hba": 2,
+      "tpsa": 63.32,
+      "clogp": 0.641,
+      "rotatable_bonds": 3,
+      "rings": 1,
+      "fraction_csp3": 0.222
+    },
+    "derivative": null,
+    "delta": null,
+    "reason_zh": "CCD采用中性四配位硼表达；标准RDKit价态检查拒绝该SMILES。不能擅自改成三配位硼酸或带电硼酸盐后再当作原结构计算。"
+  },
+  "property_assessments": [
+    {
+      "property": "lipophilicity",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    },
+    {
+      "property": "polarity_tpsa",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    },
+    {
+      "property": "aqueous_solubility",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    },
+    {
+      "property": "passive_permeability",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    },
+    {
+      "property": "proteolytic_stability",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    },
+    {
+      "property": "conformational_rigidity",
+      "direction": "uncertain",
+      "conclusion_type": "unknown",
+      "evidence_level": "descriptor_unavailable",
+      "confidence": "low",
+      "reason_zh": "当前CCD价态表达不能可靠生成该性质的结构描述符，保留为空值。",
+      "experimental_support": false
+    }
+  ],
+  "experimental_context": {
+    "conclusion": "对硼酸基苯丙氨酸装入荧光蛋白后，可把过氧亚硝酸盐氧化事件转成选择性荧光响应。",
+    "measurement": "pnGFP/pnRFP均完成体外和活细胞验证；低毫摩尔H₂O₂及多种其他活性氧没有同等响应。",
+    "attributionBoundary": "A1IPL与已核验的7N8为同一类pBoF化学结构；功能依赖定向进化后的完整色团环境。",
+    "confidence": "完整肽支持"
+  },
+  "evidence_summary": {
+    "overall_tier": "complete_peptide_context",
+    "website_evidence_label_zh": "完整肽证据",
+    "directly_supported_properties": [],
+    "context_supported_properties": [
+      "reported_experimental_context"
+    ],
+    "prediction_only_properties": [],
+    "important_boundary_zh": "A1IPL与已核验的7N8为同一类pBoF化学结构；功能依赖定向进化后的完整色团环境。"
+  },
+  "quality_control": {
+    "name_and_structure_source": "wwPDB CCD snapshot",
+    "descriptor_crosscheck": "held_out_special_neutral_tetracoordinate_boron",
+    "property_label_policy": "missing_numeric_values_not_imputed",
+    "reverified_at": "2026-09-03T07:52:51.174102+00:00"
+  },
+  "sources": [
+    {
+      "title": "RCSB CCD A1IPL · para-boronophenylalanine",
+      "url": "https://www.rcsb.org/ligand/A1IPL",
+      "supports": "确认衍生物名称、结构和CCD天然母体关系"
+    },
+    {
+      "title": "RCSB CCD PHE · 天然母体",
+      "url": "https://www.rcsb.org/ligand/PHE",
+      "supports": "确认天然氨基酸母体结构"
+    },
+    {
+      "title": "PDB 9GTV · CCD A1IPL",
+      "url": "https://www.rcsb.org/structure/9GTV",
+      "supports": "提供完整肽或骨架层面的使用证据"
+    },
+    {
+      "title": "Chen et al., 2016",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4958459/",
+      "supports": "pBoF荧光蛋白的选择性响应"
+    },
+    {
+      "title": "Sun et al., 2023",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10330634/",
+      "supports": "红色传感器的体内外验证"
+    }
+  ],
+  "descriptor_handling": {
+    "official_representation": {
+      "smiles": "B(c1ccc(cc1)C[C@@H](C(=O)O)N)(O)(O)O",
+      "formula": "C9 H13 B N O5",
+      "parse_status": "RDKit standard valence check failed",
+      "numeric_descriptors": null,
+      "reason_zh": "CCD采用中性四配位硼表示。该写法适合保存官方结构记录，但不能在标准RDKit价态规则下直接计算。"
+    },
+    "normalized_computational_representations": [
+      {
+        "representation_id": "tetrahedral_boronate_anion",
+        "recommended_for_numeric_model": true,
+        "smiles": "[B-](c1ccc(cc1)C[C@@H](C(=O)O)N)(O)(O)O",
+        "formula": "C9H13BNO5-",
+        "formal_charge": -1,
+        "descriptors": {
+          "exact_mw": 226.089,
+          "hbd": 5,
+          "hba": 5,
+          "tpsa": 124.01,
+          "clogp": -2.236,
+          "rotatable_bonds": 4
+        },
+        "delta_vs_phe": {
+          "exact_mw": 61.01,
+          "hbd": 3,
+          "hba": 3,
+          "tpsa": 60.69,
+          "clogp": -2.877,
+          "rotatable_bonds": 1
+        },
+        "boundary_zh": "这是把官方四配位硼规范化为带-1电荷的硼酸盐后得到的计算表示，不等于所有pH条件下唯一存在的微观状态。"
+      },
+      {
+        "representation_id": "trigonal_boronic_acid",
+        "recommended_for_numeric_model": false,
+        "smiles": "B(c1ccc(cc1)C[C@@H](C(=O)O)N)(O)O",
+        "formula": "C9H12BNO4",
+        "formal_charge": 0,
+        "descriptors": {
+          "exact_mw": 209.086,
+          "hbd": 4,
+          "hba": 4,
+          "tpsa": 103.78,
+          "clogp": -1.679,
+          "rotatable_bonds": 4
+        },
+        "delta_vs_phe": {
+          "exact_mw": 44.007,
+          "hbd": 2,
+          "hba": 2,
+          "tpsa": 40.46,
+          "clogp": -2.32,
+          "rotatable_bonds": 1
+        },
+        "boundary_zh": "这是三配位中性硼酸的另一种计算表示，元素组成与官方A1IPL式不同，只用于敏感性比较。"
+      }
+    ],
+    "training_recommendation_zh": "A1IPL继续单独保存。文本、结构身份和完整蛋白证据可用于语义训练；数值模型若采用规范化硼酸盐表示，必须同时保留representation_id、formal_charge和边界说明，不能与官方结构的空值混为一谈。"
+  }
+}

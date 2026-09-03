@@ -1,0 +1,33 @@
+{
+  "dataset_name": "天然母体衍生库 Agent 训练数据",
+  "generated_at": "2026-09-03",
+  "total_library_records": 1110,
+  "main_numeric_records": 1109,
+  "separate_special_records": 1,
+  "special_record_ids": [
+    "PHE__A1IPL"
+  ],
+  "main_evidence_group_counts": {
+    "context_reference": 233,
+    "prediction_only": 786,
+    "property_specific_experiment": 90
+  },
+  "full_library_evidence_group_counts": {
+    "property_specific_experiment": 90,
+    "context_reference": 234,
+    "prediction_only": 786
+  },
+  "files": {
+    "main_csv": "natural-parent-derivative-training-1109.csv",
+    "main_json": "natural-parent-derivative-training-1109.json",
+    "main_jsonl": "natural-parent-derivative-training-1109.jsonl",
+    "special_csv": "natural-parent-derivative-a1ipl-special.csv",
+    "special_json": "natural-parent-derivative-a1ipl-special.json",
+    "workbook": "natural-parent-derivative-agent-training-1110.xlsx"
+  },
+  "validation": {
+    "unique_main_record_ids": 1109,
+    "main_records_have_numeric_delta": true,
+    "a1ipl_not_in_main": true
+  }
+}

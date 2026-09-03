@@ -152,7 +152,17 @@ export default function DerivativeCatalog() {
       <h1>天然氨基酸<br /><em>修饰衍生库</em></h1>
       <p>这里只收录CCD已经明确指向22种天然编码氨基酸之一的非天然氨基酸。天然母体关系、具体修饰位置和性质证据分开记录。</p>
       <div className="derivative-stats"><article><strong>{records.length.toLocaleString()}</strong><span>天然氨基酸修饰相关CCD记录总数</span></article><article><strong>{naturalAminoAcidParents.length}</strong><span>能够对应的天然氨基酸母体</span></article><article><strong>{modificationOptions.length}</strong><span>修饰方式标签；同一条记录可以同时具有多个标签</span></article><article><strong>{directPropertyEvidenceCount} / {contextualPropertyEvidenceCount} / {propertyRuleCount}</strong><span>依次为具体残基或同骨架实验／完整肽或同类修饰参考／没有性质实验（未核验0条）</span></article></div>
-      <div className="derivative-downloads"><a href="../natural-parent-derivative-analysis.csv">下载首轮结构分析</a><a href="../natural-parent-manual-structure-review.csv">下载二次核验结果</a></div>
+      <div className="derivative-training-downloads">
+        <div><span>AGENT TRAINING DATA</span><strong>结构化训练数据下载</strong><p>1109条可直接数值训练；A1IPL 1条因特殊硼价态单独保存。Excel内含逐列解释。</p></div>
+        <nav>
+          <a className="primary" href="/downloads/natural-parent-derivative-agent-training-1110.xlsx" download>下载Excel汇总</a>
+          <a href="/downloads/natural-parent-derivative-training-1109.csv" download>CSV · 1109条</a>
+          <a href="/downloads/natural-parent-derivative-training-1109.json" download>JSON · 完整字段</a>
+          <a href="/downloads/natural-parent-derivative-training-1109.jsonl" download>JSONL · 一行一条</a>
+          <a className="special" href="/downloads/natural-parent-derivative-a1ipl-special.json" download>A1IPL单独JSON</a>
+        </nav>
+        <small>旧版审计文件：<a href="../natural-parent-derivative-analysis.csv" download>首轮结构分析</a> · <a href="../natural-parent-manual-structure-review.csv" download>二次核验结果</a></small>
+      </div>
     </section>
 
     <section className="parent-selector" aria-label="按天然氨基酸母体筛选">

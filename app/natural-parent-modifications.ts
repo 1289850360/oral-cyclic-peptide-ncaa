@@ -7,6 +7,7 @@ import { buildDefaultPropertyReview } from "./natural-parent-property-review-def
 import { naturalParentEvidenceUpgrades } from "./natural-parent-evidence-upgrades";
 import { applyNaturalParentCorrection, naturalParentCorrectionByCcd } from "./natural-parent-corrections";
 import substitutabilityJson from "../public/natural-parent-substitutability-audit.json";
+import analysisJson from "../public/natural-parent-derivative-analysis.json";
 
 export type NaturalParentModification = {
   reviewStatus?: "complete" | "second-pass-complete" | "semantic-resolved" | "complex-transformation-resolved" | "reviewed-unresolved";
@@ -249,6 +250,27 @@ const substitutabilityByCcd = new Map(
   (substitutabilityJson.records as SubstitutabilityAuditRecord[]).map((record) => [record.ccdId, record]),
 );
 
+type DescriptorAnalysisRecord = {
+  ccdId: string;
+  descriptorDeltas?: { NumHBA?: number };
+};
+
+const descriptorAnalysisByCcd = new Map(
+  (analysisJson.records as DescriptorAnalysisRecord[]).map((record) => [record.ccdId, record]),
+);
+
+function withCurrentHbaDelta(ccdId: string, record: NaturalParentModification): NaturalParentModification {
+  const hba = descriptorAnalysisByCcd.get(ccdId)?.descriptorDeltas?.NumHBA;
+  if (!Number.isFinite(hba)) return record;
+  const signedHba = Number(hba) > 0 ? `+${Number(hba)}` : String(Number(hba));
+  const replace = (text: string) => text.replace(/氢键受体[+-]?\d+(?:\.\d+)?/g, `氢键受体${signedHba}`);
+  return {
+    ...record,
+    structuralChange: replace(record.structuralChange),
+    directlyCausedProperties: record.directlyCausedProperties.map(replace),
+  };
+}
+
 function withStructuralSafetyBoundary(ccdId: string, record: NaturalParentModification): NaturalParentModification {
   const category = substitutabilityByCcd.get(ccdId)?.category;
   if (category !== "complex-skeletal-transformation") return record;
@@ -318,7 +340,8 @@ export const naturalParentModificationByCcd: Record<string, NaturalParentModific
           sources: [...correctedRecord.sources, ...evidenceUpgrade.sources],
         }
       : correctedRecord;
-    const upgradedRecord = withStructuralSafetyBoundary(ccdId, evidenceAlignedRecord);
+    const descriptorAlignedRecord = withCurrentHbaDelta(ccdId, evidenceAlignedRecord);
+    const upgradedRecord = withStructuralSafetyBoundary(ccdId, descriptorAlignedRecord);
     return [
       ccdId,
       withDirectionalPropertyWording({
